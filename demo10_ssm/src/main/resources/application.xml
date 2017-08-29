@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+			http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+
+	<!-- 引入db配置文件 -->
+	<!--<context:property-placeholder location="classpath:db.properties"/>-->
+
+	<!--&lt;!&ndash; 配置 db 连接池 &ndash;&gt;-->
+	<!--<bean id="dbDataSource" class="com.alibaba.druid.pool.DruidDataSource"-->
+		  <!--destroy-method="close">-->
+		<!--<property name="driverClassName" value="${db.driverClassName}"></property>-->
+		<!--<property name="url" value="${db.url}"></property>-->
+		<!--<property name="username" value="${db.username}"></property>-->
+		<!--<property name="password" value="${db.password}"></property>-->
+	<!--</bean>-->
+
+
+	<!--&lt;!&ndash; 配置SqlSessionFactoryBean  &ndash;&gt;-->
+	<!--<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+
+		<!--&lt;!&ndash; 配置链接信息  &ndash;&gt;-->
+		<!--<property name="dataSource" ref="dbDataSource" />-->
+
+		<!--<property name="configLocation" value="classpath:mybatis-config.xml" />-->
+
+		<!--<property name="typeAliasesPackage" value="com.ax.spring.domain" />-->
+
+		<!--<property name="mapperLocations" value="classpath:com/ax/spring/mapper/UserMapper.xml" />-->
+
+	<!--</bean>-->
+
+
+
+
+	<!--&lt;!&ndash; 配置mapper &ndash;&gt;-->
+	<!--<bean id="baseMapper" abstract="true" class="org.mybatis.spring.mapper.MapperFactoryBean" />-->
+
+	<!--<bean id="userMapper" parent="baseMapper">-->
+		<!--<property name="mapperInterface" value="com.ax.spring.mapper.UserMapper" />-->
+	<!--</bean>-->
+
+
+
+	<!--<bean id="userService" class="com.ax.spring.service.UserServiceImp">-->
+		<!--<property name="userMapper" ref="userMapper" />-->
+
+	<!--</bean>-->
+
+
+
+
+	<!--&lt;!&ndash;配置Mapper&ndash;&gt;-->
+
+	<!--&lt;!&ndash; 配置事务管理器 &ndash;&gt;-->
+	<!--<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
+		<!--<property name="dataSource" ref="dbDataSource"></property>-->
+	<!--</bean>-->
+
+	<!--&lt;!&ndash; 配置事务切面 AOP  &ndash;&gt;-->
+	<!--<aop:config>-->
+		<!--<aop:pointcut expression="execution(* com.ax.spring.service.*Service.*(..))" id="crudPC"/>-->
+		<!--<aop:advisor advice-ref="txAdvice" pointcut-ref="crudPC"/>-->
+
+	<!--</aop:config>-->
+
+
+	<!--&lt;!&ndash; 配置事务属性 &ndash;&gt;-->
+	<!--<tx:advice id="txAdvice" transaction-manager="txManager">-->
+		<!--<tx:attributes>-->
+			<!--<tx:method name="get*" read-only="true"/>-->
+			<!--<tx:method name="query*" read-only="true"/>-->
+			<!--<tx:method name="list*" read-only="true"/>-->
+			<!--<tx:method name="*" propagation="REQUIRED"/>-->
+		<!--</tx:attributes>-->
+	<!--</tx:advice>-->
+
+
+
+
+</beans>
