@@ -4,15 +4,38 @@ import com.alibaba.fastjson.JSON;
 import com.ax.spring.domain.Person;
 import com.ax.spring.domain.AXResult;
 import com.ax.spring.domain.User;
+import com.ax.spring.service.IUserService;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations ="classpath:application.xml")
 public class test1 {
 
+    @Autowired
+    private IUserService userService;
 
     @Test
+    public void testU(){
+        User user = new User();
+        user.setAge(18);
+        user.setName("jim2");
+        userService.add(user);
+
+    }
+
+
+
+
+
+
     public void test(){
 
         System.out.println("test");
@@ -72,7 +95,7 @@ public class test1 {
     }
 
 
-    @Test
+
     public  void test2(){
         String name = "JOM";
         System.out.println(new AXResult(true,name).toJSONString());;

@@ -1,8 +1,11 @@
 package com.ax.spring.service;
 
 import com.ax.spring.domain.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+
 
 public interface IUserService {
 

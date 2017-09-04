@@ -1,7 +1,7 @@
-/Users/moledeveloper/05git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/domain/AXResult.java
-/Users/moledeveloper/05git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/service/UserServiceImp.java
-/Users/moledeveloper/05git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/service/IUserService.java
-/Users/moledeveloper/05git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/controller/LoginController.java
-/Users/moledeveloper/05git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/domain/Person.java
-/Users/moledeveloper/05git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/mapper/UserMapper.java
-/Users/moledeveloper/05git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/domain/User.java
+/04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/controller/LoginController.java
+/04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/service/UserServiceImp.java
+/04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/domain/User.java
+/04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/service/IUserService.java
+/04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/domain/AXResult.java
+/04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/domain/Person.java
+/04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/mapper/UserMapper.java

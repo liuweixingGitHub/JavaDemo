@@ -279,6 +279,28 @@
 					<path>/</path>
 				</configuration>
 			</plugin>
+
+			<!--mybatis自动生成mapper-->
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.3.2</version>
+				<configuration>
+					<verbose>true</verbose>
+					<!--覆盖原有的,false建立一个备份的-->
+					<overwrite>false</overwrite>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<!--<artifactId>mysql-connector-java</artifactId>-->
+						<artifactId>mysql-connector-java</artifactId>
+						<version>5.1.21</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+
+
 		</plugins>
 
 	</build>

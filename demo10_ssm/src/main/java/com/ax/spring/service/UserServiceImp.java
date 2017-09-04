@@ -2,18 +2,24 @@ package com.ax.spring.service;
 
 import com.ax.spring.domain.User;
 import com.ax.spring.mapper.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 
 import java.util.List;
 
+//这个注解方式必须有 set方式不需要
 
+//@Service("userService")
+@Service()
 public class UserServiceImp implements  IUserService{
 
-	
+	@Autowired
     private UserMapper userMapper;
 
-    public void setUserMapper(UserMapper userMapper) {
-        this.userMapper = userMapper;
-    }
+//    public void setUserMapper(UserMapper userMapper) {
+//        this.userMapper = userMapper;
+//    }
 
     public void add(User user) {
         userMapper.insert(user);
