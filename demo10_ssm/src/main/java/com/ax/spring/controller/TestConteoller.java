@@ -76,7 +76,7 @@ public class TestConteoller {
 
 
 
-    @RequestMapping(value="/login22")
+    @RequestMapping(value="/hello")
     @ResponseBody
     public String hello(){
 

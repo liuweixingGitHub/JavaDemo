@@ -1,8 +1,9 @@
+/04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/mapper/UserinfoMapper.java
 /04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/service/UserServiceImp.java
 /04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/controller/RegisterController.java
 /04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/service/IUserService.java
 /04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/service/LoginServiceImp.java
-/04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/mapper/LogininfoMapper.java
+/04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/dao/Userinfo.java
 /04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/controller/TestConteoller.java
 /04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/dao/Person.java
 /04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/mapper/UserMapper.java
@@ -12,4 +13,3 @@
 /04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/service/RegisterServiceImp.java
 /04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/service/ILoginService.java
 /04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/service/IRegisterService.java
-/04git/JavaDemo/demo10_ssm/src/main/java/com/ax/spring/dao/Logininfo.java

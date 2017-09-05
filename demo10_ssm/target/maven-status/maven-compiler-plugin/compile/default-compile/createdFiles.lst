@@ -5,11 +5,11 @@ com/ax/spring/service/ILoginService.class
 com/ax/spring/service/RegisterServiceImp.class
 com/ax/spring/mapper/UserMapper.class
 com/ax/spring/util/AXResult.class
+com/ax/spring/dao/Userinfo.class
 com/ax/spring/service/IUserService.class
 com/ax/spring/service/LoginServiceImp.class
 com/ax/spring/controller/LoginController.class
-com/ax/spring/mapper/LogininfoMapper.class
 com/ax/spring/controller/TestConteoller.class
 com/ax/spring/controller/RegisterController.class
 com/ax/spring/dao/Person.class
-com/ax/spring/dao/Logininfo.class
+com/ax/spring/mapper/UserinfoMapper.class

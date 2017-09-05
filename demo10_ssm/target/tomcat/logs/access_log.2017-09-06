@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [06/Sep/2017:00:33:27 +0800] "GET /login?username=jim&password=123 HTTP/1.1" 200 133 http-bio-8091-exec-1 1528
+0:0:0:0:0:0:0:1 - - [06/Sep/2017:00:33:27 +0800] "GET /favicon.ico HTTP/1.1" 404 153 http-bio-8091-exec-2 52
+0:0:0:0:0:0:0:1 - - [06/Sep/2017:00:33:27 +0800] "GET /favicon.ico HTTP/1.1" 404 153 http-bio-8091-exec-3 4
+0:0:0:0:0:0:0:1 - - [06/Sep/2017:00:42:32 +0800] "GET /login?username=jim&password=123 HTTP/1.1" 302 - http-bio-8091-exec-1 195
+0:0:0:0:0:0:0:1 - - [06/Sep/2017:00:42:32 +0800] "GET /login.jsp HTTP/1.1" 404 153 http-bio-8091-exec-2 12
+0:0:0:0:0:0:0:1 - - [06/Sep/2017:00:43:37 +0800] "GET /login?username=jim&password=123 HTTP/1.1" 200 144 http-bio-8091-exec-1 300
+0:0:0:0:0:0:0:1 - - [06/Sep/2017:00:49:00 +0800] "GET /login?username=jim&password=123 HTTP/1.1" 302 - http-bio-8090-exec-1 422
+0:0:0:0:0:0:0:1 - - [06/Sep/2017:00:49:00 +0800] "GET /login.jsp HTTP/1.1" 404 153 http-bio-8090-exec-2 50
+0:0:0:0:0:0:0:1 - - [06/Sep/2017:00:51:10 +0800] "GET /login?username=jim&password=123 HTTP/1.1" 404 153 http-bio-8090-exec-1 253
+0:0:0:0:0:0:0:1 - - [06/Sep/2017:00:52:18 +0800] "GET /login?username=jim&password=123 HTTP/1.1" 200 144 http-bio-8090-exec-1 423
+192.168.0.7 - - [06/Sep/2017:00:54:28 +0800] "GET /login?password=123&username=jim HTTP/1.1" 200 144 http-bio-8090-exec-3 103
