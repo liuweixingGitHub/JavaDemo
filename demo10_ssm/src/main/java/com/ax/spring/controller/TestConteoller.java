@@ -28,9 +28,6 @@ public class TestConteoller {
     @Autowired
     private IUserService userService;
 
-
-
-
     @RequestMapping(value="/reg2")
     @ResponseBody
     public String reg2(String username,String password){
@@ -62,7 +59,7 @@ public class TestConteoller {
 
         User user = userService.get(1L);
 
-        List list = new ArrayList();
+        List<User>  list = new ArrayList();
         list.add(user);
 
 //        return  new AXResult(true,list).toJSONString();
@@ -83,7 +80,7 @@ public class TestConteoller {
 
 
 
-        List list = new ArrayList();
+        List<Person> list = new ArrayList();
 
         Person person = new Person();
         person.setAge(10);
@@ -147,7 +144,7 @@ public class TestConteoller {
     public String  springUpload(HttpServletRequest request) throws Exception {
         System.out.println("上传文件........");
 
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList();
 
         CommonsMultipartResolver multipartResolver=new CommonsMultipartResolver(
                 request.getSession().getServletContext());
@@ -184,7 +181,7 @@ public class TestConteoller {
             String name = list.get(0);
             System.out.println("name = " + name);
 //            return  new AXResult(true,name).toJSONString();
-            return AXResult.succeeName(name);
+            return AXResult.succeeFileName(name);
 //            return  JSON.toJSONString( new AXResult(true,name));
         }else {
 

@@ -10,7 +10,7 @@ public class AXResult {
     private Boolean result;
     private List list;
     private String msg;
-    private String name;
+    private String fileName;
 
     public Boolean getResult() {
         return result;
@@ -36,12 +36,12 @@ public class AXResult {
         this.msg = msg;
     }
 
-    public String getName() {
-        return name;
+    public String getFileName() {
+        return fileName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
     public String toJSONString(){
@@ -67,14 +67,14 @@ public class AXResult {
     /*
   返回成功list
    */
-    public  static String succeeName(String name) {
+    public  static String succeeFileName(String name) {
 
         if (name==null){
             name = "";
         }
         AXResult result = new  AXResult ();
         result.setResult(true );
-        result.setName(name);
+        result.setFileName(name);
         return result.toJSONString();
     }
 
