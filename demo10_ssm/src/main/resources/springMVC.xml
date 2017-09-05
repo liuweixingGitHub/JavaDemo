@@ -20,12 +20,13 @@
 	<!-- 支持注解驱动 对springmvc支持 -->
 	<mvc:annotation-driven>
 
-		<!--使用阿里巴巴json解析springMVC返回值-->
 		<mvc:message-converters register-defaults="true">
+
+			<!--使用阿里巴巴json解析springMVC返回值-->
 			<bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
 				<property name="supportedMediaTypes">
 					<list>
-						<!--<value>application/json;charset=UTF-8</value>-->
+						<value>application/json;charset=UTF-8</value>
 						<!--解决中文问题-->
 						<value>*/*;charset=UTF-8</value>
 					</list>
@@ -66,9 +67,14 @@
 	<!-- 配置视图解析器 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/"/>
+
+		<!---->
 		<!--<property name="suffix" value=".jsp"/>-->
-		<!--<property name="contentType" value="text/json"/>-->
+
+
+		<!--网页返回json格式-->
 		<property name="contentType" value="application/json"/>
+		<!--<property name="contentType" value="text/json"/>-->
 
 	</bean>
 

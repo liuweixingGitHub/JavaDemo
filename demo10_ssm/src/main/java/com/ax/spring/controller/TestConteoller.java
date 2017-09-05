@@ -1,15 +1,13 @@
 package com.ax.spring.controller;
 
 
-import com.alibaba.fastjson.JSON;
-import com.ax.spring.domain.Person;
-import com.ax.spring.domain.AXResult;
+import com.ax.spring.dao.Person;
+import com.ax.spring.util.AXResult;
 import com.ax.spring.domain.User;
 import com.ax.spring.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -18,7 +16,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -26,10 +23,34 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-public class LoginController {
+public class TestConteoller {
 
     @Autowired
     private IUserService userService;
+
+
+
+
+    @RequestMapping(value="/reg2")
+    @ResponseBody
+    public String reg2(String username,String password){
+
+        System.out.println("reg"+username);
+
+        return username+password;
+
+    }
+
+
+    @RequestMapping(value="/home")
+    public ModelAndView reg3(String username, String password){
+
+        ModelAndView mView = new ModelAndView();
+        mView.addObject("key","填进去");
+        mView.setViewName("home.jsp");
+        return mView;
+    }
+
 
 
     @RequestMapping(value="/login")
@@ -44,7 +65,12 @@ public class LoginController {
         List list = new ArrayList();
         list.add(user);
 
-        return  new AXResult(true,list).toJSONString();
+//        return  new AXResult(true,list).toJSONString();
+        System.out.println( AXResult.errorMsg("代码"));
+        System.out.println( ">>"+AXResult.succeeList(null));
+        System.out.println( ">>"+AXResult.succeeList(list));
+        return  AXResult.succeeList(list);
+
 
 //        return "abc";
     }
@@ -93,8 +119,9 @@ public class LoginController {
 //
 //        str = jsonObject.toJSONString();
 
-        return new AXResult(true,list).toJSONString();
+//        return new AXResult(true,list).toJSONString();
 
+        return AXResult.succeeList(list);
     }
 
 
@@ -156,11 +183,13 @@ public class LoginController {
         if (list.size()==1){
             String name = list.get(0);
             System.out.println("name = " + name);
-            return  new AXResult(true,name).toJSONString();
+//            return  new AXResult(true,name).toJSONString();
+            return AXResult.succeeName(name);
 //            return  JSON.toJSONString( new AXResult(true,name));
         }else {
 
-            return  new AXResult(true,list).toJSONString();
+//            return  new AXResult(true,list).toJSONString();
+            return AXResult.succeeList(list);
         }
 
     }

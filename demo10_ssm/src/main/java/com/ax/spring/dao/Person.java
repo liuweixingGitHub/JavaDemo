@@ -1,4 +1,6 @@
-package com.ax.spring.domain;
+package com.ax.spring.dao;
+
+import com.ax.spring.domain.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +12,7 @@ public class Person {
     private  String name;
     private  Integer age;
 
-    private  User user2;
+    private User user2;
 
 
     private List list1 = new ArrayList();

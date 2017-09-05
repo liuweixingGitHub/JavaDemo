@@ -1,8 +1,10 @@
 package com.ax;
 
 import com.alibaba.fastjson.JSON;
-import com.ax.spring.domain.Person;
-import com.ax.spring.domain.AXResult;
+import com.ax.spring.dao.Logininfo;
+import com.ax.spring.dao.Person;
+import com.ax.spring.mapper.LogininfoMapper;
+import com.ax.spring.util.AXResult;
 import com.ax.spring.domain.User;
 import com.ax.spring.service.IUserService;
 import org.junit.Test;
@@ -20,21 +22,47 @@ import java.util.List;
 public class test1 {
 
     @Autowired
+    private LogininfoMapper logininfoMapper;
+
+    @Test
+   public void testinfo(){
+
+       Logininfo logininfo  = new Logininfo();
+       logininfo.setUsername("jim");
+       logininfo.setPassword("123");
+
+       int insert = this.logininfoMapper.insert(logininfo);
+        System.out.println("insert = " + insert);
+   }
+
+
+
+
+    @Autowired
     private IUserService userService;
 
     @Test
     public void testU(){
-        User user = new User();
-        user.setAge(18);
-        user.setName("jim2");
-        userService.add(user);
+//        User user = new User();
+//        user.setAge(18);
+//        user.setName("中文jim2");
+//        userService.add(user);
+
+        User user = userService.get(1L);
+
+        List list = new ArrayList();
+        list.add(user);
+
+//        return  new AXResult(true,list).toJSONString();
+        System.out.println( AXResult.errorMsg("代码"));
+        System.out.println( AXResult.errorMsg(null));
+
+        System.out.println( ">>"+AXResult.succeeList(null));
+        System.out.println( ">>"+AXResult.succeeList(list));
+
+
 
     }
-
-
-
-
-
 
     public void test(){
 
@@ -79,7 +107,7 @@ public class test1 {
 //        map.put("lit",list);
 
 
-        AXResult result = new AXResult(true,list);
+        AXResult result = new AXResult();
 
         result.setResult(true);
         result.setList(list);
@@ -97,8 +125,8 @@ public class test1 {
 
 
     public  void test2(){
-        String name = "JOM";
-        System.out.println(new AXResult(true,name).toJSONString());;
+//        String name = "JOM";
+//        System.out.println(new AXResult(true,name).toJSONString());;
 
     }
 }

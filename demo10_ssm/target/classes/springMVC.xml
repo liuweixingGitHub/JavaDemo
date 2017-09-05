@@ -11,36 +11,53 @@
 	<!--引入spring配置-->
 	<import resource="classpath:application.xml" />
 	
-	<!-- 支持注解驱动 对springmvc支持 -->
-	<mvc:annotation-driven />
+
+	<!--<mvc:annotation-driven />-->
 
 	<!-- 开启注解扫描 -->
 	<context:component-scan base-package="com.ax.spring.controller" />
 
-
+	<!-- 支持注解驱动 对springmvc支持 -->
 	<mvc:annotation-driven>
 
-		<!--配置 返回string 时中文及类型-->
-		<mvc:message-converters>
-			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
-				<!--解决中文问题-->
-				<constructor-arg value="UTF-8" index="0">
-				</constructor-arg>
+		<mvc:message-converters register-defaults="true">
+
+			<!--使用阿里巴巴json解析springMVC返回值-->
+			<bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
 				<property name="supportedMediaTypes">
 					<list>
 						<value>application/json;charset=UTF-8</value>
 						<!--解决中文问题-->
 						<value>*/*;charset=UTF-8</value>
-
-
-
 					</list>
 				</property>
 			</bean>
-
 		</mvc:message-converters>
-
 	</mvc:annotation-driven>
+
+
+	<!--<mvc:annotation-driven>-->
+
+		<!--&lt;!&ndash;配置 返回string 时中文及类型&ndash;&gt;-->
+		<!--<mvc:message-converters>-->
+
+			<!--<bean class="org.springframework.http.converter.StringHttpMessageConverter">-->
+				<!--&lt;!&ndash;解决中文问题&ndash;&gt;-->
+				<!--<constructor-arg value="UTF-8" index="0">-->
+				<!--</constructor-arg>-->
+				<!--<property name="supportedMediaTypes">-->
+					<!--<list>-->
+						<!--<value>application/json;charset=UTF-8</value>-->
+						<!--&lt;!&ndash;解决中文问题&ndash;&gt;-->
+						<!--<value>*/*;charset=UTF-8</value>-->
+					<!--</list>-->
+				<!--</property>-->
+			<!--</bean>-->
+			<!---->
+		<!--</mvc:message-converters>-->
+
+	<!--</mvc:annotation-driven>-->
+
 
 
 	<!-- 支持对静态资源的处理 -->
@@ -50,8 +67,15 @@
 	<!-- 配置视图解析器 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/"/>
-		<property name="suffix" value=".jsp"/>
-		<property name="contentType" value="text/json"/>
+
+		<!---->
+		<!--<property name="suffix" value=".jsp"/>-->
+
+
+		<!--网页返回json格式-->
+		<property name="contentType" value="application/json"/>
+		<!--<property name="contentType" value="text/json"/>-->
+
 	</bean>
 
 

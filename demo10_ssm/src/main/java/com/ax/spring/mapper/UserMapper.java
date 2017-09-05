@@ -1,7 +1,6 @@
 package com.ax.spring.mapper;
 
 import com.ax.spring.domain.User;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
