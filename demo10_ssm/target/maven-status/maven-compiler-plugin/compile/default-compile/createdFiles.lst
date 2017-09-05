@@ -9,4 +9,5 @@ com/ax/spring/service/IUserService.class
 com/ax/spring/mapper/LogininfoMapper.class
 com/ax/spring/controller/TestConteoller.class
 com/ax/spring/dao/Person.class
+com/ax/spring/controller/LogininfoParameter.class
 com/ax/spring/dao/Logininfo.class

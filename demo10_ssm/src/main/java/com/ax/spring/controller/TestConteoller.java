@@ -2,12 +2,14 @@ package com.ax.spring.controller;
 
 
 import com.ax.spring.dao.Person;
+import com.ax.spring.service.ILogininfoService;
 import com.ax.spring.util.AXResult;
 import com.ax.spring.domain.User;
 import com.ax.spring.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
@@ -27,6 +29,31 @@ public class TestConteoller {
 
     @Autowired
     private IUserService userService;
+
+    @Autowired
+    private ILogininfoService logininfoService;
+
+    @RequestMapping(value="/regp")
+    @ResponseBody
+    public AXResult regP(LogininfoParameter logininfoParameter,@RequestParam(required=true)String id){
+
+        AXResult result = new  AXResult();
+        try {
+
+            this.logininfoService.register(logininfoParameter.getUsername(),logininfoParameter.getPassword());
+
+            result.setResult(true);
+            result.setMsg("注册成功");
+
+        }catch (RuntimeException e){
+
+            result.setResult(false);
+            result.setMsg(e.getMessage());
+        }
+        return result;
+    }
+
+
 
     @RequestMapping(value="/reg2")
     @ResponseBody

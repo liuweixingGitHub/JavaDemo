@@ -5,6 +5,7 @@ import com.ax.spring.util.AXResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
@@ -16,7 +17,7 @@ public class LogininfoController {
 
     @RequestMapping(value="/reg")
     @ResponseBody
-    public AXResult reg(String username, String password){
+    public AXResult reg(@RequestParam(required=true)String username, @RequestParam(required=true)String password){
 
         AXResult result = new  AXResult();
         try {
@@ -33,6 +34,7 @@ public class LogininfoController {
         }
         return result;
     }
+
 
 
 
