@@ -97,4 +97,12 @@
 
     SELECT COUNT(id) FROM t_logininfo WHERE username=#{username}
   </select>
+
+  <select id="getModelByUsername" resultMap="BaseResultMap">
+
+    SELECT
+      <include refid="Base_Column_List" />
+    FROM t_logininfo WHERE username=#{username}
+
+  </select>
 </mapper>

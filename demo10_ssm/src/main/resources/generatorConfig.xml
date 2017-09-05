@@ -53,7 +53,7 @@
 
 
         <!-- 配置表信息 -->
-        <table  tableName="t_logininfo" domainObjectName="Logininfo"  enableCountByExample="false"
+        <table  tableName="t_userinfo" domainObjectName="Userinfo"  enableCountByExample="false"
                 enableUpdateByExample="false" enableDeleteByExample="false"
                 enableSelectByExample="false" selectByExampleQueryId="false">
             <!-- schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample

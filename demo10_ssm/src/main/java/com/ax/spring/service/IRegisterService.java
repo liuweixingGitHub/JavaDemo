@@ -1,7 +1,11 @@
 package com.ax.spring.service;
 
-public interface ILogininfoService {
+import com.ax.spring.util.AXResult;
+
+public interface IRegisterService {
 
 
     void register(String username, String password);
+
+
 }

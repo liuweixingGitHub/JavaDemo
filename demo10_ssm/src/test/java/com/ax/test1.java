@@ -1,9 +1,7 @@
 package com.ax;
 
 import com.alibaba.fastjson.JSON;
-import com.ax.spring.dao.Logininfo;
 import com.ax.spring.dao.Person;
-import com.ax.spring.mapper.LogininfoMapper;
 import com.ax.spring.util.AXResult;
 import com.ax.spring.domain.User;
 import com.ax.spring.service.IUserService;
