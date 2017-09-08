@@ -3,7 +3,9 @@ package com.ax.spring.util;
 import com.alibaba.fastjson.JSON;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class AXResult {
 
@@ -82,6 +84,8 @@ public class AXResult {
     返回错误
      */
     public  static String errorMsg(String msg) {
+
+
 
         if (msg==null){
             msg = "";

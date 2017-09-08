@@ -1,4 +1,4 @@
-package com.ax.spring.dao;
+package com.ax.spring.domain;
 
 import com.ax.spring.domain.User;
 
@@ -12,10 +12,17 @@ public class Person {
     private  String name;
     private  Integer age;
 
-    private User user2;
+
+
+
+       private User user2;
 
 
     private List list1 = new ArrayList();
+
+
+
+
 
     public List getList1() {
         return list1;

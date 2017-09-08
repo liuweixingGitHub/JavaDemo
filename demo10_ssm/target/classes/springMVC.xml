@@ -12,28 +12,63 @@
 	<import resource="classpath:application.xml" />
 	
 
-	<!--<mvc:annotation-driven />-->
 
-	<!-- 开启注解扫描 -->
+
+	<!-- SpringMVC 开启注解扫描 -->
 	<context:component-scan base-package="com.ax.spring.controller" />
 
-	<!-- 支持注解驱动 对springmvc支持 -->
+	<!-- SpringMVC 支持注解驱动-->
 	<mvc:annotation-driven>
 
 		<mvc:message-converters register-defaults="true">
 
 			<!--使用阿里巴巴json解析springMVC返回值-->
-			<bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+			<bean id="fastJsonHttpMessageConverter" class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
 				<property name="supportedMediaTypes">
 					<list>
+						<!-- 这里顺序不能反，一定先写text/html,不然ie下出现下载提示 -->
+						<value>text/html; charset=UTF-8</value>
 						<value>application/json;charset=UTF-8</value>
 						<!--解决中文问题-->
 						<value>*/*;charset=UTF-8</value>
 					</list>
 				</property>
 			</bean>
+
+
+			<!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />-->
+
+
+			<!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
+				<!--<property name="messageConverters">-->
+					<!--<list>-->
+						<!--<bean class="org.springframework.http.converter.StringHttpMessageConverter">-->
+							<!--<property name="supportedMediaTypes">-->
+								<!--<list>-->
+									<!--<value>text/html; charset=UTF-8</value>-->
+									<!--<value>application/json;charset=UTF-8</value>-->
+								<!--</list>-->
+							<!--</property>-->
+						<!--</bean>-->
+
+						<!--<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+							<!--<property name="supportedMediaTypes">-->
+								<!--<list>-->
+									<!--<value>text/html; charset=UTF-8</value>-->
+									<!--<value>application/json;charset=UTF-8</value>-->
+								<!--</list>-->
+							<!--</property>-->
+						<!--</bean>-->
+					<!--</list>-->
+				<!--</property>-->
+			<!--</bean>-->
+
+
 		</mvc:message-converters>
 	</mvc:annotation-driven>
+
+
+
 
 
 	<!--<mvc:annotation-driven>-->
@@ -60,26 +95,55 @@
 
 
 
-	<!-- 支持对静态资源的处理 -->
+
+
+
+	<!-- SpringMVC 支持对静态资源的处理 -->
 	<mvc:default-servlet-handler/>
 
 
-	<!-- 配置视图解析器 -->
+	<!--freemarker配置本身 -->
+	<bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+
+		<!--模板编码-->
+		<property name="defaultEncoding" value="UTF-8"/>
+		<!--模板加载路径-->
+		<!--<property name="templateLoaderPath" value="/WEB-INF/views/"/>-->
+		<!--一些基本输出设置-->
+		<property name="freemarkerSettings" >
+			<value>
+				number_format = 0.##
+				datetime_format = yyyy-MM-dd HH:mm:ss
+			</value>
+
+		</property>
+	</bean>
+
+
+	<!--freemarkerss视图解析器FreeMarkerViewResolver-->
+
+	<bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<!--把session中的属性直接添加到上下文中,可以在页面中 直接使用session值-->
+		<property name="exposeSessionAttributes" value="true"/>
+		<property name="exposeSpringMacroHelpers" value="true"/>
+		<property name="suffix" value=".ftl"/>
+		<property name="contentType" value="application/json;charset=UTF-8" />
+
+	</bean>
+
+	<!-- SpringMVC 配置视图解析器 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/"/>
 
 		<!---->
 		<!--<property name="suffix" value=".jsp"/>-->
-
-
 		<!--网页返回json格式-->
-		<property name="contentType" value="application/json"/>
+		<property name="contentType" value="application/json;charset=UTF-8"/>
 		<!--<property name="contentType" value="text/json"/>-->
-
 	</bean>
 
 
-	<!-- 上传解析器 -->
+	<!-- SpringMVC 上传解析器 -->
 	<bean id="multipartResolver"
 		  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<!-- 设置上传文件的最大尺寸为1MB -->
@@ -87,6 +151,7 @@
 			<value>1024000000</value>
 		</property>
 	</bean>
+
 
 
 

@@ -1,6 +1,6 @@
 package com.ax.spring.mapper;
 
-import com.ax.spring.dao.Userinfo;
+import com.ax.spring.domain.Userinfo;
 import org.apache.ibatis.annotations.Param;
 
 public interface UserinfoMapper {
@@ -62,4 +62,9 @@ public interface UserinfoMapper {
     按照名username查找
      */
     Userinfo getModelByUsername(@Param("username") String username);
+
+    /*
+   按照名username和passwor查找
+    */
+    Userinfo getModelByUsernameAndPassword(@Param("username") String username,@Param("password") String password);
 }

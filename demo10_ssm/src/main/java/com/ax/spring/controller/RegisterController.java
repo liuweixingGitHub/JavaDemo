@@ -19,6 +19,8 @@ public class RegisterController {
     @ResponseBody
     public AXResult register(@RequestParam(required=true)String username, @RequestParam(required=true)String password){
 
+
+
         AXResult result = new  AXResult();
         try {
 

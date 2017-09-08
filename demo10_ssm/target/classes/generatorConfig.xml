@@ -29,8 +29,8 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
 
-        <!-- 生成实体类地址 -->
-        <javaModelGenerator targetPackage="com.ax.spring.dao" targetProject="src/main/java" >
+        <!-- 生成实体类地址 domain -->
+        <javaModelGenerator targetPackage="com.ax.spring.domain" targetProject="src/main/java" >
             <!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] -->
             <property name="enableSubPackages" value="false"/>
             <!-- 是否针对string类型的字段在set的时候进行trim调用 -->

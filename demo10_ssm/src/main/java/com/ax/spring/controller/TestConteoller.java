@@ -1,7 +1,10 @@
 package com.ax.spring.controller;
 
 
-import com.ax.spring.dao.Person;
+import com.alibaba.fastjson.JSONObject;
+import com.ax.spring.domain.Person;
+import com.ax.spring.domain.Userinfo;
+import com.ax.spring.service.ILoginService;
 import com.ax.spring.service.IRegisterService;
 import com.ax.spring.util.AXResult;
 import com.ax.spring.domain.User;
@@ -31,6 +34,37 @@ public class TestConteoller {
 
     @Autowired
     private IRegisterService logininfoService;
+
+    @Autowired
+    private ILoginService loginService;
+
+    @RequestMapping(value="/400")
+    @ResponseBody
+    public ModelAndView error(String username, String password){
+
+        JSONObject jsonObject = new JSONObject();
+        try {
+
+            Userinfo logininfo = this.loginService.login(username,password);
+
+            System.out.println("logininfo = " + logininfo);
+
+            jsonObject.put("result",true);
+            jsonObject.put("userinfo",logininfo);
+
+        }catch (RuntimeException e){
+            jsonObject.put("result",true);
+            jsonObject.put("mes",e.getMessage());
+        }
+
+        ModelAndView mView = new ModelAndView("400.jsp");
+
+        mView.addObject("key",jsonObject);
+
+        return mView;
+
+
+    }
 
 //    @RequestMapping(value="/regp")
 //    @ResponseBody

@@ -4,12 +4,15 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Insert title here</title>
+    <title>首页</title>
 </head>
 <body>
-安安定定多多多多<br>
+首页<br>
 
-${key}
+${key}<br>
+${key.result}<br>
+${key.userinfo.username}<br>
+
 
 </body>
 </html>

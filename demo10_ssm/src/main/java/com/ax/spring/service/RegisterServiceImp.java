@@ -1,6 +1,6 @@
 package com.ax.spring.service;
 
-import com.ax.spring.dao.Userinfo;
+import com.ax.spring.domain.Userinfo;
 import com.ax.spring.mapper.UserinfoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +21,7 @@ public class RegisterServiceImp implements IRegisterService {
             userinfo.setUsername(username);
             userinfo.setPassword(password);
 
-           int insert = this.userinfoMapper.insert(userinfo);
+            int insert = this.userinfoMapper.insert(userinfo);
 
         }else {
             System.out.println("用户已经存在");

@@ -1,7 +1,9 @@
 package com.ax;
 
 import com.alibaba.fastjson.JSON;
-import com.ax.spring.dao.Person;
+import com.ax.spring.domain.Person;
+import com.ax.spring.domain.Userinfo;
+import com.ax.spring.mapper.UserinfoMapper;
 import com.ax.spring.util.AXResult;
 import com.ax.spring.domain.User;
 import com.ax.spring.service.IUserService;
@@ -20,21 +22,7 @@ import java.util.List;
 public class test1 {
 
     @Autowired
-    private LogininfoMapper logininfoMapper;
-
-    @Test
-   public void testinfo(){
-
-       Logininfo logininfo  = new Logininfo();
-       logininfo.setUsername("jim");
-       logininfo.setPassword("123");
-
-       int insert = this.logininfoMapper.insert(logininfo);
-        System.out.println("insert = " + insert);
-   }
-
-
-
+    private UserinfoMapper logininfoMapper;
 
     @Autowired
     private IUserService userService;
