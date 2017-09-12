@@ -3,10 +3,7 @@ package com.ax;
 import com.ax.spring.domain.Userinfo;
 import com.ax.spring.mapper.UserinfoMapper;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 //
 //@RunWith(SpringJUnit4ClassRunner.class)

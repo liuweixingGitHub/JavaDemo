@@ -15,7 +15,7 @@
 
 
 	<!-- SpringMVC 开启注解扫描 -->
-	<context:component-scan base-package="com.ax.spring.controller" />
+	<context:component-scan base-package="com.ax.spring.controller;com.ax.spring.listener" />
 
 	<!-- SpringMVC 支持注解驱动-->
 	<mvc:annotation-driven>
@@ -151,6 +151,28 @@
 			<value>1024000000</value>
 		</property>
 	</bean>
+
+
+   <!--配置拦截器-->
+	<mvc:interceptors>
+
+		<mvc:interceptor>
+			<mvc:mapping path="/login*" />
+			<bean class="com.ax.spring.inteceptor.LoginInteceptor"></bean>
+		</mvc:interceptor>
+
+		<mvc:interceptor>
+			<mvc:mapping path="/register*"/>
+			<bean class="com.ax.spring.inteceptor.RegisterInteceptor"></bean>
+		</mvc:interceptor>
+
+		<mvc:interceptor>
+			<mvc:mapping path="/*" />
+			<bean class="com.ax.spring.inteceptor.BaseInteceptor"></bean>
+		</mvc:interceptor>
+
+	</mvc:interceptors>
+
 
 
 

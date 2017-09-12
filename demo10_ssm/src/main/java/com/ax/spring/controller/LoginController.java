@@ -5,21 +5,13 @@ import com.ax.spring.domain.Userinfo;
 import com.ax.spring.service.ILoginService;
 import com.ax.spring.util.JsonView;
 import com.ax.spring.util.UserinfoContext;
-import jdk.nashorn.internal.ir.RuntimeNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.support.RequestContext;
-import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
-import sun.misc.Request;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 

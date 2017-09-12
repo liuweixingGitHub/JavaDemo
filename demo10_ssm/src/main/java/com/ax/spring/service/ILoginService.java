@@ -5,4 +5,9 @@ import com.ax.spring.domain.Userinfo;
 public interface ILoginService {
 
     Userinfo login(String username, String password);
+
+
+    boolean hasAdmin();
+
+    void createAdmin();
 }

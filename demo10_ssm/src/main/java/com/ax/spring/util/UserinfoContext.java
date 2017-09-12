@@ -3,9 +3,7 @@ package com.ax.spring.util;
 import com.ax.spring.domain.Userinfo;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.springframework.web.servlet.support.RequestContext;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 
 public class UserinfoContext {
