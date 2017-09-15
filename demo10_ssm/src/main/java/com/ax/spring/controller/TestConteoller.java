@@ -2,15 +2,18 @@ package com.ax.spring.controller;
 
 
 import com.alibaba.fastjson.JSONObject;
+import com.ax.spring.context.UserinfoContext;
 import com.ax.spring.domain.Person;
 import com.ax.spring.domain.Userinfo;
+import com.ax.spring.interceptor.RequiredLogin;
 import com.ax.spring.service.ILoginService;
 import com.ax.spring.service.IRegisterService;
-import com.ax.spring.util.AXResult;
+import com.ax.spring.util.AXTools.AXResult;
 import com.ax.spring.domain.User;
 import com.ax.spring.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -32,20 +35,24 @@ public class TestConteoller {
     @Autowired
     private IUserService userService;
 
+
     @Autowired
     private IRegisterService logininfoService;
 
     @Autowired
     private ILoginService loginService;
 
-    @RequestMapping(value="/400")
+    @Autowired
+    protected HttpServletRequest request;
+
+    @RequestMapping(value="/400.do")
     @ResponseBody
     public ModelAndView error(String username, String password){
 
         JSONObject jsonObject = new JSONObject();
         try {
 
-            Userinfo logininfo = this.loginService.login(username,password);
+            Userinfo logininfo = this.loginService.login(username,password,request);
 
             System.out.println("logininfo = " + logininfo);
 
@@ -63,8 +70,15 @@ public class TestConteoller {
 
         return mView;
 
-
     }
+
+
+
+
+
+
+
+
 
 //    @RequestMapping(value="/regp")
 //    @ResponseBody
@@ -99,7 +113,7 @@ public class TestConteoller {
     }
 
 
-    @RequestMapping(value="/home")
+    @RequestMapping(value="/reg3")
     public ModelAndView reg3(String username, String password){
 
         ModelAndView mView = new ModelAndView();

@@ -2,12 +2,14 @@ package com.ax.spring.service;
 
 import com.ax.spring.domain.Userinfo;
 
+import javax.servlet.http.HttpServletRequest;
+
 public interface ILoginService {
 
-    Userinfo login(String username, String password);
-
+    Userinfo login(String username, String password, HttpServletRequest request);
 
     boolean hasAdmin();
 
     void createAdmin();
+
 }

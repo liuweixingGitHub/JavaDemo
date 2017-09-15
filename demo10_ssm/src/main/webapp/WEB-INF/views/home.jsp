@@ -7,12 +7,14 @@
     <title>首页</title>
 </head>
 <body>
-首页<br>
+首页2<br>
 
-${key}<br>
-${key.result}<br>
-${key.userinfo.username}<br>
+<%--${requestScope}<br>--%>
 
+${result}<br>
+${requestScope.result}<br>
+${requestScope.userinfo.username}<br>
+${userinfo.username}<br>
 
 </body>
 </html>

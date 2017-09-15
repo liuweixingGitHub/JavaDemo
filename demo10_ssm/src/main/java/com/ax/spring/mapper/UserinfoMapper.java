@@ -53,7 +53,7 @@ public interface UserinfoMapper {
     int updateByPrimaryKey(Userinfo record);
 
     /*
-  注册获得是否已经有了
+    注册获得是否已经有了
    */
     int getCountByUsername(@Param("username") String username);
 

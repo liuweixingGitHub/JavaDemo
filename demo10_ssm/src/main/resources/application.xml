@@ -20,6 +20,12 @@
 	<!--扫描spring打标签的包-->
 	<context:component-scan base-package="com.ax.spring.service" />
 
+	<!--自动扫描mapper-->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" >
+		<property name="basePackage" value="com.ax.spring.mapper" />
+		<!--<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />-->
+	</bean>
+
 	<!-- 引入db配置文件 -->
 	<context:property-placeholder location="classpath:db.properties"/>
 	<!-- 配置 db 连接池 -->
@@ -47,11 +53,7 @@
 	</bean>
 
 
-	<!--自动扫描mapper-->
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" >
-		<property name="basePackage" value="com.ax.spring.mapper" />
-		<!--<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />-->
-	</bean>
+
 
 
 	<!--配置Mapper-->
@@ -65,7 +67,7 @@
 
 
 
-	<!--<bean id="userService" class="com.ax.spring.service.UserServiceImp">-->
+	<!--<bean id="userService" class="com.ax.spring.service.impl.UserServiceImp">-->
 		<!--<property name="userMapper" ref="userMapper" />-->
 
 	<!--</bean>-->

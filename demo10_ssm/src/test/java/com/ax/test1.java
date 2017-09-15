@@ -3,7 +3,7 @@ package com.ax;
 import com.alibaba.fastjson.JSON;
 import com.ax.spring.domain.Person;
 import com.ax.spring.mapper.UserinfoMapper;
-import com.ax.spring.util.AXResult;
+import com.ax.spring.util.AXTools.AXResult;
 import com.ax.spring.domain.User;
 import com.ax.spring.service.IUserService;
 import org.junit.Test;

@@ -2,9 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>123</title>
+    <title>首页1234</title>
+
+    <script type="text/javascript" src="js/jquery/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.form.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+
+
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            $('#loginForm').validate({
+
+                rules:{
+                    "username":{
+                        required:true,
+                        rangelength:[2,16]
+                    },
+                    "password":{
+                        required:true,
+                        rangelength:[2,16]
+                    },
+                },
+                messages:{
+                    "username":{
+                        required:"填写用户名",
+                        rangelength:"用户名的长度在{0}到{1}之间"
+                    },
+                    "password":{
+                        required:"填写密码",
+                        rangelength:"密码的长度在{0}到{1}之间"
+                    },
+                },
+
+
+                /*
+                使用bootstrap的 提交表单
+                 */
+                submitHandler:function(form) {
+                    $(form).ajaxForm(function() {
+                        alert("Thank you for your comment!");
+                    });
+                },
+
+//                errorClass:"text-danger",
+                errorClass:"text-warning",
+
+
+
+            });
+        });
+
+    </script>
+
+
 </head>
 <body>
-	首页~~
+
+
+index
+
+<form id="loginForm" action="/login.do" method="post">
+    账号: <input type="text" name="username" /><br>
+    密码:  <input type="text" name="password" /><br>
+    <input type="submit" value="登陆" />
+</form>
+
+
 </body>
 </html>
