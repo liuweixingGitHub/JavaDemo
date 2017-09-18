@@ -103,11 +103,27 @@ $(function () {
             // });
 
             //不刷新页面,值提交form
-            $(form).ajaxSubmit(function (data){
+            //不刷新页面,值提交form
+            $(form).ajaxSubmit({
 
-                alert(data);
-                alert(data.mes);
+                dataType:"json",
+
+                success:function (data){
+
+                    if (data.success){
+
+                        $.messager.confirm("提示","注册成功",function() {
+
+                        });
+
+                    }else {
+                        $.messager.alert("提示",data.mes);
+                    }
+
+
+                }
             });
+
 
         },
 
