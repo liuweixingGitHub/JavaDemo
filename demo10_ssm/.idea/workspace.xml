@@ -4,6 +4,7 @@
     <list default="true" id="b00348a9-6563-4602-8b93-bf44c8301ca1" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/dao/Userinfo.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/dao/Person.class" afterPath="" />
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/dao/Person.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/dao/Userinfo.class" afterPath="" />
@@ -38,6 +39,42 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/util/AXResult.class" afterPath="$PROJECT_DIR$/target/classes/com/ax/spring/util/AXResult.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/service/LoginServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/ax/spring/service/LoginServiceImp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/controller/TestConteoller.class" afterPath="$PROJECT_DIR$/target/classes/com/ax/spring/controller/TestConteoller.class" />
+=======
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/dao/Userinfo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/dao/Person.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/util/AXResult.java" afterPath="$PROJECT_DIR$/src/main/java/com/ax/spring/util/AXResult.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo10_ssm.iml" afterPath="$PROJECT_DIR$/demo10_ssm.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/ax/spring/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/UserinfoMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/UserinfoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/service/ILoginService.class" afterPath="$PROJECT_DIR$/target/classes/com/ax/spring/service/ILoginService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/util/AXResult.class" afterPath="$PROJECT_DIR$/target/classes/com/ax/spring/util/AXResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/mapper/UserinfoMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/ax/spring/mapper/UserinfoMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/controller/TestConteoller.class" afterPath="$PROJECT_DIR$/target/classes/com/ax/spring/controller/TestConteoller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/UserinfoMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/UserinfoMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/400.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/400.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/ax/test1.java" afterPath="$PROJECT_DIR$/src/test/java/com/ax/test1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/service/LoginServiceImp.class" afterPath="$PROJECT_DIR$/target/classes/com/ax/spring/service/LoginServiceImp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/service/LoginServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/ax/spring/service/LoginServiceImp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/controller/RegisterController.class" afterPath="$PROJECT_DIR$/target/classes/com/ax/spring/controller/RegisterController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/springMVC.xml" afterPath="$PROJECT_DIR$/target/classes/springMVC.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/mapper/UserinfoMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/ax/spring/mapper/UserinfoMapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/service/RegisterServiceImp.java" afterPath="$PROJECT_DIR$/src/main/java/com/ax/spring/service/RegisterServiceImp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/springMVC.xml" afterPath="$PROJECT_DIR$/src/main/resources/springMVC.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/demo10_ssm_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/demo10_ssm_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/service/RegisterServiceImp.class" afterPath="$PROJECT_DIR$/target/classes/com/ax/spring/service/RegisterServiceImp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ax/spring/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/ax/spring/controller/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2017-09-06" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2017-09-06" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/controller/TestConteoller.java" afterPath="$PROJECT_DIR$/src/main/java/com/ax/spring/controller/TestConteoller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/service/ILoginService.java" afterPath="$PROJECT_DIR$/src/main/java/com/ax/spring/service/ILoginService.java" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,6 +97,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -75,11 +113,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
               <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+=======
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/service/login.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="jquery.bootstrap.min.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/plugins/jquery.bootstrap.min.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -148,6 +194,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="615">
               <caret line="41" column="36" lean-forward="false" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+=======
+      <file leaf-file-name="register.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/service/register.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
               <folding />
             </state>
           </provider>
@@ -164,6 +217,7 @@
         <option value="AnnotationType" />
         <option value="Class" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -196,6 +250,7 @@
       <find>ajaxForm</find>
       <find>getPreventDefault()</find>
       <find>getCountByUsername</find>
+      <find>bootstrap.min.js</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -215,11 +270,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/db.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/query/QueryObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/service/LoginServiceImp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/query/IpLogQueryObject.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/ax/IpTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/service/IpLogServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/IpLogMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/IpLogMapper.xml" />
@@ -256,16 +306,27 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/service/IRegisterService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/service/impl/RegisterServiceImp.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/ax/test1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/controller/MenuController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/service/register.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/util/AXTools/AXResult.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/controller/RegisterController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/springMVC-servlet.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/webapp/register.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/service/login.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
+=======
+        <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/plugins/jquery.bootstrap.min.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/plugins/jquery.bootstrap.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/service/jsHead.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/service/jsHeader.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/register.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/menu.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/service/login.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/service/register.js" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
       </list>
     </option>
   </component>
@@ -283,8 +344,13 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="289" />
     <option name="y" value="34" />
+=======
+    <option name="x" value="318" />
+    <option name="y" value="59" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
     <option name="width" value="1490" />
     <option name="height" value="940" />
   </component>
@@ -304,7 +370,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -336,25 +409,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
               <item name="spring" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -363,19 +417,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="context" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
               <item name="spring" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -384,124 +425,7 @@
               <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="inteceptor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="AXTools" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="freemarker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
@@ -515,6 +439,36 @@
               <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="jquery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -523,31 +477,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo10_ssm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ax" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="PackagesPane" />
+=======
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -561,6 +501,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="$PROJECT_DIR$/src/main/webapp/css/service" />
       <recent name="$PROJECT_DIR$/src/main/webapp/css/bootstrap" />
       <recent name="$PROJECT_DIR$/src/main/webapp/css" />
@@ -573,6 +514,19 @@
       <recent name="$PROJECT_DIR$/src/main/webapp/js/service" />
       <recent name="$PROJECT_DIR$/src/main/webapp/js/bootstrap" />
       <recent name="$PROJECT_DIR$/src/main/webapp/js" />
+=======
+      <recent name="$PROJECT_DIR$/src/main/webapp/js/plugins" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/js/jquery" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/ax/spring/util/AXTools" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/js/jquery" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/js/plugins" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/css" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/js/service" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/js/bootstrap" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
     </key>
   </component>
   <component name="RunDashboard">
@@ -909,8 +863,13 @@
       <workItem from="1505357620686" duration="8911000" />
       <workItem from="1505439315557" duration="1991000" />
       <workItem from="1505441804394" duration="16180000" />
+<<<<<<< HEAD
       <workItem from="1505537325003" duration="23553000" />
       <workItem from="1505728171757" duration="1218000" />
+=======
+      <workItem from="1505537325003" duration="23492000" />
+      <workItem from="1505734397358" duration="4172000" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
     </task>
     <servers />
   </component>
@@ -947,7 +906,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="127173000" />
+=======
+    <option name="totallyTimeSpent" value="130066000" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -959,7 +922,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="289" y="34" width="1490" height="940" extended-state="0" />
+=======
+    <frame x="318" y="59" width="1490" height="940" extended-state="0" />
+    <editor active="true" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -970,12 +938,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20609756" sideWeight="0.19889502" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32988507" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3187348" sideWeight="0.80110496" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31797236" sideWeight="0.80110496" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2838398" sideWeight="0.49448818" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27986577" sideWeight="0.49448818" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31918505" sideWeight="0.5055118" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24980299" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1070,6 +1042,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/404.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1106,13 +1079,12 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/inteceptor/UserInfoInteceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1155,7 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1171,7 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1179,6 +1149,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="14" lean-forward="false" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+<<<<<<< HEAD
           <folding />
         </state>
       </provider>
@@ -1188,10 +1159,13 @@
         <state relative-caret-position="320">
           <caret line="35" column="78" lean-forward="false" selection-start-line="35" selection-start-column="78" selection-end-line="35" selection-end-column="78" />
           <folding />
+=======
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery/jquery.js" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/plugins/jquery.form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1200,13 +1174,14 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap/bootstrap.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap/bootstrap.min.js" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/service/ILoginService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1214,7 +1189,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1222,10 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="e#883#884#0" expanded="false" />
-            <element signature="e#923#924#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1233,7 +1203,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1249,7 +1218,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-169">
           <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1257,7 +1225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="57" column="20" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1265,16 +1232,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
           <caret line="116" column="22" lean-forward="true" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="22" />
-          <folding>
-            <marker date="1505196499000" expanded="true" signature="1128:1233" ph="select from t_userinfo" />
-            <marker date="1505196499000" expanded="true" signature="1447:1506" ph="delete from " />
-            <marker date="1505196499000" expanded="true" signature="1764:1933" ph="insert into t_userinfo... " />
-            <marker date="1505196499000" expanded="true" signature="3055:3422" ph="update t_use... " />
-            <marker date="1505196499000" expanded="true" signature="3651:3847" ph="update t_use... " />
-            <marker date="1505196499000" expanded="true" signature="3939:3998" ph="SELECT COUNT... t_userinfo" />
-            <marker date="1505196499000" expanded="true" signature="4102:4196" ph="SELECT FROM t_userinfo" />
-            <marker date="1505196499000" expanded="true" signature="4318:4437" ph="SELECT FROM t_userinfo" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1305,7 +1263,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1196">
           <caret line="96" column="25" lean-forward="false" selection-start-line="96" selection-start-column="25" selection-end-line="96" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1313,25 +1270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="139" column="36" lean-forward="false" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/controller/MenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/service/register.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,15 +1277,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/controller/RegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1361,77 +1290,630 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/springMVC-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        <state relative-caret-position="253">
+          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/plugins/jquery.form.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+<<<<<<< HEAD
+        <state relative-caret-position="540">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+=======
+        <state relative-caret-position="351">
           <caret line="21" column="11155" lean-forward="false" selection-start-line="21" selection-start-column="11147" selection-end-line="21" selection-end-column="11155" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery/jquery-3.2.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="615">
+          <caret line="41" column="36" lean-forward="false" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="36" />
+=======
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery/jquery-3.2.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="465">
-          <caret line="49" column="36" lean-forward="false" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+          <caret line="31" column="27" lean-forward="false" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+=======
+        <state relative-caret-position="68">
+          <caret line="92" column="36" lean-forward="false" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/controller/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="15">
+          <caret line="21" column="11155" lean-forward="false" selection-start-line="21" selection-start-column="11147" selection-end-line="21" selection-end-column="11155" />
+=======
+        <state relative-caret-position="255">
+          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/plugins/jquery.form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="46" column="24" lean-forward="false" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+          <folding>
+            <marker date="1505650076000" expanded="false" signature="0:816" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="817:843" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="845:865" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="886:1673" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="937:1025" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="1081:1620" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="1146:1616" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="1186:1574" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="1192:1413" ph="//..." />
+            <marker date="1505650076000" expanded="true" signature="1453:1503" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="1513:1569" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="1626:1670" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="1687:41569" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="1689:1708" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="1726:2636" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="2663:2693" ph="/** Feature detection ...*/" />
+            <marker date="1505650076000" expanded="true" signature="2879:3108" ph="//..." />
+            <marker date="1505650076000" expanded="true" signature="3134:3371" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="3152:3201" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="3304:3324" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="3375:3717" ph="/** ajaxSubmit() provides a mechanism for immediately submitting ...*/" />
+            <marker date="1505650076000" expanded="true" signature="3782:25987" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="3875:3966" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="3970:4018" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="4098:4137" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="4223:4406" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="4238:4319" ph="{&quot;url&quot;: options...}" />
+            <marker date="1505650076000" expanded="true" signature="4362:4401" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="4448:4470" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="4702:4792" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="4821:5064" ph="{&quot;url&quot;: url...}" />
+            <marker date="1505650076000" expanded="true" signature="5079:5209" ph="//..." />
+            <marker date="1505650076000" expanded="true" signature="5307:5397" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="5550:5639" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="5725:5775" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="5898:6065" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="6212:6298" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="6419:6511" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="6559:6598" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="6644:6766" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="6772:6838" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="6888:6954" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="6919:6948" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="6981:7068" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="7012:7062" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="7180:7502" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="7288:7495" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="7434:7488" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="7529:7666" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="7566:7613" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="7619:7662" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="7716:7974" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="7894:7970" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="7998:8195" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="8082:8190" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="8221:8416" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="8307:8411" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="8453:8601" ph="//..." />
+            <marker date="1505650076000" expanded="true" signature="8675:8712" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="9043:9165" ph="//..." />
+            <marker date="1505650076000" expanded="true" signature="9236:9571" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="9241:9393" ph="//..." />
+            <marker date="1505650076000" expanded="true" signature="9425:9521" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="9472:9513" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="9527:9566" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="9622:9657" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="9663:9696" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="9818:9846" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="10020:10512" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="10192:10489" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="10614:12139" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="10689:10739" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="10767:10993" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="10877:10988" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="10907:10982" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="11075:11191" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="11226:11807" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="11315:11801" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="11376:11777" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="11440:11761" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="11522:11556" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="11625:11688" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="11898:12112" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="11966:12005" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="12011:12042" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="12064:12107" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="12240:25984" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="12411:12440" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="12453:12702" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="12556:12697" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="12602:12644" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="12650:12691" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="12935:13087" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="13020:13055" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="13061:13081" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="13093:13255" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="13283:14235" ph="{&quot;statusText&quot;: 'n/a'...}" />
+            <marker date="1505650076000" expanded="true" signature="13639:14230" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="13773:13908" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="13838:13901" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="14025:14080" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="14094:14151" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="14174:14224" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="14369:14409" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="14420:14469" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="14542:14636" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="14562:14586" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="14658:14709" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="14793:15048" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="14841:15043" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="14945:15037" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="15135:16148" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="15141:15483" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="15548:15636" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="15580:15630" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="15649:15773" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="15788:15842" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="15852:16003" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="16016:16126" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="16362:16447" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="16560:19484" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="16886:16935" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="16957:17005" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="17129:17242" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="17147:17234" ph="{&quot;encoding&quot;: 'multipart/form-data'...}" />
+            <marker date="1505650076000" expanded="true" signature="17285:17406" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="17330:17387" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="17464:17908" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="17475:17662" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="17610:17654" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="17673:17902" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="17817:17862" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="18000:19188" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="18024:18691" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="18059:18684" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="18103:18676" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="18323:18504" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="18510:18667" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="18719:18801" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="18828:18872" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="18878:18932" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="18977:19007" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="19020:19181" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="19197:19479" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="19349:19395" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="19401:19443" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="19506:19528" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="19534:19602" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="19680:24653" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="19724:19744" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="19782:19857" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="19901:19988" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="20025:20130" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="20183:20267" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="20239:20261" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="20293:20335" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="20341:20396" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="20443:23111" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="20464:20495" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="20683:21175" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="20712:20974" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="20721:20863" ph="//..." />
+            <marker date="1505650076000" expanded="true" signature="20981:21168" ph="//..." />
+            <marker date="1505650076000" expanded="true" signature="21414:21448" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="21494:21597" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="21677:21835" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="21960:22738" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="22084:22334" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="22349:22730" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="22539:22627" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="22640:22722" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="22802:22905" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="22916:23009" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="23022:23104" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="23124:23230" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="23253:23308" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="23330:23462" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="23576:23796" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="23598:23661" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="23733:23789" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="23814:24099" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="23856:23895" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="23914:23974" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="24031:24093" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="24112:24167" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="24195:24236" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="24258:24311" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="24362:24403" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="24447:24641" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="24475:24503" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="24509:24606" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="24701:25065" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="24776:24881" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="24887:24955" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="25113:25226" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="25119:25141" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="25270:25958" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="25546:25610" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="25566:25604" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="25638:25683" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="25718:25935" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="25784:25822" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="25895:25929" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="25991:26680" ph="/** ajaxForm() provides a mechanism for fully automating form submission. ...*/" />
+            <marker date="1505650076000" expanded="true" signature="26743:28128" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="26827:27009" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="26842:26923" ph="{&quot;url&quot;: options...}" />
+            <marker date="1505650076000" expanded="true" signature="26966:27005" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="27216:27633" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="27293:27424" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="27356:27399" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="27661:27977" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="28184:28408" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="28188:28215" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="28272:28405" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="28448:29324" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="28452:28479" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="28574:28759" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="28719:28737" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="28841:29217" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="28884:28947" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="28992:29110" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="29116:29213" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="29263:29314" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="29435:29498" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="29502:30015" ph="/** formToArray() gathers form element data into an array of objects that can ...*/" />
+            <marker date="1505650076000" expanded="true" signature="30076:32499" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="30118:30136" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="30329:30390" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="30394:30559" ph="//..." />
+            <marker date="1505650076000" expanded="true" signature="30636:30773" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="30727:30769" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="30802:30820" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="30853:30890" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="30972:32112" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="31032:31052" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="31106:31365" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="31193:31346" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="31435:31585" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="31455:31486" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="31535:31579" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="31634:31931" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="31654:31685" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="31736:31849" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="31778:31843" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="31855:31925" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="31981:32108" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="32001:32032" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="32143:32483" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="32343:32479" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="32503:32647" ph="/** Serializes form data into a 'submittable' string. This method will return a string ...*/" />
+            <marker date="1505650076000" expanded="true" signature="32689:32789" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="32793:32959" ph="/** Serializes all field elements in the jQuery object into a query string. ...*/" />
+            <marker date="1505650076000" expanded="true" signature="33004:33461" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="33044:33384" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="33080:33098" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="33181:33283" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="33233:33277" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="33333:33380" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="33465:34892" ph="/** Returns the value(s) of the element in the matched set. For example, consider the following form: ...*/" />
+            <marker date="1505650076000" expanded="true" signature="34933:35282" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="34996:35264" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="35150:35170" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="35204:35231" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="35237:35260" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="35286:35338" ph="/** Returns the value of the field element. ...*/" />
+            <marker date="1505650076000" expanded="true" signature="35380:36519" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="35488:35515" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="35519:35558" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="35815:35877" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="35819:35857" ph="/*...*/" />
+            <marker date="1505650076000" expanded="true" signature="35903:36470" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="35957:35980" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="36145:36452" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="36206:36447" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="36245:36384" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="36400:36424" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="36523:36975" ph="/** Clears the form data. Takes the following actions on the form's input fields: ...*/" />
+            <marker date="1505650076000" expanded="true" signature="37018:37124" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="37050:37119" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="37128:37175" ph="/** Clears the selected form elements. ...*/" />
+            <marker date="1505650076000" expanded="true" signature="37239:38286" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="37409:38281" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="37509:37537" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="37582:37615" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="37643:37679" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="37703:37842" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="37747:37801" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="37807:37836" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="37867:38277" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="37873:38115" ph="//..." />
+            <marker date="1505650076000" expanded="true" signature="38243:38272" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="38291:38835" ph="/** Resets the form data or individual elements. Takes the following actions ...*/" />
+            <marker date="1505650076000" expanded="true" signature="38865:40323" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="38897:40318" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="38978:40314" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="38996:39036" ph="..." />
+            <marker date="1505650076000" expanded="true" signature="39078:39132" ph="..." />
+            <marker date="1505650076000" expanded="true" signature="39171:39451" ph="..." />
+            <marker date="1505650076000" expanded="true" signature="39257:39395" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="39286:39338" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="39344:39389" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="39401:39433" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="39470:39735" ph="..." />
+            <marker date="1505650076000" expanded="true" signature="39510:39715" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="39649:39709" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="39753:39934" ph="..." />
+            <marker date="1505650076000" expanded="true" signature="39857:39893" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="39951:40217" ph="..." />
+            <marker date="1505650076000" expanded="true" signature="39957:40070" ph="//..." />
+            <marker date="1505650076000" expanded="true" signature="40173:40199" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="40230:40309" ph="..." />
+            <marker date="1505650076000" expanded="true" signature="40327:40382" ph="/** Enables or disables any matching elements. ...*/" />
+            <marker date="1505650076000" expanded="true" signature="40410:40527" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="40444:40462" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="40494:40522" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="40531:40656" ph="/** Checks/unchecks any matching checkboxes or radio buttons and ...*/" />
+            <marker date="1505650076000" expanded="true" signature="40691:41168" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="40730:40753" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="40785:41163" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="40852:40886" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="40937:41159" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="41041:41125" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="41275:41567" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="41307:41323" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="41443:41477" ph="{...}" />
+            <marker date="1505650076000" expanded="true" signature="41527:41564" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/plugins/jquery.bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+          <folding>
+            <marker date="1481600290000" expanded="false" signature="0:166" ph="/** jquery.bootstrap.js ...*/" />
+            <marker date="1481600290000" expanded="true" signature="167:193" ph="/*...*/" />
+            <marker date="1481600290000" expanded="true" signature="195:324" ph="/*...*/" />
+            <marker date="1481600290000" expanded="true" signature="355:596" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="396:593" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="484:587" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="596:645" ph="/*...*/" />
+            <marker date="1481600290000" expanded="true" signature="660:4848" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="697:4844" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="967:1604" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="1224:1231" ph="×" />
+            <marker date="1481600290000" expanded="true" signature="1649:3002" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="1904:2955" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="2099:2274" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="2411:2474" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="2489:2520" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="2765:2913" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="2794:2894" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="2833:2880" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="3031:3171" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="3208:3518" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="3376:3510" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="3401:3502" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="3560:4413" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="3674:3701" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="3933:4028" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="4139:4201" ph="/*...*/" />
+            <marker date="1481600290000" expanded="true" signature="4445:4471" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="4501:4523" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="4552:4573" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="4604:4822" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="4635:4816" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="4655:4727" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="4733:4808" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="4859:4950" ph="/*...*/" />
+            <marker date="1481600290000" expanded="true" signature="4977:6968" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="5019:5547" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="5086:5147" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="5192:5541" ph="{&quot;title&quot;: title...}" />
+            <marker date="1481600290000" expanded="true" signature="5282:5330" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="5348:5535" ph="[...]" />
+            <marker date="1481600290000" expanded="true" signature="5349:5534" ph="{&quot;text&quot;: model.ok.text...}" />
+            <marker date="1481600290000" expanded="true" signature="5468:5524" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="5601:6277" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="5681:6271" ph="{&quot;title&quot;: title...}" />
+            <marker date="1481600290000" expanded="true" signature="5771:5819" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="5837:6265" ph="[...]" />
+            <marker date="1481600290000" expanded="true" signature="5838:6061" ph="{&quot;text&quot;: model.ok.text...}" />
+            <marker date="1481600290000" expanded="true" signature="5957:6051" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="6071:6264" ph="{&quot;text&quot;: model.cancel.text...}" />
+            <marker date="1481600290000" expanded="true" signature="6198:6254" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="6282:6307" ph="/*...*/" />
+            <marker date="1481600290000" expanded="true" signature="6620:6882" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="6640:6708" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="6834:6870" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="6894:6964" ph="{&quot;alert&quot;: alert...}" />
+            <marker date="1481600290000" expanded="true" signature="6994:7103" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="7105:7185" ph="/*...*/" />
+            <marker date="1481600290000" expanded="true" signature="7200:13916" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="7247:13911" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="7560:8683" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="7691:8219" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="8349:8623" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="8726:9781" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="8811:9732" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="9155:9554" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="9817:10413" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="9947:9971" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="10017:10135" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="10072:10127" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="10454:10787" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="10514:10557" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="10563:10781" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="10644:10746" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="10881:11388" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="10940:11382" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="11163:11267" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="11540:11566" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="11599:11625" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="11659:11693" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="11726:12069" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="11775:11799" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="11839:11969" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="12000:12063" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="12104:12276" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="12309:12801" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="12476:12795" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="12838:13019" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="12911:12988" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="13059:13099" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="13132:13609" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="13263:13298" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="13642:13889" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="13772:13883" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="13926:13953" ph="/*...*/" />
+            <marker date="1481600290000" expanded="true" signature="13968:16607" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="14011:16603" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="14305:15406" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="14365:14376" ph="..." />
+            <marker date="1481600290000" expanded="true" signature="14484:15345" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="14728:14963" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="15435:15885" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="15529:15877" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="15663:15763" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="15769:15869" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="15936:16581" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="16015:16157" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="16224:16575" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="16268:16565" ph="{...}" />
+            <marker date="1481600290000" expanded="true" signature="16383:16546" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/plugins/jquery.bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="1864" lean-forward="false" selection-start-line="5" selection-start-column="1864" selection-end-line="5" selection-end-column="1864" />
-          <folding>
-            <marker date="1505462973000" expanded="true" signature="642:649" ph="×" />
-            <marker date="1505462973000" expanded="true" signature="6052:6063" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="111" />
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/service/login.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/service/jsHead.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/service/jsHeader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="118" lean-forward="true" selection-start-line="19" selection-start-column="118" selection-end-line="19" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery/jquery-3.2.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery/jquery-2.1.3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="465">
+          <caret line="49" column="36" lean-forward="false" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
+=======
+        <state relative-caret-position="390">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/service/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="87" lean-forward="true" selection-start-line="16" selection-start-column="87" selection-end-line="16" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="222">
           <caret line="19" column="85" lean-forward="true" selection-start-line="19" selection-start-column="85" selection-end-line="19" selection-end-column="85" />
+=======
+        <state relative-caret-position="210">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/service/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+>>>>>>> b0dcf88e261cba6758c8b3ea7617e0e7b621ff05
           <folding />
         </state>
       </provider>

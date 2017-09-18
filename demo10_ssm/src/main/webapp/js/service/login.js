@@ -70,12 +70,9 @@ $(function () {
 
                     if (data.success){
 
-                        // $.messager.confirm("提示","登陆成功,点击确定跳转到个人中心",function() {
-                        //     window.location.href="/user/menu.do";
-                        // });
-
-                        alert("确认框打开了！");
-                        window.location.href="/user/menu.do";
+                        $.messager.confirm("提示","登陆成功,点击确定跳转到个人中心",function() {
+                            window.location.href="/user/menu.do";
+                        });
 
                     }else {
                         $.messager.alert("提示",data.mes);
