@@ -1,5 +1,6 @@
 package com.ax.spring.controller;
 
+import com.ax.spring.domain.Userinfo;
 import com.ax.spring.service.IRegisterService;
 import com.ax.spring.util.AXTools.AXResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,16 +20,31 @@ public class RegisterController {
     @ResponseBody
     public AXResult register(@RequestParam(required=true)String username, @RequestParam(required=true)String password){
 
-        boolean register = this.registerService.register(username,password);
+        boolean register = this.registerService.register(username,password,Userinfo.USERTYPE_NORMAL);
 
         AXResult result = new  AXResult();
         if (register){
-            result.setResult(true);
+            result.setSuccess(true);
             result.setMsg("注册成功");
+
         }else {
-            result.setResult(false);
+            result.setSuccess(false);
             result.setMsg("用户已存在");
         }
+        return result;
+    }
+
+    @RequestMapping(value="/checkUsername.do")
+    @ResponseBody
+    public AXResult checkUsername(@RequestParam(required=true)String username){
+
+        Boolean checkUsername = registerService.checkUsername(username);
+        System.out.println("username = " + username+ "\n"+"checkUsername="+checkUsername);
+//        return registerService.checkUsername(username);
+
+        AXResult result = new  AXResult();
+        result.setSuccess(checkUsername);
+
         return result;
 
     }

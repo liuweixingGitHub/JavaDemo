@@ -7,17 +7,17 @@ import java.util.List;
 
 public class AXResult {
 
-    private Boolean result;
+    private Boolean success;
     private List list;
     private String msg;
     private String fileName;
 
-    public Boolean getResult() {
-        return result;
+    public Boolean getSuccess() {
+        return success;
     }
 
-    public void setResult(Boolean result) {
-        this.result = result;
+    public void setSuccess(Boolean success) {
+        this.success = success;
     }
 
     public List getList() {
@@ -44,6 +44,7 @@ public class AXResult {
         this.fileName = fileName;
     }
 
+
     public String toJSONString(){
 
        return JSON.toJSONString(this);
@@ -59,7 +60,7 @@ public class AXResult {
             list = new ArrayList();
         }
         AXResult result = new  AXResult ();
-        result.setResult(true );
+        result.setSuccess(true );
         result.setList(list);
         return result.toJSONString();
     }
@@ -73,7 +74,7 @@ public class AXResult {
             name = "";
         }
         AXResult result = new  AXResult ();
-        result.setResult(true );
+        result.setSuccess(true );
         result.setFileName(name);
         return result.toJSONString();
     }
@@ -83,13 +84,11 @@ public class AXResult {
      */
     public  static String errorMsg(String msg) {
 
-
-
         if (msg==null){
             msg = "";
         }
         AXResult result = new  AXResult ();
-        result.setResult(false );
+        result.setSuccess(false );
         result.setMsg(msg);
         return result.toJSONString();
     }

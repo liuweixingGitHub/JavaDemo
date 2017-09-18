@@ -4,82 +4,65 @@
     <meta charset="UTF-8">
     <title>首页1234</title>
 
-    <!--jquery-->
-    <script type="text/javascript" src="js/jquery/jquery.js"></script>
+    <!--&lt;!&ndash;css&ndash;&gt;-->
 
-    <!--jquery插件-->
-    <script type="text/javascript" src="js/plugins/jquery.form.min.js"></script>
-
-    <script type="text/javascript" src="js/plugins/jquery.validate.min.js"></script>
-
-    <script type="text/javascript" src="js/plugins/jquery.bootstrap.min.js"></script>
-
-    <!--bootstrap-->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="js/bootstrap/bootstrap/bootstrap.min.js"></script>
+    <!--<link href="css/index.css" rel="stylesheet" type="text/css" />-->
 
 
+    <!--&lt;!&ndash;js&ndash;&gt;-->
+    <!--&lt;!&ndash;jquery&ndash;&gt;-->
+    <!--<script type="text/javascript" src="js/jquery/jquery.js"></script>-->
 
+    <!--&lt;!&ndash;jquery插件&ndash;&gt;-->
+    <!--<script type="text/javascript" src="js/plugins/jquery.form.min.js"></script>-->
 
+    <!--<script type="text/javascript" src="js/plugins/jquery.validate.min.js"></script>-->
 
+    <!--<script type="text/javascript" src="js/plugins/jquery.bootstrap.min.js"></script>-->
 
+    <!--&lt;!&ndash;bootstrap&ndash;&gt;-->
+    <!--<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>-->
 
-    <script type="text/javascript">
-
-        $(function () {
-
-            $('#loginForm').validate({
-
-                rules:{
-                    "username":{
-                        required:true,
-                        rangelength:[2,16]
-                    },
-                    "password":{
-                        required:true,
-                        rangelength:[2,16]
-                    },
-                },
-                messages:{
-                    "username":{
-                        required:"填写用户名",
-                        rangelength:"用户名的长度在{0}到{1}之间"
-                    },
-                    "password":{
-                        required:"填写密码",
-                        rangelength:"密码的长度在{0}到{1}之间"
-                    },
-                },
-
-
-                /*
-                使用bootstrap的 提交表单
-                 */
-                submitHandler:function(form) {
-                    $(form).ajaxForm(function() {
-                        alert("Thank you for your comment!");
-                    });
-                },
-
-                errorClass:"text-danger",
-
-
-            });
-        });
-
-    </script>
+    <!--<script type="text/javascript" src="js/service/login.js"></script>-->
 
 
 </head>
 <body>
 
 
-index
+<!--<h1 class="text-center text-danger">登陆</h1><br>-->
 
-<form id="loginForm" action="/login.do" method="post">
-    账号: <input type="text" name="username" /><br>
-    密码:  <input type="text" name="password" /><br>
-    <input type="submit" value="登陆" />
+<!--<form id="login-form" action="/login.do" role="form" class="form-horizontal" method="post">-->
+
+
+    <!--<div class="form-group">-->
+        <!--<label class="col-sm-2 control-label" for="username">用户名：</label>-->
+        <!--<div class="col-sm-5">-->
+            <!--<input class="form-control" id="username" name="username" />-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <!--<div class="form-group">-->
+        <!--<label class="col-sm-2 control-label" for="password">密码：</label>-->
+        <!--<div class="col-sm-5">-->
+            <!--<input class="form-control" id="password" name="password" />-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+
+    <!--<div class="form-group">-->
+        <!--<div class="col-md-offset-2 col-md-10">-->
+
+            <!--<button type="submit" >登 陆</button>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+
+
 </form>
 
 

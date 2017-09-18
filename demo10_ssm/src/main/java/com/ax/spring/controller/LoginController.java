@@ -6,6 +6,7 @@ import com.ax.spring.interceptor.RequiredLogin;
 import com.ax.spring.service.ILoginService;
 import com.ax.spring.util.AXTools.AXJsonView;
 import com.ax.spring.context.UserinfoContext;
+import com.ax.spring.util.AXTools.AXResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,7 +40,7 @@ public class LoginController extends BaseController {
         Userinfo userinfo = this.loginService.login(username,password, this.request);
         if (userinfo != null){
 
-            map.put("result",true);
+            map.put("success",true);
             map.put("userinfo",userinfo);
 
             System.out.println(">>"+UserinfoContext.getCurrent());
@@ -52,6 +53,36 @@ public class LoginController extends BaseController {
         return map;
 
     }
+
+
+//    @RequestMapping(value="/login.do")
+//    @ResponseBody
+//    public AXResult login(@RequestParam(required = true) String username, @RequestParam(required = true) String password){
+//
+//        String userAgent = this.request.getHeader("user-agent");
+//        System.out.println("userAgent = " + userAgent);
+//
+//
+//        AXResult axResult = new AXResult();
+//
+//        Userinfo userinfo = this.loginService.login(username,password, this.request);
+//        if (userinfo != null){
+//
+//            axResult.setSuccess(true);
+//            axResult.setObject(userinfo);
+//
+//            System.out.println(">>"+UserinfoContext.getCurrent());
+//
+//        }else {
+//
+//
+//            axResult.setSuccess(false);
+//            axResult.setMsg("账号或者密码错误");
+//        }
+//        return axResult;
+//
+//    }
+
 
     /*
     jsp 页面可以直接取值,默认是请求转发 forward:

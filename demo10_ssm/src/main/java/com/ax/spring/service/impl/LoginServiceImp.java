@@ -23,9 +23,6 @@ public class LoginServiceImp implements ILoginService {
     @Autowired
     private IpLogMapper ipLogMapper;
 
-
-
-
     public Userinfo login(String username, String password,HttpServletRequest request){
 
         IpLog ipLog = new IpLog();
