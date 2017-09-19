@@ -1,10 +1,8 @@
 package com.ax.spring.controller;
 
-import com.ax.spring.domain.IpLog;
 import com.ax.spring.interceptor.RequiredLogin;
-import com.ax.spring.mapper.IpLogMapper;
 import com.ax.spring.query.IpLogQueryObject;
-import com.ax.spring.query.PageResult;
+import com.ax.spring.util.AXTools.AXPageResult;
 import com.ax.spring.service.IIpLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,9 +13,6 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @Controller
 public class IpController extends BaseController {
@@ -30,7 +25,7 @@ public class IpController extends BaseController {
     @RequiredLogin
     @RequestMapping(value="/user/ip.do")
     @ResponseBody
-    public PageResult test() {
+    public AXPageResult test() {
 
         IpLogQueryObject queryObject = new IpLogQueryObject();
 
@@ -64,14 +59,11 @@ public class IpController extends BaseController {
         queryObject.setUserType(0);
 
 
-        PageResult result = ipLogService.query(queryObject);
-
-
+        AXPageResult result = ipLogService.query(queryObject);
 
         System.out.println("result = " + result);
 
-        Map<String,Object> map = new HashMap<>();
-        map.put("ac","123");
+
         return result;
 
     }

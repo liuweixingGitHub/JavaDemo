@@ -1,16 +1,20 @@
 package com.ax.spring.util.AXTools;
 
-import com.alibaba.fastjson.JSON;
-
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-public class AXResult {
+
+public class AXResultMap extends HashMap{
 
     private Boolean success;
     private List list;
     private String msg;
     private String fileName;
+
+    public AXResultMap() {
+        super();
+    }
 
     public Boolean getSuccess() {
         return success;
@@ -18,6 +22,7 @@ public class AXResult {
 
     public void setSuccess(Boolean success) {
         this.success = success;
+        this.put("success",success);
     }
 
     public List getList() {
@@ -26,6 +31,7 @@ public class AXResult {
 
     public void setList(List list) {
         this.list = list;
+        this.put("list",list);
     }
 
     public String getMsg() {
@@ -34,6 +40,7 @@ public class AXResult {
 
     public void setMsg(String msg) {
         this.msg = msg;
+        this.put("msg",msg);
     }
 
     public String getFileName() {
@@ -42,54 +49,55 @@ public class AXResult {
 
     public void setFileName(String fileName) {
         this.fileName = fileName;
+        this.put("fileName",fileName);
     }
 
-
-    public String toJSONString(){
-
-       return JSON.toJSONString(this);
-
-    }
+//    public String toJSONString(){
+//
+//       return JSON.toJSONString(this);
+//
+//    }
 
     /*
     返回成功list
      */
-    public  static String succeeList(List list) {
+    public  static AXResultMap succeeList(List list) {
 
         if (list==null){
             list = new ArrayList();
         }
-        AXResult result = new  AXResult ();
+        AXResultMap result = new AXResultMap();
         result.setSuccess(true );
         result.setList(list);
-        return result.toJSONString();
+
+        return result;
     }
 
     /*
   返回成功list
    */
-    public  static String succeeFileName(String name) {
+    public  static AXResultMap succeeFileName(String name) {
 
         if (name==null){
             name = "";
         }
-        AXResult result = new  AXResult ();
+        AXResultMap result = new AXResultMap();
         result.setSuccess(true );
         result.setFileName(name);
-        return result.toJSONString();
+        return result;
     }
 
     /*
     返回错误
      */
-    public  static String errorMsg(String msg) {
+    public  static AXResultMap errorMsg(String msg) {
 
         if (msg==null){
             msg = "";
         }
-        AXResult result = new  AXResult ();
+        AXResultMap result = new AXResultMap();
         result.setSuccess(false );
         result.setMsg(msg);
-        return result.toJSONString();
+        return result;
     }
 }

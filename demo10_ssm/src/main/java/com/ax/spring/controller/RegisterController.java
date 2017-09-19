@@ -2,7 +2,7 @@ package com.ax.spring.controller;
 
 import com.ax.spring.domain.Userinfo;
 import com.ax.spring.service.IRegisterService;
-import com.ax.spring.util.AXTools.AXResult;
+import com.ax.spring.util.AXTools.AXResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,11 +18,11 @@ public class RegisterController {
 
     @RequestMapping(value="/register.do")
     @ResponseBody
-    public AXResult register(@RequestParam(required=true)String username, @RequestParam(required=true)String password){
+    public AXResultMap register(@RequestParam(required=true)String username, @RequestParam(required=true)String password){
 
         boolean register = this.registerService.register(username,password,Userinfo.USERTYPE_NORMAL);
 
-        AXResult result = new  AXResult();
+        AXResultMap result = new AXResultMap();
         if (register){
             result.setSuccess(true);
             result.setMsg("注册成功");
@@ -36,13 +36,13 @@ public class RegisterController {
 
     @RequestMapping(value="/checkUsername.do")
     @ResponseBody
-    public AXResult checkUsername(@RequestParam(required=true)String username){
+    public AXResultMap checkUsername(@RequestParam(required=true)String username){
 
         Boolean checkUsername = registerService.checkUsername(username);
         System.out.println("username = " + username+ "\n"+"checkUsername="+checkUsername);
 //        return registerService.checkUsername(username);
 
-        AXResult result = new  AXResult();
+        AXResultMap result = new AXResultMap();
         result.setSuccess(checkUsername);
 
         return result;

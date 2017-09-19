@@ -64,6 +64,8 @@ $(function () {
             //不刷新页面,值提交form
             $(form).ajaxSubmit({
 
+                url:"/login.do",
+                type:"post",
                 dataType:"json",
 
                 success:function (data){
@@ -71,7 +73,9 @@ $(function () {
                     if (data.success){
 
                         $.messager.confirm("提示","登陆成功,点击确定跳转到个人中心",function() {
+
                             window.location.href="/user/menu.do";
+                            // window.location.href="/menu.jsp";
                         });
 
                     }else {
@@ -83,10 +87,6 @@ $(function () {
             });
 
         },
-
-
-
-
 
     });
 

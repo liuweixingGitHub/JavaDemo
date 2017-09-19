@@ -1,4 +1,4 @@
-package com.ax.spring.query;
+package com.ax.spring.util.AXTools;
 
 
 import lombok.Getter;
@@ -11,7 +11,7 @@ import java.util.List;
 @Getter
 
 @SuppressWarnings("all")
-public class PageResult {
+public class AXPageResult {
 
     private Integer totalCount;
     private Integer pageSize = 10;
@@ -21,11 +21,11 @@ public class PageResult {
     private Integer prev;
     private Integer next;
 
-    public PageResult() {
+    public AXPageResult() {
         super();
     }
 
-    public PageResult(Integer totalCount, Integer pageSize, Integer currentPage, List result) {
+    public AXPageResult(Integer totalCount, Integer pageSize, Integer currentPage, List result) {
         this.totalCount = totalCount;
         this.pageSize = pageSize;
         this.currentPage = currentPage;
@@ -33,8 +33,8 @@ public class PageResult {
     }
 
 
-    public static PageResult empty(int pageSize){
-        return new PageResult(0,pageSize,1,new ArrayList<>());
+    public static AXPageResult empty(int pageSize){
+        return new AXPageResult(0,pageSize,1,new ArrayList<>());
 
     }
 
@@ -54,7 +54,7 @@ public class PageResult {
 
     @Override
     public String toString() {
-        return "PageResult{" +
+        return "AXPageResult{" +
                 "totalCount=" + totalCount +
                 ", pageSize=" + pageSize +
                 ", currentPage=" + currentPage +

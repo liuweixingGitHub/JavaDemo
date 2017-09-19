@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class UserinfoContext {
 
-    public static final String USERINFO_IN_SESSION = "userinfo";
+    public static final String USERINFO_IN_SESSION = "USERINFO_IN_SESSION";
 
 
     private static  HttpServletRequest getRequest(){

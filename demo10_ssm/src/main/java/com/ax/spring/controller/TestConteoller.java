@@ -2,18 +2,15 @@ package com.ax.spring.controller;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.ax.spring.context.UserinfoContext;
 import com.ax.spring.domain.Person;
 import com.ax.spring.domain.Userinfo;
-import com.ax.spring.interceptor.RequiredLogin;
 import com.ax.spring.service.ILoginService;
 import com.ax.spring.service.IRegisterService;
-import com.ax.spring.util.AXTools.AXResult;
+import com.ax.spring.util.AXTools.AXResultMap;
 import com.ax.spring.domain.User;
 import com.ax.spring.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
@@ -82,9 +79,9 @@ public class TestConteoller {
 
 //    @RequestMapping(value="/regp")
 //    @ResponseBody
-//    public AXResult regP(LogininfoParameter logininfoParameter,@RequestParam(required=true)String id){
+//    public AXResultMap regP(LogininfoParameter logininfoParameter,@RequestParam(required=true)String id){
 //
-//        AXResult result = new  AXResult();
+//        AXResultMap result = new  AXResultMap();
 //        try {
 //
 //            this.logininfoService.register(logininfoParameter.getUsername(),logininfoParameter.getPassword());
@@ -126,7 +123,7 @@ public class TestConteoller {
 
     @RequestMapping(value="/hello")
     @ResponseBody
-    public String hello(){
+    public AXResultMap hello(){
 
         System.out.println("HelloController");
 
@@ -136,11 +133,11 @@ public class TestConteoller {
         List<User>  list = new ArrayList();
         list.add(user);
 
-//        return  new AXResult(true,list).toJSONString();
-        System.out.println( AXResult.errorMsg("代码"));
-        System.out.println( ">>"+AXResult.succeeList(null));
-        System.out.println( ">>"+AXResult.succeeList(list));
-        return  AXResult.succeeList(list);
+//        return  new AXResultMap(true,list).toJSONString();
+        System.out.println( AXResultMap.errorMsg("代码"));
+        System.out.println( ">>"+ AXResultMap.succeeList(null));
+        System.out.println( ">>"+ AXResultMap.succeeList(list));
+        return  AXResultMap.succeeList(list);
 
 
 //        return "abc";
@@ -150,7 +147,7 @@ public class TestConteoller {
 //    @RequestMapping(value="/test",produces="application/json;charset=UTF-8")
     @RequestMapping(value="/test")
     @ResponseBody
-    public String test(){
+    public AXResultMap test(){
 
 
 
@@ -190,9 +187,9 @@ public class TestConteoller {
 //
 //        str = jsonObject.toJSONString();
 
-//        return new AXResult(true,list).toJSONString();
+//        return new AXResultMap(true,list).toJSONString();
 
-        return AXResult.succeeList(list);
+        return AXResultMap.succeeList(list);
     }
 
 
@@ -215,7 +212,7 @@ public class TestConteoller {
      */
     @RequestMapping("/up")
     @ResponseBody
-    public String  springUpload(HttpServletRequest request) throws Exception {
+    public AXResultMap springUpload(HttpServletRequest request) throws Exception {
         System.out.println("上传文件........");
 
         List<String> list = new ArrayList();
@@ -254,13 +251,13 @@ public class TestConteoller {
         if (list.size()==1){
             String name = list.get(0);
             System.out.println("name = " + name);
-//            return  new AXResult(true,name).toJSONString();
-            return AXResult.succeeFileName(name);
-//            return  JSON.toJSONString( new AXResult(true,name));
+//            return  new AXResultMap(true,name).toJSONString();
+            return AXResultMap.succeeFileName(name);
+//            return  JSON.toJSONString( new AXResultMap(true,name));
         }else {
 
-//            return  new AXResult(true,list).toJSONString();
-            return AXResult.succeeList(list);
+//            return  new AXResultMap(true,list).toJSONString();
+            return AXResultMap.succeeList(list);
         }
 
     }

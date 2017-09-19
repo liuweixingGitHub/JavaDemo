@@ -1,7 +1,7 @@
-package com.ax.spring.query;
+package com.ax.spring.util.AXTools;
 
 
-public class QueryObject {
+public class AXQueryObject {
 
     private int currentPage = 1;
     private int pageSize = 10;

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--freemarker配置本身 -->
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+
+        <!--模板编码-->
+        <property name="defaultEncoding" value="UTF-8"/>
+        <!--模板加载路径-->
+        <property name="templateLoaderPath" value="/WEB-INF/views/"/>
+        <!--一些基本输出设置-->
+        <property name="freemarkerSettings" >
+            <value>
+                number_format = 0.##
+                datetime_format = yyyy-MM-dd HH:mm:ss
+            </value>
+
+        </property>
+    </bean>
+
+
+    <!--freemarkerss视图解析器FreeMarkerViewResolver-->
+
+    <bean id="freeMarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <!--把session中的属性直接添加到上下文中,可以在页面中 直接使用session值-->
+        <property name="exposeSessionAttributes" value="true"/>
+        <property name="exposeSpringMacroHelpers" value="true"/>
+        <property name="suffix" value=".ftl"/>
+        <property name="contentType" value="text/html;charset=UTF-8" />
+    </bean>
+
+
+</beans>

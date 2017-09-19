@@ -3,7 +3,7 @@ package com.ax;
 import com.alibaba.fastjson.JSON;
 import com.ax.spring.domain.Person;
 import com.ax.spring.mapper.UserinfoMapper;
-import com.ax.spring.util.AXTools.AXResult;
+import com.ax.spring.util.AXTools.AXResultMap;
 import com.ax.spring.domain.User;
 import com.ax.spring.service.IUserService;
 import org.junit.Test;
@@ -38,12 +38,12 @@ public class test1 {
         List list = new ArrayList();
         list.add(user);
 
-//        return  new AXResult(true,list).toJSONString();
-        System.out.println( AXResult.errorMsg("代码"));
-        System.out.println( AXResult.errorMsg(null));
+//        return  new AXResultMap(true,list).toJSONString();
+        System.out.println( AXResultMap.errorMsg("代码"));
+        System.out.println( AXResultMap.errorMsg(null));
 
-        System.out.println( ">>"+AXResult.succeeList(null));
-        System.out.println( ">>"+AXResult.succeeList(list));
+        System.out.println( ">>"+ AXResultMap.succeeList(null));
+        System.out.println( ">>"+ AXResultMap.succeeList(list));
 
 
 
@@ -92,7 +92,7 @@ public class test1 {
 //        map.put("lit",list);
 
 
-        AXResult result = new AXResult();
+        AXResultMap result = new AXResultMap();
 
         result.setSuccess(true);
         result.setList(list);
@@ -100,7 +100,7 @@ public class test1 {
         str= JSON.toJSONString(result);
 //
         System.out.println(">>>"+str);
-        System.out.println(">>>"+result.toJSONString());
+        System.out.println(">>>"+result);
 
 
 //        System.out.println(">>>"+jsonObject.toJSONString());
@@ -109,9 +109,14 @@ public class test1 {
 
 
 
-    public  void test2(){
-//        String name = "JOM";
-//        System.out.println(new AXResult(true,name).toJSONString());;
+    @Test
+    public  void test112(){
+        AXResultMap axResult = new AXResultMap();
+        axResult.setSuccess(true);
+
+      ;
+
+        System.out.println("axResult = " +   JSON.toJSONString(axResult));
 
     }
 }

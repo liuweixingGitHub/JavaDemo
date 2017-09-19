@@ -1,21 +1,15 @@
 package com.ax.spring.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.ax.spring.domain.Userinfo;
-import com.ax.spring.interceptor.RequiredLogin;
 import com.ax.spring.service.ILoginService;
-import com.ax.spring.util.AXTools.AXJsonView;
 import com.ax.spring.context.UserinfoContext;
-import com.ax.spring.util.AXTools.AXResult;
+import com.ax.spring.util.AXTools.AXResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,59 +23,54 @@ public class LoginController extends BaseController {
 
     @RequestMapping(value="/login.do")
     @ResponseBody
-    public Map<String,Object> login(@RequestParam(required = true) String username, @RequestParam(required = true) String password){
+    public AXResultMap login(@RequestParam(required = true) String username, @RequestParam(required = true) String password){
+
+        String userAgent = this.request.getHeader("user-agent");
+        System.out.println("userAgent = " + userAgent);
+
+        AXResultMap axResultMap = new AXResultMap();
+
+        Userinfo userinfo = this.loginService.login(username,password, this.request);
+
+        if (userinfo != null){
+
+            axResultMap.setSuccess(true);
+            axResultMap.put("userinfo",userinfo);
+        }else {
+
+            axResultMap.setSuccess(false);
+            axResultMap.setMsg("账号或者密码错误");
+        }
+        return axResultMap;
+
+    }
+
+
+    @RequestMapping(value="/login12.do")
+    @ResponseBody
+    public AXResultMap login12(@RequestParam(required = true) String username, @RequestParam(required = true) String password){
 
         String userAgent = this.request.getHeader("user-agent");
         System.out.println("userAgent = " + userAgent);
 
 
-        Map<String,Object> map = new HashMap<String, Object>();
+        AXResultMap axResult = new AXResultMap();
 
         Userinfo userinfo = this.loginService.login(username,password, this.request);
         if (userinfo != null){
 
-            map.put("success",true);
-            map.put("userinfo",userinfo);
+            axResult.setSuccess(true);
+            axResult.put("userinfo",userinfo);
 
             System.out.println(">>"+UserinfoContext.getCurrent());
 
         }else {
-
-            map.put("result",false);
-            map.put("mes","账号或者密码错误");
+            axResult.setSuccess(false);
+            axResult.setMsg("账号或者密码错误");
         }
-        return map;
+        return axResult;
 
     }
-
-
-//    @RequestMapping(value="/login.do")
-//    @ResponseBody
-//    public AXResult login(@RequestParam(required = true) String username, @RequestParam(required = true) String password){
-//
-//        String userAgent = this.request.getHeader("user-agent");
-//        System.out.println("userAgent = " + userAgent);
-//
-//
-//        AXResult axResult = new AXResult();
-//
-//        Userinfo userinfo = this.loginService.login(username,password, this.request);
-//        if (userinfo != null){
-//
-//            axResult.setSuccess(true);
-//            axResult.setObject(userinfo);
-//
-//            System.out.println(">>"+UserinfoContext.getCurrent());
-//
-//        }else {
-//
-//
-//            axResult.setSuccess(false);
-//            axResult.setMsg("账号或者密码错误");
-//        }
-//        return axResult;
-//
-//    }
 
 
     /*

@@ -15,7 +15,7 @@ app<br>
 <%--3 ${requestScope.userinfo.username}<br>--%>
 <%--4 ${userinfo.username}<br>--%>
 
-
+${requestScope}
 
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.ax.spring.query;
 
+import com.ax.spring.util.AXTools.AXQueryObject;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -8,7 +9,7 @@ import java.util.Date;
 
 @Setter
 @Getter
-public class IpLogQueryObject extends QueryObject {
+public class IpLogQueryObject extends AXQueryObject {
 
     private Date beginDate;
     private Date endDate;
