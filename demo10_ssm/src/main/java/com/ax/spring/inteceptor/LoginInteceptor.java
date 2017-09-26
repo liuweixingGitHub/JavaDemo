@@ -4,6 +4,7 @@ package com.ax.spring.inteceptor;
 
 import com.ax.spring.context.UserinfoContext;
 import com.ax.spring.interceptor.RequiredLogin;
+import com.ax.spring.util.AXTools.AXConst;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
@@ -31,7 +32,7 @@ public class LoginInteceptor extends HandlerInterceptorAdapter {
                 /*
                 没有保存过userinfo信息
                  */
-                if (request.getSession().getAttribute(UserinfoContext.USERINFO_IN_SESSION) == null){
+                if (request.getSession().getAttribute(AXConst.USERINFO_IN_SESSION) == null){
 
                     response.sendRedirect("/login.html");
                     return false;

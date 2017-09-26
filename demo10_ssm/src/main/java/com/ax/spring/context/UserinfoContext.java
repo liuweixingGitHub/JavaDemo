@@ -1,6 +1,7 @@
 package com.ax.spring.context;
 
 import com.ax.spring.domain.Userinfo;
+import com.ax.spring.util.AXTools.AXConst;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -8,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class UserinfoContext {
     
-    public static final String USERINFO_IN_SESSION = "USERINFO_IN_SESSION";
+
 
 
     private static  HttpServletRequest getRequest(){
@@ -17,12 +18,12 @@ public class UserinfoContext {
     }
 
     public static  void  putUserinfo(Userinfo userinfo){
-        getRequest().getSession().setAttribute(USERINFO_IN_SESSION,userinfo);
+        getRequest().getSession().setAttribute(AXConst.USERINFO_IN_SESSION,userinfo);
 
     }
 
     public static  Userinfo  getCurrent(){
-        return (Userinfo)  getRequest().getSession().getAttribute(USERINFO_IN_SESSION);
+        return (Userinfo)  getRequest().getSession().getAttribute(AXConst.USERINFO_IN_SESSION);
 
     }
 

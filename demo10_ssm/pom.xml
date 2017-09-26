@@ -203,6 +203,13 @@
 			<scope>provided</scope>
 		</dependency>
 
+
+		<!--<dependency>-->
+			<!--<groupId>javax.servlet</groupId>-->
+			<!--<artifactId>javax.servlet-api</artifactId>-->
+			<!--<version>3.1.0</version>-->
+		<!--</dependency>-->
+
 		<!--文件上传-->
 		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
 		<dependency>
@@ -241,7 +248,7 @@
         </dependency>
 
 
-    </dependencies>
+	</dependencies>
 
 	<build>
 		<resources>

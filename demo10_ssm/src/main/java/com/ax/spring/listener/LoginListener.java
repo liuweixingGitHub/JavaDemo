@@ -5,6 +5,7 @@ package com.ax.spring.listener;
 import com.ax.spring.context.UserinfoContext;
 import com.ax.spring.domain.Userinfo;
 import com.ax.spring.service.ILoginService;
+import com.ax.spring.util.AXTools.AXConst;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -73,7 +74,7 @@ public class LoginListener  implements HandlerInterceptor {
 
 
         HttpSession session = request.getSession();
-        Userinfo userinfo = (Userinfo) session.getAttribute(UserinfoContext.USERINFO_IN_SESSION);
+        Userinfo userinfo = (Userinfo) session.getAttribute(AXConst.USERINFO_IN_SESSION);
         if (userinfo == null) {
 
             String url = request.getContextPath() + "/login.html";
