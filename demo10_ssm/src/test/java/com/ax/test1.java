@@ -112,11 +112,11 @@ public class test1 {
     @Test
     public  void test112(){
         AXResultMap axResult = new AXResultMap();
-        axResult.setSuccess(true);
+        axResult.put("NAME","JIM")
 
       ;
 
-        System.out.println("axResult = " +   JSON.toJSONString(axResult));
+        System.out.println("axResult = " +   axResult.get("NAME"));
 
     }
 }

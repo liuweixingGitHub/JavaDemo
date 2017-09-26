@@ -7,8 +7,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 
 public class UserinfoContext {
-
-    public static final String USERINFO_IN_SESSION2 = "USERINFO_IN_SESSION2";
     
     public static final String USERINFO_IN_SESSION = "USERINFO_IN_SESSION";
 

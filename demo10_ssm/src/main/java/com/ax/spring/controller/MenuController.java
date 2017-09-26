@@ -26,7 +26,7 @@ public class MenuController extends BaseController{
 
 
     @RequiredLogin
-    @RequestMapping(value="/user/menu.do")
+    @RequestMapping(value="/account/menu.do")
     public String menu(Model model){
 
 

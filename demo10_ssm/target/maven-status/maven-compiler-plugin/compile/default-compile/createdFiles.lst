@@ -7,6 +7,7 @@ com/ax/spring/service/impl/UserServiceImp.class
 com/ax/spring/domain/Userinfo.class
 com/ax/spring/service/IIpLogService.class
 com/ax/spring/domain/IpLog.class
+com/ax/spring/util/freemarker/CodeGenMain.class
 com/ax/spring/context/UserinfoContext.class
 com/ax/spring/controller/MenuController.class
 com/ax/spring/inteceptor/UserInfoInteceptor.class
@@ -22,14 +23,18 @@ com/ax/spring/service/impl/RegisterServiceImp.class
 com/ax/spring/inteceptor/RegisterInteceptor.class
 com/ax/spring/listener/LoginListener.class
 com/ax/spring/mapper/IpLogMapper.class
+com/ax/spring/util/AXTools/MD5.class
 com/ax/spring/inteceptor/LoginInteceptor.class
+com/ax/spring/service/impl/LoginServiceImp.class
 com/ax/spring/controller/BaseController.class
+com/ax/spring/controller/TestConteoller.class
 com/ax/spring/controller/RegisterController.class
 com/ax/spring/util/AXTools/AXResultMap.class
 com/ax/spring/util/AXTools/AXConst.class
 com/ax/spring/service/IRegisterService.class
 com/ax/spring/service/IUserinfoService.class
 com/ax/spring/service/ILoginService.class
+com/ax/spring/interceptor/RequiredLogin.class
 com/ax/spring/util/AXTools/AXPageResult.class
 com/ax/spring/controller/LoginController.class
 com/ax/spring/controller/IpController.class
