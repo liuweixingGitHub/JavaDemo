@@ -9,9 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class MenuController extends BaseController{
+public class MenuController extends AccountController{
 
 //    @RequiredLogin
 //    @RequestMapping(value="/user/menu.do")
@@ -26,7 +27,7 @@ public class MenuController extends BaseController{
 
 
     @RequiredLogin
-    @RequestMapping(value="/account/menu.do")
+    @RequestMapping(value="/menu.do")
     public String menu(Model model){
 
 

@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 import java.util.Date;
 
 @Service
@@ -22,6 +23,8 @@ public class LoginServiceImp implements ILoginService {
 
     @Autowired
     private IpLogMapper ipLogMapper;
+
+
 
     public Userinfo login(String username, String password,HttpServletRequest request){
 
@@ -71,8 +74,5 @@ public class LoginServiceImp implements ILoginService {
 
         }
 
-
     }
-
-
 }

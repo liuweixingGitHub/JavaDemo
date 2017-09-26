@@ -15,15 +15,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Controller
-public class IpController extends BaseController {
+public class IpController extends AccountController {
 
     @Autowired
     private IIpLogService ipLogService;
 
 
-
-    @RequiredLogin
-    @RequestMapping(value="/user/ip.do")
+    @RequestMapping(value="/ip.do")
     @ResponseBody
     public AXPageResult test() {
 

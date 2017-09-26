@@ -27,7 +27,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-public class TestConteoller {
+public class TestConteoller extends BaseController {
 
     @Autowired
     private IUserService userService;
@@ -66,6 +66,27 @@ public class TestConteoller {
         mView.addObject("key",jsonObject);
 
         return mView;
+
+    }
+
+
+    @RequestMapping(value="/test2.do")
+    @ResponseBody
+    public AXResultMap test2(){
+
+
+
+        AXResultMap axResultMap = new AXResultMap();
+
+
+
+
+
+            axResultMap.setSuccess(true);
+            axResultMap.put("userinfo","123456");
+
+
+        return axResultMap;
 
     }
 

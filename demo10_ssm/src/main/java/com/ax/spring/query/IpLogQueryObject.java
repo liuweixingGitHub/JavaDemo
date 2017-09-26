@@ -7,8 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
-@Setter
-@Getter
+
 public class IpLogQueryObject extends AXQueryObject {
 
     private Date beginDate;
@@ -17,6 +16,29 @@ public class IpLogQueryObject extends AXQueryObject {
     private int userType = -1;
     private boolean like;
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public int getUserType() {
+        return userType;
+    }
+
+    public void setUserType(int userType) {
+        this.userType = userType;
+    }
+
+    public boolean isLike() {
+        return like;
+    }
+
+    public void setLike(boolean like) {
+        this.like = like;
+    }
 
     public Date getBeginDate() {
         return beginDate;

@@ -8,9 +8,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 
 public class UserinfoContext {
-    
-
-
 
     private static  HttpServletRequest getRequest(){
 

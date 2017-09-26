@@ -5,8 +5,8 @@ import lombok.Setter;
 
 import java.util.Date;
 
-@Getter
-@Setter
+
+
 public class IpLog {
 
     public static final int LOGINSTATE_FAILD;
@@ -35,6 +35,43 @@ public class IpLog {
 
     private Long userinfoId;
 
+
+    public void setLoginTime(Date loginTime) {
+        this.loginTime = loginTime;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    public Integer getLoginState() {
+        return loginState;
+    }
+
+    public void setLoginState(Integer loginState) {
+        this.loginState = loginState;
+    }
+
+    public Integer getUserType() {
+        return userType;
+    }
+
+    public void setUserType(Integer userType) {
+        this.userType = userType;
+    }
+
+    public Long getUserinfoId() {
+        return userinfoId;
+    }
+
+    public void setUserinfoId(Long userinfoId) {
+        this.userinfoId = userinfoId;
+    }
+
     public Long getId() {
         return id;
     }
@@ -54,6 +91,7 @@ public class IpLog {
     public Date getLoginTime() {
         return loginTime;
     }
+
 
     @Override
     public String toString() {

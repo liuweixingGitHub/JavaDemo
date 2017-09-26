@@ -4,6 +4,7 @@ com/ax/spring/service/impl/IpLogServiceImpl.class
 com/ax/spring/mapper/UserMapper.class
 com/ax/spring/service/impl/UserinfoServiceImpl.class
 com/ax/spring/service/impl/UserServiceImp.class
+com/ax/spring/controller/AccountController.class
 com/ax/spring/domain/Userinfo.class
 com/ax/spring/service/IIpLogService.class
 com/ax/spring/domain/IpLog.class
