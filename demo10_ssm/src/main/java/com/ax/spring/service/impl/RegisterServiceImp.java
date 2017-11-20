@@ -1,6 +1,6 @@
 package com.ax.spring.service.impl;
 
-import com.ax.spring.domain.Userinfo;
+import com.ax.spring.entity.Userinfo;
 import com.ax.spring.mapper.UserinfoMapper;
 import com.ax.spring.service.IRegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ public class RegisterServiceImp implements IRegisterService {
             userinfo.setUsertype(userType);
             int insert = this.userinfoMapper.insert(userinfo);
 
-            return insert >0? true : false;
+            return insert > 0;
 
         }
             return false;

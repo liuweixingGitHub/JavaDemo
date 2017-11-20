@@ -1,4 +1,4 @@
-package com.ax.spring.domain;
+package com.ax.spring.entity;
 
 public class Userinfo {
 

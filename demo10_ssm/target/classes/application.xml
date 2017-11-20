@@ -46,10 +46,23 @@
 
 		<property name="configLocation" value="classpath:mybatis-config.xml" />
 
-		<property name="typeAliasesPackage" value="com.ax.spring.domain" />
+		<property name="typeAliasesPackage" value="com.ax.spring" />
 
 		<!--<property name="mapperLocations" value="classpath:com/ax/spring/mapper/UserMapper.xml" />-->
 		<property name="mapperLocations" value="classpath*:com/ax/spring/mapper/*Mapper.xml" />
+
+		<!-- 配置mybatis分页插件PageHelper -->
+		<property name="plugins">
+			<array>
+				<bean class="com.github.pagehelper.PageInterceptor">
+					<property name="properties">
+						<!-- 什么都不配，使用默认的配置 -->
+						<value></value>
+					</property>
+				</bean>
+			</array>
+		</property>
+
 	</bean>
 
 

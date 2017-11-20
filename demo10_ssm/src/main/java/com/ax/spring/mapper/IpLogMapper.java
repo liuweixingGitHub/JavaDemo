@@ -1,6 +1,6 @@
 package com.ax.spring.mapper;
 
-import com.ax.spring.domain.IpLog;
+import com.ax.spring.entity.IpLog;
 import com.ax.spring.query.IpLogQueryObject;
 import java.util.List;
 
@@ -26,6 +26,9 @@ public interface IpLogMapper {
     分页查询 内容
      */
     List<IpLog> query(IpLogQueryObject queryObject);
+
+    List<IpLog> queryPage(IpLogQueryObject queryObject);
+
 
 
 }

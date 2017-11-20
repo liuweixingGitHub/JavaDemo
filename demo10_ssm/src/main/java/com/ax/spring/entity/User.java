@@ -1,4 +1,4 @@
-package com.ax.spring.domain;
+package com.ax.spring.entity;
 
 
 import org.apache.ibatis.type.Alias;

@@ -1,6 +1,4 @@
-package com.ax.spring.domain;
-
-import com.ax.spring.domain.User;
+package com.ax.spring.entity;
 
 import java.util.ArrayList;
 import java.util.List;

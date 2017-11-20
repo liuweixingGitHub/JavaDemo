@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ax.spring.mapper.IpLogMapper" >
-  <resultMap id="BaseResultMap" type="com.ax.spring.domain.IpLog" >
+  <resultMap id="BaseResultMap" type="com.ax.spring.entity.IpLog" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="userName" property="userName" jdbcType="VARCHAR" />
     <result column="loginTime" property="loginTime" jdbcType="TIMESTAMP" />
@@ -14,7 +14,7 @@
     id, userName, loginTime, ip, loginState, userType, userinfoId
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from t_ipLog
     where id = #{id,jdbcType=BIGINT}
@@ -23,7 +23,7 @@
     delete from t_ipLog
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="com.ax.spring.domain.IpLog" useGeneratedKeys="true" keyProperty="id" >
+  <insert id="insert" parameterType="com.ax.spring.entity.IpLog" useGeneratedKeys="true" keyProperty="id" >
     insert into t_ipLog (userName, loginTime, ip, 
       loginState, userType, userinfoId
       )
@@ -31,7 +31,7 @@
       #{loginState,jdbcType=INTEGER}, #{userType,jdbcType=INTEGER}, #{userinfoId,jdbcType=BIGINT}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.ax.spring.domain.IpLog" useGeneratedKeys="true" keyProperty="id" >
+  <insert id="insertSelective" parameterType="com.ax.spring.entity.IpLog" useGeneratedKeys="true" keyProperty="id" >
     insert into t_ipLog
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="userName != null" >
@@ -74,7 +74,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.ax.spring.domain.IpLog" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.ax.spring.entity.IpLog" >
     update t_ipLog
     <set >
       <if test="userName != null" >
@@ -98,7 +98,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.ax.spring.domain.IpLog" >
+  <update id="updateByPrimaryKey" parameterType="com.ax.spring.entity.IpLog" >
     update t_ipLog
     set userName = #{userName,jdbcType=VARCHAR},
       loginTime = #{loginTime,jdbcType=TIMESTAMP},
@@ -155,10 +155,23 @@
     ORDER BY loginTime DESC
 
     <!--<if test="pageSize>-1">-->
-        <!--LIMIT #{start},#{pageSize}-->
+    <!--LIMIT #{start},#{pageSize}-->
     <!--</if>-->
 
   </select>
+
+
+
+  <select id="queryPage"  resultMap="BaseResultMap" parameterType="com.ax.spring.query.IpLogQueryObject">
+    SELECT *
+    FROM t_ipLog
+    <include refid="base_query" />
+
+
+
+  </select>
+
+
 
 
 </mapper>

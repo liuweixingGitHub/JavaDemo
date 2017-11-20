@@ -1,6 +1,6 @@
 package com.ax.spring.context;
 
-import com.ax.spring.domain.Userinfo;
+import com.ax.spring.entity.Userinfo;
 import com.ax.spring.util.AXTools.AXConst;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;

@@ -2,21 +2,11 @@ package com.ax.spring.listener;
 
 
 
-import com.ax.spring.context.UserinfoContext;
-import com.ax.spring.domain.Userinfo;
 import com.ax.spring.service.ILoginService;
-import com.ax.spring.util.AXTools.AXConst;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
-import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.ModelAndView;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import java.io.IOException;
 
 @Component
 public class LoginListener  implements ApplicationListener<ContextRefreshedEvent>{

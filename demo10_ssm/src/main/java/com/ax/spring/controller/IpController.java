@@ -4,6 +4,7 @@ import com.ax.spring.interceptor.RequiredLogin;
 import com.ax.spring.query.IpLogQueryObject;
 import com.ax.spring.util.AXTools.AXPageResult;
 import com.ax.spring.service.IIpLogService;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -65,4 +66,7 @@ public class IpController extends AccountController {
         return result;
 
     }
+
+
+
 }

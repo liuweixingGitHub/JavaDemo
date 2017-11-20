@@ -1,6 +1,6 @@
 package com.ax.spring.controller;
 
-import com.ax.spring.domain.Userinfo;
+import com.ax.spring.entity.Userinfo;
 import com.ax.spring.service.IRegisterService;
 import com.ax.spring.util.AXTools.AXResultMap;
 import org.springframework.beans.factory.annotation.Autowired;

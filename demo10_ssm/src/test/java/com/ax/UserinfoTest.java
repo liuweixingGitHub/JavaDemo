@@ -1,6 +1,6 @@
 package com.ax;
 
-import com.ax.spring.domain.Userinfo;
+import com.ax.spring.entity.Userinfo;
 import com.ax.spring.mapper.UserinfoMapper;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

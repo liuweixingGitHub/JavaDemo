@@ -2,13 +2,16 @@ package com.ax.spring.controller;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.ax.spring.domain.Person;
-import com.ax.spring.domain.Userinfo;
+import com.ax.spring.entity.Person;
+import com.ax.spring.entity.Userinfo;
+import com.ax.spring.query.IpLogQueryObject;
+import com.ax.spring.service.IIpLogService;
 import com.ax.spring.service.ILoginService;
 import com.ax.spring.service.IRegisterService;
 import com.ax.spring.util.AXTools.AXResultMap;
-import com.ax.spring.domain.User;
+import com.ax.spring.entity.User;
 import com.ax.spring.service.IUserService;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,6 +44,9 @@ public class TestConteoller extends BaseController {
 
     @Autowired
     protected HttpServletRequest request;
+
+    @Autowired
+    private IIpLogService ipLogService;
 
     @RequestMapping(value="/400.do")
     @ResponseBody
@@ -89,13 +95,6 @@ public class TestConteoller extends BaseController {
         return axResultMap;
 
     }
-
-
-
-
-
-
-
 
 
 //    @RequestMapping(value="/regp")
@@ -222,7 +221,7 @@ public class TestConteoller extends BaseController {
 
         ModelAndView mView = new ModelAndView();
         mView.addObject("key","123456");
-        mView.setViewName("hello");
+        mView.setViewName("home");
         return mView;
 
     }
@@ -282,4 +281,33 @@ public class TestConteoller extends BaseController {
         }
 
     }
+
+
+
+
+    @RequestMapping(value="/ipPage.do")
+    @ResponseBody
+    public PageInfo ipPage() {
+
+
+        System.out.println("IpController.ipPage");
+
+        IpLogQueryObject queryObject = new IpLogQueryObject();
+
+        queryObject.setUserName("jim");
+
+
+
+        System.out.println("queryObject = " + queryObject);
+
+        PageInfo  pageInfo = ipLogService.queryPage(queryObject,1,10);
+
+        System.out.println("pageInfo = " + pageInfo);
+
+
+        return pageInfo;
+
+    }
+
+
 }

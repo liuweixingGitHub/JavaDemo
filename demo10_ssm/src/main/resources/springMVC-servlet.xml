@@ -12,7 +12,7 @@
 	<import resource="classpath:application.xml" />
 
 
-	<import resource="classpath:freemarker.xml" />
+	<!--<import resource="classpath:freemarker.xml" />-->
 
 	<!-- SpringMVC 开启注解扫描 -->
 	<context:component-scan base-package="com.ax.spring.controller;com.ax.spring.listener" />
@@ -72,17 +72,20 @@
 	<!--SpringMVC 配置视图解析器 和 freemarker 不能同时存在-->
 
 	<!-- SpringMVC 配置视图解析器 -->
-	<!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
-		<!--<property name="prefix" value="/WEB-INF/views/"/>-->
-		<!--&lt;!&ndash;&ndash;&gt;-->
-		<!--<property name="suffix" value=".jsp"/>-->
-		<!--&lt;!&ndash;网页返回json格式&ndash;&gt;-->
-		<!--&lt;!&ndash;<property name="contentType" value="application/json;charset=UTF-8"/>&ndash;&gt;-->
-		<!--&lt;!&ndash;<property name="contentType" value="text/json"/>&ndash;&gt;-->
-		<!--<property name="contentType" value="text/html"/>-->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"/>
+		<!---->
+		<property name="suffix" value=".jsp"/>
+		<!--网页返回json格式-->
+		<!--<property name="contentType" value="application/json;charset=UTF-8"/>-->
+		<!--<property name="contentType" value="text/json"/>-->
+		<property name="contentType" value="text/html"/>
 
-		<!--<property name="order" value="1"/>-->
-	<!--</bean>-->
+		<property name="order" value="0"/>
+	</bean>
+
+
+
 
 	<!-- SpringMVC 上传解析器 -->
 	<bean id="multipartResolver"

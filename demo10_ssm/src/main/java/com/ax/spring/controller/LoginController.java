@@ -1,6 +1,6 @@
 package com.ax.spring.controller;
 
-import com.ax.spring.domain.Userinfo;
+import com.ax.spring.entity.Userinfo;
 import com.ax.spring.service.ILoginService;
 import com.ax.spring.context.UserinfoContext;
 import com.ax.spring.util.AXTools.AXResultMap;
@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @Controller
 public class LoginController extends BaseController {

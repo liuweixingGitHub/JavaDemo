@@ -1,6 +1,6 @@
 package com.ax.spring.service;
 
-import com.ax.spring.domain.Userinfo;
+import com.ax.spring.entity.Userinfo;
 
 public interface IUserinfoService {
 

@@ -22,9 +22,8 @@ if (!String.prototype.format) {
 Description: $.fn.dialog
 Author: Kris Zhang
 */
-;(function($) {
-
-  $.fn.dialog = function(options) {
+(function ($) {
+    $.fn.dialog = function(options) {
 
     var self    = this
       , $this   = $(self)
@@ -142,9 +141,9 @@ Author: Kris Zhang
       /*
       Passing the options, etc: backdrop, keyboard
       */
-      options.autoOpen === false && (options.show = false)
-      options.width  && $modalDialog.width(options.width)
-      options.height && $modalDialog.height(options.height)
+      options.autoOpen === false && (options.show = false);
+      options.width  && $modalDialog.width(options.width);
+      options.height && $modalDialog.height(options.height);
       $msgbox.modal(options)
     }
 
@@ -329,7 +328,7 @@ require:
           ;
 
         name && (row[name] = $input.val());
-      }
+      };
       edit && $rows.find("input").keyup(editHandler);
     };
 
@@ -367,8 +366,8 @@ require:
         //if it has 'formatter' attribute override the content
         value = format ? format(row[field], row) : value;
         trow = trow + "<td>" + value + "</td>";
-      };
-      trow += "</tr>";
+      }
+        trow += "</tr>";
       return trow;
     };
 
@@ -587,8 +586,8 @@ Dependence: string.js
         ));
         children && pushFn.apply(tree, build(children, false, state));
         tree.push('</li>');
-      };
-      !root && tree.push('</ul>')
+      }
+        !root && tree.push('</ul>');
 
       return tree;
     };

@@ -1,8 +1,8 @@
 package com.ax.spring.service.impl;
 
 
-import com.ax.spring.domain.IpLog;
-import com.ax.spring.domain.Userinfo;
+import com.ax.spring.entity.IpLog;
+import com.ax.spring.entity.Userinfo;
 import com.ax.spring.mapper.IpLogMapper;
 import com.ax.spring.mapper.UserinfoMapper;
 import com.ax.spring.service.ILoginService;
@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
 import java.util.Date;
 
 @Service
@@ -31,7 +30,7 @@ public class LoginServiceImp implements ILoginService {
         IpLog ipLog = new IpLog();
         ipLog.setIp(request.getRemoteAddr());
         ipLog.setLoginTime(new Date());
-        ipLog.setUserName(username);;
+        ipLog.setUserName(username);
 
 
         Userinfo userinfo = this.userinfoMapper.getModelByUsernameAndPassword(username,password);
@@ -69,7 +68,7 @@ public class LoginServiceImp implements ILoginService {
             Userinfo userinfo = new Userinfo();
             userinfo.setUsername(AXConst.ADMIN_NAME);
             userinfo.setPassword(AXConst.ADMIN_PASSWORD);
-            userinfo.setUsertype(userinfo.USERTYPE_SYSTEM);
+            userinfo.setUsertype(Userinfo.USERTYPE_SYSTEM);
             this.userinfoMapper.insert(userinfo);
 
         }

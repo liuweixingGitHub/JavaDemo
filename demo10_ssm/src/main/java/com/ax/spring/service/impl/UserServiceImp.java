@@ -1,6 +1,6 @@
 package com.ax.spring.service.impl;
 
-import com.ax.spring.domain.User;
+import com.ax.spring.entity.User;
 import com.ax.spring.mapper.UserMapper;
 import com.ax.spring.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.ax.spring.service;
 
-import com.ax.spring.domain.User;
+import com.ax.spring.entity.User;
 
 import java.util.List;
 

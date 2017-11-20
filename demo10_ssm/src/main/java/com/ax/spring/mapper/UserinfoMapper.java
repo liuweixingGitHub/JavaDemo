@@ -1,6 +1,6 @@
 package com.ax.spring.mapper;
 
-import com.ax.spring.domain.Userinfo;
+import com.ax.spring.entity.Userinfo;
 import org.apache.ibatis.annotations.Param;
 
 public interface UserinfoMapper {

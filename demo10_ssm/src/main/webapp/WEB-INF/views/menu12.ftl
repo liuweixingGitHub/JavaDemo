@@ -9,7 +9,7 @@
 
 <h3>freemarker演示</h3>
 <#--${userinfo2}<br>-->
-${userinfo}
+<#--${userinfo}-->
 <#--${session["userinfo"]}-->
 
 

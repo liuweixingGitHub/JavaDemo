@@ -2,14 +2,13 @@ package com.ax.spring.controller;
 
 
 import com.ax.spring.context.UserinfoContext;
-import com.ax.spring.domain.Userinfo;
+import com.ax.spring.entity.Userinfo;
 import com.ax.spring.interceptor.RequiredLogin;
 import com.ax.spring.service.IUserinfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class MenuController extends AccountController{
