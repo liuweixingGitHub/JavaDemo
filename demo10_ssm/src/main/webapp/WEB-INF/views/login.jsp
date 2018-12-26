@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +30,7 @@
 <body>
 
 
-<h1 class="text-center text-danger">登陆login.html</h1><br>
+<h1 class="text-center text-danger">登陆login.jsp</h1><br>
 
 <form id="login-form" role="form" class="form-horizontal">
 
@@ -51,9 +52,7 @@
 
 
     <div class="form-group">
-        <div id="submitBtn" class="col-md-offset-2 col-md-10">
-            <button type="submit" >登 陆2</button>
-        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
     </div>
 
 

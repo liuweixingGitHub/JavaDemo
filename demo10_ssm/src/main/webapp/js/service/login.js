@@ -55,6 +55,7 @@ $(function () {
          */
         submitHandler:function(form) {
 
+
             //刷新页面,显示json数据
             // form.submit(); //没有这一句表单不会提交
             // $(form).ajaxForm(function() {
@@ -67,25 +68,28 @@ $(function () {
                 url:"/login.do",
                 type:"post",
                 dataType:"json",
-
                 success:function (data){
 
-                    if (data.success){
+                    if (data.state){
 
                         $.messager.confirm("提示","登陆成功,点击确定跳转到个人中心",function() {
+/**直接进去静态页面*/
+// window.location.href="/home.html";
+  window.location.href="/home.page";
 
-                            window.location.href="/user/menu.do";
-                            // window.location.href="/menu.jsp";
                         });
 
                     }else {
-                        $.messager.alert("提示",data.mes);
+                        $.messager.alert("提示",data.msg);
                     }
-
-
                 }
             });
 
+//            $(form).ajaxSubmit({
+//                url:"/home.page",
+//                type:"get",
+////                dataType:"json",
+//            });
         },
 
     });

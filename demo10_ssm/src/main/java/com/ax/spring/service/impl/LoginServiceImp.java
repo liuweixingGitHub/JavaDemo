@@ -8,6 +8,7 @@ import com.ax.spring.mapper.UserinfoMapper;
 import com.ax.spring.service.ILoginService;
 import com.ax.spring.util.AXTools.AXConst;
 import com.ax.spring.context.UserinfoContext;
+import com.ax.spring.util.AXTools.AXResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,17 +25,16 @@ public class LoginServiceImp implements ILoginService {
     private IpLogMapper ipLogMapper;
 
 
-
-    public Userinfo login(String username, String password,HttpServletRequest request){
+    public Userinfo login(String username, String password, HttpServletRequest request) {
 
         IpLog ipLog = new IpLog();
         ipLog.setIp(request.getRemoteAddr());
         ipLog.setLoginTime(new Date());
-        ipLog.setUserName(username);
+        ipLog.setUserName(username);//小写
 
 
-        Userinfo userinfo = this.userinfoMapper.getModelByUsernameAndPassword(username,password);
-        if (userinfo != null){
+        Userinfo userinfo = this.userinfoMapper.getModelByUsernameAndPassword(username, password);
+        if (userinfo != null) {
             /*
             登陆成功,保存当前登陆的userinfo
              */
@@ -45,25 +45,80 @@ public class LoginServiceImp implements ILoginService {
             ipLog.setUserinfoId(userinfo.getId());
             ipLog.setLoginState(IpLog.LOGINSTATE_SUCCESS);
 
-        }else {
+            ipLogMapper.insert(ipLog);
+        } else {
             ipLog.setLoginState(IpLog.LOGINSTATE_FAILD);
 
         }
 
-        ipLogMapper.insert(ipLog);
 
         return userinfo;
 
     }
 
-    public boolean hasAdmin(){
 
-        return this.userinfoMapper.getCountByUsername(AXConst.ADMIN_NAME)>0;
+    public AXResultMap loginState(String username, String password, HttpServletRequest request) {
+
+
+        Userinfo userinfo = this.userinfoMapper.getModelByUsername(username.toLowerCase());
+
+        System.out.println("userinfo = " + userinfo);
+
+
+        AXResultMap axResultMap = new AXResultMap();
+
+        if (userinfo == null) {
+
+
+            axResultMap.setSuccess(false);
+            axResultMap.setMsg("账号不存在");
+
+
+        } else {
+
+
+            /**记录登录成功或失败*/
+            IpLog ipLog = new IpLog();
+            ipLog.setIp(request.getRemoteAddr());
+            ipLog.setLoginTime(new Date());
+            ipLog.setUserName(username.toLowerCase());//小写
+            ipLog.setUserType(userinfo.getUsertype());
+            ipLog.setUserinfoId(userinfo.getId());
+
+            if (userinfo.getPassword().toLowerCase().equals(password.toLowerCase())) {
+
+                /**登陆成功,保存当前登陆的userinfo*/
+                UserinfoContext.putUserinfo(userinfo);
+                ipLog.setLoginState(IpLog.LOGINSTATE_SUCCESS);
+
+                axResultMap.setSuccess(true);
+                axResultMap.put("userinfo", userinfo);
+
+            } else {
+
+                ipLog.setLoginState(IpLog.LOGINSTATE_FAILD);
+                axResultMap.setSuccess(false);
+                axResultMap.setMsg("账号或者密码错误");
+
+            }
+            ipLogMapper.insert(ipLog);
+        }
+
+
+        return axResultMap;
 
     }
-    public void createAdmin(){
 
-        if (!hasAdmin()){
+
+    public boolean hasAdmin() {
+
+        return this.userinfoMapper.getCountByUsername(AXConst.ADMIN_NAME) > 0;
+
+    }
+
+    public void createAdmin() {
+
+        if (!hasAdmin()) {
 
             Userinfo userinfo = new Userinfo();
             userinfo.setUsername(AXConst.ADMIN_NAME);

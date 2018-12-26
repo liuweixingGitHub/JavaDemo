@@ -22,7 +22,7 @@ public class AXResultMap extends HashMap{
 
     public void setSuccess(Boolean success) {
         this.success = success;
-        this.put("success",success);
+        this.put("state",success);
     }
 
     public List getList() {

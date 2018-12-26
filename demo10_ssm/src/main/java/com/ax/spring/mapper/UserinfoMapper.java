@@ -66,4 +66,6 @@ public interface UserinfoMapper {
    按照名username和passwor查找
     */
     Userinfo getModelByUsernameAndPassword(@Param("username") String username,@Param("password") String password);
+
+
 }

@@ -15,7 +15,10 @@
 		<wicket.version>1.3.2</wicket.version>
 		<jetty.version>6.1.4</jetty.version>
 
-		<org.springframework.version>4.3.2.RELEASE</org.springframework.version>
+		<!--<org.springframework.version>4.3.2.RELEASE</org.springframework.version>-->
+
+		<org.springframework.version>5.1.3.RELEASE</org.springframework.version>
+
 
 	</properties>
 
@@ -38,23 +41,43 @@
 
 
 		<!--mysql-connector-->
+		<!--<dependency>-->
+			<!--<groupId>mysql</groupId>-->
+			<!--<artifactId>mysql-connector-java</artifactId>-->
+			<!--<version>6.0.6</version>-->
+		<!--</dependency>-->
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>6.0.6</version>
+			<version>8.0.13</version>
 		</dependency>
 
+
 		<!--阿里巴巴 fastjson-->
+		<!--<dependency>-->
+			<!--<groupId>com.alibaba</groupId>-->
+			<!--<artifactId>fastjson</artifactId>-->
+			<!--<version>1.2.35</version>-->
+		<!--</dependency>-->
+		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
-			<version>1.2.35</version>
+			<version>1.2.54</version>
 		</dependency>
+
 		<!--阿里巴巴 druid-->
+		<!--<dependency>-->
+			<!--<groupId>com.alibaba</groupId>-->
+			<!--<artifactId>druid</artifactId>-->
+			<!--<version>1.1.0</version>-->
+		<!--</dependency>-->
+		<!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
-			<version>1.1.0</version>
+			<version>1.1.12</version>
 		</dependency>
 
 		<!-- spring需要的jar包依赖 -->
@@ -150,11 +173,19 @@
 		<!-- Spring MVC for Portlet Environments (depends on spring-core, spring-beans,
             spring-context, spring-web) Define this if you use Spring MVC with a Portlet
             Container (org.springframework.web.portlet.*) -->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework</groupId>-->
+			<!--<artifactId>spring-webmvc-portlet</artifactId>-->
+			<!--<version>${org.springframework.version}</version>-->
+		<!--</dependency>-->
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc-portlet -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc-portlet</artifactId>
-			<version>${org.springframework.version}</version>
+			<version>4.3.21.RELEASE</version>
 		</dependency>
+
 		<!-- Support for testing Spring applications with tools such as JUnit and
             TestNG This artifact is generally always defined with a 'test' scope for
             the integration testing framework and unit testing stubs -->

@@ -29,10 +29,7 @@ public class MenuController extends AccountController{
     @RequestMapping(value="/menu.do")
     public String menu(Model model){
 
-
         Userinfo userinfo = UserinfoContext.getCurrent();
-
-
         model.addAttribute("userinfo", userinfoService.get(userinfo.getId()));
         System.out.println("userinfo = " + userinfo);
 

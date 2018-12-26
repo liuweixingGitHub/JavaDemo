@@ -12,7 +12,7 @@
 <%--${requestScope}<br>--%>
 
 ${result}<br>
-${requestScope.result}<br>
+${requestScope.state}<br>
 ${requestScope.userinfo.username}<br>
 ${userinfo.username}<br>
 

@@ -17,35 +17,41 @@ public class LoginController extends BaseController {
     @Autowired
     private ILoginService loginService;
 
+    /**
+     * jsp 页面可以直接取值,默认是请求转发 forward:
+     * ${result}
+     */
+    @RequestMapping(value = "/login.page")
+    public ModelAndView loginPage() {
 
-    @RequestMapping(value="/login.do")
+
+        ModelAndView modelAndView = new ModelAndView("login");
+
+
+        return modelAndView;
+
+    }
+
+
+    @RequestMapping(value = "/login.do")
     @ResponseBody
-    public AXResultMap login(@RequestParam(required = true) String username, @RequestParam(required = true) String password){
+    public AXResultMap login(@RequestParam(required = true) String username, @RequestParam(required = true) String password) {
 
-        String userAgent = this.request.getHeader("user-agent");
-        System.out.println("userAgent = " + userAgent);
+//        String userAgent = this.request.getHeader("user-agent");
+//        System.out.println("userAgent = " + userAgent);
 
-        AXResultMap axResultMap = new AXResultMap();
+        AXResultMap axResultMap = this.loginService.loginState(username, password, this.request);
 
-        Userinfo userinfo = this.loginService.login(username,password, this.request);
+        System.out.println("axResultMap = " + axResultMap);
 
-        if (userinfo != null){
-
-            axResultMap.setSuccess(true);
-            axResultMap.put("userinfo",userinfo);
-        }else {
-
-            axResultMap.setSuccess(false);
-            axResultMap.setMsg("账号或者密码错误");
-        }
         return axResultMap;
 
     }
 
 
-    @RequestMapping(value="/login12.do")
+    @RequestMapping(value = "/login12.do")
     @ResponseBody
-    public AXResultMap login12(@RequestParam(required = true) String username, @RequestParam(required = true) String password){
+    public AXResultMap login12(@RequestParam(required = true) String username, @RequestParam(required = true) String password) {
 
         String userAgent = this.request.getHeader("user-agent");
         System.out.println("userAgent = " + userAgent);
@@ -53,15 +59,17 @@ public class LoginController extends BaseController {
 
         AXResultMap axResult = new AXResultMap();
 
-        Userinfo userinfo = this.loginService.login(username,password, this.request);
-        if (userinfo != null){
+        Userinfo userinfo = this.loginService.login(username, password, this.request);
+
+
+        if (userinfo != null) {
 
             axResult.setSuccess(true);
-            axResult.put("userinfo",userinfo);
+            axResult.put("userinfo", userinfo);
 
-            System.out.println(">>"+UserinfoContext.getCurrent());
+            System.out.println(">>" + UserinfoContext.getCurrent());
 
-        }else {
+        } else {
             axResult.setSuccess(false);
             axResult.setMsg("账号或者密码错误");
         }
@@ -70,28 +78,16 @@ public class LoginController extends BaseController {
     }
 
 
-    /*
-    jsp 页面可以直接取值,默认是请求转发 forward:
-    ${result}
+    /**
+     * jsp 页面可以直接取值,默认是请求转发 forward:
+     * ${result}
      */
-    @RequestMapping(value="/login2.do")
-
-    public ModelAndView login2(@RequestParam(required=true)String username, @RequestParam(required=true)String password) {
-
-        ModelAndView mView = new ModelAndView("home.jsp");
-        Userinfo userinfo = this.loginService.login(username,password, this.request);
-        if (userinfo != null){
-            mView.addObject("result",true);
-            mView.addObject("userinfo",userinfo);
-
-        }else {
-            mView.addObject("result",false);
-            mView.addObject("mes","账号或者密码错误");
-        }
-        return mView;
+    @RequestMapping(value = "/home.page")
+    public ModelAndView homePage() {
+        ModelAndView modelAndView = new ModelAndView("home");
+        return modelAndView;
 
     }
-
 
 
 //重定向 redirect
