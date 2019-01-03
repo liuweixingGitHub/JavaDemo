@@ -6,20 +6,15 @@ import java.util.List;
 public class Person {
 
 
-    private  Long id;
-    private  String name;
-    private  Integer age;
+    private Long id;
+    private String name;
+    private Integer age;
 
 
-
-
-       private User user2;
+    private User user2;
 
 
     private List list1 = new ArrayList();
-
-
-
 
 
     public List getList1() {

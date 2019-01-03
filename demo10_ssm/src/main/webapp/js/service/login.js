@@ -1,5 +1,11 @@
 $(function () {
 
+ $('#registerBtn').click(function(){
+
+   window.location.href="/register.page";
+
+ });
+
 
     $('#login-form').validate({
 
@@ -18,7 +24,6 @@ $(function () {
             "username":{
                 required:"填写用户名",
                 rangelength:"用户名的长度在{0}到{1}之间",
-                remote:"用户已经存在",
             },
             "password":{
                 required:"填写密码",
@@ -72,12 +77,12 @@ $(function () {
 
                     if (data.state){
 
-                        $.messager.confirm("提示","登陆成功,点击确定跳转到个人中心",function() {
+//                        $.messager.confirm("提示","登陆成功,点击确定跳转到个人中心",function() {
 /**直接进去静态页面*/
 // window.location.href="/home.html";
   window.location.href="/home.page";
 
-                        });
+//                        });
 
                     }else {
                         $.messager.alert("提示",data.msg);

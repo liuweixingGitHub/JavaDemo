@@ -6,7 +6,7 @@ $(function () {
         $.ajax({
             dataType:"json",
             type:"get",
-            url:"/checkUsername.do",
+            url:"/checkUserName.do",
             data:{username:value},
             async:false,
             success:function(data){
@@ -28,19 +28,8 @@ $(function () {
                 rangelength:[2,16],
 
                 //B:在JQuery的validate功能中使用remote实现Ajax功能后台验证(只可返回String类型"true"或"false"值)
-                checkUsername:true,
-                // remote:{
-                //     url:"/checkUsername.do",
-                //     type:"get",
-                //     dataType: 'json',
-                //     data:{
-                //         'type': function(){return $('input[name="type"]:checked').val();}
-                //         // name:function(){
-                //         //     // return $("#result").val();
-                //         //
-                //         // }
-                //     }
-                // },
+//                checkUsername:false,
+
             },
             "password":{
                 required:true,
@@ -55,7 +44,7 @@ $(function () {
             "username":{
                 required:"填写用户名",
                 rangelength:"用户名的长度在{0}到{1}之间",
-                remote:"用户已经存在",
+//                remote:"请",
             },
             "password":{
                 required:"填写密码",

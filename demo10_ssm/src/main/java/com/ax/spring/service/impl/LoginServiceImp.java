@@ -24,13 +24,13 @@ public class LoginServiceImp implements ILoginService {
     @Autowired
     private IpLogMapper ipLogMapper;
 
-
+    @Override
     public Userinfo login(String username, String password, HttpServletRequest request) {
 
         IpLog ipLog = new IpLog();
         ipLog.setIp(request.getRemoteAddr());
         ipLog.setLoginTime(new Date());
-        ipLog.setUserName(username);//小写
+        ipLog.setUserName(username);
 
 
         Userinfo userinfo = this.userinfoMapper.getModelByUsernameAndPassword(username, password);
@@ -56,7 +56,7 @@ public class LoginServiceImp implements ILoginService {
 
     }
 
-
+    @Override
     public AXResultMap loginState(String username, String password, HttpServletRequest request) {
 
 
@@ -70,7 +70,7 @@ public class LoginServiceImp implements ILoginService {
         if (userinfo == null) {
 
 
-            axResultMap.setSuccess(false);
+            axResultMap.setState(false);
             axResultMap.setMsg("账号不存在");
 
 
@@ -81,7 +81,7 @@ public class LoginServiceImp implements ILoginService {
             IpLog ipLog = new IpLog();
             ipLog.setIp(request.getRemoteAddr());
             ipLog.setLoginTime(new Date());
-            ipLog.setUserName(username.toLowerCase());//小写
+            ipLog.setUserName(username.toLowerCase());
             ipLog.setUserType(userinfo.getUsertype());
             ipLog.setUserinfoId(userinfo.getId());
 
@@ -91,13 +91,13 @@ public class LoginServiceImp implements ILoginService {
                 UserinfoContext.putUserinfo(userinfo);
                 ipLog.setLoginState(IpLog.LOGINSTATE_SUCCESS);
 
-                axResultMap.setSuccess(true);
+                axResultMap.setState(true);
                 axResultMap.put("userinfo", userinfo);
 
             } else {
 
                 ipLog.setLoginState(IpLog.LOGINSTATE_FAILD);
-                axResultMap.setSuccess(false);
+                axResultMap.setState(false);
                 axResultMap.setMsg("账号或者密码错误");
 
             }
@@ -109,13 +109,14 @@ public class LoginServiceImp implements ILoginService {
 
     }
 
-
+    @Override
     public boolean hasAdmin() {
 
         return this.userinfoMapper.getCountByUsername(AXConst.ADMIN_NAME) > 0;
 
     }
 
+    @Override
     public void createAdmin() {
 
         if (!hasAdmin()) {

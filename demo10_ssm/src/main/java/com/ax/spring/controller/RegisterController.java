@@ -25,28 +25,24 @@ public class RegisterController {
 
         AXResultMap result = new AXResultMap();
         if (register) {
-            result.setSuccess(true);
+            result.setState(true);
             result.setMsg("注册成功");
 
         } else {
-            result.setSuccess(false);
+            result.setState(false);
             result.setMsg("用户已存在");
         }
         return result;
     }
 
-    @RequestMapping(value = "/checkUsername.do")
+    @RequestMapping(value = "/checkUserName.do")
     @ResponseBody
-    public AXResultMap checkUsername(@RequestParam(required = true) String username) {
+    public boolean checkUsername(@RequestParam(required = true) String username) {
 
         Boolean checkUsername = registerService.checkUsername(username);
-        System.out.println("username = " + username + "\n" + "checkUsername=" + checkUsername);
-//        return registerService.checkUsername(username);
+        System.out.println("checkUsername>>>> "+checkUsername);
 
-        AXResultMap result = new AXResultMap();
-        result.setSuccess(checkUsername);
-
-        return result;
+        return checkUsername;
 
     }
 

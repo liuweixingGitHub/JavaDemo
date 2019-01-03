@@ -64,13 +64,13 @@ public class LoginController extends BaseController {
 
         if (userinfo != null) {
 
-            axResult.setSuccess(true);
+            axResult.setState(true);
             axResult.put("userinfo", userinfo);
 
             System.out.println(">>" + UserinfoContext.getCurrent());
 
         } else {
-            axResult.setSuccess(false);
+            axResult.setState(false);
             axResult.setMsg("账号或者密码错误");
         }
         return axResult;

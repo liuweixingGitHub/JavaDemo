@@ -48,48 +48,44 @@ public class TestConteoller extends BaseController {
     @Autowired
     private IIpLogService ipLogService;
 
-    @RequestMapping(value="/400.do")
+    @RequestMapping(value = "/400.do")
     @ResponseBody
-    public ModelAndView error(String username, String password){
+    public ModelAndView error(String username, String password) {
 
         JSONObject jsonObject = new JSONObject();
         try {
 
-            Userinfo logininfo = this.loginService.login(username,password,request);
+            Userinfo logininfo = this.loginService.login(username, password, request);
 
             System.out.println("logininfo = " + logininfo);
 
-            jsonObject.put("result",true);
-            jsonObject.put("userinfo",logininfo);
+            jsonObject.put("result", true);
+            jsonObject.put("userinfo", logininfo);
 
-        }catch (RuntimeException e){
-            jsonObject.put("result",true);
-            jsonObject.put("mes",e.getMessage());
+        } catch (RuntimeException e) {
+            jsonObject.put("result", true);
+            jsonObject.put("mes", e.getMessage());
         }
 
         ModelAndView mView = new ModelAndView("400.jsp");
 
-        mView.addObject("key",jsonObject);
+        mView.addObject("key", jsonObject);
 
         return mView;
 
     }
 
 
-    @RequestMapping(value="/test2.do")
+    @RequestMapping(value = "/test2.do")
     @ResponseBody
-    public AXResultMap test2(){
-
+    public AXResultMap test2() {
 
 
         AXResultMap axResultMap = new AXResultMap();
 
 
-
-
-
-            axResultMap.setSuccess(true);
-            axResultMap.put("userinfo","123456");
+        axResultMap.setState(true);
+        axResultMap.put("userinfo", "123456");
 
 
         return axResultMap;
@@ -118,57 +114,54 @@ public class TestConteoller extends BaseController {
 //    }
 
 
-
-    @RequestMapping(value="/reg2")
+    @RequestMapping(value = "/reg2")
     @ResponseBody
-    public String reg2(String username,String password){
+    public String reg2(String username, String password) {
 
-        System.out.println("reg"+username);
+        System.out.println("reg" + username);
 
-        return username+password;
+        return username + password;
 
     }
 
 
-    @RequestMapping(value="/reg3")
-    public ModelAndView reg3(String username, String password){
+    @RequestMapping(value = "/reg3")
+    public ModelAndView reg3(String username, String password) {
 
         ModelAndView mView = new ModelAndView();
-        mView.addObject("key","填进去");
+        mView.addObject("key", "填进去");
         mView.setViewName("home.jsp");
         return mView;
     }
 
 
-
-    @RequestMapping(value="/hello")
+    @RequestMapping(value = "/hello")
     @ResponseBody
-    public AXResultMap hello(){
+    public AXResultMap hello() {
 
         System.out.println("HelloController");
 
 
         User user = userService.get(1L);
 
-        List<User>  list = new ArrayList();
+        List<User> list = new ArrayList();
         list.add(user);
 
 //        return  new AXResultMap(true,list).toJSONString();
-        System.out.println( AXResultMap.errorMsg("代码"));
-        System.out.println( ">>"+ AXResultMap.succeeList(null));
-        System.out.println( ">>"+ AXResultMap.succeeList(list));
-        return  AXResultMap.succeeList(list);
+        System.out.println(AXResultMap.errorMsg("代码"));
+        System.out.println(">>" + AXResultMap.succeeList(null));
+        System.out.println(">>" + AXResultMap.succeeList(list));
+        return AXResultMap.succeeList(list);
 
 
 //        return "abc";
     }
 
 
-//    @RequestMapping(value="/test",produces="application/json;charset=UTF-8")
-    @RequestMapping(value="/test")
+    //    @RequestMapping(value="/test",produces="application/json;charset=UTF-8")
+    @RequestMapping(value = "/test")
     @ResponseBody
-    public AXResultMap test(){
-
+    public AXResultMap test() {
 
 
         List<Person> list = new ArrayList();
@@ -213,14 +206,13 @@ public class TestConteoller extends BaseController {
     }
 
 
-
     @RequestMapping("/hello2")
-    public ModelAndView function1 ()  {
+    public ModelAndView function1() {
 
         System.out.println("demo1");
 
         ModelAndView mView = new ModelAndView();
-        mView.addObject("key","123456");
+        mView.addObject("key", "123456");
         mView.setViewName("home");
         return mView;
 
@@ -237,27 +229,26 @@ public class TestConteoller extends BaseController {
 
         List<String> list = new ArrayList();
 
-        CommonsMultipartResolver multipartResolver=new CommonsMultipartResolver(
+        CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver(
                 request.getSession().getServletContext());
 
         //检查form中是否有enctype="multipart/form-data"
-        if(multipartResolver.isMultipart(request)) {
+        if (multipartResolver.isMultipart(request)) {
             //将request变成多部分request
-            MultipartHttpServletRequest multiRequest=(MultipartHttpServletRequest)request;
+            MultipartHttpServletRequest multiRequest = (MultipartHttpServletRequest) request;
             //获取multiRequest 中所有的文件名
-            Iterator iter=multiRequest.getFileNames();
+            Iterator iter = multiRequest.getFileNames();
 
-            System.out.println("iter-->"+iter);
+            System.out.println("iter-->" + iter);
 
 
-
-            while(iter.hasNext()){
+            while (iter.hasNext()) {
 
                 //一次遍历所有文件
-                MultipartFile file=multiRequest.getFile(iter.next().toString());
-                if(file!=null){
-                    String path="/Users/moledeveloper/Desktop/"+file.getOriginalFilename();
-                    System.out.println("path-->"+path);
+                MultipartFile file = multiRequest.getFile(iter.next().toString());
+                if (file != null) {
+                    String path = "/Users/moledeveloper/Desktop/" + file.getOriginalFilename();
+                    System.out.println("path-->" + path);
                     //上传
                     file.transferTo(new File(path));
                     list.add(file.getOriginalFilename());
@@ -268,13 +259,13 @@ public class TestConteoller extends BaseController {
         }
 
         System.out.println("上传文件 成功");
-        if (list.size()==1){
+        if (list.size() == 1) {
             String name = list.get(0);
             System.out.println("name = " + name);
 //            return  new AXResultMap(true,name).toJSONString();
             return AXResultMap.succeeFileName(name);
 //            return  JSON.toJSONString( new AXResultMap(true,name));
-        }else {
+        } else {
 
 //            return  new AXResultMap(true,list).toJSONString();
             return AXResultMap.succeeList(list);
@@ -283,9 +274,7 @@ public class TestConteoller extends BaseController {
     }
 
 
-
-
-    @RequestMapping(value="/ipPage.do")
+    @RequestMapping(value = "/ipPage.do")
     @ResponseBody
     public PageInfo ipPage() {
 
@@ -297,10 +286,9 @@ public class TestConteoller extends BaseController {
         queryObject.setUserName("jim");
 
 
-
         System.out.println("queryObject = " + queryObject);
 
-        PageInfo  pageInfo = ipLogService.queryPage(queryObject,1,10);
+        PageInfo pageInfo = ipLogService.queryPage(queryObject, 1, 10);
 
         System.out.println("pageInfo = " + pageInfo);
 

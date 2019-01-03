@@ -46,7 +46,8 @@
 
 		<property name="configLocation" value="classpath:mybatis-config.xml" />
 
-		<property name="typeAliasesPackage" value="com.ax.spring" />
+		<!--实体类-->
+		<property name="typeAliasesPackage" value="com.ax.spring.entity" />
 
 		<!--<property name="mapperLocations" value="classpath:com/ax/spring/mapper/UserMapper.xml" />-->
 		<property name="mapperLocations" value="classpath*:com/ax/spring/mapper/*Mapper.xml" />

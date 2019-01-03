@@ -14,6 +14,7 @@ public class RegisterServiceImp implements IRegisterService {
 
 
 
+    @Override
     public boolean register(String username, String password,int userType){
 
        int count = this.userinfoMapper.getCountByUsername(username);
@@ -32,6 +33,7 @@ public class RegisterServiceImp implements IRegisterService {
             return false;
     }
 
+    @Override
     public Boolean checkUsername(String username){
 
         int count = this.userinfoMapper.getCountByUsername(username);

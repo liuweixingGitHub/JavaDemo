@@ -5,9 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class AXResultMap extends HashMap{
+public class AXResultMap extends HashMap {
 
-    private Boolean success;
+
+    private Boolean state;
     private List list;
     private String msg;
     private String fileName;
@@ -16,13 +17,13 @@ public class AXResultMap extends HashMap{
         super();
     }
 
-    public Boolean getSuccess() {
-        return success;
+    public Boolean getState() {
+        return state;
     }
 
-    public void setSuccess(Boolean success) {
-        this.success = success;
-        this.put("state",success);
+    public void setState(Boolean state) {
+        this.state = state;
+        this.put("state", state);
     }
 
     public List getList() {
@@ -31,7 +32,7 @@ public class AXResultMap extends HashMap{
 
     public void setList(List list) {
         this.list = list;
-        this.put("list",list);
+        this.put("list", list);
     }
 
     public String getMsg() {
@@ -40,7 +41,7 @@ public class AXResultMap extends HashMap{
 
     public void setMsg(String msg) {
         this.msg = msg;
-        this.put("msg",msg);
+        this.put("msg", msg);
     }
 
     public String getFileName() {
@@ -49,7 +50,7 @@ public class AXResultMap extends HashMap{
 
     public void setFileName(String fileName) {
         this.fileName = fileName;
-        this.put("fileName",fileName);
+        this.put("fileName", fileName);
     }
 
 //    public String toJSONString(){
@@ -61,13 +62,13 @@ public class AXResultMap extends HashMap{
     /*
     返回成功list
      */
-    public  static AXResultMap succeeList(List list) {
+    public static AXResultMap succeeList(List list) {
 
-        if (list==null){
+        if (list == null) {
             list = new ArrayList();
         }
         AXResultMap result = new AXResultMap();
-        result.setSuccess(true );
+        result.setState(true);
         result.setList(list);
 
         return result;
@@ -76,13 +77,13 @@ public class AXResultMap extends HashMap{
     /*
   返回成功list
    */
-    public  static AXResultMap succeeFileName(String name) {
+    public static AXResultMap succeeFileName(String name) {
 
-        if (name==null){
+        if (name == null) {
             name = "";
         }
         AXResultMap result = new AXResultMap();
-        result.setSuccess(true );
+        result.setState(true);
         result.setFileName(name);
         return result;
     }
@@ -90,13 +91,13 @@ public class AXResultMap extends HashMap{
     /*
     返回错误
      */
-    public  static AXResultMap errorMsg(String msg) {
+    public static AXResultMap errorMsg(String msg) {
 
-        if (msg==null){
+        if (msg == null) {
             msg = "";
         }
         AXResultMap result = new AXResultMap();
-        result.setSuccess(false );
+        result.setState(false);
         result.setMsg(msg);
         return result;
     }

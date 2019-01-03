@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserinfoServiceImpl implements IUserinfoService{
+public class UserinfoServiceImpl implements IUserinfoService {
 
     @Autowired
     private UserinfoMapper userinfoMapper;

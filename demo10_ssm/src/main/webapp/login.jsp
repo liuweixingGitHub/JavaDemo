@@ -10,14 +10,14 @@
     <!--jquery-->
     <script src=" js/jquery/jquery-2.1.3.min.js"></script>
 
-    <!--jquery插件-->
-    <script src="https://cdn.bootcss.com/jquery.form/4.2.2/jquery.form.min.js"></script>
-    <script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="js/plugins/jquery.bootstrap.min.js"></script>
+     <!--jquery插件-->
+       <script src="js/plugins/jquery.form.min.js"></script>
+       <script src="js/plugins/jquery.validate.min.js"></script>
+       <script type="text/javascript" src="js/plugins/jquery.bootstrap.min.js"></script>
 
-    <!--bootstrap-->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+       <!--bootstrap-->
+       <link href="js/plugins/bootstrap-3.3.7.min.css" rel="stylesheet">
+       <script src="js/plugins/jquery.bootstrap.min.js"></script>
 
 
     <!--css-->
@@ -30,7 +30,7 @@
 <body>
 
 
-<h1 class="text-center text-danger">登陆login.jsp</h1><br>
+<h1 class="text-center text-danger">登陆login.jsp222</h1><br>
 
 <form id="login-form" role="form" class="form-horizontal">
 
@@ -54,6 +54,8 @@
     <div class="form-group">
         <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
     </div>
+
+    <button id="registerBtn" class="btn btn-lg btn-primary btn-block">注册</button>
 
 
 </form>
