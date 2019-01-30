@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+
+    <!--js head-->
+    <!--jquery-->
+    <script src=" js/jquery/jquery-2.1.3.min.js"></script>
+
+    <!--jquery插件-->
+    <script src="https://cdn.bootcss.com/jquery.form/4.2.2/jquery.form.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.bootstrap.min.js"></script>
+
+    <!--bootstrap-->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <!--css-->
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/service/register.js"></script>
+
+</head>
+<body>
+
+
+<h1 class="text-center text-danger">注册</h1><br>
+
+<form id="register-form" role="form" class="form-horizontal">
+
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="username">用户名：</label>
+        <div class="col-sm-5">
+            <input class="form-control" id="username" name="username" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="password">密码：</label>
+        <div class="col-sm-5">
+            <input class="form-control" id="password" name="password" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label" for="confirm-password">确认密码：</label>
+        <div class="col-sm-5">
+            <input class="form-control" id="confirm-password" name="confirm-password" />
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+
+            <button type="submit" >注册</button>
+        </div>
+    </div>
+
+</form>
+
+
+</body>
+</html>
