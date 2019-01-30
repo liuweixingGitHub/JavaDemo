@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ax.demo.mapper.IpLogMapper" >
+  <resultMap id="BaseResultMap" type="com.ax.demo.entity.IpLog" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="userName" property="userName" jdbcType="VARCHAR" />
+    <result column="loginTime" property="loginTime" jdbcType="TIMESTAMP" />
+    <result column="ip" property="ip" jdbcType="VARCHAR" />
+    <result column="loginState" property="loginState" jdbcType="INTEGER" />
+    <result column="userType" property="userType" jdbcType="INTEGER" />
+    <result column="userinfoId" property="userinfoId" jdbcType="BIGINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, userName, loginTime, ip, loginState, userType, userinfoId
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select
+    <include refid="Base_Column_List" />
+    from t_ipLog
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from t_ipLog
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.ax.demo.entity.IpLog" useGeneratedKeys="true" keyProperty="id" >
+    insert into t_ipLog (userName, loginTime, ip, 
+      loginState, userType, userinfoId
+      )
+    values (#{userName,jdbcType=VARCHAR}, #{loginTime,jdbcType=TIMESTAMP}, #{ip,jdbcType=VARCHAR}, 
+      #{loginState,jdbcType=INTEGER}, #{userType,jdbcType=INTEGER}, #{userinfoId,jdbcType=BIGINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ax.demo.entity.IpLog" useGeneratedKeys="true" keyProperty="id" >
+    insert into t_ipLog
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userName != null" >
+        userName,
+      </if>
+      <if test="loginTime != null" >
+        loginTime,
+      </if>
+      <if test="ip != null" >
+        ip,
+      </if>
+      <if test="loginState != null" >
+        loginState,
+      </if>
+      <if test="userType != null" >
+        userType,
+      </if>
+      <if test="userinfoId != null" >
+        userinfoId,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userName != null" >
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="loginTime != null" >
+        #{loginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ip != null" >
+        #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="loginState != null" >
+        #{loginState,jdbcType=INTEGER},
+      </if>
+      <if test="userType != null" >
+        #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoId != null" >
+        #{userinfoId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ax.demo.entity.IpLog" >
+    update t_ipLog
+    <set >
+      <if test="userName != null" >
+        userName = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="loginTime != null" >
+        loginTime = #{loginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="ip != null" >
+        ip = #{ip,jdbcType=VARCHAR},
+      </if>
+      <if test="loginState != null" >
+        loginState = #{loginState,jdbcType=INTEGER},
+      </if>
+      <if test="userType != null" >
+        userType = #{userType,jdbcType=INTEGER},
+      </if>
+      <if test="userinfoId != null" >
+        userinfoId = #{userinfoId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ax.demo.entity.IpLog" >
+    update t_ipLog
+    set userName = #{userName,jdbcType=VARCHAR},
+      loginTime = #{loginTime,jdbcType=TIMESTAMP},
+      ip = #{ip,jdbcType=VARCHAR},
+      loginState = #{loginState,jdbcType=INTEGER},
+      userType = #{userType,jdbcType=INTEGER},
+      userinfoId = #{userinfoId,jdbcType=BIGINT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <sql id="base_query">
+
+    <where>
+      <if test="beginDate!=null">
+        AND loginTime &gt;=#{beginDate}
+      </if>
+
+      <if test="endDate!=null">
+        AND loginTime &lt;=#{endDate}
+      </if>
+
+      <if test="userName!=null and like">
+        AND userName LIKE '%${userName}%'
+      </if>
+
+      <if test="userName!=null and !like">
+        AND userName = #{userName}
+      </if>
+
+      <if test="userType>-1">
+        AND userType = #{userType}
+      </if>
+
+    </where>
+
+  </sql>
+
+
+  <!--分页查询 个数-->
+  <select id="queryForCount" resultType="int">
+    SELECT COUNT(id) FROM t_ipLog
+    <include refid="base_query" />
+
+
+  </select>
+
+
+  <!--分页查询 内容-->
+  <select id="query"  resultMap="BaseResultMap" parameterType="java.lang.Long"  >
+    SELECT  <include refid="Base_Column_List" />
+    FROM t_ipLog
+    <include refid="base_query" />
+
+    ORDER BY loginTime DESC
+
+    <!--<if test="pageSize>-1">-->
+    <!--LIMIT #{start},#{pageSize}-->
+    <!--</if>-->
+
+  </select>
+
+
+
+  <select id="queryPage"  resultMap="BaseResultMap" parameterType="com.ax.demo.query.IpLogQueryObject">
+    SELECT *
+    FROM t_ipLog
+    <include refid="base_query" />
+
+
+
+  </select>
+
+
+
+
+</mapper>

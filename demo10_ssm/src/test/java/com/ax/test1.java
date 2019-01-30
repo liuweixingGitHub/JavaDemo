@@ -94,7 +94,7 @@ public class test1 {
 
         AXResultMap result = new AXResultMap();
 
-        result.setSuccess(true);
+        result.setState(true);
         result.setList(list);
 //
         str= JSON.toJSONString(result);

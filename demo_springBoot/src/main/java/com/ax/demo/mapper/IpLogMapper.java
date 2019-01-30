@@ -1,7 +1,8 @@
-package com.ax.spring.mapper;
+package com.ax.demo.mapper;
 
-import com.ax.spring.entity.IpLog;
-import com.ax.spring.query.IpLogQueryObject;
+import com.ax.demo.entity.IpLog;
+import com.ax.demo.query.IpLogQueryObject;
+
 import java.util.List;
 
 public interface IpLogMapper {

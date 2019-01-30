@@ -11,6 +11,7 @@ public class DemoSpringBootApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		System.out.println("contextLoads;>>");
 	}
 
 }
