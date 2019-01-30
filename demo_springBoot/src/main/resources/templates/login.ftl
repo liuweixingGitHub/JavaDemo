@@ -20,7 +20,7 @@
 
 
     <!--css-->
-    <link href="css/index.css" rel="stylesheet" type="text/css"/>
+    <link href="css/login.css" rel="stylesheet" type="text/css"/>
 
     <!--js-->
     <script type="text/javascript" src="js/service/login.js"></script>
@@ -52,13 +52,12 @@
 
     <div class="form-group">
         <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
-        <button id="registerBtn" class="btn btn-lg btn-primary btn-block">注册</button>
     </div>
-
-
 </form>
 
-
+<div>
+    <button id="registerBtn" class="btn btn-lg btn-primary btn-block">注册</button>
+</div>
 
 
 </body>

@@ -1,8 +1,9 @@
 $(function () {
 
+
  $('#registerBtn').click(function(){
 
-   window.location.href="/register.page";
+   window.location.href="/register.do";
 
  });
 

@@ -2,36 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ea7d67-6a48-43bd-871a-4b252567d317" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/controller/IndexController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/public/error/400.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/public/error/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/templates/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/WEB-INF/views/hello.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/WEB-INF/views/menu12.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/WEB-INF/views/register.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/app.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/css/register.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/jquery/jquery-2.1.3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/jquery/jquery-2.1.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/plugins/bootstrap-3.3.7.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/plugins/jquery.bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/plugins/jquery.bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/plugins/jquery.form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/plugins/jquery.form.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/plugins/jquery.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/plugins/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/service/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/service/register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/menu.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/controller/RegisterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/templates/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/templates/register.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/templates/register.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/css/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/service/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/service/login.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
