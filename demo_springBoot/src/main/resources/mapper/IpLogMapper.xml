@@ -13,16 +13,19 @@
   <sql id="Base_Column_List" >
     id, userName, loginTime, ip, loginState, userType, userinfoId
   </sql>
+
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select
     <include refid="Base_Column_List" />
     from t_ipLog
     where id = #{id,jdbcType=BIGINT}
   </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from t_ipLog
     where id = #{id,jdbcType=BIGINT}
   </delete>
+
   <insert id="insert" parameterType="com.ax.demo.entity.IpLog" useGeneratedKeys="true" keyProperty="id" >
     insert into t_ipLog (userName, loginTime, ip, 
       loginState, userType, userinfoId
@@ -31,6 +34,7 @@
       #{loginState,jdbcType=INTEGER}, #{userType,jdbcType=INTEGER}, #{userinfoId,jdbcType=BIGINT}
       )
   </insert>
+
   <insert id="insertSelective" parameterType="com.ax.demo.entity.IpLog" useGeneratedKeys="true" keyProperty="id" >
     insert into t_ipLog
     <trim prefix="(" suffix=")" suffixOverrides="," >
@@ -74,6 +78,7 @@
       </if>
     </trim>
   </insert>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.ax.demo.entity.IpLog" >
     update t_ipLog
     <set >
@@ -166,11 +171,20 @@
     SELECT *
     FROM t_ipLog
     <include refid="base_query" />
-
-
-
   </select>
 
+  <select id="findByPageInfo" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_ipLog
+  </select>
+
+
+  <select id="findByPage" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_ipLog
+  </select>
 
 
 

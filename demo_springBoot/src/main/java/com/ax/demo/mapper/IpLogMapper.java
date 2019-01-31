@@ -2,6 +2,7 @@ package com.ax.demo.mapper;
 
 import com.ax.demo.entity.IpLog;
 import com.ax.demo.query.IpLogQueryObject;
+import com.github.pagehelper.Page;
 
 import java.util.List;
 
@@ -33,6 +34,7 @@ public interface IpLogMapper {
 
     List<IpLog> queryPage(IpLogQueryObject queryObject);
 
+    List<IpLog> findByPageInfo();
 
-
+    Page<IpLog> findByPage();
 }

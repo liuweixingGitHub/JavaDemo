@@ -40,7 +40,7 @@ public class RegisterServiceImpl implements IRegisterService {
     }
 
     @Override
-    public Boolean checkUsername(String username){
+    public boolean checkUsername(String username){
 
         int count = this.userinfoMapper.getCountByUsername(username);
         System.out.println("count = " + count);

@@ -1,79 +1,34 @@
 package com.ax.demo.listener;
 
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.boot.ApplicationRunner;
+import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+
+import java.util.Date;
+
 /**
  * @author axing
  */
 @Component
 public class LoginListener  implements ApplicationListener<ContextRefreshedEvent> {
 
-//    @Autowired
-//    private ILoginService loginService;
-//
-//    @Autowired
-//    HttpServletRequest request;
-//
-//    @Autowired
-//    HttpServletResponse response;
-
+    @Override
     public void onApplicationEvent(ContextRefreshedEvent event){
 
-        System.out.println("监听tomcat启动>>");
-
-//        loginService.createAdmin();
+        System.out.println("-------------->" + "监听tomcat启动" + new Date());
 
     }
+
+//    @Override
+//    public void onApplicationEvent(ApplicationEvent event){
+//
+//        System.out.println("****************监听tomcat启动成功****************");
+//
+//    }
+
 }
-
-//@Component
-//public class LoginListener  implements HandlerInterceptor {
-//
-//    @Autowired
-//    private ILoginService loginService;
-//
-//
-//    @Override
-//    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-//
-//
-//        System.out.println("监听tomcat启动>>");
-//
-//        loginService.createAdmin();
-//
-//
-//        HttpSession session = request.getSession();
-//        Userinfo userinfo = (Userinfo) session.getAttribute(AxConst.USERINFO_IN_SESSION);
-//        if (userinfo == null) {
-//
-//            String url = request.getContextPath() + "/login.html";
-//
-//            System.out.println("userinfo == null"+ "url="+url);
-//
-//            response.sendRedirect(url);
-//
-//            return false;
-//        }
-//        return true;
-//    }
-//
-//    @Override
-//    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-//
-//    }
-//
-//    @Override
-//    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-//
-//    }
-//
-//    public void onApplicationEvent(ContextRefreshedEvent event) {
-//
-//        System.out.println("监听tomcat启动>>");
-//
-//        loginService.createAdmin();
-//    }
-//}
-
 

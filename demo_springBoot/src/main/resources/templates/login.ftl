@@ -22,9 +22,9 @@
 
 
     <div class="form-group">
-        <label class="col-sm-2 control-label" for="password">密码：</label>
+        <label class="col-sm-2 control-label" for="password" >密码：</label>
         <div class="col-sm-5">
-            <input class="form-control" id="password" name="password"/>
+            <input class="form-control" id="password" name="password" type="password"/>
         </div>
     </div>
 

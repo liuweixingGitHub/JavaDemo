@@ -7,14 +7,14 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @author axing
  */
-public abstract class ILoginService {
+public interface ILoginService {
 
-    public abstract Userinfo login(String username, String password, HttpServletRequest request);
+    Userinfo login(String username, String password, HttpServletRequest request);
 
-    public abstract AxResultMap loginState(String username, String password, HttpServletRequest request);
+     AxResultMap loginState(String username, String password, HttpServletRequest request);
 
-    public abstract boolean hasAdmin();
+    boolean hasAdmin();
 
-    public abstract void createAdmin();
+    void createAdmin();
 
 }

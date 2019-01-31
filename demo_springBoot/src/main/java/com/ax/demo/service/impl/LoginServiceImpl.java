@@ -18,7 +18,7 @@ import java.util.Date;
  * @author axing
  */
 @Service
-public class LoginServiceImpl extends ILoginService {
+public class LoginServiceImpl implements ILoginService {
 
     @Autowired
     private UserinfoMapper userinfoMapper;

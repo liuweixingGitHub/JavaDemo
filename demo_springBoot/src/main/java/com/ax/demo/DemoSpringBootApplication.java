@@ -7,8 +7,14 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.HttpMessageConverter;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 /**
  * @author axing
  */
@@ -16,8 +22,25 @@ import org.springframework.http.converter.HttpMessageConverter;
 @MapperScan("com.ax.demo.mapper")
 public class DemoSpringBootApplication {
 
+	private static ApplicationContext ctx;
+
 	public static void main(String[] args) {
-		SpringApplication.run(DemoSpringBootApplication.class, args);
+
+		ctx = SpringApplication.run(DemoSpringBootApplication.class, args);
+
+		try {
+
+			String host = InetAddress.getLocalHost().getHostAddress();
+			TomcatServletWebServerFactory tomcatServletWebServerFactory= (TomcatServletWebServerFactory) ctx.getBean("tomcatServletWebServerFactory");
+			int port = tomcatServletWebServerFactory.getPort(); String contextPath = tomcatServletWebServerFactory.getContextPath();
+
+			System.out.println("\n");
+			System.out.println("地址是: http://"+host+":"+port+contextPath+"/");
+
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	@Bean
@@ -34,5 +57,9 @@ public class DemoSpringBootApplication {
 		HttpMessageConverter converter = fasHttpMessageConverter;
 		return new HttpMessageConverters(converter);
 	}
+
+
+
+
 }
 

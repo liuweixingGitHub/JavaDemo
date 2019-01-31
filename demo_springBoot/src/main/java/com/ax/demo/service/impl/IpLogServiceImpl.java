@@ -5,6 +5,9 @@ import com.ax.demo.mapper.IpLogMapper;
 import com.ax.demo.query.IpLogQueryObject;
 import com.ax.demo.service.IIpLogService;
 import com.ax.demo.util.axtools.AxPageResult;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +17,7 @@ import java.util.List;
  * @author axing
  */
 @Service
-public class IpLogServiceImpl extends IIpLogService {
+public class IpLogServiceImpl implements IIpLogService {
 
     @Autowired
     private IpLogMapper ipLogMapper;
@@ -39,7 +42,7 @@ public class IpLogServiceImpl extends IIpLogService {
 
     @Override
     public void insert(IpLog ipLog) {
-
+        ipLogMapper.insert(ipLog);
     }
 
     @Override
@@ -47,4 +50,22 @@ public class IpLogServiceImpl extends IIpLogService {
         return 0;
     }
 
+    @Override
+    public PageInfo<IpLog> findByPageInfo(int pageNum, int pageSize) {
+
+        PageHelper.startPage(pageNum, pageSize);
+
+        List<IpLog> list = ipLogMapper.findByPage();
+
+        PageInfo<IpLog> pageInfo = new PageInfo(list);
+
+        return pageInfo;
+    }
+
+    @Override
+    public Page<IpLog> findByPage(int pageNum, int pageSize) {
+
+        PageHelper.startPage(pageNum, pageSize);
+        return ipLogMapper.findByPage();
+    }
 }
