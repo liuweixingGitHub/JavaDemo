@@ -2,13 +2,16 @@ package com.ax.demo.inteceptor;
 
 
 import com.ax.demo.interceptor.RequiredLogin;
-import com.ax.demo.util.axtools.AXConst;
+import com.ax.demo.util.axtools.AxConst;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * @author axing
+ */
 public class LoginInteceptor extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -29,7 +32,7 @@ public class LoginInteceptor extends HandlerInterceptorAdapter {
                 /*
                 没有保存过userinfo信息
                  */
-                if (request.getSession().getAttribute(AXConst.USERINFO_IN_SESSION) == null){
+                if (request.getSession().getAttribute(AxConst.USERINFO_IN_SESSION) == null){
 
                     response.sendRedirect("/login.html");
                     return false;

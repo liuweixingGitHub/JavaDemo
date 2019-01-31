@@ -2,14 +2,16 @@ package com.ax.demo.controller;
 
 import com.ax.demo.entity.Userinfo;
 import com.ax.demo.service.IRegisterService;
-import com.ax.demo.util.axtools.AXResultMap;
+import com.ax.demo.util.axtools.AxResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
-
+/**
+ * @author axing
+ */
 @RestController
 public class RegisterController {
 
@@ -28,11 +30,11 @@ public class RegisterController {
 
     @RequestMapping(value = "/registerUser.do")
     @ResponseBody
-    public AXResultMap registerUser(@RequestParam(required = true) String username, @RequestParam(required = true) String password) {
+    public AxResultMap registerUser(@RequestParam(required = true) String username, @RequestParam(required = true) String password) {
 
         boolean register = this.registerService.register(username, password, Userinfo.USERTYPE_NORMAL);
 
-        AXResultMap result = new AXResultMap();
+        AxResultMap result = new AxResultMap();
         if (register) {
             result.setState(true);
             result.setMsg("注册成功");

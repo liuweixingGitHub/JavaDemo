@@ -5,7 +5,9 @@ import com.ax.demo.mapper.UserinfoMapper;
 import com.ax.demo.service.IUserinfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+/**
+ * @author axing
+ */
 @Service
 public class UserinfoServiceImpl implements IUserinfoService {
 
@@ -14,8 +16,6 @@ public class UserinfoServiceImpl implements IUserinfoService {
 
     @Override
     public Userinfo get(Long id) {
-
-
         return userinfoMapper.selectByPrimaryKey(id);
 
     }

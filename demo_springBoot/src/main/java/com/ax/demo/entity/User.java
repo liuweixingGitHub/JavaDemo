@@ -1,7 +1,9 @@
 package com.ax.demo.entity;
 
 import org.apache.ibatis.type.Alias;
-
+/**
+ * @author axing
+ */
 @Alias("User")
 public class User {
 

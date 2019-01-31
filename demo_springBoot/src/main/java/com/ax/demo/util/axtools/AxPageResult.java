@@ -2,7 +2,10 @@ package com.ax.demo.util.axtools;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AXPageResult {
+/**
+ * @author axing
+ */
+public class AxPageResult {
 
     private Integer totalCount;
     private Integer pageSize = 10;
@@ -12,11 +15,11 @@ public class AXPageResult {
     private Integer prev;
     private Integer next;
 
-    public AXPageResult() {
+    public AxPageResult() {
         super();
     }
 
-    public AXPageResult(Integer totalCount, Integer pageSize, Integer currentPage, List result) {
+    public AxPageResult(Integer totalCount, Integer pageSize, Integer currentPage, List result) {
         this.totalCount = totalCount;
         this.pageSize = pageSize;
         this.currentPage = currentPage;
@@ -24,8 +27,8 @@ public class AXPageResult {
     }
 
 
-    public static AXPageResult empty(int pageSize){
-        return new AXPageResult(0,pageSize,1,new ArrayList<>());
+    public static AxPageResult empty(int pageSize){
+        return new AxPageResult(0,pageSize,1,new ArrayList<>());
 
     }
 
@@ -45,7 +48,7 @@ public class AXPageResult {
 
     @Override
     public String toString() {
-        return "AXPageResult{" +
+        return "AxPageResult{" +
                 "totalCount=" + totalCount +
                 ", pageSize=" + pageSize +
                 ", currentPage=" + currentPage +

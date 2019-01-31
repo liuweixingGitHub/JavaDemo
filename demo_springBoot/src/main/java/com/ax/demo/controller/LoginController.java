@@ -1,20 +1,22 @@
 package com.ax.demo.controller;
 
 import com.ax.demo.service.ILoginService;
-import com.ax.demo.util.axtools.AXResultMap;
-import com.ax.demo.util.axtools.AXResultObject;
+import com.ax.demo.util.axtools.AxResultMap;
+import com.ax.demo.util.axtools.AxResultObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * @author axing
+ */
+@SuppressWarnings("ALL")
 @RestController
 public class LoginController extends BaseController {
 
@@ -23,9 +25,9 @@ public class LoginController extends BaseController {
 
     @RequestMapping(value = "/login.do")
     @ResponseBody
-    public AXResultMap login(@RequestParam(value = "username",required = true) String username, @RequestParam(value = "password" ,required = true) String password) {
+    public AxResultMap login(@RequestParam(value = "username",required = true) String username, @RequestParam(value = "password" ,required = true) String password) {
 
-        AXResultMap axResultMap = this.loginService.loginState(username, password, this.request);
+        AxResultMap axResultMap = this.loginService.loginState(username, password, this.request);
 
         System.out.println("axResultMap = " + axResultMap);
 
@@ -40,7 +42,7 @@ public class LoginController extends BaseController {
         List list = new LinkedList();
         list.add("B");
 
-        AXResultObject object = new AXResultObject();
+        AxResultObject object = new AxResultObject();
         object.setState(true);
         object.setMsg("hhh");
         object.setList(list);

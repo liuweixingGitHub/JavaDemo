@@ -3,6 +3,9 @@ package com.ax.demo.entity;
 import java.util.Date;
 
 
+/**
+ * @author axing
+ */
 public class IpLog {
 
     public static final int LOGINSTATE_FAILD;

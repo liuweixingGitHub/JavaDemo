@@ -7,16 +7,18 @@ import com.ax.demo.entity.Userinfo;
 import com.ax.demo.mapper.IpLogMapper;
 import com.ax.demo.mapper.UserinfoMapper;
 import com.ax.demo.service.ILoginService;
-import com.ax.demo.util.axtools.AXConst;
-import com.ax.demo.util.axtools.AXResultMap;
+import com.ax.demo.util.axtools.AxConst;
+import com.ax.demo.util.axtools.AxResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
-
+/**
+ * @author axing
+ */
 @Service
-public class LoginServiceImpl implements ILoginService {
+public class LoginServiceImpl extends ILoginService {
 
     @Autowired
     private UserinfoMapper userinfoMapper;
@@ -57,7 +59,7 @@ public class LoginServiceImpl implements ILoginService {
     }
 
     @Override
-    public AXResultMap loginState(String username, String password, HttpServletRequest request) {
+    public AxResultMap loginState(String username, String password, HttpServletRequest request) {
 
 
         Userinfo userinfo = this.userinfoMapper.getModelByUsername(username.toLowerCase());
@@ -65,7 +67,7 @@ public class LoginServiceImpl implements ILoginService {
         System.out.println("userinfo = " + userinfo);
 
 
-        AXResultMap axResultMap = new AXResultMap();
+        AxResultMap axResultMap = new AxResultMap();
 
         if (userinfo == null) {
 
@@ -112,7 +114,7 @@ public class LoginServiceImpl implements ILoginService {
     @Override
     public boolean hasAdmin() {
 
-        return this.userinfoMapper.getCountByUsername(AXConst.ADMIN_NAME) > 0;
+        return this.userinfoMapper.getCountByUsername(AxConst.ADMIN_NAME) > 0;
 
     }
 
@@ -122,8 +124,8 @@ public class LoginServiceImpl implements ILoginService {
         if (!hasAdmin()) {
 
             Userinfo userinfo = new Userinfo();
-            userinfo.setUsername(AXConst.ADMIN_NAME);
-            userinfo.setPassword(AXConst.ADMIN_PASSWORD);
+            userinfo.setUsername(AxConst.ADMIN_NAME);
+            userinfo.setPassword(AxConst.ADMIN_PASSWORD);
             userinfo.setUsertype(Userinfo.USERTYPE_SYSTEM);
             this.userinfoMapper.insert(userinfo);
 

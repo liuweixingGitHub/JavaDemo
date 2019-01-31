@@ -1,12 +1,12 @@
 package com.ax.demo.query;
 
-import com.ax.demo.util.axtools.AXQueryObject;
+import com.ax.demo.util.axtools.AxQueryObject;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
 
-public class IpLogQueryObject extends AXQueryObject {
+public class IpLogQueryObject extends AxQueryObject {
 
     private Date beginDate;
     private Date endDate;

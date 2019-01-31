@@ -1,18 +1,20 @@
 package com.ax.demo.service;
 
 import com.ax.demo.entity.Userinfo;
-import com.ax.demo.util.axtools.AXResultMap;
+import com.ax.demo.util.axtools.AxResultMap;
 
 import javax.servlet.http.HttpServletRequest;
+/**
+ * @author axing
+ */
+public abstract class ILoginService {
 
-public interface ILoginService {
+    public abstract Userinfo login(String username, String password, HttpServletRequest request);
 
-    Userinfo login(String username, String password, HttpServletRequest request);
+    public abstract AxResultMap loginState(String username, String password, HttpServletRequest request);
 
-    AXResultMap loginState(String username, String password, HttpServletRequest request);
+    public abstract boolean hasAdmin();
 
-    boolean hasAdmin();
-
-    void createAdmin();
+    public abstract void createAdmin();
 
 }

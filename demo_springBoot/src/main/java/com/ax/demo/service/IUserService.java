@@ -5,6 +5,9 @@ import com.ax.demo.entity.User;
 import java.util.List;
 
 
+/**
+ * @author axing
+ */
 public interface IUserService {
 
     void add(User user);

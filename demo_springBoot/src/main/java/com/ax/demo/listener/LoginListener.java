@@ -1,13 +1,11 @@
 package com.ax.demo.listener;
 
-
-
-import com.ax.demo.service.ILoginService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
-
+/**
+ * @author axing
+ */
 @Component
 public class LoginListener  implements ApplicationListener<ContextRefreshedEvent> {
 
@@ -46,7 +44,7 @@ public class LoginListener  implements ApplicationListener<ContextRefreshedEvent
 //
 //
 //        HttpSession session = request.getSession();
-//        Userinfo userinfo = (Userinfo) session.getAttribute(AXConst.USERINFO_IN_SESSION);
+//        Userinfo userinfo = (Userinfo) session.getAttribute(AxConst.USERINFO_IN_SESSION);
 //        if (userinfo == null) {
 //
 //            String url = request.getContextPath() + "/login.html";

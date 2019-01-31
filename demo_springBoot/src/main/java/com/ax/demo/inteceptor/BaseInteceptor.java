@@ -6,6 +6,9 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * @author axing
+ */
 public class BaseInteceptor extends HandlerInterceptorAdapter {
 
 

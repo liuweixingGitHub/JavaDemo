@@ -17,6 +17,10 @@ public class UserServiceImpl implements IUserService {
 	@Autowired
     private UserMapper userMapper;
 
+    public UserServiceImpl(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
+
     @Override
     public void add(User user) {
         userMapper.insert(user);

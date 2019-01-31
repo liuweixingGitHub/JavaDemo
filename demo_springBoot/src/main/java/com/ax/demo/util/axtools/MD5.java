@@ -1,5 +1,7 @@
 package com.ax.demo.util.axtools;
-
+/**
+ * @author axing
+ */
 public class MD5 {
 	static final int S11 = 7;
 

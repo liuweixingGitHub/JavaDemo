@@ -1,7 +1,7 @@
 package com.ax.demo.context;
 
 import com.ax.demo.entity.Userinfo;
-import com.ax.demo.util.axtools.AXConst;
+import com.ax.demo.util.axtools.AxConst;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -15,12 +15,12 @@ public class UserinfoContext {
     }
 
     public static  void  putUserinfo(Userinfo userinfo){
-        getRequest().getSession().setAttribute(AXConst.USERINFO_IN_SESSION,userinfo);
+        getRequest().getSession().setAttribute(AxConst.USERINFO_IN_SESSION,userinfo);
 
     }
 
     public static  Userinfo  getCurrent(){
-        return (Userinfo)  getRequest().getSession().getAttribute(AXConst.USERINFO_IN_SESSION);
+        return (Userinfo)  getRequest().getSession().getAttribute(AxConst.USERINFO_IN_SESSION);
 
     }
 

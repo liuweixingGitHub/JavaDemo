@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @author axing
  */
-public class AXConst {
+public class AxConst {
 
     public static final String ADMIN_NAME = "admin";
 

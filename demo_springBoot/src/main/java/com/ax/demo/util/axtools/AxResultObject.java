@@ -1,15 +1,10 @@
 package com.ax.demo.util.axtools;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import javafx.scene.input.DataFormat;
-import org.springframework.format.datetime.DateFormatter;
-
-import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.zip.DataFormatException;
 
-public class AXResultObject {
+public class AxResultObject {
 
     private Boolean state;
     private String msg;
@@ -21,11 +16,8 @@ public class AXResultObject {
 
 
     public Date getCurrentDate() {
-
         return new Date();
     }
-
-
 
     public Boolean getState() {
         return state;

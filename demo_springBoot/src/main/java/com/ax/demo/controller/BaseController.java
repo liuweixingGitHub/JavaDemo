@@ -5,7 +5,9 @@ import org.springframework.stereotype.Controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+/**
+ * @author axing
+ */
 @Controller
 public class BaseController {
 

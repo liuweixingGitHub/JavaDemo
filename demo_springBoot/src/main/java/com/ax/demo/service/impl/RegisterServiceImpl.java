@@ -7,7 +7,9 @@ import org.apache.tomcat.util.security.MD5Encoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
-
+/**
+ * @author axing
+ */
 @Service
 public class RegisterServiceImpl implements IRegisterService {
 

@@ -2,15 +2,18 @@ package com.ax.demo.service;
 
 import com.ax.demo.entity.IpLog;
 import com.ax.demo.query.IpLogQueryObject;
-import com.ax.demo.util.axtools.AXPageResult;
+import com.ax.demo.util.axtools.AxPageResult;
 
 
-public interface IIpLogService {
+/**
+ * @author axing
+ */
+public abstract class IIpLogService {
 
-    AXPageResult query(IpLogQueryObject queryObject);
+    public abstract AxPageResult query(IpLogQueryObject queryObject);
 
-    void insert(IpLog ipLog);
-    int queryForCount(IpLogQueryObject queryObject);
+    public abstract void insert(IpLog ipLog);
+    public abstract int queryForCount(IpLogQueryObject queryObject);
 
 
 //    PageInfo queryPage(IpLogQueryObject queryObject, int pageNum, int pageSize);

@@ -5,6 +5,9 @@ import com.ax.demo.query.IpLogQueryObject;
 
 import java.util.List;
 
+/**
+ * @author axing
+ */
 public interface IpLogMapper {
     int deleteByPrimaryKey(Long id);
 

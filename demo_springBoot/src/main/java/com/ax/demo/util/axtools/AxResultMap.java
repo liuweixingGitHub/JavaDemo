@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-
-public class AXResultMap extends HashMap {
+/**
+ * @author axing
+ */
+public class AxResultMap extends HashMap {
 
 
     private Boolean state;
@@ -13,7 +15,7 @@ public class AXResultMap extends HashMap {
     private String msg;
     private String fileName;
 
-    public AXResultMap() {
+    public AxResultMap() {
         super();
     }
 
@@ -62,12 +64,12 @@ public class AXResultMap extends HashMap {
     /**
     返回成功list
      */
-    public static AXResultMap succeeList(List list) {
+    public static AxResultMap succeeList(List list) {
 
         if (list == null) {
             list = new ArrayList();
         }
-        AXResultMap result = new AXResultMap();
+        AxResultMap result = new AxResultMap();
         result.setState(true);
         result.setList(list);
 
@@ -77,12 +79,12 @@ public class AXResultMap extends HashMap {
     /*
   返回成功list
    */
-    public static AXResultMap succeeFileName(String name) {
+    public static AxResultMap succeeFileName(String name) {
 
         if (name == null) {
             name = "";
         }
-        AXResultMap result = new AXResultMap();
+        AxResultMap result = new AxResultMap();
         result.setState(true);
         result.setFileName(name);
         return result;
@@ -91,12 +93,12 @@ public class AXResultMap extends HashMap {
     /*
     返回错误
      */
-    public static AXResultMap errorMsg(String msg) {
+    public static AxResultMap errorMsg(String msg) {
 
         if (msg == null) {
             msg = "";
         }
-        AXResultMap result = new AXResultMap();
+        AxResultMap result = new AxResultMap();
         result.setState(false);
         result.setMsg(msg);
         return result;

@@ -9,7 +9,10 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class AXJsonView {
+/**
+ * @author axing
+ */
+public class AxJsonView {
 
     public static ModelAndView Render(Object model, HttpServletResponse response)
     {

@@ -4,7 +4,7 @@ import com.ax.demo.entity.IpLog;
 import com.ax.demo.mapper.IpLogMapper;
 import com.ax.demo.query.IpLogQueryObject;
 import com.ax.demo.service.IIpLogService;
-import com.ax.demo.util.axtools.AXPageResult;
+import com.ax.demo.util.axtools.AxPageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,14 +14,14 @@ import java.util.List;
  * @author axing
  */
 @Service
-public class IpLogServiceImpl implements IIpLogService {
+public class IpLogServiceImpl extends IIpLogService {
 
     @Autowired
     private IpLogMapper ipLogMapper;
 
 
     @Override
-    public AXPageResult query(IpLogQueryObject queryObject) {
+    public AxPageResult query(IpLogQueryObject queryObject) {
 
         int  count = ipLogMapper.queryForCount(queryObject);
 
@@ -30,10 +30,10 @@ public class IpLogServiceImpl implements IIpLogService {
             List<IpLog> list = ipLogMapper.query(queryObject);
 
 
-            return new AXPageResult(count,queryObject.getPageSize(),queryObject.getCurrentPage(),list);
+            return new AxPageResult(count,queryObject.getPageSize(),queryObject.getCurrentPage(),list);
 
         }
-        return AXPageResult.empty(queryObject.getPageSize());
+        return AxPageResult.empty(queryObject.getPageSize());
     }
 
 
