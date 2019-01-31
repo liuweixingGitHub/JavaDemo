@@ -50,7 +50,7 @@ public class RegisterController {
     @ResponseBody
     public boolean checkUsername(@RequestParam(required = true) String username) {
 
-        Boolean checkUsername = registerService.checkUsername(username);
+        boolean checkUsername = registerService.checkUsername(username);
         System.out.println("checkUsername>>>> "+checkUsername);
 
         return checkUsername;

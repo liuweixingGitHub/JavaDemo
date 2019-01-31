@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public class AxJsonView {
 
-    public static ModelAndView Render(Object model, HttpServletResponse response)
+    public static ModelAndView render(Object model, HttpServletResponse response)
     {
         MappingJackson2HttpMessageConverter jsonConverter = new MappingJackson2HttpMessageConverter();
 

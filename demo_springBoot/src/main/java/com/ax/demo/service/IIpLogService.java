@@ -14,13 +14,40 @@ import java.util.List;
  */
 public interface IIpLogService {
 
+    /**
+     * 查询
+     * @param queryObject
+     * @return AxPageResult
+     */
      AxPageResult query(IpLogQueryObject queryObject);
 
+    /**
+     * 插入
+     * @param ipLog
+     */
       void insert(IpLog ipLog);
-      int queryForCount(IpLogQueryObject queryObject);
 
+    /**
+     * 查询
+     * @param queryObject
+     * @return int
+     */
+    int queryForCount(IpLogQueryObject queryObject);
+
+    /**
+     * 分页
+     * @param pageNum
+     * @param pageSize
+     * @return PageInfo
+     */
       PageInfo<IpLog> findByPageInfo(int pageNum, int pageSize);
 
+    /**
+     * 分页
+     * @param pageNum
+     * @param pageSize
+     * @return Page
+     */
     Page<IpLog> findByPage(int pageNum, int pageSize);
 
 //    PageInfo queryPage(IpLogQueryObject queryObject, int pageNum, int pageSize);
