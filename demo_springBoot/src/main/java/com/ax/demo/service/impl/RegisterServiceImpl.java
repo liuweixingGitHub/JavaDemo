@@ -3,8 +3,10 @@ package com.ax.demo.service.impl;
 import com.ax.demo.entity.Userinfo;
 import com.ax.demo.mapper.UserinfoMapper;
 import com.ax.demo.service.IRegisterService;
+import org.apache.tomcat.util.security.MD5Encoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.DigestUtils;
 
 @Service
 public class RegisterServiceImpl implements IRegisterService {
@@ -18,10 +20,13 @@ public class RegisterServiceImpl implements IRegisterService {
     public boolean register(String username, String password,int userType){
 
        int count = this.userinfoMapper.getCountByUsername(username);
+        MD5Encoder.encode(password.getBytes());
 
         if (count<=0){
             Userinfo userinfo = new Userinfo();
             userinfo.setUsername(username);
+            /**password 加密密码*/
+//            String psw_md5 = DigestUtils.md5DigestAsHex(password.getBytes());
             userinfo.setPassword(password);
             userinfo.setUsertype(userType);
             int insert = this.userinfoMapper.insert(userinfo);

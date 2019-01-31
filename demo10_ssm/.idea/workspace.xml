@@ -2,55 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ea7d67-6a48-43bd-871a-4b252567d317" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/DruidConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/context/UserinfoContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/controller/BaseController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/dao/IGenericDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/entity/BaseDomain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/entity/IpLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/entity/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/entity/Userinfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/inteceptor/BaseInteceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/inteceptor/LoginInteceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/inteceptor/RegisterInteceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/inteceptor/UserInfoInteceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/interceptor/RequiredLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/listener/LoginListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/mapper/IpLogMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/mapper/IpLogMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/mapper/UserinfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/mapper/UserinfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/query/IpLogQueryObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/service/IIpLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/service/ILoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/service/IRegisterService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/service/IUserinfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/service/impl/IpLogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/service/impl/RegisterServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/service/impl/UserinfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/util/axtools/AXConst.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/util/axtools/AXJsonView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/util/axtools/AXPageResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/util/axtools/AXQueryObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/util/axtools/AXResultMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/util/axtools/MD5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/util/freemarker/CodeGenMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/util/freemarker/IDAO.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/test/java/com/ax/demo/service/impl/IpLogServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/util/axtools/AXResultObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/static/js/plugins/bootstrap-4.2.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/static/js/plugins/jquery.form-4.2.2.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/IpLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/IpLogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ax/test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ax/test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/plugins/jquery.bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/static/js/plugins/jquery.bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/login_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/login_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo_springBoot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/DemoSpringBootApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/DemoSpringBootApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/service/impl/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/java/com/ax/demo/service/impl/RegisterServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/test/java/com/ax/demo/DemoSpringBootApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/test/java/com/ax/demo/DemoSpringBootApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/templates/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/templates/register.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/templates/register.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/css/plugins/bootstrap-3.3.7.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/static/css/plugins/bootstrap-4.2.1.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/css/service/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/static/css/service/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/plugins/jquery-2.1.3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/static/js/plugins/jquery-2.1.3.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/plugins/jquery.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/plugins/jquery.form.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/plugins/jquery.validate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/static/js/plugins/jquery.validate-1.8.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/service/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/static/js/service/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo_springBoot/src/main/webapp/js/service/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/../demo_springBoot/src/main/resources/static/js/service/register.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,52 +36,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/UserinfoMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="68" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="68" />
-              <folding>
-                <element signature="docComment;method#deleteByPrimaryKey#0;class#UserinfoMapper#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
+            <state relative-caret-position="-124">
               <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/service/impl/LoginServiceImp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/service/ILoginService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/UserMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -141,6 +73,41 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/controller/RegisterController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="46" column="5" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="46" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../demo_springBoot/src/main/resources/static/js/plugins/jquery.bootstrap.min.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -220,7 +187,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/service/impl/RegisterServiceImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/service/impl/UserinfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/plugins/bootstrap-3.3.7.min.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/service/login.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
@@ -233,6 +199,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/ax/test1.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/IpLogMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/login.html" />
       </list>
     </option>
   </component>
@@ -251,8 +218,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="171" />
-    <option name="y" value="37" />
+    <option name="x" value="54" />
+    <option name="y" value="23" />
     <option name="width" value="1330" />
     <option name="height" value="877" />
   </component>
@@ -262,7 +229,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -398,6 +364,39 @@
               <item name="demo10" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo10" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo10_ssm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -420,6 +419,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -448,7 +448,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BaseTest">
+  <component name="RunManager" selected="Maven.demo10 [tomcat7:run]">
     <configuration name="BaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demo10" />
       <extension name="coverage">
@@ -565,9 +565,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="171" y="37" width="1330" height="877" extended-state="0" />
+    <frame x="54" y="23" width="1330" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3121118" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3167702" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -576,7 +577,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924698" weight="0.3375796" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924698" visible="true" weight="0.3375796" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -625,16 +626,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/service/impl/UserinfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/controller/BaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -657,16 +648,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/jquery/jquery-2.1.3.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="25" column="69" lean-forward="true" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/plugins/jquery.bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/plugins/jquery.bootstrap.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -784,16 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/controller/RegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="37" column="43" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -880,18 +851,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/inteceptor/RegisterInteceptor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/UserinfoMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="618">
+          <caret line="68" selection-start-line="54" selection-start-column="3" selection-end-line="68" />
+          <folding>
+            <element signature="docComment;method#deleteByPrimaryKey#0;class#UserinfoMapper#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/IpLogMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/service/impl/LoginServiceImp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/UserinfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/service/ILoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -899,6 +884,53 @@
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/IpLogMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/UserinfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/IpLogMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/inteceptor/RegisterInteceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../demo_springBoot/src/main/resources/static/js/plugins/jquery.bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/inteceptor/LoginInteceptor.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -912,42 +944,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
+        <state relative-caret-position="-124">
           <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/service/ILoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/service/impl/LoginServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/IpLogMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ax/spring/mapper/UserinfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="68" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="68" />
-          <folding>
-            <element signature="docComment;method#deleteByPrimaryKey#0;class#UserinfoMapper#0" />
-          </folding>
         </state>
       </provider>
     </entry>

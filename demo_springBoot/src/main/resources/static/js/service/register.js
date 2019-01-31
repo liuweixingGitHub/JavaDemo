@@ -94,18 +94,21 @@ $(function () {
             //不刷新页面,值提交form
             //不刷新页面,值提交form
             $(form).ajaxSubmit({
-                url:"/register.do",
+                url:"/registerUser.do",
                 type:"post",
                 dataType:"json",
 
                 success:function (data){
 
-                    if (data.success){
+                    if (data.state){
+
 
                         $.messager.confirm("提示","注册成功",function() {
+
                         });
 
                     }else {
+                    alert(1);
                         $.messager.alert("提示",data.mes);
                     }
                 }

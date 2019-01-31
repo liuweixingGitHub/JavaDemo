@@ -3,7 +3,7 @@ $(function () {
 
  $('#registerBtn').click(function(){
 
-   window.location.href="/register.do";
+   window.location.href="/registerPage.do";
 
  });
 
