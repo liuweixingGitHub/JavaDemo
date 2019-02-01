@@ -2,18 +2,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.ax.demo</groupId>
 	<artifactId>demo</artifactId>
 	<version>0.0.1</version>
 	<name>demo_springBoot</name>
-	<!--<packaging>war</packaging>-->
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
+	<!--<packaging>jar</packaging>-->
 
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -23,6 +25,7 @@
 	</properties>
 
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -74,12 +77,21 @@
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
 
-
+		<!--打包至外部tomcat-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
 		</dependency>
+
+		<!--开发热部署,这里没用 -->
+		<!--<dependency>-->
+			<!--<groupId>org.springframework.boot</groupId>-->
+			<!--<artifactId>spring-boot-devtools</artifactId>-->
+			<!--&lt;!&ndash;<optional>true</optional>&ndash;&gt;-->
+			<!--<scope>runtime</scope>-->
+			<!--<version>2.1.2.RELEASE</version>-->
+		<!--</dependency>-->
 
 	</dependencies>
 
@@ -89,6 +101,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+				</configuration>
 			</plugin>
 
 			<!-- war 插件来定义打包以后的 war 包名称 -->

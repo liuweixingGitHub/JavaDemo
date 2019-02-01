@@ -45,13 +45,27 @@ public class LoginController extends BaseController {
 
         AxResultObject object = new AxResultObject();
         object.setState(true);
-        object.setMsg("hhh");
+        object.setMsg("uuuuudddddd");
         object.setList(list);
 
         return object;
 
     }
 
+    @RequestMapping(value = "/login3.do")
+    public Object login3(){
+
+        List list = new LinkedList();
+        list.add("B");
+
+        AxResultObject object = new AxResultObject();
+        object.setState(true);
+        object.setMsg("eee");
+        object.setList(list);
+
+        return object;
+
+    }
 
     /**
      * jsp 页面可以直接取值,默认是请求转发 forward:
