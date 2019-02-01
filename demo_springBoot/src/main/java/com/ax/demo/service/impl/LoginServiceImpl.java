@@ -66,7 +66,7 @@ public class LoginServiceImpl implements ILoginService {
         System.out.println("userinfo = " + userinfo);
 
 
-        AxResultMap axResultMap = new AxResultMap<String,Object>();
+        AxResultMap axResultMap = new AxResultMap();
 
         if (userinfo == null) {
 

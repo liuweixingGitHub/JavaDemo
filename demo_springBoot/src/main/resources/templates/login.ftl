@@ -42,19 +42,20 @@
 </body>
 
 
-<script src="/js/plugins/jquery-2.1.3.min.js"></script>
-<script src="/js/plugins/jquery.form-4.2.2.min.js"></script>
-<script src="/js/plugins/jquery.validate-1.8.1.min.js"></script>
-<script src="/js/plugins/bootstrap-4.2.1.min.js"></script>
-<script src="/js/plugins/jquery.bootstrap.min.js"></script>
-<link href="/css/plugins/bootstrap-4.2.1.min.css" rel="stylesheet">
+<script src="${request.contextPath}/js/plugins/jquery-2.1.3.min.js"></script>
+<script src="${request.contextPath}/js/plugins/jquery.form-4.2.2.min.js"></script>
+<script src="${request.contextPath}/js/plugins/jquery.validate-1.8.1.min.js"></script>
+<script src="${request.contextPath}/js/plugins/bootstrap-4.2.1.min.js"></script>
+<script src="${request.contextPath}/js/plugins/jquery.bootstrap.min.js"></script>
+<link href="${request.contextPath}/css/plugins/bootstrap-4.2.1.min.css" rel="stylesheet">
 
 <!--css-->
-<link href="/css/service/base.css" rel="stylesheet" type="text/css"/>
+<link href="${request.contextPath}/css/service/base.css" rel="stylesheet" type="text/css"/>
 
 
 <!--js-->
-<script type="text/javascript" src="/js/service/login.js"></script>
+<script type="text/javascript" src="${request.contextPath}/js/service/contextPath.js"></script>
+<script type="text/javascript" src="${request.contextPath}/js/service/login.js"></script>
 
 
 </html>

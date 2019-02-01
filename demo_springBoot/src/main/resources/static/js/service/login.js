@@ -1,6 +1,4 @@
 $(function () {
-
-
  $('#registerBtn').click(function(){
 
    window.location.href="/registerPage.do";
@@ -61,7 +59,6 @@ $(function () {
          */
         submitHandler:function(form) {
 
-
             //刷新页面,显示json数据
             // form.submit(); //没有这一句表单不会提交
             // $(form).ajaxForm(function() {
@@ -71,7 +68,8 @@ $(function () {
             //不刷新页面,值提交form
             $(form).ajaxSubmit({
 
-                url:"/login.do",
+
+                url:getContextPath("/login.do"),
                 type:"post",
                 dataType:"json",
                 success:function (data){
@@ -81,7 +79,7 @@ $(function () {
 //                        $.messager.confirm("提示","登陆成功,点击确定跳转到个人中心",function() {
 /**直接进去静态页面*/
 // window.location.href="/home.html";
-  window.location.href="/home.page";
+  window.location.href=getContextPath("/home.page");
 
 //                        });
 
