@@ -42,7 +42,6 @@ public class LoginServiceImpl implements ILoginService {
              */
             UserinfoContext.putUserinfo(userinfo);
 
-
             ipLog.setUserType(userinfo.getUsertype());
             ipLog.setUserinfoId(userinfo.getId());
             ipLog.setLoginState(IpLog.LOGINSTATE_SUCCESS);
@@ -67,7 +66,7 @@ public class LoginServiceImpl implements ILoginService {
         System.out.println("userinfo = " + userinfo);
 
 
-        AxResultMap axResultMap = new AxResultMap();
+        AxResultMap axResultMap = new AxResultMap<String,Object>();
 
         if (userinfo == null) {
 
@@ -78,8 +77,7 @@ public class LoginServiceImpl implements ILoginService {
 
         } else {
 
-
-            /**记录登录成功或失败*/
+            /*记录登录成功或失败*/
             IpLog ipLog = new IpLog();
             ipLog.setIp(request.getRemoteAddr());
             ipLog.setLoginTime(new Date());
@@ -89,7 +87,7 @@ public class LoginServiceImpl implements ILoginService {
 
             if (userinfo.getPassword().toLowerCase().equals(password.toLowerCase())) {
 
-                /**登陆成功,保存当前登陆的userinfo*/
+                /*登陆成功,保存当前登陆的userinfo*/
                 UserinfoContext.putUserinfo(userinfo);
                 ipLog.setLoginState(IpLog.LOGINSTATE_SUCCESS);
 

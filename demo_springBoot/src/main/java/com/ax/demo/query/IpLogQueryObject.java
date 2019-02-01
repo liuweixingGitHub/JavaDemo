@@ -5,7 +5,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
-
+/**
+ * @author axing
+ */
 public class IpLogQueryObject extends AxQueryObject {
 
     private Date beginDate;

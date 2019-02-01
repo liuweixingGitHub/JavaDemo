@@ -4,6 +4,9 @@ import com.alibaba.fastjson.annotation.JSONField;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author axing
+ */
 public class AxResultObject {
 
     private Boolean state;

@@ -76,7 +76,7 @@ public class AxResultMap extends HashMap {
         return result;
     }
 
-    /*
+    /**
   返回成功list
    */
     public static AxResultMap succeeFileName(String name) {
@@ -90,7 +90,7 @@ public class AxResultMap extends HashMap {
         return result;
     }
 
-    /*
+    /**
     返回错误
      */
     public static AxResultMap errorMsg(String msg) {

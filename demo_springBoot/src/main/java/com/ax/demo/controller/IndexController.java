@@ -12,8 +12,7 @@ public class IndexController {
     @RequestMapping(value = "/")
     public ModelAndView index(){
 
-        ModelAndView modelAndView = new ModelAndView("login");
-        return modelAndView;
+        return new ModelAndView("login");
     }
 
 }

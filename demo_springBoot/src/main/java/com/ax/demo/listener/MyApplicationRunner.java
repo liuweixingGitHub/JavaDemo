@@ -14,8 +14,12 @@ import java.util.Date;
  *
  * */
 
-@Component//被spring容器管理
-@Order(1)//如果多个自定义ApplicationRunner，用来标明执行顺序
+@Component
+@Order(1)
+/**如果多个自定义ApplicationRunner，用来标明执行顺序*/
+/**
+ * @author axing
+ */
 public class MyApplicationRunner implements ApplicationRunner {
 
     @Override

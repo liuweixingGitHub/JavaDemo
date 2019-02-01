@@ -5,7 +5,9 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
-
+/**
+ * @author axing
+ */
 @Component
 public class WebApplicationListener implements ApplicationListener<WebServerInitializedEvent> {
 

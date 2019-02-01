@@ -9,7 +9,9 @@ import java.util.List;
 /**
  * @author axing
  */
+@SuppressWarnings("AlibabaAbstractMethodOrInterfaceMethodMustUseJavadoc")
 public interface IpLogMapper {
+
     int deleteByPrimaryKey(Long id);
 
     int insert(IpLog record);

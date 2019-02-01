@@ -28,7 +28,7 @@ public class CodeGenMain {
       cfg.setDirectoryForTemplateLoading(file);
 
 
-      Map<String,Object> map = new HashMap<String,Object>();
+      Map<String,Object> map = new HashMap(10);
       map.put("className","Brand");
 
 

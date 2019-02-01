@@ -28,7 +28,7 @@ public class RegisterServiceImpl implements IRegisterService {
             Userinfo userinfo = new Userinfo();
             userinfo.setUsername(username);
             /**password 加密密码*/
-//            String psw_md5 = DigestUtils.md5DigestAsHex(password.getBytes());
+            /* String psw_md5 = DigestUtils.md5DigestAsHex(password.getBytes());*/
             userinfo.setPassword(password);
             userinfo.setUsertype(userType);
             int insert = this.userinfoMapper.insert(userinfo);
@@ -43,11 +43,11 @@ public class RegisterServiceImpl implements IRegisterService {
     public boolean checkUsername(String username){
 
         int count = this.userinfoMapper.getCountByUsername(username);
+
         System.out.println("count = " + count);
-        return count<=0;
+
+        return count>0;
     }
-
-
 
 
 }

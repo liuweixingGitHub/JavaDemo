@@ -36,6 +36,7 @@ public class DemoSpringBootApplication {
 
 			System.out.println("\n");
 			System.out.println("地址是: http://"+host+":"+port+contextPath+"/");
+			System.out.println("地址是: http://"+"localhost:"+port+contextPath+"/");
 
 		} catch (UnknownHostException e) {
 			e.printStackTrace();

@@ -3,6 +3,7 @@ package com.ax.demo.controller;
 import com.ax.demo.entity.Userinfo;
 import com.ax.demo.service.IRegisterService;
 import com.ax.demo.util.axtools.AxResultMap;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,18 +20,21 @@ public class RegisterController {
     @Autowired
     private IRegisterService registerService;
 
+
+    public RegisterController(IRegisterService registerService) {
+        this.registerService = registerService;
+    }
+
     @RequestMapping(value = "/registerPage.do")
     public ModelAndView registerPage(){
 
-        System.out.println("");
-        ModelAndView modelAndView = new ModelAndView("register");
-        return modelAndView;
+        return new ModelAndView("register");
     }
 
 
     @RequestMapping(value = "/registerUser.do")
     @ResponseBody
-    public AxResultMap registerUser(@RequestParam(required = true) String username, @RequestParam(required = true) String password) {
+    public AxResultMap registerUser(@RequestParam(value = "username") String username, @RequestParam(value = "password") String password) {
 
         boolean register = this.registerService.register(username, password, Userinfo.USERTYPE_NORMAL);
 
@@ -46,11 +50,14 @@ public class RegisterController {
         return result;
     }
 
+
+
     @RequestMapping(value = "/checkUserName.do")
     @ResponseBody
-    public boolean checkUsername(@RequestParam(required = true) String username) {
+    public boolean checkUsername(@Param(value = "username") String username) {
 
         boolean checkUsername = registerService.checkUsername(username);
+
         System.out.println("checkUsername>>>> "+checkUsername);
 
         return checkUsername;

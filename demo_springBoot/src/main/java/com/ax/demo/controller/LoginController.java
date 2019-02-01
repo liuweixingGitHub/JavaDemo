@@ -1,5 +1,6 @@
 package com.ax.demo.controller;
 
+import com.ax.demo.interceptor.RequiredLogin;
 import com.ax.demo.service.ILoginService;
 import com.ax.demo.util.axtools.AxResultMap;
 import com.ax.demo.util.axtools.AxResultObject;
@@ -52,13 +53,13 @@ public class LoginController extends BaseController {
     }
 
 
-
     /**
      * jsp 页面可以直接取值,默认是请求转发 forward:
      * ${result}
      */
     @RequestMapping(value = "/home.page")
-    public ModelAndView homePage() {
+    @RequiredLogin
+    private ModelAndView homePage() {
         ModelAndView modelAndView = new ModelAndView("home");
         return modelAndView;
 

@@ -1,18 +1,21 @@
 package com.ax.demo.interceptor;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
+
 /**
  * @author axing
  */
-//@Target(ElementType.METHOD)
-@Retention(RetentionPolicy.RUNTIME)
+
 @Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
 public @interface RequiredLogin {
 
+    String[] value() default {};
 
+    String[] authorities() default {};
+
+    String[] roles() default {};
 
 }
 

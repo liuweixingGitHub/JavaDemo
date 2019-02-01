@@ -7,6 +7,9 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 
+/**
+ * @author axing
+ */
 public class UserinfoContext {
 
     private static HttpServletRequest getRequest(){
