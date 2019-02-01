@@ -12,8 +12,8 @@
 	<artifactId>demo</artifactId>
 	<version>0.0.1</version>
 	<name>demo_springBoot</name>
-	<packaging>war</packaging>
-	<!--<packaging>jar</packaging>-->
+	<!--<packaging>war</packaging>-->
+	<packaging>jar</packaging>
 
 	<description>Demo project for Spring Boot</description>
 	<properties>
