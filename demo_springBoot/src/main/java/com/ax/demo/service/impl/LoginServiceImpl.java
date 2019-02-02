@@ -27,22 +27,22 @@ public class LoginServiceImpl implements ILoginService {
     private IpLogMapper ipLogMapper;
 
     @Override
-    public Userinfo login(String username, String password, HttpServletRequest request) {
+    public Userinfo login(String userName, String passWord, HttpServletRequest request) {
 
         IpLog ipLog = new IpLog();
         ipLog.setIp(request.getRemoteAddr());
         ipLog.setLoginTime(new Date());
-        ipLog.setUserName(username);
+        ipLog.setUserName(userName);
 
 
-        Userinfo userinfo = this.userinfoMapper.getModelByUsernameAndPassword(username, password);
+        Userinfo userinfo = this.userinfoMapper.getModelByuserNameAndpassWord(userName, passWord);
         if (userinfo != null) {
             /*
             登陆成功,保存当前登陆的userinfo
              */
             UserinfoContext.putUserinfo(userinfo);
 
-            ipLog.setUserType(userinfo.getUsertype());
+            ipLog.setUserType(userinfo.getUserType());
             ipLog.setUserinfoId(userinfo.getId());
             ipLog.setLoginState(IpLog.LOGINSTATE_SUCCESS);
 
@@ -58,10 +58,10 @@ public class LoginServiceImpl implements ILoginService {
     }
 
     @Override
-    public AxResultMap loginState(String username, String password, HttpServletRequest request) {
+    public AxResultMap loginState(String userName, String passWord, HttpServletRequest request) {
 
 
-        Userinfo userinfo = this.userinfoMapper.getModelByUsername(username.toLowerCase());
+        Userinfo userinfo = this.userinfoMapper.getModelByuserName(userName.toLowerCase());
 
         System.out.println("userinfo = " + userinfo);
 
@@ -81,11 +81,11 @@ public class LoginServiceImpl implements ILoginService {
             IpLog ipLog = new IpLog();
             ipLog.setIp(request.getRemoteAddr());
             ipLog.setLoginTime(new Date());
-            ipLog.setUserName(username.toLowerCase());
-            ipLog.setUserType(userinfo.getUsertype());
+            ipLog.setUserName(userName.toLowerCase());
+            ipLog.setUserType(userinfo.getUserType());
             ipLog.setUserinfoId(userinfo.getId());
 
-            if (userinfo.getPassword().toLowerCase().equals(password.toLowerCase())) {
+            if (userinfo.getPassWord().toLowerCase().equals(passWord.toLowerCase())) {
 
                 /*登陆成功,保存当前登陆的userinfo*/
                 UserinfoContext.putUserinfo(userinfo);
@@ -112,7 +112,7 @@ public class LoginServiceImpl implements ILoginService {
     @Override
     public boolean hasAdmin() {
 
-        return this.userinfoMapper.getCountByUsername(AxConst.ADMIN_NAME) > 0;
+        return this.userinfoMapper.getCountByuserName(AxConst.ADMIN_NAME) > 0;
 
     }
 
@@ -122,9 +122,9 @@ public class LoginServiceImpl implements ILoginService {
         if (!hasAdmin()) {
 
             Userinfo userinfo = new Userinfo();
-            userinfo.setUsername(AxConst.ADMIN_NAME);
-            userinfo.setPassword(AxConst.ADMIN_PASSWORD);
-            userinfo.setUsertype(Userinfo.USERTYPE_SYSTEM);
+            userinfo.setUserName(AxConst.ADMIN_NAME);
+            userinfo.setPassWord(AxConst.ADMIN_PASSWORD);
+            userinfo.setUserType(Userinfo.USERTYPE_SYSTEM);
             this.userinfoMapper.insert(userinfo);
 
         }

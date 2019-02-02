@@ -1,6 +1,8 @@
 package com.ax.demo;
 
 import com.ax.demo.config.RedisService;
+import com.ax.demo.entity.Userinfo;
+import com.ax.demo.util.axtools.AxResultObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -55,6 +57,8 @@ public class AppSpringBootApplicationTests {
 		Object value = redisUtils.get("redis_key");
 		System.out.println(value);
 	}
+
+
 
 
 

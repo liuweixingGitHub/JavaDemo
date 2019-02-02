@@ -60,17 +60,17 @@ public interface UserinfoMapper {
     /**
        注册获得是否已经有了
       */
-    int getCountByUsername(@Param("username") String username);
+    int getCountByuserName(String userName);
 
     /**
-    按照名username查找
+    按照名userName查找
      */
-    Userinfo getModelByUsername(@Param("username") String username);
+    Userinfo getModelByuserName(String userName);
 
     /**
-    *按照名username和passwor查找
+    *按照名userName和passwor查找
     */
-    Userinfo getModelByUsernameAndPassword(@Param("username") String username,@Param("password") String password);
+    Userinfo getModelByuserNameAndpassWord(String userName,String passWord);
 
     /**
      * 查询所有

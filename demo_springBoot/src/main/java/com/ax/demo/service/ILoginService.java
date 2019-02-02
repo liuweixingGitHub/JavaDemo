@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServletRequest;
  */
 public interface ILoginService {
 
-    Userinfo login(String username, String password, HttpServletRequest request);
+    Userinfo login(String userName, String passWord, HttpServletRequest request);
 
-     AxResultMap loginState(String username, String password, HttpServletRequest request);
+     AxResultMap loginState(String userName, String passWord, HttpServletRequest request);
 
     boolean hasAdmin();
 
