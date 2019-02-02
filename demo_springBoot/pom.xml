@@ -14,8 +14,8 @@
 	<artifactId>demo</artifactId>
 	<version>0.0.1</version>
 	<name>demo_springBoot</name>
-	<packaging>war</packaging>
-	<!--<packaging>jar</packaging>-->
+	<!--<packaging>war</packaging>-->
+	<packaging>jar</packaging>
 
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -92,6 +92,12 @@
 			<!--<scope>runtime</scope>-->
 			<!--<version>2.1.2.RELEASE</version>-->
 		<!--</dependency>-->
+
+		<!--redis-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
 
 	</dependencies>
 

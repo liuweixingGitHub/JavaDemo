@@ -129,4 +129,11 @@
         FROM t_userinfo WHERE username=#{username} AND password=#{password}
     </select>
 
+
+    <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from t_userinfo
+    </select>
+
 </mapper>

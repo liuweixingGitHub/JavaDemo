@@ -12,6 +12,7 @@ import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactor
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -23,6 +24,7 @@ import java.net.UnknownHostException;
  * @author axing
  */
 @SpringBootApplication
+/**开启缓存功能*/
 @EnableCaching
 @MapperScan("com.ax.demo.mapper")
 //public class AppSpringBootApplication {
@@ -30,15 +32,32 @@ import java.net.UnknownHostException;
 
 public class AppSpringBootApplication extends SpringBootServletInitializer {
 
-	@Profile(value = {"war"})
+	private static ApplicationContext ctx;
+
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+
+		ctx = builder.context();
+
+		try {
+
+			String host = InetAddress.getLocalHost().getHostAddress();
+			TomcatServletWebServerFactory tomcatServletWebServerFactory= (TomcatServletWebServerFactory) ctx.getBean("tomcatServletWebServerFactory");
+			int port = tomcatServletWebServerFactory.getPort(); String contextPath = tomcatServletWebServerFactory.getContextPath();
+
+			System.out.println("\n");
+			System.out.println("地址是:2 http://"+host+":"+port+contextPath+"/");
+			System.out.println("地址是2: http://"+"localhost:"+port+contextPath+"/");
+
+		} catch (UnknownHostException e) {
+			e.printStackTrace();
+		}
 
 		return builder.sources(AppSpringBootApplication.class);
 	}
 
 
-	private static ApplicationContext ctx;
+
 
 	public static void main(String[] args) {
 
@@ -74,9 +93,6 @@ public class AppSpringBootApplication extends SpringBootServletInitializer {
 		HttpMessageConverter converter = fasHttpMessageConverter;
 		return new HttpMessageConverters(converter);
 	}
-
-
-
 
 }
 

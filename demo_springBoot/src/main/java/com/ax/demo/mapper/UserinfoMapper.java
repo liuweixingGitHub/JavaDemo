@@ -2,6 +2,9 @@ package com.ax.demo.mapper;
 
 import com.ax.demo.entity.Userinfo;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+
 /**
  * @author axing
  */
@@ -65,9 +68,14 @@ public interface UserinfoMapper {
     Userinfo getModelByUsername(@Param("username") String username);
 
     /**
-   按照名username和passwor查找
+    *按照名username和passwor查找
     */
     Userinfo getModelByUsernameAndPassword(@Param("username") String username,@Param("password") String password);
 
+    /**
+     * 查询所有
+     * @return
+     */
+   List<Userinfo> getAll();
 
 }
