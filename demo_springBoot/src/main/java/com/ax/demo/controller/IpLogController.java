@@ -1,5 +1,6 @@
 package com.ax.demo.controller;
 
+import com.ax.demo.entity.IpLog;
 import com.ax.demo.service.IIpLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,4 +28,18 @@ public class IpLogController {
 
     }
 
+    /**ipLogPage 只有数据*/
+    @RequestMapping(value = "/ipLogAll.do")
+    public Object ipLogAll(){
+        return ipLogService.findAll();
+
+    }
+
+
+
+    @RequestMapping(value = "/getIpLog.do")
+    public IpLog getByKey(Long id) {
+        return  ipLogService.getByKey(id);
+
+    }
 }

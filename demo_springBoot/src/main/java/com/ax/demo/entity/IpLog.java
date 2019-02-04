@@ -1,12 +1,13 @@
 package com.ax.demo.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
 /**
  * @author axing
  */
-public class IpLog {
+public class IpLog implements Serializable {
 
     public static final int LOGINSTATE_FAILD;
 
@@ -92,16 +93,5 @@ public class IpLog {
     }
 
 
-    @Override
-    public String toString() {
-        return "IpLog{" +
-                "id=" + id +
-                ", userName='" + userName + '\'' +
-                ", loginTime=" + loginTime +
-                ", ip='" + ip + '\'' +
-                ", loginState=" + loginState +
-                ", userType=" + userType +
-                ", userinfoId=" + userinfoId +
-                '}';
-    }
+
 }

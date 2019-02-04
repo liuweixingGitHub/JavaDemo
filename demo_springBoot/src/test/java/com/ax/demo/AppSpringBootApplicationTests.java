@@ -1,6 +1,7 @@
 package com.ax.demo;
 
 import com.ax.demo.config.RedisService;
+import com.ax.demo.entity.IpLog;
 import com.ax.demo.entity.Userinfo;
 import com.ax.demo.util.axtools.AxResultObject;
 import org.junit.Test;
@@ -46,7 +47,11 @@ public class AppSpringBootApplicationTests {
 	 */
 	@Test
 	public void set() {
-		redisUtils.set("redis_key", "redis_vale");
+		IpLog ipLog = new IpLog();
+		ipLog.setId((long) 88);
+		ipLog.setUserName("jim");
+
+		redisUtils.set("ipLog:redis_key1", ipLog);
 	}
 
 	/**

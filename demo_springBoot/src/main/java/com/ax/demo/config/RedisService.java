@@ -1,8 +1,16 @@
 package com.ax.demo.config;
 
 import com.alibaba.fastjson.JSON;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
 import org.springframework.data.redis.core.*;
+import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
+import org.springframework.data.redis.serializer.RedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
@@ -13,6 +21,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * redis操作工具类.</br>
  * (基于RedisTemplate)
+ *
  * @author xcbeyond
  * 2018年7月19日下午2:56:24
  */
@@ -21,6 +30,10 @@ public class RedisService {
 
     @Autowired
     private RedisTemplate redisTemplate;
+
+
+   public final static String REDIS_VALUE_IPLOG = "iplog";
+
 
     /**
      * RedisTemplate的key和value可以是任意类型的数据，

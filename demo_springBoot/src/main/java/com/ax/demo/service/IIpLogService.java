@@ -21,6 +21,8 @@ public interface IIpLogService {
      */
      AxPageResult query(IpLogQueryObject queryObject);
 
+    IpLog getByKey(Long id);
+
     /**
      * 插入
      * @param ipLog
@@ -49,6 +51,8 @@ public interface IIpLogService {
      * @return Page
      */
     Page<IpLog> findByPage(int pageNum, int pageSize);
+
+    List<IpLog> findAll();
 
 //    PageInfo queryPage(IpLogQueryObject queryObject, int pageNum, int pageSize);
 

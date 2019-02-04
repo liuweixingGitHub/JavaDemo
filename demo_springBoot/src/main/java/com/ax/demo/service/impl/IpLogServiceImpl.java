@@ -1,5 +1,7 @@
 package com.ax.demo.service.impl;
 
+import com.ax.demo.config.RedisConfig;
+import com.ax.demo.config.RedisService;
 import com.ax.demo.entity.IpLog;
 import com.ax.demo.mapper.IpLogMapper;
 import com.ax.demo.query.IpLogQueryObject;
@@ -9,6 +11,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -21,7 +24,6 @@ public class IpLogServiceImpl implements IIpLogService {
 
     @Autowired
     private IpLogMapper ipLogMapper;
-
 
     @Override
     public AxPageResult query(IpLogQueryObject queryObject) {
@@ -62,10 +64,24 @@ public class IpLogServiceImpl implements IIpLogService {
         return pageInfo;
     }
 
+
     @Override
     public Page<IpLog> findByPage(int pageNum, int pageSize) {
 
         PageHelper.startPage(pageNum, pageSize);
         return ipLogMapper.findByPage();
+    }
+
+    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
+    @Override
+    public List<IpLog> findAll() {
+        return ipLogMapper.findByPage();
+    }
+
+
+    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
+    @Override
+    public IpLog getByKey(Long id) {
+        return ipLogMapper.selectByPrimaryKey(id);
     }
 }

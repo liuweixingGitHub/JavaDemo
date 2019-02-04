@@ -3,6 +3,7 @@ package com.ax.demo.mapper;
 import com.ax.demo.entity.IpLog;
 import com.ax.demo.query.IpLogQueryObject;
 import com.github.pagehelper.Page;
+import org.springframework.cache.annotation.Cacheable;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @author axing
  */
 @SuppressWarnings("AlibabaAbstractMethodOrInterfaceMethodMustUseJavadoc")
+
 public interface IpLogMapper {
 
     int deleteByPrimaryKey(Long id);
@@ -37,6 +39,7 @@ public interface IpLogMapper {
     List<IpLog> queryPage(IpLogQueryObject queryObject);
 
     List<IpLog> findByPageInfo();
+
 
     Page<IpLog> findByPage();
 }
