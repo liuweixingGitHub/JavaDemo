@@ -46,16 +46,14 @@ public class RedisConfig extends CachingConfigurerSupport {
     @Bean
     @Override
     public KeyGenerator keyGenerator() {
-        return new KeyGenerator(){
+        return new KeyGenerator() {
 
             public Object generate(Object target, Method method, Object... params) {
                 StringBuffer sb = new StringBuffer();
                 sb.append(target.getClass().getName());
                 sb.append(method.getName());
-                for(Object obj:params){
-                    sb.append(JSON.toJSONString(obj,SerializerFeature.WriteClassName).hashCode());
-
-
+                for (Object obj : params) {
+                    sb.append(JSON.toJSONString(obj, SerializerFeature.WriteClassName).hashCode());
                 }
                 System.out.println("sb = " + sb.toString());
                 return sb.toString();
@@ -66,6 +64,7 @@ public class RedisConfig extends CachingConfigurerSupport {
 
     /**
      * 解决存储json乱码
+     *
      * @return
      */
     @Bean

@@ -35,8 +35,6 @@ public class IpLogController {
 
     }
 
-
-
     @RequestMapping(value = "/getIpLog.do")
     public IpLog getByKey(Long id) {
         return  ipLogService.getByKey(id);

@@ -52,6 +52,7 @@ public class IpLogServiceImpl implements IIpLogService {
         return 0;
     }
 
+    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
     @Override
     public PageInfo<IpLog> findByPageInfo(int pageNum, int pageSize) {
 
@@ -64,7 +65,7 @@ public class IpLogServiceImpl implements IIpLogService {
         return pageInfo;
     }
 
-
+    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
     @Override
     public Page<IpLog> findByPage(int pageNum, int pageSize) {
 

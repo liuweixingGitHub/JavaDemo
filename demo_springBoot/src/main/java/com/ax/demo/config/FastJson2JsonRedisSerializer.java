@@ -1,6 +1,6 @@
 package com.ax.demo.config;
 
-import  com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,7 +9,6 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.SerializationException;
 import org.springframework.util.Assert;
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 /** * FastJson2JsonRedisSerializer * Redis使用FastJson序列化 by zhengkai */
 public class FastJson2JsonRedisSerializer<T> implements RedisSerializer<T> {
     private ObjectMapper objectMapper = new ObjectMapper();
