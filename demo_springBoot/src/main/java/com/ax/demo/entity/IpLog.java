@@ -6,6 +6,7 @@ import java.util.Date;
 
 /**
  * @author axing
+ * implements Serializable redis 需要序列化
  */
 public class IpLog implements Serializable {
 

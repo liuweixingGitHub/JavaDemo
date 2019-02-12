@@ -37,25 +37,24 @@ public class RedisConfig extends CachingConfigurerSupport {
                 for (Object obj : params) {
                     stringBuffer.append(JSON.toJSONString(obj, SerializerFeature.WriteClassName).hashCode());
                 }
-                System.out.println("stringBuffer = " + stringBuffer.toString());
                 return stringBuffer.toString();
             }
         };
     }
 
 
-    /**
-     * 解决存储json乱码
-     *
-     * @return
-     */
-    @Bean
-    public RedisCacheConfiguration redisCacheConfiguration(){
-        FastJsonRedisSerializer<Object> fastJsonRedisSerializer = new FastJsonRedisSerializer<>(Object.class);
-        RedisCacheConfiguration configuration = RedisCacheConfiguration.defaultCacheConfig();
-        configuration = configuration.serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(fastJsonRedisSerializer)).entryTtl(Duration.ofDays(30));
-        return configuration;
-    }
+//    /**
+//     * 解决存储json乱码
+//     *
+//     * @return
+//     */
+//    @Bean
+//    public RedisCacheConfiguration redisCacheConfiguration(){
+//        FastJsonRedisSerializer<Object> fastJsonRedisSerializer = new FastJsonRedisSerializer<>(Object.class);
+//        RedisCacheConfiguration configuration = RedisCacheConfiguration.defaultCacheConfig();
+//        configuration = configuration.serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(fastJsonRedisSerializer)).entryTtl(Duration.ofDays(30));
+//        return configuration;
+//    }
 
 
 
