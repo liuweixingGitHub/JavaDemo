@@ -5,6 +5,8 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -25,7 +27,10 @@ public class MyApplicationRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments applicationArguments) throws Exception {
 
-        System.out.println("-------------->" + "监听tomcat启动" + new Date());
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:ss:mm.SSSS");
+        String dateString = dateTimeFormatter.format(LocalDateTime.now());
+
+        System.out.println("-------------->" + "监听tomcat启动>> " + dateString);
         System.out.println("获取到的参数： " + applicationArguments.getOptionNames());
         System.out.println("获取到的参数： " + applicationArguments.getNonOptionArgs());
         System.out.println("获取到的参数： " + applicationArguments.getSourceArgs());

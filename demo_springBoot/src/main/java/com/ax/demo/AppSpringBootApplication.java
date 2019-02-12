@@ -17,6 +17,8 @@ import org.springframework.http.converter.HttpMessageConverter;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  * @author axing
@@ -66,6 +68,11 @@ public class AppSpringBootApplication extends SpringBootServletInitializer {
 			int port = tomcatServletWebServerFactory.getPort(); String contextPath = tomcatServletWebServerFactory.getContextPath();
 
 			System.out.println("\n");
+
+			DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:ss:mm.SSSS");
+			String dateString = dateTimeFormatter.format(LocalDateTime.now());
+			System.out.println("-------------->" + "监听tomcat启动>> " + dateString);
+
 			System.out.println("地址是: http://"+host+":"+port+contextPath+"/");
 			System.out.println("地址是: http://"+"localhost:"+port+contextPath+"/");
 
