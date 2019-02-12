@@ -187,5 +187,113 @@
   </select>
 
 
+  <delete id="deleteByIdList"  parameterType = "java.util.List">
+    delete from t_ipLog where id
+    in
+    <foreach collection="list"  item="item" open="(" separator="," close=")"  >
+      #{item}
+    </foreach>
+  </delete>
+
+
+  <insert id="insertList" parameterType="List">
+
+    insert into t_ipLog
+    (
+    userName,
+    loginTime,
+    ip,
+    loginState,
+    userType,
+    userinfoId
+    )
+
+    values
+
+    <foreach collection="list" item="item" index="index" separator=",">
+      (
+      #{item.userName},
+      #{item.loginTime},
+      #{item.ip},
+      #{item.loginState},
+      #{item.userType},
+      #{item.userinfoId}
+      )
+    </foreach>
+
+
+  </insert>
+
+
+  <update id="updateByList" parameterType="java.util.List">
+    <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+      update t_ipLog
+      <set>
+
+        userName=#{item.userName,jdbcType=VARCHAR},
+        loginTime=#{item.loginTime,jdbcType=TIMESTAMP},
+        ip=#{item.ip,jdbcType=VARCHAR},
+        loginState=#{item.loginState,jdbcType=INTEGER},
+        userType=#{item.userType,jdbcType=INTEGER},
+        userinfoId=#{item.userinfoId,jdbcType=BIGINT}
+
+      </set>
+      <where>
+        id = #{item.id,jdbcType=BIGINT}
+      </where>
+    </foreach>
+  </update>
+
+
+
+  <!-- 批量更新第二种方法，通过 case when语句变相的进行批量更新 -->
+  <update id="updateByListWhen" parameterType="java.util.List">
+    update t_ipLog
+    <trim prefix="set" suffixOverrides=",">
+
+      <!-- 拼接case when 这是另一种写法，这种写着更专业的感觉 -->
+      <trim prefix="userName =case" suffix="end,">
+        <foreach collection="list" item="item">
+          <if test="item.userName!=null">
+            when id=#{item.id} then #{item.userName}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="loginTime =case" suffix="end,">
+        <foreach collection="list" item="item">
+          <if test="item.loginTime!=null">
+            when id=#{item.id} then #{item.loginTime}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="ip =case" suffix="end,">
+        <foreach collection="list" item="item">
+          <if test="item.ip!=null">
+            when id=#{item.id} then #{item.ip}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="loginState =case" suffix="end,">
+        <foreach collection="list" item="item">
+          <if test="item.loginState!=null">
+            when id=#{item.id} then #{item.loginState}
+          </if>
+        </foreach>
+      </trim>
+      <trim prefix="userType =case" suffix="end,">
+        <foreach collection="list" item="item">
+          <if test="item.userType!=null">
+            when id=#{item.id} then #{item.userType}
+          </if>
+        </foreach>
+      </trim>
+    </trim>
+    <where>
+      <foreach collection="list" separator="or" item="item">
+        id = #{item.id}
+      </foreach>
+    </where>
+  </update>
+
 
 </mapper>

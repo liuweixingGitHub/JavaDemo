@@ -40,4 +40,14 @@ public class IpLogController {
         return  ipLogService.getByKey(id);
 
     }
+
+    @RequestMapping(value = "/updateIplog.do")
+    public int updateByEntity(IpLog ipLog) {
+
+        return ipLogService.updateByEntity(ipLog);
+
+    }
+
+
+
 }

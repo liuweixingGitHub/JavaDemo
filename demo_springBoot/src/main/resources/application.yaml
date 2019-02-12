@@ -12,7 +12,9 @@ spring:
       #监控统计拦截的filters
       filters: stat
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/demo10_p1
+      # allowMultiQueries=true 允许批量更新
+#      url: jdbc:mysql://localhost:3306/demo10_p1?characterEncoding=utf-8&allowMultiQueries=true
+      url: jdbc:mysql://localhost:3306/demo10_p1?characterEncoding=utf-8
       username: root
       password: root123456
       #配置初始化大小/最小/最大
@@ -32,6 +34,7 @@ spring:
       #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
+
   freemarker:
     request-context-attribute: request
     cache: false

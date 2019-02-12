@@ -16,21 +16,32 @@ public interface IIpLogService {
 
     /**
      * 查询
+     *
      * @param queryObject
      * @return AxPageResultEntity
      */
-     AxPageResultEntity query(IpLogQueryObject queryObject);
+    AxPageResultEntity query(IpLogQueryObject queryObject);
 
     IpLog getByKey(Long id);
 
     /**
      * 插入
+     *
      * @param ipLog
      */
-      void insert(IpLog ipLog);
+    void insert(IpLog ipLog);
+
+    /**
+     * 更新
+     *
+     * @param ipLog
+     * @return
+     */
+    int updateByEntity(IpLog ipLog);
 
     /**
      * 查询
+     *
      * @param queryObject
      * @return int
      */
@@ -38,14 +49,16 @@ public interface IIpLogService {
 
     /**
      * 分页
+     *
      * @param pageNum
      * @param pageSize
      * @return PageInfo
      */
-      PageInfo<IpLog> findByPageInfo(int pageNum, int pageSize);
+    PageInfo<IpLog> findByPageInfo(int pageNum, int pageSize);
 
     /**
      * 分页
+     *
      * @param pageNum
      * @param pageSize
      * @return Page

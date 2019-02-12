@@ -1,5 +1,7 @@
 package com.ax.demo.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -26,9 +28,11 @@ public class IpLog implements Serializable {
 
     private String userName;
 
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date loginTime;
 
     private String ip;
+
 
     private Integer loginState;
 

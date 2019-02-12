@@ -2,8 +2,10 @@ package com.ax.demo;
 
 import com.ax.demo.config.RedisService;
 import com.ax.demo.entity.IpLog;
+import com.ax.demo.mapper.IpLogMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.format.datetime.DateFormatter;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -13,7 +15,9 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 @RunWith(SpringRunner.class)
@@ -94,6 +98,73 @@ public class AppSpringBootApplicationTests {
 		Object value = redisUtils.get("redis_key");
 		System.out.println(value);
 	}
+
+
+	@Autowired
+	IpLogMapper ipLogMapper;
+
+	@Test
+	public void deleteByIdList() {
+
+		List list = new ArrayList();
+		list.add(94);
+
+
+
+	int result	= ipLogMapper.deleteByIdList(list);
+
+		System.out.println("result = " + result);
+	}
+
+	@Test
+	public void insertList() {
+
+		List list = new ArrayList();
+
+		IpLog ipLog1 = new IpLog();
+
+		ipLog1.setUserName("jim1");
+
+
+		list.add(ipLog1);
+
+		IpLog ipLog2 = new IpLog();
+		ipLog2.setUserName("jim2");
+
+		list.add(ipLog2);
+
+
+		int result	= ipLogMapper.insertList(list);
+
+		System.out.println("result = " + result);
+	}
+
+
+	@Test
+	public void updateByList() {
+
+		List list = new ArrayList();
+
+		IpLog ipLog1 = ipLogMapper.selectByPrimaryKey(88L);
+
+		ipLog1.setUserName("jim11");
+
+		list.add(ipLog1);
+
+		IpLog ipLog2 = ipLogMapper.selectByPrimaryKey(89L);;
+		ipLog2.setUserName("jim22");
+
+		list.add(ipLog2);
+
+
+		int result	= ipLogMapper.updateByListWhen(list);
+
+
+//		int result	=ipLogMapper.updateByPrimaryKey(ipLog1);
+
+		System.out.println("result = " + result);
+	}
+
 
 
 
