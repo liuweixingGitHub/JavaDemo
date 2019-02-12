@@ -1,12 +1,11 @@
 package com.ax.demo.service.impl;
 
-import com.ax.demo.config.RedisConfig;
 import com.ax.demo.config.RedisService;
 import com.ax.demo.entity.IpLog;
 import com.ax.demo.mapper.IpLogMapper;
 import com.ax.demo.query.IpLogQueryObject;
 import com.ax.demo.service.IIpLogService;
-import com.ax.demo.util.axtools.AxPageResult;
+import com.ax.demo.util.axtools.AxPageResultEntity;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -20,13 +19,14 @@ import java.util.List;
  * @author axing
  */
 @Service
+
 public class IpLogServiceImpl implements IIpLogService {
 
     @Autowired
     private IpLogMapper ipLogMapper;
 
     @Override
-    public AxPageResult query(IpLogQueryObject queryObject) {
+    public AxPageResultEntity query(IpLogQueryObject queryObject) {
 
         int  count = ipLogMapper.queryForCount(queryObject);
 
@@ -35,10 +35,10 @@ public class IpLogServiceImpl implements IIpLogService {
             List<IpLog> list = ipLogMapper.query(queryObject);
 
 
-            return new AxPageResult(count,queryObject.getPageSize(),queryObject.getCurrentPage(),list);
+            return new AxPageResultEntity(count,queryObject.getPageSize(),queryObject.getCurrentPage(),list);
 
         }
-        return AxPageResult.empty(queryObject.getPageSize());
+        return AxPageResultEntity.empty(queryObject.getPageSize());
     }
 
 
@@ -52,7 +52,7 @@ public class IpLogServiceImpl implements IIpLogService {
         return 0;
     }
 
-    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
+//    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
     @Override
     public PageInfo<IpLog> findByPageInfo(int pageNum, int pageSize) {
 

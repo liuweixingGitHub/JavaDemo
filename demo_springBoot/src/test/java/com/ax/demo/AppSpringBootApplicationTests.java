@@ -2,14 +2,19 @@ package com.ax.demo;
 
 import com.ax.demo.config.RedisService;
 import com.ax.demo.entity.IpLog;
-import com.ax.demo.entity.Userinfo;
-import com.ax.demo.util.axtools.AxResultObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.format.datetime.DateFormatter;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -18,6 +23,33 @@ public class AppSpringBootApplicationTests {
 	@Test
 	public void contextLoads() {
 		System.out.println("contextLoads;>>");
+
+		LocalDateTime dateTime = LocalDateTime.now();
+
+		System.out.println("dateTime = " + dateTime);
+
+		ZonedDateTime zonedDateTime = ZonedDateTime.now();
+		System.out.println("zonedDateTime = " + zonedDateTime);
+
+		ZoneId zoneId = ZoneId.systemDefault();
+		System.out.println("zoneId = " + zoneId);
+
+		ZonedDateTime zonedDateTime1 = dateTime.atZone(zoneId);
+
+		System.out.println("zonedDateTime1 = " + zonedDateTime1);
+
+		Date date  = new Date();
+		System.out.println("date = " + date);
+
+
+		DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+		LocalDateTime time = LocalDateTime.now();
+		String localTime = df.format(time);
+		String localTime2 =df.format(zonedDateTime);
+
+		System.out.println("localTime = " + localTime);
+		System.out.println("localTime2 = " + localTime2);
+
 
 
 //		try {

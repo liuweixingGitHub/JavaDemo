@@ -2,7 +2,7 @@ package com.ax.demo.controller;
 
 import com.ax.demo.entity.Userinfo;
 import com.ax.demo.service.IUserinfoService;
-import com.ax.demo.util.axtools.AxResultObject;
+import com.ax.demo.util.axtools.AxResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,7 +31,7 @@ public class UserinfoController {
 
         List<Userinfo> list = iUserinfoService.getAllUserinfo();
 
-        AxResultObject object = new AxResultObject();
+        AxResponseEntity object = new AxResponseEntity();
         object.setState(true);
         object.setList(list);
 

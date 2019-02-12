@@ -3,7 +3,7 @@ package com.ax.demo.controller;
 import com.ax.demo.interceptor.RequiredLogin;
 import com.ax.demo.service.ILoginService;
 import com.ax.demo.util.axtools.AxResultMap;
-import com.ax.demo.util.axtools.AxResultObject;
+import com.ax.demo.util.axtools.AxResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -43,7 +43,7 @@ public class LoginController extends BaseController {
         List list = new LinkedList();
         list.add("B");
 
-        AxResultObject object = new AxResultObject();
+        AxResponseEntity object = new AxResponseEntity();
         object.setState(true);
         object.setMsg("uuuuudddddd");
         object.setList(list);
@@ -58,7 +58,7 @@ public class LoginController extends BaseController {
         List list = new LinkedList();
         list.add("B");
 
-        AxResultObject object = new AxResultObject();
+        AxResponseEntity object = new AxResponseEntity();
         object.setState(true);
         object.setMsg("eee");
         object.setList(list);

@@ -4,7 +4,7 @@ package com.ax.demo.util.axtools;
 /**
  * @author axing
  */
-public class AxQueryObject {
+public class AxQueryEntity {
 
     private int currentPage = 1;
     private int pageSize = 10;

@@ -2,7 +2,7 @@ package com.ax.demo.service;
 
 import com.ax.demo.entity.IpLog;
 import com.ax.demo.query.IpLogQueryObject;
-import com.ax.demo.util.axtools.AxPageResult;
+import com.ax.demo.util.axtools.AxPageResultEntity;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
 
@@ -17,9 +17,9 @@ public interface IIpLogService {
     /**
      * 查询
      * @param queryObject
-     * @return AxPageResult
+     * @return AxPageResultEntity
      */
-     AxPageResult query(IpLogQueryObject queryObject);
+     AxPageResultEntity query(IpLogQueryObject queryObject);
 
     IpLog getByKey(Long id);
 

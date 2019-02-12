@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--<link rel="shortcut icon" href="//www.suning.com/favicon.ico" type="image/x-icon">-->
+    <!--<link rel="shortcut icon" href="/favicon.ico"/>-->
     <title>登陆</title>
 
 </head>

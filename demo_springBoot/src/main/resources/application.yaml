@@ -1,7 +1,7 @@
 server:
   servlet:
     context-path: /
-  port: 8082
+  port: 8080
 
 spring:
   datasource:
@@ -48,9 +48,9 @@ spring:
     host: localhost # Redis服务器地址
     timeout: 5000 # 连接超时时间（毫秒）
 
-  mvc:
-    favicon:
-      enabled: true
+#  mvc:
+#    favicon:
+#      enabled: true
 
   devtools:
     restart:
