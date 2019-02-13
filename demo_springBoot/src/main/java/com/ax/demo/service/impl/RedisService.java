@@ -1,4 +1,4 @@
-package com.ax.demo.config;
+package com.ax.demo.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.*;
@@ -23,7 +23,7 @@ public class RedisService {
     private RedisTemplate redisTemplate;
 
 
-   public final static String REDIS_VALUE_IPLOG = "iplog";
+    public final static String REDIS_VALUE_IPLOG = "iplog";
 
 
     /**
@@ -89,8 +89,9 @@ public class RedisService {
      */
     public void removePattern(final String pattern) {
         Set<Serializable> keys = redisTemplate.keys(pattern);
-        if (keys.size() > 0)
+        if (keys.size() > 0) {
             redisTemplate.delete(keys);
+        }
     }
 
     /**

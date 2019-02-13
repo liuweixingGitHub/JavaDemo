@@ -9,8 +9,7 @@ public class TokenServiceImpl implements ITokenService {
 
     @Override
     public String getToken(Userinfo user) {
-        String token="";
-        token= JWT.create().withAudience(user.getId().toString())
+        String token = JWT.create().withAudience(user.getId().toString())
                 .sign(Algorithm.HMAC256(user.getPassWord()));
         return token;
     }

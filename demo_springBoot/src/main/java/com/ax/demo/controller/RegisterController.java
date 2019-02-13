@@ -2,7 +2,7 @@ package com.ax.demo.controller;
 
 import com.ax.demo.entity.Userinfo;
 import com.ax.demo.service.IRegisterService;
-import com.ax.demo.util.axtools.AxResultMap;
+import com.ax.demo.util.axtools.AxResponseEntity;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,20 +34,22 @@ public class RegisterController {
 
     @RequestMapping(value = "/registerUser.do")
     @ResponseBody
-    public AxResultMap registerUser(@RequestParam(value = "username") String username, @RequestParam(value = "password") String password) {
+    public Object registerUser(@RequestParam(value = "username") String username, @RequestParam(value = "password") String password) {
 
         boolean register = this.registerService.register(username, password, Userinfo.USERTYPE_NORMAL);
 
-        AxResultMap result = new AxResultMap();
+
+        AxResponseEntity responseEntity = new AxResponseEntity();
+
         if (register) {
-            result.setState(true);
-            result.setMsg("注册成功");
+            responseEntity.setState(true);
+            responseEntity.setMsg("注册成功");
 
         } else {
-            result.setState(false);
-            result.setMsg("用户已存在");
+            responseEntity.setState(false);
+            responseEntity.setMsg("用户已存在");
         }
-        return result;
+        return responseEntity;
     }
 
 

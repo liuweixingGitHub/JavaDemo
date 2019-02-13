@@ -1,6 +1,6 @@
 package com.ax.demo;
 
-import com.ax.demo.config.RedisService;
+import com.ax.demo.service.impl.RedisService;
 import com.ax.demo.entity.IpLog;
 import com.ax.demo.mapper.IpLogMapper;
 import com.ax.demo.util.axtools.AxResponseEntity;
@@ -8,7 +8,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.format.datetime.DateFormatter;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
@@ -19,7 +18,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

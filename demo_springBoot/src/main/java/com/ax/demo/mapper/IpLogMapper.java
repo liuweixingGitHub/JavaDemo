@@ -27,12 +27,12 @@ public interface IpLogMapper {
     int updateByPrimaryKey(IpLog record);
 
     /**
-    分页查询 个数
+     * 分页查询 个数
      */
     int queryForCount(IpLogQueryObject queryObject);
 
     /**
-    分页查询 内容
+     * 分页查询 内容
      */
     List<IpLog> query(IpLogQueryObject queryObject);
 
@@ -51,6 +51,7 @@ public interface IpLogMapper {
     /**
      * 批量更新,多个sql,
      * 需要 url: jdbc:mysql://localhost:3306/demo10_p1?characterEncoding=utf-8&allowMultiQueries=true
+     *
      * @param list
      * @return
      */
@@ -58,6 +59,7 @@ public interface IpLogMapper {
 
     /**
      * 批量更新,拼接一条sql
+     *
      * @param list
      * @return
      */

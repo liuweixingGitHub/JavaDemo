@@ -14,7 +14,7 @@ import java.util.List;
 @Service()
 public class UserServiceImpl implements IUserService {
 
-	@Autowired
+    @Autowired
     private UserMapper userMapper;
 
     public UserServiceImpl(UserMapper userMapper) {

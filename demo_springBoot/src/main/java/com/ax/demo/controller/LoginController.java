@@ -2,7 +2,6 @@ package com.ax.demo.controller;
 
 import com.ax.demo.interceptor.RequiredLogin;
 import com.ax.demo.service.ILoginService;
-import com.ax.demo.util.axtools.AxResultMap;
 import com.ax.demo.util.axtools.AxResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,9 +25,9 @@ public class LoginController extends BaseController {
 
     @RequestMapping(value = "/login.do")
     @ResponseBody
-    public AxResultMap login(@RequestParam(value = "username",required = true) String username, @RequestParam(value = "password" ,required = true) String password) {
+    public Object login(@RequestParam(value = "username",required = true) String username, @RequestParam(value = "password" ,required = true) String password) {
 
-        AxResultMap axResultMap = this.loginService.loginState(username, password, this.request);
+        Object axResultMap = this.loginService.loginState(username, password, this.request);
 
         System.out.println("axResultMap = " + axResultMap);
 

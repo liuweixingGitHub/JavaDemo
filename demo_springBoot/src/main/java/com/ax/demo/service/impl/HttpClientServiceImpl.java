@@ -14,11 +14,11 @@ import java.nio.charset.StandardCharsets;
  * @Date 2018/1/23 下午5:43
  */
 @Service
-public class HttpClientServiceImpl implements HttpClientService  {
+public class HttpClientServiceImpl implements HttpClientService {
 
-//    Class<T> responseType, Object... uriVariables
-@Override
-    public <T> T  client(String url, HttpMethod method, MultiValueMap<String, String> params,Class<T> responseType){
+    //    Class<T> responseType, Object... uriVariables
+    @Override
+    public <T> T client(String url, HttpMethod method, MultiValueMap<String, String> params, Class<T> responseType) {
 
 
         RestTemplate restTemplate = new RestTemplate();
@@ -41,14 +41,14 @@ public class HttpClientServiceImpl implements HttpClientService  {
     }
 
     @Override
-    public <T>T  getClient(String url, MultiValueMap<String, String> params,Class<T> responseType){
+    public <T> T getClient(String url, MultiValueMap<String, String> params, Class<T> responseType) {
 
-        return (T) this.client(url,HttpMethod.GET,params,responseType);
+        return (T) this.client(url, HttpMethod.GET, params, responseType);
     }
 
     @Override
-    public <T> T  postClient(String url, MultiValueMap<String, String> params,Class<T> responseType){
+    public <T> T postClient(String url, MultiValueMap<String, String> params, Class<T> responseType) {
 
-        return (T) this.client(url,HttpMethod.POST,params,responseType);
+        return (T) this.client(url, HttpMethod.POST, params, responseType);
     }
 }

@@ -5,7 +5,6 @@ import com.alibaba.fastjson.annotation.JSONField;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
-import java.util.List;
 
 /**
  * @author axing
@@ -18,7 +17,7 @@ public class AxResponseEntity<T> {
 
     private T body;
 
-    @JSONField(format="yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") //@DatetimeFormat是将String转换成Date，一般前台给后台传值时用
     private Date currentDate;
 
@@ -27,7 +26,7 @@ public class AxResponseEntity<T> {
         return new Date();
     }
 
-    public Boolean getState() {
+    public boolean getState() {
         return state;
     }
 
@@ -43,8 +42,6 @@ public class AxResponseEntity<T> {
         this.msg = msg;
     }
 
-
-
     public T getBody() {
         return body;
     }
@@ -55,23 +52,6 @@ public class AxResponseEntity<T> {
 
     @Override
     public String toString() {
-        return "AxResponseEntity{" +
-                "state=" + state +
-                ", msg='" + msg + '\'' +
-                ", body=" + body +
-                ", currentDate=" + currentDate +
-                '}';
+        return JSON.toJSONString(this);
     }
-
-
-//    @Override
-//    public String toString() {
-//        return JSON.toJSONString(this);
-////        return "AxResponseEntity{" +
-////                "state=" + state +
-////                ", msg='" + msg + '\'' +
-////                ", body=" + body +
-////                ", currentDate=" + currentDate +
-////                '}';
-//    }
 }

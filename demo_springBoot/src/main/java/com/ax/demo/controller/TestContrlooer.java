@@ -1,11 +1,10 @@
 package com.ax.demo.controller;
 
-import com.ax.demo.config.RedisService;
+import com.ax.demo.service.impl.RedisService;
 import com.ax.demo.service.HttpClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class TestContrlooer {

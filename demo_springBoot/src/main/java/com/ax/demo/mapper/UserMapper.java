@@ -8,12 +8,16 @@ import java.util.List;
 /**
  * @author axing
  */
-public interface UserMapper{
+public interface UserMapper {
 
-     void insert(User user);
-     void update(User user);
-     User get(Long id);
-     void  delete(Long id);
-     List<User> list();
+    void insert(User user);
+
+    void update(User user);
+
+    User get(Long id);
+
+    void delete(Long id);
+
+    List<User> list();
 
 }

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -105,12 +104,6 @@ class UpdateListObject {
 
     @Override
     public String toString() {
-
-      return   JSON.toJSONString(this);
-
-//        return "UpdateListObject{" +
-//                "list=" + list +
-//                ", name='" + name + '\'' +
-//                '}';
+      return JSON.toJSONString(this);
     }
 }

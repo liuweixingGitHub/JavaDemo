@@ -7,6 +7,7 @@ import org.apache.tomcat.util.security.MD5Encoder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
+
 /**
  * @author axing
  */
@@ -17,14 +18,13 @@ public class RegisterServiceImpl implements IRegisterService {
     private UserinfoMapper userinfoMapper;
 
 
-
     @Override
-    public boolean register(String username, String password,int userType){
+    public boolean register(String username, String password, int userType) {
 
-       int count = this.userinfoMapper.getCountByuserName(username);
+        int count = this.userinfoMapper.getCountByuserName(username);
         MD5Encoder.encode(password.getBytes());
 
-        if (count<=0){
+        if (count <= 0) {
             Userinfo userinfo = new Userinfo();
             userinfo.setUserName(username);
             /**password 加密密码*/
@@ -36,17 +36,17 @@ public class RegisterServiceImpl implements IRegisterService {
             return insert > 0;
 
         }
-            return false;
+        return false;
     }
 
     @Override
-    public boolean checkUsername(String username){
+    public boolean checkUsername(String username) {
 
         int count = this.userinfoMapper.getCountByuserName(username);
 
         System.out.println("count = " + count);
 
-        return count>0;
+        return count > 0;
     }
 
 

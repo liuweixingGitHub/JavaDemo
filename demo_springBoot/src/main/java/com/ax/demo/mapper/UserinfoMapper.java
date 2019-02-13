@@ -58,24 +58,25 @@ public interface UserinfoMapper {
     int updateByPrimaryKey(Userinfo record);
 
     /**
-       注册获得是否已经有了
-      */
+     * 注册获得是否已经有了
+     */
     int getCountByuserName(String userName);
 
     /**
-    按照名userName查找
+     * 按照名userName查找
      */
     Userinfo getModelByuserName(String userName);
 
     /**
-    *按照名userName和passwor查找
-    */
-    Userinfo getModelByuserNameAndpassWord(String userName,String passWord);
+     * 按照名userName和passwor查找
+     */
+    Userinfo getModelByuserNameAndpassWord(String userName, String passWord);
 
     /**
      * 查询所有
+     *
      * @return
      */
-   List<Userinfo> getAll();
+    List<Userinfo> getAll();
 
 }

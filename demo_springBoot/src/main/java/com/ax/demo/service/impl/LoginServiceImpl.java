@@ -8,12 +8,13 @@ import com.ax.demo.mapper.IpLogMapper;
 import com.ax.demo.mapper.UserinfoMapper;
 import com.ax.demo.service.ILoginService;
 import com.ax.demo.util.axtools.AxConst;
-import com.ax.demo.util.axtools.AxResultMap;
+import com.ax.demo.util.axtools.AxResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
+
 /**
  * @author axing
  */
@@ -58,7 +59,7 @@ public class LoginServiceImpl implements ILoginService {
     }
 
     @Override
-    public AxResultMap loginState(String userName, String passWord, HttpServletRequest request) {
+    public Object loginState(String userName, String passWord, HttpServletRequest request) {
 
 
         Userinfo userinfo = this.userinfoMapper.getModelByuserName(userName.toLowerCase());
@@ -66,15 +67,11 @@ public class LoginServiceImpl implements ILoginService {
         System.out.println("userinfo = " + userinfo);
 
 
-        AxResultMap axResultMap = new AxResultMap();
+        AxResponseEntity<Userinfo> responseEntity = new AxResponseEntity();
 
         if (userinfo == null) {
-
-
-            axResultMap.setState(false);
-            axResultMap.setMsg("账号不存在");
-
-
+            responseEntity.setState(false);
+            responseEntity.setMsg("账号不存在");
         } else {
 
             /*记录登录成功或失败*/
@@ -91,21 +88,21 @@ public class LoginServiceImpl implements ILoginService {
                 UserinfoContext.putUserinfo(userinfo);
                 ipLog.setLoginState(IpLog.LOGINSTATE_SUCCESS);
 
-                axResultMap.setState(true);
-                axResultMap.put("userinfo", userinfo);
+                responseEntity.setState(true);
+                responseEntity.setBody(userinfo);
 
             } else {
 
                 ipLog.setLoginState(IpLog.LOGINSTATE_FAILD);
-                axResultMap.setState(false);
-                axResultMap.setMsg("账号或者密码错误");
+                responseEntity.setState(false);
+                responseEntity.setMsg("账号或者密码错误");
 
             }
             ipLogMapper.insert(ipLog);
         }
 
 
-        return axResultMap;
+        return responseEntity;
 
     }
 

@@ -13,8 +13,11 @@ public interface IUserService {
     void add(User user);
 
     void update(User user);
+
     User get(Long id);
-    void  delete(Long id);
+
+    void delete(Long id);
+
     List<User> list();
 
 }

@@ -49,6 +49,9 @@ import java.nio.charset.StandardCharsets;
 //
 //}
 
+/**
+ * http请求,配置 rpc方式之一
+ */
 @Configuration
 public class RestTemplateConfig {
 

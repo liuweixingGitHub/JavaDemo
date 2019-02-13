@@ -13,8 +13,7 @@ import java.util.Date;
  * ApplicationRunner和CommandLineRunner，来实现，他们都是在SpringApplication 执行之后开始执行的。
  * CommandLineRunner接口可以用来接收字符串数组的命令行参数，
  * ApplicationRunner 是使用ApplicationArguments 用来接收参数的，貌似后者更牛逼一些。
- *
- * */
+ */
 
 @Component
 @Order(1)
