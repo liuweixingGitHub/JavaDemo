@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  * @author axing
  */
-@SuppressWarnings("ALL")
 @RestController
 public class LoginController extends BaseController {
 
@@ -25,7 +25,8 @@ public class LoginController extends BaseController {
 
     @RequestMapping(value = "/login.do")
     @ResponseBody
-    public Object login(@RequestParam(value = "username",required = true) String username, @RequestParam(value = "password" ,required = true) String password) {
+    public Object login(@RequestParam(value = "username") String username,
+                        @RequestParam(value = "password") String password) {
 
         Object axResultMap = this.loginService.loginState(username, password, this.request);
 
@@ -37,12 +38,12 @@ public class LoginController extends BaseController {
 
 
     @RequestMapping(value = "/login2.do")
-    public Object login2(){
+    public Object login2() {
 
-        List list = new LinkedList();
+        List<String> list = new ArrayList<>();
         list.add("B");
 
-        AxResponseEntity<List> object = new AxResponseEntity();
+        AxResponseEntity object = new AxResponseEntity();
         object.setState(true);
         object.setMsg("uuuuudddddd");
         object.setBody(list);
@@ -52,12 +53,12 @@ public class LoginController extends BaseController {
     }
 
     @RequestMapping(value = "/login3.do")
-    public Object login3(){
+    public Object login3() {
 
-        List list = new LinkedList();
+        List<String> list = new LinkedList<>();
         list.add("B");
 
-        AxResponseEntity object = new AxResponseEntity();
+        AxResponseEntity<List<String>> object = new AxResponseEntity<>();
         object.setState(true);
         object.setMsg("eee");
         object.setBody(list);
@@ -73,8 +74,7 @@ public class LoginController extends BaseController {
     @RequestMapping(value = "/home.page")
     @RequiredLogin
     private ModelAndView homePage() {
-        ModelAndView modelAndView = new ModelAndView("home");
-        return modelAndView;
+        return new ModelAndView("home");
 
     }
 

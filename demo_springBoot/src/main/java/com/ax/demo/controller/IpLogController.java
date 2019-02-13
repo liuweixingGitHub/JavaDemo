@@ -17,6 +17,7 @@ import java.util.List;
  */
 @RestController
 public class IpLogController {
+
     @Autowired
     IIpLogService ipLogService;
 
@@ -24,7 +25,8 @@ public class IpLogController {
      * PageInfo 含有页面信息
      */
     @RequestMapping(value = "/ipLogPageInfo.do")
-    public Object ipLogPageInfo(@RequestParam(value = "pageNum", required = true) int pageNum, @RequestParam(value = "pageSize", required = true) int pageSize) {
+    public Object ipLogPageInfo(@RequestParam(value = "pageNum", required = true) int pageNum,
+                                @RequestParam(value = "pageSize", required = true) int pageSize) {
         return ipLogService.findByPageInfo(pageNum, pageSize);
 
     }
@@ -33,7 +35,8 @@ public class IpLogController {
      * ipLogPage 只有数据
      */
     @RequestMapping(value = "/ipLogPage.do")
-    public Object ipLogPage(@RequestParam(value = "pageNum", required = true) int pageNum, @RequestParam(value = "pageSize", required = true) int pageSize) {
+    public Object ipLogPage(@RequestParam(value = "pageNum") int pageNum,
+                            @RequestParam(value = "pageSize") int pageSize) {
         return ipLogService.findByPage(pageNum, pageSize);
 
     }
@@ -73,7 +76,7 @@ public class IpLogController {
     }
 
     @RequestMapping(value = "/list.do")
-    public void listParam(@RequestBody List<String> list,String name) {
+    public void listParam(@RequestBody List<String> list, String name) {
 
         System.out.println("list = " + list);
         System.out.println("name = " + name);
@@ -83,8 +86,8 @@ public class IpLogController {
 
 class UpdateListObject {
 
-    List<IpLog> list;
-    String name;
+    private List<IpLog> list;
+    private String name;
 
     public List<IpLog> getList() {
         return list;
@@ -104,6 +107,6 @@ class UpdateListObject {
 
     @Override
     public String toString() {
-      return JSON.toJSONString(this);
+        return JSON.toJSONString(this);
     }
 }
