@@ -6,6 +6,7 @@ import com.ax.demo.mapper.IpLogMapper;
 import com.ax.demo.query.IpLogQueryObject;
 import com.ax.demo.service.IIpLogService;
 import com.ax.demo.util.axtools.AxPageResultEntity;
+import com.ax.demo.util.axtools.AxResponseEntity;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -20,7 +21,7 @@ import java.util.List;
  * @author axing
  */
 @Service
-@Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
+//@Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
 public class IpLogServiceImpl implements IIpLogService {
 
     @Autowired
@@ -92,7 +93,19 @@ public class IpLogServiceImpl implements IIpLogService {
         return ipLogMapper.updateByPrimaryKeySelective(ipLog);
     }
 
-    /**
+    @Override
+    public Object updateByListWhen(List<IpLog> list) {
+
+        int count = ipLogMapper.updateByListWhen(list);
+        AxResponseEntity responseEntity = new AxResponseEntity();
+        if (count>0){
+            responseEntity.setState(true);
+        }else {
+            responseEntity.setState(false);
+        }
+        return responseEntity;
+    }
+/**
      * 缓存注解的使用
      *
      * @Cacheable

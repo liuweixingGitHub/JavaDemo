@@ -67,6 +67,8 @@ public interface IIpLogService {
 
     List<IpLog> findAll();
 
+    Object updateByListWhen(List<IpLog> list);
+
 //    PageInfo queryPage(IpLogQueryObject queryObject, int pageNum, int pageSize);
 
 }

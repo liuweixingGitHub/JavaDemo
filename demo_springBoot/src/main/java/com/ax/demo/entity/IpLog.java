@@ -97,6 +97,16 @@ public class IpLog implements Serializable {
         return loginTime;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "IpLog{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", loginTime=" + loginTime +
+                ", ip='" + ip + '\'' +
+                ", loginState=" + loginState +
+                ", userType=" + userType +
+                ", userinfoId=" + userinfoId +
+                '}';
+    }
 }
