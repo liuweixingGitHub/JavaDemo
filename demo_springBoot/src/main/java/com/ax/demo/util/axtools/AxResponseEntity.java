@@ -9,12 +9,13 @@ import java.util.List;
 /**
  * @author axing
  */
-public class AxResponseEntity {
+public class AxResponseEntity<T> {
 
-    private Boolean state;
+    private boolean state;
+
     private String msg;
-    private List list;
-    private String fileName;
+
+    private T body;
 
     @JSONField(format="yyyy-MM-dd HH:mm:ss")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") //@DatetimeFormat是将String转换成Date，一般前台给后台传值时用
@@ -29,7 +30,7 @@ public class AxResponseEntity {
         return state;
     }
 
-    public void setState(Boolean state) {
+    public void setState(boolean state) {
         this.state = state;
     }
 
@@ -41,19 +42,23 @@ public class AxResponseEntity {
         this.msg = msg;
     }
 
-    public List getList() {
-        return list;
+
+
+    public T getBody() {
+        return body;
     }
 
-    public void setList(List list) {
-        this.list = list;
+    public void setBody(T body) {
+        this.body = body;
     }
 
-    public String getFileName() {
-        return fileName;
-    }
-
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
+    @Override
+    public String toString() {
+        return "AxResponseEntity{" +
+                "state=" + state +
+                ", msg='" + msg + '\'' +
+                ", body=" + body +
+                ", currentDate=" + currentDate +
+                '}';
     }
 }

@@ -77,15 +77,33 @@ public class IpLogServiceImpl implements IIpLogService {
 
 //    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
     @Override
-    public List<IpLog> findAll() {
-        return ipLogMapper.findByPage();
+    public Object findAll() {
+        List<IpLog> list = ipLogMapper.findByPage();
+
+        AxResponseEntity<List> responseEntity = new AxResponseEntity();
+        if (null!=list){
+            responseEntity.setState(true);
+            responseEntity.setBody(list);
+        }else {
+            responseEntity.setState(false);
+        }
+        return responseEntity;
     }
 
 
 //    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
     @Override
-    public IpLog getByKey(Long id) {
-        return ipLogMapper.selectByPrimaryKey(id);
+    public Object getByKey(Long id) {
+        IpLog ipLog = ipLogMapper.selectByPrimaryKey(id);
+
+        AxResponseEntity<IpLog> responseEntity = new AxResponseEntity();
+        if (null!=ipLog){
+            responseEntity.setState(true);
+            responseEntity.setBody(ipLog);
+        }else {
+            responseEntity.setState(false);
+        }
+        return responseEntity;
     }
 
     @Override

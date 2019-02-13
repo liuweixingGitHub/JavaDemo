@@ -22,7 +22,7 @@ public interface IIpLogService {
      */
     AxPageResultEntity query(IpLogQueryObject queryObject);
 
-    IpLog getByKey(Long id);
+    Object getByKey(Long id);
 
     /**
      * 插入
@@ -65,7 +65,7 @@ public interface IIpLogService {
      */
     Page<IpLog> findByPage(int pageNum, int pageSize);
 
-    List<IpLog> findAll();
+    Object findAll();
 
     Object updateByListWhen(List<IpLog> list);
 

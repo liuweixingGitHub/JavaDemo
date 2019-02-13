@@ -42,11 +42,10 @@ public class IpLogController {
     @RequestMapping(value = "/ipLogAll.do")
     public Object ipLogAll() {
         return ipLogService.findAll();
-
     }
 
     @RequestMapping(value = "/getIpLog.do")
-    public IpLog getByKey(Long id) {
+    public Object getByKey(Long id) {
         return ipLogService.getByKey(id);
 
     }
@@ -61,7 +60,6 @@ public class IpLogController {
     public Object updateByList(@RequestBody(required = false) List<IpLog> list) {
 
         return ipLogService.updateByListWhen(list);
-
     }
 
     @RequestMapping(value = "/list.do")

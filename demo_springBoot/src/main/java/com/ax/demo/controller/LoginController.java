@@ -43,10 +43,10 @@ public class LoginController extends BaseController {
         List list = new LinkedList();
         list.add("B");
 
-        AxResponseEntity object = new AxResponseEntity();
+        AxResponseEntity<List> object = new AxResponseEntity();
         object.setState(true);
         object.setMsg("uuuuudddddd");
-        object.setList(list);
+        object.setBody(list);
 
         return object;
 
@@ -61,7 +61,7 @@ public class LoginController extends BaseController {
         AxResponseEntity object = new AxResponseEntity();
         object.setState(true);
         object.setMsg("eee");
-        object.setList(list);
+        object.setBody(list);
 
         return object;
 

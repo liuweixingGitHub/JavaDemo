@@ -31,9 +31,9 @@ public class UserinfoController {
 
         List<Userinfo> list = iUserinfoService.getAllUserinfo();
 
-        AxResponseEntity object = new AxResponseEntity();
+        AxResponseEntity<List> object = new AxResponseEntity();
         object.setState(true);
-        object.setList(list);
+        object.setBody(list);
 
         return object;
 
