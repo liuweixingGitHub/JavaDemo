@@ -2,7 +2,7 @@ package com.ax.demo.controller;
 
 import com.ax.demo.entity.Userinfo;
 import com.ax.demo.service.IRegisterService;
-import com.ax.demo.util.axtools.AxResponseEntity;
+import com.ax.demo.util.axtools.AxResultEntity;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,7 +39,7 @@ public class RegisterController {
         boolean register = this.registerService.register(username, password, Userinfo.USERTYPE_NORMAL);
 
 
-        AxResponseEntity responseEntity = new AxResponseEntity();
+        AxResultEntity responseEntity = new AxResultEntity();
 
         if (register) {
             responseEntity.setState(true);

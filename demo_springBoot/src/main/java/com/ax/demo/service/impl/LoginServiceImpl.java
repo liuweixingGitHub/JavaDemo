@@ -8,7 +8,7 @@ import com.ax.demo.mapper.IpLogMapper;
 import com.ax.demo.mapper.UserinfoMapper;
 import com.ax.demo.service.ILoginService;
 import com.ax.demo.util.axtools.AxConst;
-import com.ax.demo.util.axtools.AxResponseEntity;
+import com.ax.demo.util.axtools.AxResultEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -67,7 +67,7 @@ public class LoginServiceImpl implements ILoginService {
         System.out.println("userinfo = " + userinfo);
 
 
-        AxResponseEntity<Userinfo> responseEntity = new AxResponseEntity();
+        AxResultEntity<Userinfo> responseEntity = new AxResultEntity();
 
         if (userinfo == null) {
             responseEntity.setState(false);

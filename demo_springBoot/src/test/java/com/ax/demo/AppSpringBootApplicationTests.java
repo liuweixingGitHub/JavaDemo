@@ -3,7 +3,7 @@ package com.ax.demo;
 import com.ax.demo.service.impl.RedisService;
 import com.ax.demo.entity.IpLog;
 import com.ax.demo.mapper.IpLogMapper;
-import com.ax.demo.util.axtools.AxResponseEntity;
+import com.ax.demo.util.axtools.AxResultEntity;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -87,7 +87,7 @@ public class AppSpringBootApplicationTests {
 //		ipLog.setUserName("jim");
 //
 //		redisUtils.set("ipLog:redis_key1", ipLog);
-	AxResponseEntity responseEntity =new AxResponseEntity();
+	AxResultEntity responseEntity =new AxResultEntity();
 		responseEntity.setState(true);
 		System.out.println("responseEntity = " + responseEntity);
 		System.out.println("responseEntity = " + responseEntity.toString());

@@ -5,7 +5,7 @@ import com.ax.demo.mapper.IpLogMapper;
 import com.ax.demo.query.IpLogQueryObject;
 import com.ax.demo.service.IIpLogService;
 import com.ax.demo.util.axtools.AxPageResultEntity;
-import com.ax.demo.util.axtools.AxResponseEntity;
+import com.ax.demo.util.axtools.AxResultEntity;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -77,7 +77,7 @@ public class IpLogServiceImpl implements IIpLogService {
     public Object findAll() {
         List<IpLog> list = ipLogMapper.findByPage();
 
-        AxResponseEntity<List> responseEntity = new AxResponseEntity();
+        AxResultEntity<List> responseEntity = new AxResultEntity();
         if (null != list) {
             responseEntity.setState(true);
             responseEntity.setBody(list);
@@ -93,13 +93,15 @@ public class IpLogServiceImpl implements IIpLogService {
     public Object getByKey(Long id) {
         IpLog ipLog = ipLogMapper.selectByPrimaryKey(id);
 
-        AxResponseEntity<IpLog> responseEntity = new AxResponseEntity();
+        AxResultEntity<IpLog> responseEntity = new AxResultEntity();
         if (null != ipLog) {
             responseEntity.setState(true);
             responseEntity.setBody(ipLog);
         } else {
             responseEntity.setState(false);
         }
+
+
         return responseEntity;
     }
 
@@ -112,7 +114,7 @@ public class IpLogServiceImpl implements IIpLogService {
     public Object updateByListWhen(List<IpLog> list) {
 
         int count = ipLogMapper.updateByListWhen(list);
-        AxResponseEntity responseEntity = new AxResponseEntity();
+        AxResultEntity responseEntity = new AxResultEntity();
         if (count > 0) {
             responseEntity.setState(true);
         } else {

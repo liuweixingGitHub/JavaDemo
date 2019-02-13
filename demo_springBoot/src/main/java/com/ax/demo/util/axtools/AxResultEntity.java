@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * @author axing
  */
-public class AxResponseEntity<T> {
+public class AxResultEntity<T> {
 
     private boolean state;
 

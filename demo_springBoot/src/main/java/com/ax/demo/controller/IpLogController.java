@@ -3,7 +3,7 @@ package com.ax.demo.controller;
 import com.alibaba.fastjson.JSON;
 import com.ax.demo.entity.IpLog;
 import com.ax.demo.service.IIpLogService;
-import com.ax.demo.util.axtools.AxResponseEntity;
+import com.ax.demo.util.axtools.AxResultEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -72,7 +72,7 @@ public class IpLogController {
 
         System.out.println("name = " + object);
 
-        return new AxResponseEntity();
+        return new AxResultEntity();
     }
 
     @RequestMapping(value = "/list.do")

@@ -2,7 +2,7 @@ package com.ax.demo.controller;
 
 import com.ax.demo.interceptor.RequiredLogin;
 import com.ax.demo.service.ILoginService;
-import com.ax.demo.util.axtools.AxResponseEntity;
+import com.ax.demo.util.axtools.AxResultEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -40,12 +40,12 @@ public class LoginController extends BaseController {
     @RequestMapping(value = "/login2.do")
     public Object login2() {
 
-        List<String> list = new ArrayList<>();
-        list.add("B");
-
-        AxResponseEntity object = new AxResponseEntity();
+        AxResultEntity<List<String>> object = new AxResultEntity<>();
         object.setState(true);
         object.setMsg("uuuuudddddd");
+
+        List<String> list = new ArrayList<>();
+        list.add("B");
         object.setBody(list);
 
         return object;
@@ -58,7 +58,7 @@ public class LoginController extends BaseController {
         List<String> list = new LinkedList<>();
         list.add("B");
 
-        AxResponseEntity<List<String>> object = new AxResponseEntity<>();
+        AxResultEntity<List<String>> object = new AxResultEntity<>();
         object.setState(true);
         object.setMsg("eee");
         object.setBody(list);
