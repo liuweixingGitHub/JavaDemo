@@ -1,5 +1,6 @@
 package com.ax.demo.util.axtools;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.annotation.JSONField;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -61,4 +62,16 @@ public class AxResponseEntity<T> {
                 ", currentDate=" + currentDate +
                 '}';
     }
+
+
+//    @Override
+//    public String toString() {
+//        return JSON.toJSONString(this);
+////        return "AxResponseEntity{" +
+////                "state=" + state +
+////                ", msg='" + msg + '\'' +
+////                ", body=" + body +
+////                ", currentDate=" + currentDate +
+////                '}';
+//    }
 }

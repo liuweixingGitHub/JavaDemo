@@ -1,13 +1,16 @@
 package com.ax.demo.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.ax.demo.entity.IpLog;
 import com.ax.demo.service.IIpLogService;
+import com.ax.demo.util.axtools.AxResponseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -58,15 +61,56 @@ public class IpLogController {
 
     @RequestMapping(value = "/updateList.do")
     public Object updateByList(@RequestBody(required = false) List<IpLog> list) {
-
+        System.out.println("list = " + list);
         return ipLogService.updateByListWhen(list);
     }
 
-    @RequestMapping(value = "/list.do")
-    public void listParam(@RequestBody List<String> id) {
+    @RequestMapping(value = "/updateList2.do")
+    public Object updateByList2(@RequestBody(required = false) UpdateListObject object) {
 
-        System.out.println("param = " + id);
+        System.out.println("name = " + object);
+
+        return new AxResponseEntity();
     }
 
+    @RequestMapping(value = "/list.do")
+    public void listParam(@RequestBody List<String> list,String name) {
 
+        System.out.println("list = " + list);
+        System.out.println("name = " + name);
+    }
+
+}
+
+class UpdateListObject {
+
+    List<IpLog> list;
+    String name;
+
+    public List<IpLog> getList() {
+        return list;
+    }
+
+    public void setList(List<IpLog> list) {
+        this.list = list;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+
+      return   JSON.toJSONString(this);
+
+//        return "UpdateListObject{" +
+//                "list=" + list +
+//                ", name='" + name + '\'' +
+//                '}';
+    }
 }
