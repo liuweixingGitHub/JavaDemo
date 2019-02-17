@@ -77,6 +77,18 @@
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
 
+		<!--避坑包-->
+		<dependency>
+			<groupId>net.sourceforge.nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+			<version>1.9.22</version>
+		</dependency>
+		<!--解析html包-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
 		<!--打包至外部tomcat-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

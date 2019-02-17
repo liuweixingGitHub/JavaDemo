@@ -10,9 +10,12 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author axing
@@ -88,7 +91,10 @@ public class IpLogServiceImpl implements IIpLogService {
     }
 
 
-    //    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
+    @Autowired
+    RedisService redisService;
+
+    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
     @Override
     public Object getByKey(Long id) {
         IpLog ipLog = ipLogMapper.selectByPrimaryKey(id);
@@ -101,6 +107,7 @@ public class IpLogServiceImpl implements IIpLogService {
             responseEntity.setState(false);
         }
 
+//        redisService.set("getid",ipLog,5, TimeUnit.SECONDS);
 
         return responseEntity;
     }

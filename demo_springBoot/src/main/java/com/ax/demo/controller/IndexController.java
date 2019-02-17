@@ -11,8 +11,10 @@ public class IndexController {
 
     @RequestMapping(value = "/")
     public ModelAndView index(){
+        ModelAndView modelAndView =  new ModelAndView("login");
+        modelAndView.addObject("name","tom");
 
-        return new ModelAndView("login");
+        return modelAndView;
     }
 
 }

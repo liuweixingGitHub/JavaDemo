@@ -1,6 +1,6 @@
 server:
   servlet:
-    context-path: /
+    context-path: /demo
   port: 8080
 
 spring:
@@ -35,10 +35,22 @@ spring:
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
 
-  freemarker:
-    request-context-attribute: request
+#  freemarker:
+#    request-context-attribute: request
+#    cache: false
+#    enabled: true
+
+  thymeleaf:
+    mode: LEGACYHTML5
     cache: false
-    enabled: true
+    check-template-location: true # 检查模板是否存在，然后再呈现
+    enabled: true #启用MVC Thymeleaf视图分辨率
+    template-resolver-order: 0
+    suffix: .html
+    prefix: classpath:/templates/
+    encoding: UTF-8
+
+
   redis:
     password: # Redis服务器连接密码（默认为空）
     database: 0 # Redis数据库索引（默认为0）

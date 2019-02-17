@@ -2,6 +2,7 @@ package com.ax.demo.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.http.converter.StringHttpMessageConverter;
@@ -54,6 +55,7 @@ import java.nio.charset.StandardCharsets;
  */
 @Configuration
 public class RestTemplateConfig {
+
 
     @Bean
     public RestTemplate restTemplate(ClientHttpRequestFactory factory){

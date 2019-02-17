@@ -2,6 +2,8 @@ package com.ax.demo.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.*;
+import org.springframework.data.redis.serializer.RedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
@@ -39,11 +41,13 @@ public class RedisService {
      */
     public boolean set(final String key, Object value) {
 
+        //key的字符串序列化器
+        RedisSerializer redisSerializer = new StringRedisSerializer();
+        redisTemplate.setKeySerializer(redisSerializer);
 
         boolean result = false;
         try {
-            ValueOperations<Serializable, Object> operations = redisTemplate.opsForValue();
-            operations.set(key, value);
+             redisTemplate.opsForValue().set(key,value);
             result = true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -58,12 +62,10 @@ public class RedisService {
      * @param value
      * @return
      */
-    public boolean set(final String key, Object value, Long expireTime) {
+    public boolean set(final String key, Object value, long outTime, TimeUnit timeUnit) {
         boolean result = false;
         try {
-            ValueOperations<Serializable, Object> operations = redisTemplate.opsForValue();
-            operations.set(key, value);
-            redisTemplate.expire(key, expireTime, TimeUnit.SECONDS);
+            redisTemplate.opsForValue().set(key,value,outTime,timeUnit);
             result = true;
         } catch (Exception e) {
             e.printStackTrace();
