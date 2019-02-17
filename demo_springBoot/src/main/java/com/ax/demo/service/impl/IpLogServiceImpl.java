@@ -11,7 +11,9 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -94,7 +96,9 @@ public class IpLogServiceImpl implements IIpLogService {
     @Autowired
     RedisService redisService;
 
-    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
+    //    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG,key = "#id" )
+    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG, key = "#p0")
+//    @Scheduled(fixedDelay = 6)
     @Override
     public Object getByKey(Long id) {
         IpLog ipLog = ipLogMapper.selectByPrimaryKey(id);
@@ -112,6 +116,8 @@ public class IpLogServiceImpl implements IIpLogService {
         return responseEntity;
     }
 
+    //    @CacheEvict(value = RedisService.REDIS_VALUE_IPLOG,key = "#ipLog.id")
+    @CacheEvict(value = RedisService.REDIS_VALUE_IPLOG, key = "#p0.id")
     @Override
     public int updateByEntity(IpLog ipLog) {
         return ipLogMapper.updateByPrimaryKeySelective(ipLog);

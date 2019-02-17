@@ -25,7 +25,7 @@ public class RedisService {
     private RedisTemplate redisTemplate;
 
 
-    public final static String REDIS_VALUE_IPLOG = "iplog";
+    public final static String REDIS_VALUE_IPLOG = "iplog_p0";
 
 
     /**

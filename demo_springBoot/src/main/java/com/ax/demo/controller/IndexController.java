@@ -13,7 +13,6 @@ public class IndexController {
     public ModelAndView index(){
         ModelAndView modelAndView =  new ModelAndView("login");
         modelAndView.addObject("name","tom");
-
         return modelAndView;
     }
 
