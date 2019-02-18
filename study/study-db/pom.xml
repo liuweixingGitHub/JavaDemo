@@ -57,6 +57,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<!--次项目是组件-->
 					<skip>true</skip>
 				</configuration>
 			</plugin>
