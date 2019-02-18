@@ -1,6 +1,6 @@
 package com.ax.study.all.controller;
 
-import com.ax.study.all.service.impl.RedisService;
+import com.ax.study.all.config.cache.RedisService;
 import com.ax.study.all.service.HttpClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

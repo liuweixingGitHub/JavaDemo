@@ -1,4 +1,4 @@
-package com.ax.study.all.config;
+package com.ax.study.all.config.cache;
 
 import org.springframework.data.redis.connection.Message;
 import org.springframework.data.redis.connection.MessageListener;

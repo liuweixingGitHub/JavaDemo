@@ -1,4 +1,4 @@
-package com.ax.study.all.config;
+package com.ax.study.all.config.rpc;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

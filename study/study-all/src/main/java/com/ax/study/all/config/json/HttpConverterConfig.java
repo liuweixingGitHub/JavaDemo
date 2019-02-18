@@ -1,4 +1,4 @@
-package com.ax.study.all.config;
+package com.ax.study.all.config.json;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;

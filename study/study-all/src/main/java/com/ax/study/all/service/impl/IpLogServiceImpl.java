@@ -1,5 +1,6 @@
 package com.ax.study.all.service.impl;
 
+import com.ax.study.all.config.cache.RedisService;
 import com.ax.study.all.service.IIpLogService;
 import com.ax.study.all.util.axtools.AxPageResultEntity;
 import com.ax.study.all.util.axtools.AxResultEntity;

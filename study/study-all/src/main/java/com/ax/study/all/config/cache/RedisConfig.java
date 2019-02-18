@@ -1,4 +1,4 @@
-package com.ax.study.all.config;
+package com.ax.study.all.config.cache;
 
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
