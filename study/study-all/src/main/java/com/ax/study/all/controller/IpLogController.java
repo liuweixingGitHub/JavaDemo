@@ -55,9 +55,18 @@ public class IpLogController {
 
     }
 
+    @RequestMapping(value = "/deleteIpLog.do")
+    public Object deleteByKey(Long id) {
+        return ipLogService.deleteByKey(id);
+
+    }
+
+
+
     @RequestMapping(value = "/updateIplog.do")
     public int updateByEntity(IpLog ipLog) {
 
+        System.out.println("ipLog = " + ipLog);
         return ipLogService.updateByEntity(ipLog);
     }
 

@@ -70,6 +70,8 @@ public interface IIpLogService {
 
     Object updateByListWhen(List<IpLog> list);
 
+    Object deleteByKey(Long id);
+
 //    PageInfo queryPage(IpLogQueryObject queryObject, int pageNum, int pageSize);
 
 }

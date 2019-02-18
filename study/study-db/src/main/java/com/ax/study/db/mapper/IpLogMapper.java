@@ -3,10 +3,7 @@ package com.ax.study.db.mapper;
 import com.ax.study.db.entity.IpLog;
 import com.ax.study.db.query.IpLogQueryObject;
 import com.github.pagehelper.Page;
-import org.apache.ibatis.annotations.InsertProvider;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.SelectProvider;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -20,14 +17,8 @@ public interface IpLogMapper {
 
     int insert(IpLog record);
 
-    @InsertProvider(type=IpLogMapperSql.class,method="insertIpLog")
-    int insertIpLog(IpLog ipLog);
 
     int insertSelective(IpLog record);
-
-
-    @SelectProvider(type = IpLogMapperSql.class, method = "getById")
-    IpLog selectByPrimaryKey(@Param("id") Long id);
 
 
     int updateByPrimaryKeySelective(IpLog record);
@@ -72,6 +63,18 @@ public interface IpLogMapper {
      * @return
      */
     int updateByListWhen(List<IpLog> list);
+
+    @InsertProvider(type=IpLogMapperSql.class,method="insertIpLog")
+    int insertIpLog(IpLog ipLog);
+
+    @DeleteProvider(type = IpLogMapperSql.class, method = "deleteOne")
+    int deleteOne(Long id);
+
+    @UpdateProvider(type = IpLogMapperSql.class, method = "updateIpLog")
+    int updateIpLog(IpLog ipLog);
+
+    @SelectProvider(type = IpLogMapperSql.class, method = "getById")
+    IpLog selectByPrimaryKey(@Param("id") Long id);
 
 
 }

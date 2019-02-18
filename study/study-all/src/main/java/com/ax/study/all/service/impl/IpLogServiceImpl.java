@@ -121,7 +121,8 @@ public class IpLogServiceImpl implements IIpLogService {
     @CacheEvict(value = RedisService.REDIS_VALUE_IPLOG, key = "#p0.id")
     @Override
     public int updateByEntity(IpLog ipLog) {
-        return ipLogMapper.updateByPrimaryKeySelective(ipLog);
+//        return ipLogMapper.updateByPrimaryKeySelective(ipLog);
+        return ipLogMapper.updateIpLog(ipLog);
     }
 
     @Override
@@ -136,7 +137,13 @@ public class IpLogServiceImpl implements IIpLogService {
         }
         return responseEntity;
     }
-/**
+
+    @Override
+    public Object deleteByKey(Long id) {
+        return ipLogMapper.deleteOne(id);
+    }
+
+    /**
  * 缓存注解的使用
  *
  * @Cacheable
