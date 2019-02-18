@@ -1,8 +1,8 @@
-package com.ax.demo.controller;
+package com.ax.study.all.controller;
 
-import com.ax.demo.interceptor.RequiredLogin;
-import com.ax.demo.service.ILoginService;
-import com.ax.demo.util.axtools.AxResultEntity;
+import com.ax.study.all.interceptor.RequiredLogin;
+import com.ax.study.all.service.ILoginService;
+import com.ax.study.all.util.axtools.AxResultEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,8 +27,6 @@ public class LoginController extends BaseController {
     @ResponseBody
     public Object login(@RequestParam(value = "username") String username,
                         @RequestParam(value = "password") String password) {
-
-        System.out.println("username = " + username);
 
         Object axResultMap = this.loginService.loginState(username, password, this.request);
 

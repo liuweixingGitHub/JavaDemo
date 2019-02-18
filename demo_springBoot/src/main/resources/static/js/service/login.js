@@ -1,9 +1,11 @@
 $(function () {
- $('#registerBtn').click(function(){
 
-   window.location.href="/registerPage.do";
+alert("AAA");
+     $('#registerBtn').click(function(){
 
- });
+       window.location.href="/registerPage.do";
+
+     });
 
 
     $('#login-form').validate({
@@ -29,8 +31,6 @@ $(function () {
                 rangelength:"密码的长度在{0}到{1}之间",
             },
         },
-
-//                errorClass:"text-danger",
 
         /*
         显示√ ×
@@ -59,6 +59,7 @@ $(function () {
          */
         submitHandler:function(form) {
 
+alert("AA");
             //刷新页面,显示json数据
             // form.submit(); //没有这一句表单不会提交
             // $(form).ajaxForm(function() {

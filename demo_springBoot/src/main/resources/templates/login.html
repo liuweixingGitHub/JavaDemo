@@ -10,10 +10,10 @@
 <body>
 
 
-<h1 class="text-center text-danger">登陆html22</h1><br>
+<h1 class="text-center text-danger">登陆html</h1><br>
 
 
-<p th:text="${name}">default message</p>
+<!--<p th:text="${name}">default message</p>-->
 
 <form id="login-form" role="form" class="form-horizontal">
 
@@ -59,13 +59,8 @@
 
 
 <!--js-->
-<!--<script type="text/javascript" src="/js/service/.js" th:src="@{/js/service/contextPath.js}"></script>-->
+
+<script type="text/javascript" src="/js/service/contextPath.js" th:src="@{/js/service/contextPath.js}"></script>
 <script type="text/javascript" src="/js/service/login.js" th:src="@{/js/service/login.js}"></script>
-
-<script th:inline="javascript">
-    var message = [[${name}]];
-    <!--alert(message);-->
-
-</script>
 
 </html>
