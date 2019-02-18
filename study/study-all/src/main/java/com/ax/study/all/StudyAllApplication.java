@@ -20,7 +20,7 @@ import java.time.format.DateTimeFormatter;
 
 /**开启缓存功能*/
 @EnableCaching
-@MapperScan("com.ax.demo.mapper")
+@MapperScan("com.ax.study.db.mapper")
 @SpringBootApplication
 public class StudyAllApplication extends SpringBootServletInitializer {
 

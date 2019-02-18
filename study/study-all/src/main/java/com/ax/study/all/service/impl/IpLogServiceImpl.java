@@ -45,8 +45,12 @@ public class IpLogServiceImpl implements IIpLogService {
 
     @Override
     public void insert(IpLog ipLog) {
-        ipLogMapper.insert(ipLog);
+//        ipLogMapper.insert(ipLog);
+        ipLogMapper.insertIpLog(ipLog);
     }
+
+
+
 
     @Override
     public int queryForCount(IpLogQueryObject queryObject) {

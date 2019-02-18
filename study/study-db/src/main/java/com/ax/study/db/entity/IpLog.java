@@ -33,7 +33,6 @@ public class IpLog implements Serializable {
 
     private String ip;
 
-
     private Integer loginState;
 
     private Integer userType;
