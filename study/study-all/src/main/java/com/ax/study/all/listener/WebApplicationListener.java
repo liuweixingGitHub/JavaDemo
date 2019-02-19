@@ -20,7 +20,7 @@ public class WebApplicationListener implements ApplicationListener<WebServerInit
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:ss:mm.SSSS");
         String dateString = dateTimeFormatter.format(LocalDateTime.now());
 
-        System.out.println("-------------->" + "监听tomcat启动成功>> " + dateString + " 端口:" + port);
+        System.out.println("-------------->" + "监听tomcat启动>> " + dateString + " 端口:" + port);
     }
 
 }
