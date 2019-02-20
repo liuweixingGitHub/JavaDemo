@@ -42,7 +42,7 @@ spring:
 
 #  freemarker:
 #    request-context-attribute: request
-#    cache: false
+#    redis: false
 #    enabled: true
 
   thymeleaf:

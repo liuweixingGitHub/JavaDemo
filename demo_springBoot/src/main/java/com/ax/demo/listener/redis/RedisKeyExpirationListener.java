@@ -1,4 +1,4 @@
-package com.ax.demo.listener;
+package com.ax.demo.listener.redis;
 
 import org.springframework.data.redis.connection.Message;
 import org.springframework.data.redis.listener.KeyExpirationEventMessageListener;

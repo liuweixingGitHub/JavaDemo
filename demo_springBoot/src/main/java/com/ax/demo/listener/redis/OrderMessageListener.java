@@ -1,4 +1,4 @@
-package com.ax.demo.config;
+package com.ax.demo.listener.redis;
 
 import org.springframework.data.redis.connection.Message;
 import org.springframework.data.redis.connection.MessageListener;
