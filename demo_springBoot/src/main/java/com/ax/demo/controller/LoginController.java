@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
 /**
@@ -82,11 +84,9 @@ public class LoginController extends BaseController {
 
     }
 
-    /**
-     * 使用RedirectAttributes类
-     * @param name
-     * @return
-     */
+
+    /**重定向**/
+
     @RequestMapping(value="/loginPage1")
     @ResponseBody
     public Object loginPage1(@RequestParam(value="name") String name) {
@@ -98,23 +98,34 @@ public class LoginController extends BaseController {
         return map;
     }
 
-    @RequestMapping(value="/loginPage3")
+    @RequestMapping(value="/loginPage2")
     @ResponseBody
-    public Object loginPage3(@RequestParam(value="name") String name) {
+    public Object loginPage2(@RequestParam(value="name") String name) {
 
         System.out.println("name = " + name);
 
         return "收到:"+name;
     }
 
-    @RequestMapping("/loginPage2")
-    public String helloRedirect2(@RequestParam(value="name", required=false ) String name,
-                                 RedirectAttributes redirectAttributes) {
+    @RequestMapping("/loginPage3")
+    public String loginPage3(@RequestParam(value="name", required=false ) String name,
+                                 RedirectAttributes redirectAttributes,
+                                 HttpServletResponse response)  throws Exception{
         System.out.println("name = " + name);
-
-//        redirectAttributes.addFlashAttribute("name", name);
+        //页面传参
+        redirectAttributes.addFlashAttribute("userName", name);
+        //url传参
         redirectAttributes.addAttribute("name", name);
         return "redirect:/loginPage1";
+
+    }
+    @RequestMapping("/loginPage4")
+    public void loginPage4(@RequestParam(value="name", required=false ) String name,
+                           HttpServletResponse response)  throws Exception{
+        System.out.println("name = " + name);
+
+        response.sendRedirect("/loginPage1?name="+name);
+
     }
 
 }

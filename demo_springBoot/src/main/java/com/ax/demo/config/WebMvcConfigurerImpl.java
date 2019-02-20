@@ -1,8 +1,10 @@
-package com.ax.demo.inteceptor;
+package com.ax.demo.config;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
+import com.ax.demo.inteceptor.AuthenticationInterceptor;
+import com.ax.demo.inteceptor.LoginInteceptor;
 import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,17 +23,26 @@ import java.util.List;
  * @author axing
  */
 @Configuration
-public class WebAppConfigurer implements WebMvcConfigurer {
+public class WebMvcConfigurerImpl implements WebMvcConfigurer {
 
     @Bean
     public AuthenticationInterceptor authenticationInterceptor() {
         return new AuthenticationInterceptor();
     }
 
+    @Bean
+    public LoginInteceptor loginInteceptor() {
+        return new LoginInteceptor();
+    }
+
+    /**
+     * 添加拦截器
+     * @param registry
+     */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         // 可添加多个
-        registry.addInterceptor(new LoginInteceptor()).addPathPatterns("/**");
+        registry.addInterceptor(loginInteceptor()).addPathPatterns("/**");
 
         registry.addInterceptor(authenticationInterceptor()).addPathPatterns("/**");
     }
@@ -41,7 +52,7 @@ public class WebAppConfigurer implements WebMvcConfigurer {
      * @return
      */
     @Bean
-    public HttpMessageConverter<String> stringHttpMessageConverter() {
+    public HttpMessageConverter<String> stringHttpMessageConverterUtf8() {
         StringHttpMessageConverter converter = new StringHttpMessageConverter(Charset.forName("UTF-8"));
         return converter;
     }
@@ -75,7 +86,7 @@ public class WebAppConfigurer implements WebMvcConfigurer {
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
 
-        converters.add(stringHttpMessageConverter());
+        converters.add(stringHttpMessageConverterUtf8());
         converters.add(fastJsonHttpMessageConverters());
     }
 

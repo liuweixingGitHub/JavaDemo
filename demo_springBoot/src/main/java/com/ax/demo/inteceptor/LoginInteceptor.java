@@ -2,15 +2,14 @@ package com.ax.demo.inteceptor;
 
 import com.ax.demo.interceptor.RequiredLogin;
 import com.ax.demo.util.axtools.AxConst;
-import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author axing
  */
-@Component
 public class LoginInteceptor extends BaseInteceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {

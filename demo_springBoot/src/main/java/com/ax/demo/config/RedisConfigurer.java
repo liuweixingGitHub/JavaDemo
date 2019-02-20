@@ -30,7 +30,7 @@ import java.util.Map;
  */
 @Configuration
 @EnableCaching
-public class RedisConfig extends CachingConfigurerSupport {
+public class RedisConfigurer extends CachingConfigurerSupport {
 
 //    @Bean
 //    @Override

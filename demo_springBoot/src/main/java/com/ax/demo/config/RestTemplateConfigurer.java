@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import java.nio.charset.StandardCharsets;
 
 //@Configuration
-//public class RestTemplateConfig {
+//public class RestTemplateConfigurer {
 //
 //    @Autowired
 //    private HttpPoolProperties httpPoolProperties;
@@ -54,7 +54,7 @@ import java.nio.charset.StandardCharsets;
  * http请求,配置 rpc方式之一
  */
 @Configuration
-public class RestTemplateConfig {
+public class RestTemplateConfigurer {
 
 
     @Bean
