@@ -1,9 +1,10 @@
 $(function () {
 
-alert("AAA");
      $('#registerBtn').click(function(){
 
-       window.location.href="/registerPage.do";
+
+
+        window.location.href=getContextPath("/registerPage.do");
 
      });
 
@@ -59,7 +60,6 @@ alert("AAA");
          */
         submitHandler:function(form) {
 
-alert("AA");
             //刷新页面,显示json数据
             // form.submit(); //没有这一句表单不会提交
             // $(form).ajaxForm(function() {
