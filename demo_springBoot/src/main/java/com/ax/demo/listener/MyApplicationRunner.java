@@ -26,10 +26,10 @@ public class MyApplicationRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments applicationArguments) throws Exception {
 
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:ss:mm.SSSS");
-        String dateString = dateTimeFormatter.format(LocalDateTime.now());
+        String dateString = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:ss:mm.SSSS").format(LocalDateTime.now());
 
-        System.out.println("-------------->" + "监听tomcat启动>> " + dateString);
+        System.out.println("\n");
+        System.out.println("-------------->" + "监听Springboot启动>> " + dateString);
         System.out.println("获取到的参数： " + applicationArguments.getOptionNames());
         System.out.println("获取到的参数： " + applicationArguments.getNonOptionArgs());
         System.out.println("获取到的参数： " + applicationArguments.getSourceArgs());

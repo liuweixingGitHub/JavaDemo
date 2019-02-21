@@ -5,7 +5,7 @@ import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import com.ax.demo.inteceptor.AuthenticationInterceptor;
 import com.ax.demo.inteceptor.LoginInteceptor;
-import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
+import com.ax.demo.inteceptor.RegisterInteceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -35,6 +35,11 @@ public class WebMvcConfigurerImpl implements WebMvcConfigurer {
         return new LoginInteceptor();
     }
 
+    @Bean
+    public RegisterInteceptor registerInteceptor() {
+        return new RegisterInteceptor();
+    }
+
     /**
      * 添加拦截器
      * @param registry
@@ -44,7 +49,12 @@ public class WebMvcConfigurerImpl implements WebMvcConfigurer {
         // 可添加多个
         registry.addInterceptor(loginInteceptor()).addPathPatterns("/**");
 
+        registry.addInterceptor(registerInteceptor()).addPathPatterns("/**");
+
         registry.addInterceptor(authenticationInterceptor()).addPathPatterns("/**");
+
+
+
     }
 
     /**

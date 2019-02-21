@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class LoginInteceptor extends BaseInteceptor {
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request,
+                             HttpServletResponse response,
+                             Object handler) throws Exception {
 
         System.out.println("LoginInteceptor拦截器 >> preHandle");
 
@@ -27,7 +29,6 @@ public class LoginInteceptor extends BaseInteceptor {
 
                 /**没有保存过userinfo信息*/
                 if (request.getSession().getAttribute(AxConst.USERINFO_IN_SESSION) == null){
-
                     response.sendRedirect("/");
                     return false;
                 }
