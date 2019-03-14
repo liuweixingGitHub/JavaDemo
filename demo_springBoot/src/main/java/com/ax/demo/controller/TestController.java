@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class TestContrlooer {
+public class TestController {
 
     @Autowired
     RedisService redisService;
@@ -41,5 +41,6 @@ public class TestContrlooer {
 
 
     }
+
 
 }

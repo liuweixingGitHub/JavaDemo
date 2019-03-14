@@ -19,7 +19,7 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       # allowMultiQueries=true 允许批量更新
 #      url: jdbc:mysql://localhost:3306/demo10_p1?characterEncoding=utf-8&allowMultiQueries=true
-      url: jdbc:mysql://localhost:3306/demo10_p1?characterEncoding=utf-8
+      url: jdbc:mysql://localhost:3306/ax_java_demo?characterEncoding=utf-8
       username: root
       password: root123456
       #配置初始化大小/最小/最大
@@ -76,6 +76,26 @@ spring:
     restart:
       enabled: true
       additional-paths: src/main/java
+  quartz:
+    properties:
+      org:
+        quartz:
+          scheduler:
+            instanceName: clusteredScheduler
+            instanceId: AUTO
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_
+            isClustered: false
+            clusterCheckinInterval: 10000
+            useProperties: false
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
+    job-store-type: jdbc
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml

@@ -180,7 +180,7 @@
   </select>
 
 
-  <select id="findByPage" resultMap="BaseResultMap">
+  <select id="findByPage" resultType="com.ax.demo.entity.IpLog">
     select
     <include refid="Base_Column_List" />
     from t_ipLog

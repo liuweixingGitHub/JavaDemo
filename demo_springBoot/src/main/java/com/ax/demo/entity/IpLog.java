@@ -1,5 +1,6 @@
 package com.ax.demo.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
@@ -28,8 +29,17 @@ public class IpLog implements Serializable {
 
     private String userName;
 
-    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss.SSSS")//页面写入数据库时格式
     private Date loginTime;
+
+    /**测试时间格式化**/
+    @JSONField(format="yyyy-MM-dd HH:mm:ss")//数据库导出页面时json格式化
+    private Date loginTimeStr;
+
+    public Date getLoginTimeStr() {
+        return loginTime;
+    }
+
 
     private String ip;
 

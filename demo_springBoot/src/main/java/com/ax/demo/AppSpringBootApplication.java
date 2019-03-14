@@ -8,6 +8,7 @@ import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactor
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -18,10 +19,12 @@ import java.time.format.DateTimeFormatter;
  * @author axing
  */
 
+
+@SpringBootApplication
 /**开启缓存功能*/
 @EnableCaching
 @MapperScan("com.ax.demo.mapper")
-@SpringBootApplication
+@EnableTransactionManagement
 public class AppSpringBootApplication extends SpringBootServletInitializer {
 
 	private static ApplicationContext applicationContext;
