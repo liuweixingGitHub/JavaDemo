@@ -77,7 +77,7 @@ public class IpLogServiceImpl implements IIpLogService {
         return ipLogMapper.findByPage();
     }
 
-    //    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
+        @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
     @Override
     public Object findAll() {
         List<IpLog> list = ipLogMapper.findByPage();

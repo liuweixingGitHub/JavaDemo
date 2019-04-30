@@ -3,6 +3,7 @@ package com.ax.demo.controller;
 import com.ax.demo.entity.Userinfo;
 import com.ax.demo.service.IRegisterService;
 import com.ax.demo.util.axtools.AxResultEntity;
+import io.swagger.annotations.Api;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @author axing
  */
 @RestController
+@Api(description = "用户接口")
 public class RegisterController {
 
 

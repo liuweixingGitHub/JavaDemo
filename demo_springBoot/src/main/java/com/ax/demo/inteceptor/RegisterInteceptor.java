@@ -14,7 +14,7 @@ public class RegisterInteceptor extends BaseInteceptor {
     public boolean preHandle(HttpServletRequest request,
                              HttpServletResponse response,
                              Object handler) throws Exception {
-        System.out.println("RegisterInteceptor拦截 >>"+" preHandle"+request);
+//        System.out.println("RegisterInteceptor拦截 >>"+" preHandle"+request);
 
         return super.preHandle(request, response, handler);
     }
@@ -25,7 +25,7 @@ public class RegisterInteceptor extends BaseInteceptor {
                            Object handler,
                            ModelAndView modelAndView) throws Exception {
         super.postHandle(request, response, handler, modelAndView);
-        System.out.println("RegisterInteceptor拦截 >>"+" postHandle"+request);
+//        System.out.println("RegisterInteceptor拦截 >>"+" postHandle"+request);
     }
 
     @Override
@@ -34,7 +34,7 @@ public class RegisterInteceptor extends BaseInteceptor {
                                 Object handler,
                                 Exception ex) throws Exception {
         super.afterCompletion(request, response, handler, ex);
-        System.out.println("RegisterInteceptor拦截 >>"+" postHandle"+response);
+//        System.out.println("RegisterInteceptor拦截 >>"+" postHandle"+response);
     }
 }
 

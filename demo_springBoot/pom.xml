@@ -96,14 +96,14 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!--开发热部署,这里没用 -->
+		<!--&lt;!&ndash;开发热部署,这里没用,一保存就重启机制,没有什么用 &ndash;&gt;-->
 		<!--<dependency>-->
 			<!--<groupId>org.springframework.boot</groupId>-->
 			<!--<artifactId>spring-boot-devtools</artifactId>-->
-			<!--&lt;!&ndash;<optional>true</optional>&ndash;&gt;-->
-			<!--<scope>runtime</scope>-->
-			<!--<version>2.1.2.RELEASE</version>-->
+			<!--<optional>true</optional>-->
 		<!--</dependency>-->
+
+
 
 		<!--redis-->
 		<dependency>
@@ -134,6 +134,19 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-quartz</artifactId>
+		</dependency>
+
+		<!-- swagger -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.5.0</version>
+		</dependency>
+		<!-- swagger-ui -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.5.0</version>
 		</dependency>
 
 	</dependencies>

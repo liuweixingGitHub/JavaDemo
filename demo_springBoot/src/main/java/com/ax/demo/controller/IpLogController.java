@@ -1,6 +1,6 @@
 package com.ax.demo.controller;
 
-import com.alibaba.fastjson.JSON;
+import com.ax.demo.controller.RequestBody.UpdateListObject;
 import com.ax.demo.entity.IpLog;
 import com.ax.demo.service.IIpLogService;
 import com.ax.demo.util.axtools.AxResultEntity;
@@ -37,6 +37,7 @@ public class IpLogController {
     @RequestMapping(value = "/ipLogPage.do")
     public Object ipLogPage(@RequestParam(value = "pageNum") int pageNum,
                             @RequestParam(value = "pageSize") int pageSize) {
+
         return ipLogService.findByPage(pageNum, pageSize);
 
     }
@@ -84,29 +85,3 @@ public class IpLogController {
 
 }
 
-class UpdateListObject {
-
-    private List<IpLog> list;
-    private String name;
-
-    public List<IpLog> getList() {
-        return list;
-    }
-
-    public void setList(List<IpLog> list) {
-        this.list = list;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return JSON.toJSONString(this);
-    }
-}

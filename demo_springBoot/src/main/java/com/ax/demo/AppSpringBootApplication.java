@@ -9,6 +9,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -25,6 +26,7 @@ import java.time.format.DateTimeFormatter;
 @EnableCaching
 @MapperScan("com.ax.demo.mapper")
 @EnableTransactionManagement
+@EnableSwagger2             //启动swagger注解
 public class AppSpringBootApplication extends SpringBootServletInitializer {
 
 	private static ApplicationContext applicationContext;
@@ -64,6 +66,9 @@ public class AppSpringBootApplication extends SpringBootServletInitializer {
 
 			System.out.println("地址是: http://"+host+":"+port+contextPath+"/");
 			System.out.println("地址是: http://"+"localhost:"+port+contextPath+"/");
+
+            System.out.println("swagger地址是: http://"+"localhost:"+port+contextPath+"/swagger-ui.html");
+
 
 		} catch (UnknownHostException e) {
 			e.printStackTrace();

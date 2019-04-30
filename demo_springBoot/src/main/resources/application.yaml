@@ -17,7 +17,6 @@ spring:
       #监控统计拦截的filters
       filters: stat
       driver-class-name: com.mysql.cj.jdbc.Driver
-      # allowMultiQueries=true 允许批量更新
 #      url: jdbc:mysql://localhost:3306/demo10_p1?characterEncoding=utf-8&allowMultiQueries=true
       url: jdbc:mysql://localhost:3306/ax_java_demo?characterEncoding=utf-8
       username: root
@@ -40,10 +39,6 @@ spring:
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
 
-#  freemarker:
-#    request-context-attribute: request
-#    redis: false
-#    enabled: true
 
   thymeleaf:
     mode: LEGACYHTML5
