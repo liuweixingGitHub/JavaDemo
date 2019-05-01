@@ -41,7 +41,7 @@ public class LoginServiceImpl implements ILoginService {
             /*
             登陆成功,保存当前登陆的userinfo
              */
-            UserinfoContext.putUserinfo(userinfo);
+//            UserinfoContext.putUserinfo(userinfo);
 
             ipLog.setUserType(userinfo.getUserType());
             ipLog.setUserinfoId(userinfo.getId());

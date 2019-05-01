@@ -1,6 +1,7 @@
 package com.ax.demo.controller;
 
 import com.ax.demo.entity.User;
+import com.ax.demo.interceptor.UserLoginToken;
 import com.ax.demo.service.HttpClientService;
 import com.ax.demo.service.impl.RedisService;
 import com.ax.demo.util.axtools.AxReslutMessage;
@@ -139,4 +140,16 @@ public class TestController {
         System.out.println("name = " + name);
     }
 
+    @PostMapping(value = "/jwt.do")
+    public String jwtTest() {
+
+       return "JWT成功";
+    }
+
+    @PostMapping(value = "/jwt2.do")
+    @UserLoginToken
+    public String jwtTest2() {
+
+        return "JWT成功";
+    }
 }
