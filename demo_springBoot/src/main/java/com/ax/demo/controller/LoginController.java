@@ -1,5 +1,6 @@
 package com.ax.demo.controller;
 
+import com.ax.demo.entity.LoginEntity;
 import com.ax.demo.interceptor.RequiredLogin;
 import com.ax.demo.service.ILoginService;
 import com.ax.demo.util.axtools.AxResultEntity;
@@ -7,11 +8,11 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.*;
 
@@ -25,8 +26,7 @@ public class LoginController extends BaseController {
     @Autowired
     private ILoginService loginService;
 
-    @ApiOperation(value = "登录请求" ,  notes="返回json数据")
-//    @RequestMapping(value = "/login.do")
+    @ApiOperation(value = "登录请求", notes = "返回json数据")
     @PostMapping(value = "/login.do")
     @ResponseBody
     public Object login(@RequestParam(value = "username") String username,
@@ -42,8 +42,18 @@ public class LoginController extends BaseController {
 
     }
 
+    @GetMapping(value = "/login22.do")
+    @ResponseBody
+    public Object login22(@Validated LoginEntity loginEntity) {
 
-    @RequestMapping(value = "/login2.do")
+        Map<String, Object> map = new HashMap();
+        map.put("getUsername", loginEntity.getUsername());
+        map.put("getPassword", loginEntity.getPassword());
+        return map;
+
+    }
+
+    @GetMapping(value = "/login2.do")
     @ResponseBody
     public Object login2() {
 
@@ -58,6 +68,7 @@ public class LoginController extends BaseController {
         return object;
 
     }
+
 
     @RequestMapping(value = "/login3.do")
     @ResponseBody
@@ -79,7 +90,7 @@ public class LoginController extends BaseController {
      * jsp 页面可以直接取值,默认是请求转发 forward:
      * ${result}
      */
-    @ApiOperation(value = "登录页面" ,  notes="进入home页面")
+    @ApiOperation(value = "登录页面", notes = "进入home页面")
     @RequestMapping(value = "/home.page")
     @RequiredLogin
     private ModelAndView homePage() {
@@ -88,32 +99,34 @@ public class LoginController extends BaseController {
     }
 
 
-    /**重定向**/
+    /**
+     * 重定向
+     **/
 
-    @RequestMapping(value="/loginPage1")
+    @RequestMapping(value = "/loginPage1")
     @ResponseBody
-    public Object loginPage1(@RequestParam(value="name") String name) {
+    public Object loginPage1(@RequestParam(value = "name") String name) {
 
         System.out.println("name = " + name);
 
         Map map = new HashMap();
-        map.put("name","收到:"+name);
+        map.put("name", "收到:" + name);
         return map;
     }
 
-    @RequestMapping(value="/loginPage2")
+    @RequestMapping(value = "/loginPage2")
     @ResponseBody
-    public Object loginPage2(@RequestParam(value="name") String name) {
+    public Object loginPage2(@RequestParam(value = "name") String name) {
 
         System.out.println("name = " + name);
 
-        return "收到:"+name;
+        return "收到:" + name;
     }
 
     @RequestMapping("/loginPage3")
-    public String loginPage3(@RequestParam(value="name", required=false ) String name,
-                                 RedirectAttributes redirectAttributes,
-                                 HttpServletResponse response)  throws Exception{
+    public String loginPage3(@RequestParam(value = "name", required = false) String name,
+                             RedirectAttributes redirectAttributes,
+                             HttpServletResponse response) throws Exception {
         System.out.println("name = " + name);
         //页面传参
         redirectAttributes.addFlashAttribute("userName", name);
@@ -122,12 +135,13 @@ public class LoginController extends BaseController {
         return "redirect:/loginPage1";
 
     }
+
     @RequestMapping("/loginPage4")
-    public void loginPage4(@RequestParam(value="name", required=false ) String name,
-                           HttpServletResponse response)  throws Exception{
+    public void loginPage4(@RequestParam(value = "name", required = false) String name,
+                           HttpServletResponse response) throws Exception {
         System.out.println("name = " + name);
 
-        response.sendRedirect("/loginPage1?name="+name);
+        response.sendRedirect("/loginPage1?name=" + name);
 
     }
 
