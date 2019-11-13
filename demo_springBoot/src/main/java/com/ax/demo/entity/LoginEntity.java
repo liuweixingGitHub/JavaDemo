@@ -1,17 +1,22 @@
 package com.ax.demo.entity;
 
+import com.ax.demo.entity.valid.PasswordGroup;
+import com.ax.demo.entity.valid.UsernameGroup;
+
 import javax.validation.constraints.NotNull;
 
 /**
  * @author axing
  */
 
+
+
 public class LoginEntity  {
 
-    @NotNull(message = "姓名不能空")
+    @NotNull(message = "姓名不能空",groups = UsernameGroup.class)
     private  String username;
 
-    @NotNull(message = "密码不能空")
+    @NotNull(message = "密码不能空",groups = PasswordGroup.class)
     private  String password;
 
     public String getUsername() {
@@ -28,5 +33,16 @@ public class LoginEntity  {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("{");
+        sb.append("\"username\":\"")
+                .append(username).append('\"');
+        sb.append(",\"password\":\"")
+                .append(password).append('\"');
+        sb.append('}');
+        return sb.toString();
     }
 }

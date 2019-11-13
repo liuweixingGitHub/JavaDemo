@@ -7,6 +7,8 @@ import com.ax.demo.util.axtools.AxResultEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -43,15 +45,14 @@ public class LoginController extends BaseController {
     }
 
     @GetMapping(value = "/login22.do")
-    @ResponseBody
     public Object login22(@Validated LoginEntity loginEntity) {
 
         Map<String, Object> map = new HashMap();
         map.put("getUsername", loginEntity.getUsername());
         map.put("getPassword", loginEntity.getPassword());
         return map;
-
     }
+
 
     @GetMapping(value = "/login2.do")
     @ResponseBody

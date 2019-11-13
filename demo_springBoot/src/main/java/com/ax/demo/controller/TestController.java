@@ -1,6 +1,10 @@
 package com.ax.demo.controller;
 
+import com.ax.demo.entity.LoginEntity;
+import com.ax.demo.entity.valid.PasswordGroup;
 import com.ax.demo.entity.User;
+import com.ax.demo.entity.valid.UsernameGroup;
+import com.ax.demo.entity.valid.ValidList;
 import com.ax.demo.interceptor.UserLoginToken;
 import com.ax.demo.service.HttpClientService;
 import com.ax.demo.service.impl.RedisService;
@@ -10,10 +14,13 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class TestController {
@@ -121,6 +128,7 @@ public class TestController {
 
     /**
      * Put 请求参数模型不要用 @RequestBody
+     *
      * @param user
      * @return
      */
@@ -143,7 +151,7 @@ public class TestController {
     @PostMapping(value = "/jwt.do")
     public String jwtTest() {
 
-       return "JWT成功";
+        return "JWT成功";
     }
 
     @PostMapping(value = "/jwt2.do")
@@ -152,4 +160,45 @@ public class TestController {
 
         return "JWT成功";
     }
+
+
+    @GetMapping(value = "/test22.do")
+    public Object login22(@Validated({UsernameGroup.class,PasswordGroup.class}) LoginEntity loginEntity) {
+        Map<String, Object> map = new HashMap();
+        map.put("getUsername", loginEntity.getUsername());
+        map.put("getPassword", loginEntity.getPassword());
+        return map;
+    }
+
+    @GetMapping(value = "/test23.do")
+    public Object login23(@Validated({UsernameGroup.class}) LoginEntity loginEntity) {
+        Map<String, Object> map = new HashMap();
+        map.put("getUsername", loginEntity.getUsername());
+        map.put("getPassword", loginEntity.getPassword());
+        return map;
+    }
+
+    @GetMapping(value = "/test24.do")
+    public Object login24(@Validated({PasswordGroup.class}) LoginEntity loginEntity) {
+        Map<String, Object> map = new HashMap();
+        map.put("getUsername", loginEntity.getUsername());
+        map.put("getPassword", loginEntity.getPassword());
+        return map;
+    }
+
+    /**
+     * 验证 list 必须要自定义一个list
+     * @param loginEntityList
+     * @return
+     */
+    @PostMapping(value = "/test25.do")
+    public Object login25(@RequestBody @Validated({UsernameGroup.class, PasswordGroup.class}) ValidList<LoginEntity> loginEntityList) {
+
+        loginEntityList.forEach(loginEntity ->
+                System.out.println("loginEntity = " + loginEntity)
+        );
+
+        return "AA";
+    }
+
 }
