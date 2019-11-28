@@ -1,32 +1,45 @@
 package com.ax.demo.controller;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.NoHandlerFoundException;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-@ControllerAdvice
+//@ControllerAdvice
+@RestControllerAdvice
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = Exception.class)//异常全局处理
+    @ResponseBody
 //	 在@RequestMapping执行后执行
-    public void exception(Exception exception) {
+    public Object exception(HttpServletRequest request, HttpServletResponse response, Exception exception) {
+
+        if (exception instanceof NoHandlerFoundException) {
+            return "自定义错误json"+HttpStatus.NOT_FOUND.value();
+        }
+
         System.out.println("全局exception = " + exception);
+        Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
+        System.out.println("全局exception = " + statusCode);
+        return "全局exception = " + statusCode+"response.getStatus = "+response.getStatus();
     }
-    
+
+
+
     /**
      * 对方法参数校验异常处理方法
      */
     @ExceptionHandler(value = {MethodArgumentNotValidException.class, BindException.class})
-    @ResponseBody
     public Object handlerNotValidException(Exception validException) {
 
         System.out.println("对方法参数校验异常处理方法exception = " + validException);

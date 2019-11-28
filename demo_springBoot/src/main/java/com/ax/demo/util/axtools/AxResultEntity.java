@@ -24,7 +24,7 @@ public class AxResultEntity<T> implements Serializable {
 
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") //@DatetimeFormat是将String转换成Date，一般前台给后台传值时用
-    private Date currentDate;
+    private Date date;
 
     public AxReslutMessage getMessage() {
         return message;
@@ -34,7 +34,7 @@ public class AxResultEntity<T> implements Serializable {
         this.message = message;
     }
 
-    public Date getCurrentDate() {
+    public Date getDate() {
         return new Date();
     }
 

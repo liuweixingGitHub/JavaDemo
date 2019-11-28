@@ -5,6 +5,7 @@ import com.ax.demo.entity.valid.PasswordGroup;
 import com.ax.demo.entity.User;
 import com.ax.demo.entity.valid.UsernameGroup;
 import com.ax.demo.entity.valid.ValidList;
+import com.ax.demo.interceptor.RequiredLogin;
 import com.ax.demo.interceptor.UserLoginToken;
 import com.ax.demo.service.HttpClientService;
 import com.ax.demo.service.impl.RedisService;
@@ -16,6 +17,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -186,6 +188,19 @@ public class TestController {
         return map;
     }
 
+
+    @GetMapping(value = "/test25.do")
+    public Object login(@RequestParam(value = "username") String username,
+                        @RequestParam(value = "password") String password) {
+
+        Map<String, Object> map = new HashMap();
+        map.put("getUsername", username);
+        map.put("getPassword", password);
+        return map;
+
+    }
+
+
     /**
      * 验证 list 必须要自定义一个list
      * @param loginEntityList
@@ -200,5 +215,13 @@ public class TestController {
 
         return "AA";
     }
+
+    @GetMapping(value = "/500.do")
+    public void error_500() {
+        int i = 5/0;
+    }
+
+
+
 
 }

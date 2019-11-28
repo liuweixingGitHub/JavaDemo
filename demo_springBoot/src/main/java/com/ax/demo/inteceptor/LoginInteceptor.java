@@ -16,24 +16,29 @@ public class LoginInteceptor extends BaseInteceptor {
                              HttpServletResponse response,
                              Object handler) throws Exception {
 
-        System.out.println("LoginInteceptor拦截器 >> preHandle");
 
-        if (handler instanceof HandlerMethod) {
 
-            HandlerMethod handlerMethod = (HandlerMethod) handler;
-
-            RequiredLogin requiredLogin = handlerMethod.getMethodAnnotation(RequiredLogin.class);
-
-             /**是否有自定义标签*/
-            if (requiredLogin != null){
-
-                /**没有保存过userinfo信息*/
-                if (request.getSession().getAttribute(AxConst.USERINFO_IN_SESSION) == null){
-                    response.sendRedirect("/");
-                    return false;
-                }
-            }
-        }
+//        if (handler instanceof HandlerMethod) {
+//
+//            System.out.println("LoginInteceptor拦截器 >> preHandle-1");
+//
+//            HandlerMethod handlerMethod = (HandlerMethod) handler;
+//
+//            RequiredLogin requiredLogin = handlerMethod.getMethodAnnotation(RequiredLogin.class);
+//
+//             /**是否有自定义标签*/
+//            if (requiredLogin != null){
+//                System.out.println("LoginInteceptor拦截器 >> preHandle-2");
+//                /**没有保存过userinfo信息*/
+//                if (request.getSession().getAttribute(AxConst.USERINFO_IN_SESSION) == null){
+//                    response.sendRedirect("/");
+//                    System.out.println("LoginInteceptor拦截器 >> preHandle-3");
+//
+//                    return false;
+//                }
+//            }
+//        }
+        System.out.println("LoginInteceptor拦截器 >> preHandle-4");
         return super.preHandle(request, response, handler);
     }
 

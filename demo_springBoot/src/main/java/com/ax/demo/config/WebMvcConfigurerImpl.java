@@ -4,6 +4,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import com.ax.demo.inteceptor.AuthenticationInterceptor;
+import com.ax.demo.inteceptor.BaseInteceptor;
 import com.ax.demo.inteceptor.LoginInteceptor;
 import com.ax.demo.inteceptor.RegisterInteceptor;
 import org.springframework.context.annotation.Bean;
@@ -22,6 +23,11 @@ import java.util.List;
  */
 @Configuration
 public class WebMvcConfigurerImpl implements WebMvcConfigurer {
+
+    @Bean
+    public BaseInteceptor baseInteceptor() {
+        return new BaseInteceptor();
+    }
 
     @Bean
     public AuthenticationInterceptor authenticationInterceptor() {
@@ -45,13 +51,10 @@ public class WebMvcConfigurerImpl implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         // 可添加多个
+//        registry.addInterceptor(baseInteceptor()).addPathPatterns("/**");
         registry.addInterceptor(loginInteceptor()).addPathPatterns("/**");
-
         registry.addInterceptor(registerInteceptor()).addPathPatterns("/**");
-
         registry.addInterceptor(authenticationInterceptor()).addPathPatterns("/**");
-
-
 
     }
 

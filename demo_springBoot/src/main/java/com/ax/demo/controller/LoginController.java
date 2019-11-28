@@ -22,25 +22,26 @@ import java.util.*;
  * @author axing
  */
 @Api(description = "用户接口")
-@Controller
+@RestController
 public class LoginController extends BaseController {
 
     @Autowired
     private ILoginService loginService;
 
     @ApiOperation(value = "登录请求", notes = "返回json数据")
-    @PostMapping(value = "/login.do")
+    @GetMapping(value = "/login.do")
     @ResponseBody
     public Object login(@RequestParam(value = "username") String username,
                         @RequestParam(value = "password") String password) {
 
         System.out.println("username = " + username);
 
-        Object axResultMap = this.loginService.loginState(username, password, this.request);
+        Object object = this.loginService.loginState(username, password, this.request);
 
-        System.out.println("axResultMap = " + axResultMap);
+        System.out.println("object = " + object);
 
-        return axResultMap;
+        return object;
+
 
     }
 

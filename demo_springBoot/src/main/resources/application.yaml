@@ -5,6 +5,14 @@ server:
 
 spring:
   resources:
+#  关闭走404页面
+    add-mappings: false
+
+  mvc:
+    #    关闭走404页面
+    throw-exception-if-no-handler-found: true
+    favicon:
+      enabled: true
 
   #上传文件
   servlet:
@@ -75,9 +83,8 @@ spring:
 #    host: localhost # Redis服务器地址
 #    timeout: 5000 # 连接超时时间（毫秒）
 
-  mvc:
-    favicon:
-      enabled: true
+
+
 
   devtools:
     restart:
@@ -104,17 +111,17 @@ spring:
 #            threadsInheritContextClassLoaderOfInitializingThread: true
 #    job-store-type: jdbc
 
-#mybatis:
-#  mapper-locations: classpath:mapper/*.xml
-#  type-aliases-package: com.ax.demo.entity
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.ax.demo.entity
 #
-##pagehelper
-#pagehelper:
-#  helperDialect: mysql
-#  reasonable: true
-#  supportMethodsArguments: true
-#  params: count=countSql
-#  returnPageInfo: check
+#pagehelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+  returnPageInfo: check
 
 logging:
   level:

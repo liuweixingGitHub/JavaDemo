@@ -170,6 +170,19 @@ public class AppSpringBootApplicationTests {
 
 
 
+	/**
+	 * 读取缓存数据
+	 */
+	@Test
+	public void person() {
+		Person person = new Person();
+		person.setName("jim");
+
+
+
+		System.out.println("person = " + person);
+	}
+
 
 
 
