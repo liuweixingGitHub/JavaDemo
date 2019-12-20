@@ -2,8 +2,6 @@ package com.ax.demo.util.axtools;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.annotation.JSONField;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
@@ -15,16 +13,42 @@ import java.util.Date;
 public class AxResultEntity<T> implements Serializable {
 
     private boolean state;
-
     private String msg;
-
-    private T body;
-
+    private T data;
     private transient AxReslutMessage message;
+    private AxResultStatus resultStatus;
+
+    public AxResultEntity() {
+    }
+
+    public AxResultEntity(AxResultStatus resultStatus, T data) {
+        this.resultStatus = resultStatus;
+        this.data = data;
+    }
 
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") //@DatetimeFormat是将String转换成Date，一般前台给后台传值时用
     private Date date;
+
+
+    /**
+     * 业务成功返回业务代码,描述和返回的参数
+     */
+    public static <T> AxResultEntity<T> success(AxResultStatus resultStatus, T data) {
+        if (resultStatus == null) {
+            return new AxResultEntity<T>(AxResultStatus.SUCCESS, data);
+        }
+        return new AxResultEntity<T>(resultStatus, data);
+    }
+
+
+    /**
+     * 业务成功返回业务代码,描述和返回的参数
+     */
+    public static <T> AxResultEntity<T> Success(T data) {
+        return new AxResultEntity<T>(AxResultStatus.SUCCESS, data);
+    }
+
 
     public AxReslutMessage getMessage() {
         return message;
@@ -55,12 +79,12 @@ public class AxResultEntity<T> implements Serializable {
         this.msg = msg;
     }
 
-    public T getBody() {
-        return body;
+    public T getData() {
+        return data;
     }
 
-    public void setBody(T body) {
-        this.body = body;
+    public void setData(T data) {
+        this.data = data;
     }
 
     @Override

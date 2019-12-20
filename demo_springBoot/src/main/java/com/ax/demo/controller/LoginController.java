@@ -29,7 +29,7 @@ public class LoginController extends BaseController {
     private ILoginService loginService;
 
     @ApiOperation(value = "登录请求", notes = "返回json数据")
-    @GetMapping(value = "/login.do")
+    @RequestMapping(value = "/login.do")
     @ResponseBody
     public Object login(@RequestParam(value = "username") String username,
                         @RequestParam(value = "password") String password) {
@@ -65,7 +65,7 @@ public class LoginController extends BaseController {
 
         List<String> list = new ArrayList<>();
         list.add("B");
-        object.setBody(list);
+        object.setData(list);
 
         return object;
 
@@ -82,7 +82,7 @@ public class LoginController extends BaseController {
         AxResultEntity<List<String>> object = new AxResultEntity<>();
         object.setState(true);
         object.setMsg("eee");
-        object.setBody(list);
+        object.setData(list);
 
         return object;
 

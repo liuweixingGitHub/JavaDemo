@@ -31,7 +31,7 @@ public class UserinfoController {
 
         AxResultEntity<List<Userinfo>> object = new AxResultEntity<>();
         object.setState(true);
-        object.setBody(list);
+        object.setData(list);
 
         return object;
 

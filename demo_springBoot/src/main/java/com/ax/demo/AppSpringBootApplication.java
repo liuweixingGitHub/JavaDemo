@@ -11,6 +11,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.net.InetAddress;
@@ -29,6 +30,7 @@ import java.time.format.DateTimeFormatter;
 @MapperScan("com.ax.demo.mapper")
 @EnableTransactionManagement
 @EnableSwagger2             //启动swagger注解
+//@EnableWebMvc
 public class AppSpringBootApplication extends SpringBootServletInitializer {
 
 	private static ApplicationContext applicationContext;

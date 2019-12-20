@@ -24,14 +24,35 @@ public class GlobalExceptionHandler {
 //	 在@RequestMapping执行后执行
     public Object exception(HttpServletRequest request, HttpServletResponse response, Exception exception) {
 
+        System.out.println("全局exception = " + exception);
+
+        String method = request.getMethod();
+        String path = request.getRequestURI();
+
+        Map<String,Object> data = new HashMap<>();
+        data.put("path",path);
+        data.put("method",method);
+        data.put("status",response.getStatus());
+
+        /**
+         * 404处理
+         * */
         if (exception instanceof NoHandlerFoundException) {
-            return "自定义错误json"+HttpStatus.NOT_FOUND.value();
+            data.put("msg","方法找不到");
+            return data;
         }
 
-        System.out.println("全局exception = " + exception);
-        Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
-        System.out.println("全局exception = " + statusCode);
-        return "全局exception = " + statusCode+"response.getStatus = "+response.getStatus();
+//        System.out.println("全局exception = " + exception);
+//        Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
+//        System.out.println("全局exception = " + statusCode);
+//        return "全局exception = " + statusCode+"response.getStatus = "+response.getStatus();
+
+
+        data.put("全局exception",method);
+        data.put("path",path);
+        return data;
+
+
     }
 
 

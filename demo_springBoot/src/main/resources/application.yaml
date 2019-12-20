@@ -4,15 +4,16 @@ server:
   port: 8080
 
 spring:
-  resources:
-#  关闭走404页面
-    add-mappings: false
-
+#  resources:
+#  不要为我们工程中的资源文件建立映射,会拦截所有页面 home.html
+#    add-mappings: false
   mvc:
-    #    关闭走404页面
-    throw-exception-if-no-handler-found: true
+    #出现错误时, 直接抛出异常
+#    throw-exception-if-no-handler-found: true
+    # 小logo
     favicon:
       enabled: true
+    static-path-pattern: /**
 
   #上传文件
   servlet:
@@ -61,13 +62,13 @@ spring:
 
 
   thymeleaf:
-    mode: LEGACYHTML5
-    cache: false
+    mode: HTML5 # 模板的模式
+    cache: false # 这个开发配置为false，避免改了模板还要重启服务器
     check-template-location: true # 检查模板是否存在，然后再呈现
     enabled: true #启用MVC Thymeleaf视图分辨率
     template-resolver-order: 0
     suffix: .html
-    prefix: classpath:/templates/
+    prefix: classpath:/templates/ # 这个是配置模板路径的，默认就是templates，可不用配置
     encoding: UTF-8
 
 

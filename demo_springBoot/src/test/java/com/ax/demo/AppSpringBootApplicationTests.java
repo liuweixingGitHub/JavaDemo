@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
@@ -21,6 +22,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@EnableAsync
 public class AppSpringBootApplicationTests {
 
 	@Test
@@ -87,7 +89,7 @@ public class AppSpringBootApplicationTests {
 //		ipLog.setUserName("jim");
 //
 //		redisUtils.set("ipLog:redis_key1", ipLog);
-	AxResultEntity responseEntity =new AxResultEntity();
+		AxResultEntity responseEntity =new AxResultEntity();
 		responseEntity.setState(true);
 		System.out.println("responseEntity = " + responseEntity);
 		System.out.println("responseEntity = " + responseEntity.toString());
@@ -114,7 +116,7 @@ public class AppSpringBootApplicationTests {
 
 
 
-	int result	= ipLogMapper.deleteByIdList(list);
+		int result	= ipLogMapper.deleteByIdList(list);
 
 		System.out.println("result = " + result);
 	}
@@ -183,26 +185,38 @@ public class AppSpringBootApplicationTests {
 		System.out.println("person = " + person);
 	}
 
-@Test
+	@Test
 	public void test110(){
 
-	Student stuA = new Student(1, "A", "M", 184);
-	Student stuB = new Student(2, "B", "G", 163);
-	Student stuC = new Student(3, "C", "M", 175);
-	Student stuD = new Student(4, "D", "G", 158);
-	Student stuE = new Student(5, "E", "M", 170);
-	List<Student> list = new ArrayList<>();
-	list.add(stuA);
-	list.add(stuB);
-	list.add(stuC);
-	list.add(stuD);
-	list.add(stuE);
+		Student stuA = new Student(1, "A", "M", 184);
+		Student stuB = new Student(2, "B", "G", 163);
+		Student stuC = new Student(3, "C", "M", 175);
+		Student stuD = new Student(4, "D", "G", 158);
+		Student stuE = new Student(5, "E", "M", 170);
+		List<Student> list = new ArrayList<>();
+		list.add(stuA);
+		list.add(stuB);
+		list.add(stuC);
+		list.add(stuD);
+		list.add(stuE);
 
 
-	list.stream()
-			.filter(student -> student.getSex().equals("G"))
-			.forEach(student -> System.out.println(">>>"+student.toString()));
-}
+		list.stream()
+				.filter(student -> student.getSex().equals("G"))
+				.forEach(student -> System.out.println(">>>"+student.toString()));
+	}
+
+	@Test
+	public void Task2() throws Exception{
+
+		Task task = new Task();
+		task.doTaskOne();
+		task.doTaskTwo();
+		task.doTaskThree();
+
+	}
+
+
 
 
 }

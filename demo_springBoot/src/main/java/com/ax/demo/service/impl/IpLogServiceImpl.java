@@ -85,7 +85,7 @@ public class IpLogServiceImpl implements IIpLogService {
         AxResultEntity<List> responseEntity = new AxResultEntity();
         if (null != list) {
             responseEntity.setState(true);
-            responseEntity.setBody(list);
+            responseEntity.setData(list);
         } else {
             responseEntity.setState(false);
         }
@@ -106,7 +106,7 @@ public class IpLogServiceImpl implements IIpLogService {
         AxResultEntity<IpLog> responseEntity = new AxResultEntity();
         if (null != ipLog) {
             responseEntity.setState(true);
-            responseEntity.setBody(ipLog);
+            responseEntity.setData(ipLog);
         } else {
             responseEntity.setState(false);
         }

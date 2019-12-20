@@ -84,12 +84,12 @@ public class LoginServiceImpl implements ILoginService {
 
             if (userinfo.getPassWord().toLowerCase().equals(passWord.toLowerCase())) {
 
-                /*登陆成功,保存当前登陆的userinfo*/
+                /**登陆成功,保存当前登陆的userinfo*/
                 UserinfoContext.putUserinfo(userinfo);
                 ipLog.setLoginState(IpLog.LOGINSTATE_SUCCESS);
 
                 responseEntity.setState(true);
-                responseEntity.setBody(userinfo);
+                responseEntity.setData(userinfo);
 
             } else {
 

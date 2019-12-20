@@ -1,5 +1,6 @@
 package com.ax.demo.controller;
 
+import com.ax.demo.entity.ApiVersion;
 import com.ax.demo.entity.LoginEntity;
 import com.ax.demo.entity.valid.PasswordGroup;
 import com.ax.demo.entity.User;
@@ -17,7 +18,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -33,9 +33,9 @@ public class TestController {
     @Autowired
     HttpClientService httpClientService;
 
-
     @RequestMapping(value = "/test1.do")
-    public AxResultEntity testdo() {
+    @ApiOperation(value = "获取地区信息列表", notes = "获取地区信息列表")
+    public AxResultEntity testdo1() {
 
         AxResultEntity<List<String>> axResultEntity = new AxResultEntity();
 
@@ -43,7 +43,24 @@ public class TestController {
         list.add("A");
         list.add("Baaa");
 
-        axResultEntity.setBody(list);
+        axResultEntity.setData(list);
+        axResultEntity.setState(true);
+        axResultEntity.setMessage(AxReslutMessage.INVALID);
+
+        return axResultEntity;
+
+    }
+
+    @RequestMapping(value = "/test12.do")
+    public Object test12() {
+
+        AxResultEntity<List<String>> axResultEntity = new AxResultEntity();
+
+        List<String> list = new LinkedList<>();
+        list.add("A");
+        list.add("Baaa");
+
+        axResultEntity.setData(list);
         axResultEntity.setState(true);
         axResultEntity.setMessage(AxReslutMessage.INVALID);
 
@@ -220,8 +237,5 @@ public class TestController {
     public void error_500() {
         int i = 5/0;
     }
-
-
-
 
 }
