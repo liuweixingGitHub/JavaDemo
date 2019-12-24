@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
  * @author axing
  */
 @Service
-//@Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
+@Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
 public class IpLogServiceImpl implements IIpLogService {
 
     @Autowired
@@ -56,7 +56,7 @@ public class IpLogServiceImpl implements IIpLogService {
         return 0;
     }
 
-    //    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
+//        @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
     @Override
     public PageInfo<IpLog> findByPageInfo(int pageNum, int pageSize) {
 

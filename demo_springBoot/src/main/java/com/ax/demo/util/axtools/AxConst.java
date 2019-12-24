@@ -24,6 +24,8 @@ public class AxConst {
      */
     public static final String USERINFO_IN_SESSION = "USERINFO_IN_SESSION";
 
+    public static final String USERINFO_IN_READIS = "USERINFO_IN_READIS";
+
     /**
      *
      * @return

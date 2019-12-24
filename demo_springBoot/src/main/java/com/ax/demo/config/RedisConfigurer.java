@@ -28,7 +28,7 @@ import java.util.Map;
  *
  * @author liuyazhuang
  */
-//@Configuration
+@Configuration
 //@EnableCaching
 public class RedisConfigurer extends CachingConfigurerSupport {
 

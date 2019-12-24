@@ -3,11 +3,10 @@ package com.ax.demo.config;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
-import com.ax.demo.inteceptor.AuthenticationInterceptor;
+import com.ax.demo.inteceptor.TokenInterceptor;
 import com.ax.demo.inteceptor.BaseInteceptor;
 import com.ax.demo.inteceptor.LoginInteceptor;
 import com.ax.demo.inteceptor.RegisterInteceptor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -37,8 +36,8 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
     }
 
     @Bean
-    public AuthenticationInterceptor authenticationInterceptor() {
-        return new AuthenticationInterceptor();
+    public TokenInterceptor authenticationInterceptor() {
+        return new TokenInterceptor();
     }
 
 //    @Autowired

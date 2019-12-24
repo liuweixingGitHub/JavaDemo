@@ -1,13 +1,11 @@
 package com.ax.demo.controller;
 
-import com.ax.demo.entity.ApiVersion;
 import com.ax.demo.entity.LoginEntity;
 import com.ax.demo.entity.valid.PasswordGroup;
 import com.ax.demo.entity.User;
 import com.ax.demo.entity.valid.UsernameGroup;
 import com.ax.demo.entity.valid.ValidList;
-import com.ax.demo.interceptor.RequiredLogin;
-import com.ax.demo.interceptor.UserLoginToken;
+import com.ax.demo.interceptor.RequireToken;
 import com.ax.demo.service.HttpClientService;
 import com.ax.demo.service.impl.RedisService;
 import com.ax.demo.util.axtools.AxReslutMessage;
@@ -174,7 +172,7 @@ public class TestController {
     }
 
     @PostMapping(value = "/jwt2.do")
-    @UserLoginToken
+    @RequireToken
     public String jwtTest2() {
 
         return "JWT成功";

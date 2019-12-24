@@ -12,7 +12,8 @@ import java.nio.charset.StandardCharsets;
 
 
 /**
- * http请求,配置 rpc方式之一
+ * http请求,配置 REST资源交互
+ * 也是一种rpc
  */
 @Configuration
 public class RestTemplateConfigurer {
