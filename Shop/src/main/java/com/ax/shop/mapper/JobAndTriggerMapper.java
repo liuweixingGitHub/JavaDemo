@@ -1,7 +1,7 @@
 package com.ax.shop.mapper;
 
 
-import com.ax.shop.entity.JobAndTriggerDto;
+import com.ax.shop.dto.JobAndTriggerDto;
 //import javafx.scene.control.Pagination;
 
 

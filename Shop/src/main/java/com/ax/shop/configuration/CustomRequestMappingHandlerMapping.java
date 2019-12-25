@@ -1,6 +1,6 @@
-package com.ax.shop.config;
+package com.ax.shop.configuration;
 
-import com.ax.shop.entity.ApiVersion;
+import com.ax.shop.annotation.ApiVersion;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.util.Assert;

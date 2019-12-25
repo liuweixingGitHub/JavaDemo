@@ -1,6 +1,8 @@
 package com.ax.shop.entity;
 
 
+import com.ax.shop.dto.ResultStatus;
+
 public class Result<T> {
     /**
      * 业务错误码

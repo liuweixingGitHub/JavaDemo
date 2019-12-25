@@ -1,6 +1,5 @@
 package com.ax.shop.controller;
 
-import com.ax.shop.interceptor.RequireToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;

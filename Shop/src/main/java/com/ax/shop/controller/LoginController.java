@@ -1,7 +1,6 @@
 package com.ax.shop.controller;
 
-import com.ax.shop.entity.LoginEntity;
-import com.ax.shop.interceptor.RequiredLogin;
+import com.ax.shop.dto.LoginDto;
 import com.ax.shop.service.ILoginService;
 import com.ax.shop.util.axtools.AxResultStateEnum;
 import com.ax.shop.util.axtools.AxResultEntity;
@@ -44,7 +43,7 @@ public class LoginController extends BaseController {
     }
 
     @GetMapping(value = "/login22.do")
-    public Object login22(@Validated LoginEntity loginEntity) {
+    public Object login22(@Validated LoginDto loginEntity) {
 
         Map<String, Object> map = new HashMap();
         map.put("getUsername", loginEntity.getUsername());
@@ -92,7 +91,6 @@ public class LoginController extends BaseController {
      */
     @ApiOperation(value = "登录页面", notes = "进入home页面")
     @RequestMapping(value = "/home.page")
-    @RequiredLogin
     private ModelAndView homePage() {
         return new ModelAndView("home");
 

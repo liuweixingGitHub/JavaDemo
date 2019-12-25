@@ -1,4 +1,4 @@
-package com.ax.shop.entity;
+package com.ax.shop.annotation;
 
 import org.springframework.web.bind.annotation.ResponseBody;
 

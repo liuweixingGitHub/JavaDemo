@@ -1,4 +1,4 @@
-package com.ax.shop.config;
+package com.ax.shop.configuration;
 
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
 import com.ax.shop.listener.redis.OrderMessageListener;

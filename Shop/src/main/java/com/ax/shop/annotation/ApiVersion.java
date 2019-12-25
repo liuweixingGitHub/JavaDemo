@@ -1,4 +1,4 @@
-package com.ax.shop.entity;
+package com.ax.shop.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

@@ -1,11 +1,11 @@
 package com.ax.shop.controller;
 
-import com.ax.shop.entity.LoginEntity;
+import com.ax.shop.dto.LoginDto;
 import com.ax.shop.entity.valid.PasswordGroup;
 import com.ax.shop.entity.User;
 import com.ax.shop.entity.valid.UsernameGroup;
 import com.ax.shop.entity.valid.ValidList;
-import com.ax.shop.interceptor.RequireToken;
+import com.ax.shop.annotation.RequireToken;
 import com.ax.shop.service.HttpClientService;
 import com.ax.shop.service.impl.RedisService;
 import com.ax.shop.util.axtools.AxResultStateEnum;
@@ -179,7 +179,7 @@ public class TestController {
 
 
     @GetMapping(value = "/test22.do")
-    public Object login22(@Validated({UsernameGroup.class,PasswordGroup.class}) LoginEntity loginEntity) {
+    public Object login22(@Validated({UsernameGroup.class,PasswordGroup.class}) LoginDto loginEntity) {
         Map<String, Object> map = new HashMap();
         map.put("getUsername", loginEntity.getUsername());
         map.put("getPassword", loginEntity.getPassword());
@@ -187,7 +187,7 @@ public class TestController {
     }
 
     @GetMapping(value = "/test23.do")
-    public Object login23(@Validated({UsernameGroup.class}) LoginEntity loginEntity) {
+    public Object login23(@Validated({UsernameGroup.class}) LoginDto loginEntity) {
         Map<String, Object> map = new HashMap();
         map.put("getUsername", loginEntity.getUsername());
         map.put("getPassword", loginEntity.getPassword());
@@ -195,7 +195,7 @@ public class TestController {
     }
 
     @GetMapping(value = "/test24.do")
-    public Object login24(@Validated({PasswordGroup.class}) LoginEntity loginEntity) {
+    public Object login24(@Validated({PasswordGroup.class}) LoginDto loginEntity) {
         Map<String, Object> map = new HashMap();
         map.put("getUsername", loginEntity.getUsername());
         map.put("getPassword", loginEntity.getPassword());
@@ -221,7 +221,7 @@ public class TestController {
      * @return
      */
     @PostMapping(value = "/test25.do")
-    public Object login25(@RequestBody @Validated({UsernameGroup.class, PasswordGroup.class}) ValidList<LoginEntity> loginEntityList) {
+    public Object login25(@RequestBody @Validated({UsernameGroup.class, PasswordGroup.class}) ValidList<LoginDto> loginEntityList) {
 
         loginEntityList.forEach(loginEntity ->
                 System.out.println("loginEntity = " + loginEntity)

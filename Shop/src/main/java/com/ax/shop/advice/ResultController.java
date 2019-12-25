@@ -1,6 +1,6 @@
 //package com.ax.shop.controller;
 //
-//import com.ax.shop.entity.ResponseResultBody;
+//import com.ax.shop.annotation.ResponseResultBody;
 //import com.ax.shop.entity.Result;
 //import com.ax.shop.util.axtools.AxResultEntity;
 //import org.springframework.core.MethodParameter;

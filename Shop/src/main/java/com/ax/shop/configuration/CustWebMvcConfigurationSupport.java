@@ -1,13 +1,10 @@
-package com.ax.shop.config;
+package com.ax.shop.configuration;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import com.ax.shop.inteceptor.TokenInterceptor;
 import com.ax.shop.inteceptor.BaseInteceptor;
-import com.ax.shop.inteceptor.LoginInteceptor;
-import com.ax.shop.inteceptor.RegisterInteceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -20,12 +17,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 import java.nio.charset.Charset;
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
-public class WebMvcConfig extends WebMvcConfigurationSupport {
+public class CustWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
 
     /**
      * @Configuration 中所有带 @Bean 注解的方法都会被动态代理，
@@ -38,22 +34,8 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
     }
 
     @Bean
-    public TokenInterceptor authenticationInterceptor() {
+    public TokenInterceptor tokenInterceptor() {
         return new TokenInterceptor();
-    }
-
-//    @Autowired
-//    AuthenticationInterceptor authenticationInterceptor;
-
-
-    @Bean
-    public LoginInteceptor loginInteceptor() {
-        return new LoginInteceptor();
-    }
-
-    @Bean
-    public RegisterInteceptor registerInteceptor() {
-        return new RegisterInteceptor();
     }
 
     /**
@@ -125,9 +107,8 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
     public void addInterceptors(InterceptorRegistry registry) {
         // 可添加多个
 //        registry.addInterceptor(baseInteceptor()).addPathPatterns("/**");
-        registry.addInterceptor(loginInteceptor()).addPathPatterns("/**");
-        registry.addInterceptor(registerInteceptor()).addPathPatterns("/**");
-        registry.addInterceptor(this.authenticationInterceptor()).addPathPatterns("/**");
+
+        registry.addInterceptor(this.tokenInterceptor()).addPathPatterns("/**");
 
         super.addInterceptors(registry);
 

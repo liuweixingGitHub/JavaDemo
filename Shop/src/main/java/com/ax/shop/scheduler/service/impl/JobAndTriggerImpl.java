@@ -1,6 +1,6 @@
 package com.ax.shop.scheduler.service.impl;
 
-import com.ax.shop.entity.JobAndTriggerDto;
+import com.ax.shop.dto.JobAndTriggerDto;
 import com.ax.shop.mapper.JobAndTriggerMapper;
 import com.ax.shop.scheduler.service.IJobAndTriggerService;
 import org.quartz.*;

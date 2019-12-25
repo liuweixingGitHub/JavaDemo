@@ -1,6 +1,6 @@
 package com.ax.shop.controller;
 
-import com.ax.shop.controller.RequestBody.UpdateListObject;
+import com.ax.shop.dto.UpdateListObject;
 import com.ax.shop.entity.IpLog;
 import com.ax.shop.service.IIpLogService;
 import com.ax.shop.util.axtools.AxResultEntity;

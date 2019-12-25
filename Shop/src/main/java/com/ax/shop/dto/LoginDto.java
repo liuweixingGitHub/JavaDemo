@@ -1,4 +1,4 @@
-package com.ax.shop.entity;
+package com.ax.shop.dto;
 
 import com.ax.shop.entity.valid.PasswordGroup;
 import com.ax.shop.entity.valid.UsernameGroup;
@@ -11,7 +11,7 @@ import javax.validation.constraints.NotNull;
 
 
 
-public class LoginEntity  {
+public class LoginDto {
 
     @NotNull(message = "姓名不能空",groups = UsernameGroup.class)
     private  String username;

@@ -1,7 +1,7 @@
 package com.ax.shop.scheduler.service;
 
 
-import com.ax.shop.entity.JobAndTriggerDto;
+import com.ax.shop.dto.JobAndTriggerDto;
 
 
 /**  

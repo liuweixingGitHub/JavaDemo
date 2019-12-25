@@ -1,4 +1,4 @@
-package com.ax.shop.entity;
+package com.ax.shop.dto;
 
 import org.springframework.http.HttpStatus;
 

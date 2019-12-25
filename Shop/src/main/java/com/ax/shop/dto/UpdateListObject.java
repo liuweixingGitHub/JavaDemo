@@ -1,4 +1,4 @@
-package com.ax.shop.controller.RequestBody;
+package com.ax.shop.dto;
 
 import com.alibaba.fastjson.JSON;
 import com.ax.shop.entity.IpLog;

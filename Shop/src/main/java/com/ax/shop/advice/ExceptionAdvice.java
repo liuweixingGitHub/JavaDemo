@@ -1,4 +1,4 @@
-package com.ax.shop.controller;
+package com.ax.shop.advice;
 
 import com.ax.shop.error.TokenException;
 import com.ax.shop.util.axtools.AxResultEntity;
@@ -19,7 +19,7 @@ import java.util.Map;
 //如果不想每次都写private  final Logger logger = LoggerFactory.getLogger(当前类名.class); 可以用注解@Slf4j;
 //@ControllerAdvice
 @RestControllerAdvice
-public class GlobalExceptionHandler {
+public class ExceptionAdvice {
 
     @ExceptionHandler(value = Exception.class)//异常全局处理
     @ResponseBody
