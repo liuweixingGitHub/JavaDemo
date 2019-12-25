@@ -3,6 +3,7 @@ package com.ax.shop.controller;
 import com.ax.shop.entity.LoginEntity;
 import com.ax.shop.interceptor.RequiredLogin;
 import com.ax.shop.service.ILoginService;
+import com.ax.shop.util.axtools.AxResultStateEnum;
 import com.ax.shop.util.axtools.AxResultEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -57,12 +58,12 @@ public class LoginController extends BaseController {
     public Object login2() {
 
         AxResultEntity<List<String>> object = new AxResultEntity<>();
-        object.setState(true);
+        object.setStateEnum(AxResultStateEnum.SUCCESS);
         object.setMsg("uuuuudddddd");
 
         List<String> list = new ArrayList<>();
         list.add("B");
-        object.setData(list);
+        object.setBody(list);
 
         return object;
 
@@ -77,9 +78,9 @@ public class LoginController extends BaseController {
         list.add("B");
 
         AxResultEntity<List<String>> object = new AxResultEntity<>();
-        object.setState(true);
+        object.setStateEnum(AxResultStateEnum.SUCCESS);
         object.setMsg("eee");
-        object.setData(list);
+        object.setBody(list);
 
         return object;
 

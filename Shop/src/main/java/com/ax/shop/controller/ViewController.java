@@ -1,5 +1,6 @@
 package com.ax.shop.controller;
 
+import com.ax.shop.interceptor.RequireToken;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -22,11 +23,6 @@ public class ViewController {
     @RequestMapping(value = "/lregister.html")
     private ModelAndView register_html() {
         return new ModelAndView("register");
-    }
-
-    @RequestMapping(value = "/home.html")
-    private ModelAndView homeHtml() {
-        return new ModelAndView("home");
     }
 
     @RequestMapping(value = "/500.html")

@@ -2,6 +2,7 @@ package com.ax.shop.controller;
 
 import com.ax.shop.entity.Userinfo;
 import com.ax.shop.service.IRegisterService;
+import com.ax.shop.util.axtools.AxResultStateEnum;
 import com.ax.shop.util.axtools.AxResultEntity;
 import io.swagger.annotations.Api;
 import org.apache.ibatis.annotations.Param;
@@ -44,11 +45,11 @@ public class RegisterController {
         AxResultEntity responseEntity = new AxResultEntity();
 
         if (register) {
-            responseEntity.setState(true);
+            responseEntity.setStateEnum(AxResultStateEnum.SUCCESS);
             responseEntity.setMsg("注册成功");
-
+            
         } else {
-            responseEntity.setState(false);
+            responseEntity.setStateEnum(AxResultStateEnum.FAILURE);
             responseEntity.setMsg("用户已存在");
         }
         return responseEntity;

@@ -8,21 +8,22 @@ import com.ax.shop.entity.valid.ValidList;
 import com.ax.shop.interceptor.RequireToken;
 import com.ax.shop.service.HttpClientService;
 import com.ax.shop.service.impl.RedisService;
-import com.ax.shop.util.axtools.AxReslutMessage;
+import com.ax.shop.util.axtools.AxResultStateEnum;
 import com.ax.shop.util.axtools.AxResultEntity;
 import io.swagger.annotations.ApiOperation;
+
+
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @RestController
+@Slf4j
 public class TestController {
 
     @Autowired
@@ -35,34 +36,32 @@ public class TestController {
     @ApiOperation(value = "获取地区信息列表", notes = "获取地区信息列表")
     public AxResultEntity testdo1() {
 
-        AxResultEntity<List<String>> axResultEntity = new AxResultEntity();
+        AxResultEntity<List<String>> entity = new AxResultEntity();
 
         List<String> list = new LinkedList<>();
         list.add("A");
         list.add("Baaa");
 
-        axResultEntity.setData(list);
-        axResultEntity.setState(true);
-        axResultEntity.setMessage(AxReslutMessage.INVALID);
-
-        return axResultEntity;
+        entity.setBody(list);
+        entity.setStateEnum(AxResultStateEnum.SUCCESS);
+        log.info("啊啊啊啊啊啊啊");
+        log.warn("哈哈哈哈哈");
+        return entity;
 
     }
 
     @RequestMapping(value = "/test12.do")
     public Object test12() {
 
-        AxResultEntity<List<String>> axResultEntity = new AxResultEntity();
+        AxResultEntity<List<String>> entity = new AxResultEntity();
 
-        List<String> list = new LinkedList<>();
-        list.add("A");
-        list.add("Baaa");
+        List<String> list = new ArrayList<>();
+//        list.add("A");
+//        list.add("Baaa");
 
-        axResultEntity.setData(list);
-        axResultEntity.setState(true);
-        axResultEntity.setMessage(AxReslutMessage.INVALID);
-
-        return axResultEntity;
+        entity.setBody(list);
+        entity.setStateEnum(AxResultStateEnum.FAILURE);
+        return entity;
 
     }
 

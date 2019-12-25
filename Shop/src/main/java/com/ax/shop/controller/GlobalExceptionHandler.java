@@ -1,5 +1,8 @@
 package com.ax.shop.controller;
 
+import com.ax.shop.error.TokenException;
+import com.ax.shop.util.axtools.AxResultEntity;
+import com.ax.shop.util.axtools.AxResultStateEnum;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
@@ -41,6 +44,14 @@ public class GlobalExceptionHandler {
             return data;
         }
 
+        if (exception instanceof TokenException) {
+            AxResultEntity<List<String>> resultEntity = new AxResultEntity<>();
+            resultEntity.setStateEnum(AxResultStateEnum.TOKEN_INVALID);
+            return resultEntity;
+        }
+
+
+
 //        System.out.println("全局exception = " + exception);
 //        Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
 //        System.out.println("全局exception = " + statusCode);
@@ -49,6 +60,8 @@ public class GlobalExceptionHandler {
 
         data.put("全局exception",method);
         data.put("path",path);
+
+
         return data;
 
 

@@ -6,6 +6,7 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.ax.shop.entity.Userinfo;
+import com.ax.shop.error.TokenException;
 import com.ax.shop.interceptor.PassToken;
 import com.ax.shop.interceptor.RequireToken;
 import com.ax.shop.service.IUserinfoService;
@@ -51,18 +52,18 @@ public class TokenInterceptor implements HandlerInterceptor {
             if (requireToken.required()) {
                 // 执行认证
                 if (token == null) {
-                    throw new RuntimeException("无token，请重新登录");
+                    throw new TokenException("无token，请重新登录");
                 }
                 // 获取 token 中的 user id
                 String userId;
                 try {
                     userId = JWT.decode(token).getAudience().get(0);
                 } catch (JWTDecodeException j) {
-                    throw new RuntimeException("token解析失败");
+                    throw new TokenException("token解析失败");
                 }
                 Userinfo user = userService.get(Long.valueOf(userId));
                 if (user == null) {
-                    throw new RuntimeException("用户不存在，请重新登录");
+                    throw new TokenException("用户不存在，请重新登录");
                 }
 
                 String password = user.getPassWord();
@@ -71,7 +72,7 @@ public class TokenInterceptor implements HandlerInterceptor {
                 try {
                     jwtVerifier.verify(token);
                 } catch (JWTVerificationException e) {
-                    throw new RuntimeException("token验证失败");
+                    throw new TokenException("token验证失败");
                 }
                 return true;
             }

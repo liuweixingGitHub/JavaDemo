@@ -2,6 +2,7 @@ package com.ax.shop.controller;
 
 import com.ax.shop.entity.Userinfo;
 import com.ax.shop.service.IUserinfoService;
+import com.ax.shop.util.axtools.AxResultStateEnum;
 import com.ax.shop.util.axtools.AxResultEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,11 +30,11 @@ public class UserinfoController {
 
         List<Userinfo> list = iUserinfoService.getAllUserinfo();
 
-        AxResultEntity<List<Userinfo>> object = new AxResultEntity<>();
-        object.setState(true);
-        object.setData(list);
+        AxResultEntity<List<Userinfo>> entity = new AxResultEntity<>();
+        entity.setStateEnum(AxResultStateEnum.SUCCESS);
+        entity.setBody(list);
 
-        return object;
+        return entity;
 
     }
 

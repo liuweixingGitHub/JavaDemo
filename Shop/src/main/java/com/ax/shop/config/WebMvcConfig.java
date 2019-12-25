@@ -1,5 +1,6 @@
 package com.ax.shop.config;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
@@ -19,6 +20,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 import java.nio.charset.Charset;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,7 +31,7 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
      * @Configuration 中所有带 @Bean 注解的方法都会被动态代理，
      * 因此调用该方法返回的都是同一个实例（为什么会返回同一个实例呢，因为调用该方法是会首先判断时候已经通过cglib代理创建了实例，
      * 如果已经创建好了的话，则返回当前的实例）。
-     * */
+     */
     @Bean
     public BaseInteceptor baseInteceptor() {
         return new BaseInteceptor();
@@ -73,14 +75,35 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
     @Bean
     public HttpMessageConverter fastJsonHttpMessageConverters() {
 
+        // 2.添加fastjson的配置信息，比如: 是否需要格式化返回的json数据
+        FastJsonConfig config = new FastJsonConfig();
+
+        config.setDateFormat("yyyy-MM-dd HH:MM:ss");
+
+        config.setSerializerFeatures(
+
+                //结果是否格式化,默认为false
+                SerializerFeature.PrettyFormat,
+                //枚举值使用名称或tosting
+                SerializerFeature.WriteEnumUsingName,
+                // 保留map空的字段
+                SerializerFeature.WriteMapNullValue,
+                // 将String类型的null转成""
+                SerializerFeature.WriteNullStringAsEmpty,
+                // 将Number类型的null转成0
+                SerializerFeature.WriteNullNumberAsZero,
+                // 将List类型的null转成[], List<String> list = new ArrayList<>(); 泛型不支持
+                SerializerFeature.WriteNullListAsEmpty,
+                // 将Boolean类型的null转成false
+                SerializerFeature.WriteNullBooleanAsFalse,
+                // 避免循环引用
+                SerializerFeature.DisableCircularReferenceDetect);
+
+
         // 1.定义一个converters转换消息的对象
         FastJsonHttpMessageConverter fastConverter = new FastJsonHttpMessageConverter();
-
-        // 2.添加fastjson的配置信息，比如: 是否需要格式化返回的json数据
-        FastJsonConfig fastJsonConfig = new FastJsonConfig();
-        fastJsonConfig.setSerializerFeatures(SerializerFeature.PrettyFormat);
         // 3.在converter中添加配置信息
-        fastConverter.setFastJsonConfig(fastJsonConfig);
+        fastConverter.setFastJsonConfig(config);
 
 
         // 4.中文乱码解决方案
@@ -134,12 +157,9 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
 //        registry.addResourceHandler("/upload/**").addResourceLocations("classpath:/upload/");
 
 
-
 //        registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
 //        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
 //        registry.addResourceHandler("/swagger/**").addResourceLocations("classpath:/statics/swagger/");
-
-
 
 
 //        registry.addResourceHandler("/**.html")

@@ -5,6 +5,7 @@ import com.ax.shop.mapper.IpLogMapper;
 import com.ax.shop.query.IpLogQueryObject;
 import com.ax.shop.service.IIpLogService;
 import com.ax.shop.util.axtools.AxPageResultEntity;
+import com.ax.shop.util.axtools.AxResultStateEnum;
 import com.ax.shop.util.axtools.AxResultEntity;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -79,14 +80,16 @@ public class IpLogServiceImpl implements IIpLogService {
     public Object findAll() {
         List<IpLog> list = ipLogMapper.findByPage();
 
-        AxResultEntity<List> responseEntity = new AxResultEntity();
+        AxResultEntity<List> entity = new AxResultEntity();
+
+
         if (null != list) {
-            responseEntity.setState(true);
-            responseEntity.setData(list);
+            entity.setStateEnum(AxResultStateEnum.SUCCESS);
+            entity.setBody(list);
         } else {
-            responseEntity.setState(false);
+            entity.setStateEnum(AxResultStateEnum.INVALID);
         }
-        return responseEntity;
+        return entity;
     }
 
 
@@ -102,10 +105,10 @@ public class IpLogServiceImpl implements IIpLogService {
 
         AxResultEntity<IpLog> responseEntity = new AxResultEntity();
         if (null != ipLog) {
-            responseEntity.setState(true);
-            responseEntity.setData(ipLog);
+            responseEntity.setStateEnum(AxResultStateEnum.SUCCESS);
+            responseEntity.setBody(ipLog);
         } else {
-            responseEntity.setState(false);
+            responseEntity.setStateEnum(AxResultStateEnum.INVALID);
         }
 
 //        redisService.set("getid",ipLog,5, TimeUnit.SECONDS);
@@ -126,9 +129,9 @@ public class IpLogServiceImpl implements IIpLogService {
         int count = ipLogMapper.updateByListWhen(list);
         AxResultEntity responseEntity = new AxResultEntity();
         if (count > 0) {
-            responseEntity.setState(true);
+            responseEntity.setStateEnum(AxResultStateEnum.SUCCESS);
         } else {
-            responseEntity.setState(false);
+            responseEntity.setStateEnum(AxResultStateEnum.INVALID);
         }
         return responseEntity;
     }

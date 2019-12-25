@@ -8,6 +8,7 @@ import com.ax.shop.mapper.IpLogMapper;
 import com.ax.shop.mapper.UserinfoMapper;
 import com.ax.shop.service.ILoginService;
 import com.ax.shop.util.axtools.AxConst;
+import com.ax.shop.util.axtools.AxResultStateEnum;
 import com.ax.shop.util.axtools.AxResultEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -70,7 +71,7 @@ public class LoginServiceImpl implements ILoginService {
         AxResultEntity<Userinfo> responseEntity = new AxResultEntity();
 
         if (userinfo == null) {
-            responseEntity.setState(false);
+            responseEntity.setStateEnum(AxResultStateEnum.SUCCESS);
             responseEntity.setMsg("账号不存在");
         } else {
 
@@ -88,13 +89,13 @@ public class LoginServiceImpl implements ILoginService {
                 UserinfoContext.putUserinfo(userinfo);
                 ipLog.setLoginState(IpLog.LOGINSTATE_SUCCESS);
 
-                responseEntity.setState(true);
-                responseEntity.setData(userinfo);
+                responseEntity.setStateEnum(AxResultStateEnum.SUCCESS);
+                responseEntity.setBody(userinfo);
 
             } else {
 
                 ipLog.setLoginState(IpLog.LOGINSTATE_FAILD);
-                responseEntity.setState(false);
+                responseEntity.setStateEnum(AxResultStateEnum.INVALID);
                 responseEntity.setMsg("账号或者密码错误");
 
             }

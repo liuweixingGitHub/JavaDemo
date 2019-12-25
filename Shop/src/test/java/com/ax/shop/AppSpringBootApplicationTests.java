@@ -3,6 +3,7 @@ package com.ax.shop;
 import com.ax.shop.service.impl.RedisService;
 import com.ax.shop.entity.IpLog;
 import com.ax.shop.mapper.IpLogMapper;
+import com.ax.shop.util.axtools.AxResultStateEnum;
 import com.ax.shop.util.axtools.AxResultEntity;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -90,7 +91,7 @@ public class AppSpringBootApplicationTests {
 //
 //		redisUtils.set("ipLog:redis_key1", ipLog);
 		AxResultEntity responseEntity =new AxResultEntity();
-		responseEntity.setState(true);
+		responseEntity.setStateEnum(AxResultStateEnum.SUCCESS);
 		System.out.println("responseEntity = " + responseEntity);
 		System.out.println("responseEntity = " + responseEntity.toString());
 	}
