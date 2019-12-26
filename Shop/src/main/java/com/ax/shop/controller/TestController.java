@@ -1,6 +1,8 @@
 package com.ax.shop.controller;
 
 import com.ax.shop.dto.LoginDto;
+import com.ax.shop.dto.LoginListDto;
+import com.ax.shop.entity.IpLog;
 import com.ax.shop.entity.valid.PasswordGroup;
 import com.ax.shop.entity.User;
 import com.ax.shop.entity.valid.UsernameGroup;
@@ -233,6 +235,26 @@ public class TestController {
     @GetMapping(value = "/500.do")
     public void error_500() {
         int i = 5/0;
+    }
+
+
+    @RequestMapping(value = "/loginList.do")
+    public Object updateByList(@RequestBody(required = false) List<LoginDto> list) {
+        System.out.println("list = " + list);
+        return list;
+    }
+
+
+    @RequestMapping(value = "/loginList2.do")
+    public Object loginList2(@RequestBody(required = false)LoginListDto dto) {
+        System.out.println("list = " + dto);
+        return dto;
+    }
+
+    @RequestMapping(value = "/loginList3.do")
+    public Object loginList3(@RequestBody(required = false)Map list) {
+        System.out.println("list = " + list);
+        return list;
     }
 
 }

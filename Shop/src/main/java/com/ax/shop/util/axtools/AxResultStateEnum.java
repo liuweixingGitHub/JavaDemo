@@ -18,7 +18,8 @@ public enum AxResultStateEnum {
      * 请求无效
      **/
     INVALID(HttpStatus.BAD_REQUEST.value(), "请求无效"),
-
+    INVALID_METHOD_NOT_FOUND(HttpStatus.NOT_FOUND.value(), "请求path找不到"),
+    INVALID_PARAMETER_FORMAT(HttpStatus.INTERNAL_SERVER_ERROR.value(), "请求参数格式错误"),
     BAD_REQUEST(HttpStatus.BAD_REQUEST.value(), "Bad Request"),
     INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Internal Server Error"),
     TOKEN_INVALID(HttpStatus.BAD_REQUEST.value(), "token失效"),

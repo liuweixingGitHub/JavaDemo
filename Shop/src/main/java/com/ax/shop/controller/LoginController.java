@@ -1,6 +1,8 @@
 package com.ax.shop.controller;
 
 import com.ax.shop.dto.LoginDto;
+import com.ax.shop.entity.valid.PasswordGroup;
+import com.ax.shop.entity.valid.UsernameGroup;
 import com.ax.shop.service.ILoginService;
 import com.ax.shop.util.axtools.AxResultStateEnum;
 import com.ax.shop.util.axtools.AxResultEntity;
@@ -41,6 +43,22 @@ public class LoginController extends BaseController {
 
 
     }
+
+    @GetMapping(value = "/login.do")
+    public Object login(@Validated({UsernameGroup.class, PasswordGroup.class}) LoginDto loginDto) {
+
+
+        System.out.println("username = " + loginDto.getUsername());
+
+        Object object = this.loginService.loginState(loginDto.getUsername(), loginDto.getPassword(), this.request);
+
+        System.out.println("object = " + object);
+
+        return object;
+
+    }
+
+
 
     @GetMapping(value = "/login22.do")
     public Object login22(@Validated LoginDto loginEntity) {

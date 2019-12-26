@@ -3,10 +3,13 @@ package com.ax.shop.advice;
 import com.ax.shop.error.TokenException;
 import com.ax.shop.util.axtools.AxResultEntity;
 import com.ax.shop.util.axtools.AxResultStateEnum;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
+import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
@@ -16,9 +19,11 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
 //如果不想每次都写private  final Logger logger = LoggerFactory.getLogger(当前类名.class); 可以用注解@Slf4j;
 //@ControllerAdvice
 @RestControllerAdvice
+@Slf4j
 public class ExceptionAdvice {
 
     @ExceptionHandler(value = Exception.class)//异常全局处理
@@ -27,52 +32,51 @@ public class ExceptionAdvice {
     public Object exception(HttpServletRequest request, HttpServletResponse response, Exception exception) {
 
         System.out.println("全局exception = " + exception);
+        log.info("全局exception = " + exception);
 
         String method = request.getMethod();
-        String path = request.getRequestURI();
+        String uri = request.getRequestURI();
 
-        Map<String,Object> data = new HashMap<>();
-        data.put("path",path);
-        data.put("method",method);
-        data.put("status",response.getStatus());
+        Map<String, Object> map = new HashMap<>();
+        map.put("method", method);
+        map.put("uri", uri);
+
+        AxResultEntity<Map> entity = new AxResultEntity<>();
+        entity.setMsg(map.toString());
+        entity.setBody(map);
 
         /**
          * 404处理
          * */
         if (exception instanceof NoHandlerFoundException) {
-            data.put("msg","方法找不到");
-            return data;
+            entity.setStateEnum(AxResultStateEnum.INVALID_METHOD_NOT_FOUND);
+            return entity;
         }
 
+        if (exception instanceof HttpMediaTypeNotSupportedException) {
+            entity.setStateEnum(AxResultStateEnum.INVALID_PARAMETER_FORMAT);
+            return entity;
+        }
+        /**
+         * token 无效
+         */
         if (exception instanceof TokenException) {
-            AxResultEntity<List<String>> resultEntity = new AxResultEntity<>();
-            resultEntity.setStateEnum(AxResultStateEnum.TOKEN_INVALID);
-            return resultEntity;
+            entity.setStateEnum(AxResultStateEnum.TOKEN_INVALID);
+            return entity;
         }
-
-
-
-//        System.out.println("全局exception = " + exception);
-//        Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
-//        System.out.println("全局exception = " + statusCode);
-//        return "全局exception = " + statusCode+"response.getStatus = "+response.getStatus();
-
-
-        data.put("全局exception",method);
-        data.put("path",path);
-
-
-        return data;
-
-
+        entity.setStateEnum(AxResultStateEnum.INVALID);
+        return entity;
     }
-
 
 
     /**
      * 对方法参数校验异常处理方法
      */
-    @ExceptionHandler(value = {MethodArgumentNotValidException.class, BindException.class})
+    @ExceptionHandler(value = {
+            MethodArgumentNotValidException.class,
+            BindException.class, /***/
+            MissingServletRequestParameterException.class,/**@RequestParam 校验*/
+    })
     public Object handlerNotValidException(Exception validException) {
 
         System.out.println("对方法参数校验异常处理方法exception = " + validException);
@@ -85,40 +89,42 @@ public class ExceptionAdvice {
             objectErrorList = ((BindException) validException).getBindingResult().getAllErrors();
         }
 
-        Map<String, Object> resultMap = new HashMap<>();
+        Map<String, Object> map = new HashMap<>();
 
-        for (ObjectError oe : objectErrorList) {
+        objectErrorList.forEach(error -> {
             String key = null;
             // 字段错误
-            if (oe instanceof FieldError) {
-                key = ((FieldError) oe).getField();// 获取错误验证字段名
+            if (error instanceof FieldError) {
+                key = ((FieldError) error).getField();// 获取错误验证字段名
             } else {
                 // 非字段错误
-                key = oe.getObjectName();// 获取验证对象名称
+                key = error.getObjectName();// 获取验证对象名称
             }
             // 错误信息
-            String msg = oe.getDefaultMessage();
-            resultMap.put(key, msg);
-        }
+            String msg = error.getDefaultMessage();
+            map.put(key, msg);
+        });
+
 
 //        for (ObjectError oe : objectErrorList) {
 //            String key = null;
-//            String msg = null;
 //            // 字段错误
 //            if (oe instanceof FieldError) {
-//                FieldError fe = (FieldError) oe;
-//                key = fe.getField();// 获取错误验证字段名
+//                key = ((FieldError) oe).getField();// 获取错误验证字段名
 //            } else {
 //                // 非字段错误
 //                key = oe.getObjectName();// 获取验证对象名称
 //            }
 //            // 错误信息
-//            msg = oe.getDefaultMessage();
-//            resultMap.put(key, msg);
+//            String msg = oe.getDefaultMessage();
+//            map.put(key, msg);
 //        }
-        System.out.println("resultMap = " + resultMap);
 
-        return resultMap;
+        AxResultEntity entity = new AxResultEntity();
+        entity.setStateEnum(AxResultStateEnum.FAILURE);
+        entity.setMsg(map.toString());
+        
+        return entity;
 
     }
 
