@@ -32,4 +32,5 @@ public interface StudentMapper {
     @InsertProvider(type = StudentMapperProvider.class, method = "inserList")
     public int inserList(@Param("list") List<Student> list);
 
+
 }

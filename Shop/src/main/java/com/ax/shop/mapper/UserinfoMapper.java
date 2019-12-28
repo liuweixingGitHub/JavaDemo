@@ -64,7 +64,7 @@ public interface UserinfoMapper {
     /**
      * 按照名userName查找
      */
-    Userinfo getModelByuserName(String userName);
+    Userinfo getByuserName(String userName);
 
     /**
      * 按照名userName和passwor查找

@@ -123,7 +123,7 @@ public class ExceptionAdvice {
         AxResultEntity entity = new AxResultEntity();
         entity.setStateEnum(AxResultStateEnum.FAILURE);
         entity.setMsg(map.toString());
-        
+
         return entity;
 
     }

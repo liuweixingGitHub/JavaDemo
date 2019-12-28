@@ -2,6 +2,7 @@ package com.ax.shop.util.axtools;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -20,8 +21,11 @@ public class AxResultEntity<T> implements Serializable {
 
 
     /**忽略序列化*/
-//    @JSONField(serialize=false) transient
+////    @JSONField(serialize=false)  transient关键字只能修饰变量，而不能修饰方法和类。
     private transient AxResultStateEnum stateEnum;
+
+//        @JSONField(serialize=false)
+//    private  AxResultStateEnum stateEnum;
 
     public AxResultEntity() {
     }
@@ -59,6 +63,7 @@ public class AxResultEntity<T> implements Serializable {
     public AxResultStateEnum getStateEnum() {
         return stateEnum;
     }
+
 
     public void setStateEnum(@NotNull AxResultStateEnum stateEnum) {
         this.stateEnum = stateEnum;

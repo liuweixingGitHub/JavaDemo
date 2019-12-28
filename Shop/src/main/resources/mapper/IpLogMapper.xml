@@ -195,6 +195,10 @@
     </foreach>
   </delete>
 
+  <delete id="deleteById">
+
+  </delete>
+
 
   <insert id="insertList" parameterType="List">
 

@@ -60,10 +60,22 @@ public class LoginServiceImpl implements ILoginService {
     }
 
     @Override
+    public Userinfo getByUserName(String userName) {
+
+
+        Userinfo userinfo = this.userinfoMapper.getByuserName(userName);
+
+        return userinfo;
+
+    }
+
+
+
+    @Override
     public Object loginState(String userName, String passWord, HttpServletRequest request) {
 
 
-        Userinfo userinfo = this.userinfoMapper.getModelByuserName(userName.toLowerCase());
+        Userinfo userinfo = this.userinfoMapper.getByuserName(userName.toLowerCase());
 
         System.out.println("userinfo = " + userinfo);
 

@@ -1,6 +1,7 @@
 package com.ax.shop.service.impl;
 
 import com.ax.shop.entity.IpLog;
+import com.ax.shop.entity.Userinfo;
 import com.ax.shop.mapper.IpLogMapper;
 import com.ax.shop.query.IpLogQueryObject;
 import com.ax.shop.service.IIpLogService;
@@ -26,6 +27,33 @@ public class IpLogServiceImpl implements IIpLogService {
 
     @Autowired
     private IpLogMapper ipLogMapper;
+
+//    public addIpLog(Userinfo userinfo)
+//    IpLog ipLog = new IpLog();
+//        ipLog.setIp(request.getRemoteAddr());
+//        ipLog.setLoginTime(new Date());
+//        ipLog.setUserName(userName);
+//
+//
+//    Userinfo userinfo = this.userinfoMapper.getModelByuserNameAndpassWord(userName, passWord);
+//        if (userinfo != null) {
+//            /*
+//            登陆成功,保存当前登陆的userinfo
+//             */
+////            UserinfoContext.putUserinfo(userinfo);
+//
+//        ipLog.setUserType(userinfo.getUserType());
+//        ipLog.setUserinfoId(userinfo.getId());
+//        ipLog.setLoginState(IpLog.LOGINSTATE_SUCCESS);
+//
+//        ipLogMapper.insert(ipLog);
+//    } else {
+//        ipLog.setLoginState(IpLog.LOGINSTATE_FAILD);
+//
+//    }
+//
+
+
 
     @Override
     public AxPageResultEntity query(IpLogQueryObject queryObject) {

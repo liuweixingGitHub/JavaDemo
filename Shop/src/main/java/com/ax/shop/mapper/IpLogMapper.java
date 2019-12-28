@@ -65,4 +65,5 @@ public interface IpLogMapper {
     int updateByListWhen(List<IpLog> list);
 
 
+    int deleteById(int id);
 }

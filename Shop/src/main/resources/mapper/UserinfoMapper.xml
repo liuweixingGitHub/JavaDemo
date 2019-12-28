@@ -114,7 +114,7 @@
     </select>
 
     <!--按照名userName查找-->
-    <select id="getModelByuserName" resultMap="BaseResultMap">
+    <select id="getByuserName" resultMap="BaseResultMap">
 
         SELECT
         <include refid="Base_Column_List"/>

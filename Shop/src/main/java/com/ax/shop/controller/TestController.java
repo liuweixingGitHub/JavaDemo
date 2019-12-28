@@ -12,6 +12,7 @@ import com.ax.shop.service.HttpClientService;
 import com.ax.shop.service.impl.RedisService;
 import com.ax.shop.util.axtools.AxResultStateEnum;
 import com.ax.shop.util.axtools.AxResultEntity;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 
@@ -26,6 +27,7 @@ import java.util.*;
 
 @RestController
 @Slf4j
+@Api(tags = "测试")
 public class TestController {
 
     @Autowired
@@ -237,21 +239,22 @@ public class TestController {
         int i = 5/0;
     }
 
-
-    @RequestMapping(value = "/loginList.do")
+    @ApiOperation(value = "参数为list,嵌套map")
+    @PostMapping(value = "/loginList.do")
     public Object updateByList(@RequestBody(required = false) List<LoginDto> list) {
         System.out.println("list = " + list);
         return list;
     }
 
-
-    @RequestMapping(value = "/loginList2.do")
+    @ApiOperation(value = "参数为map,嵌套list,用object接受")
+    @PostMapping(value = "/loginList2.do")
     public Object loginList2(@RequestBody(required = false)LoginListDto dto) {
         System.out.println("list = " + dto);
         return dto;
     }
 
-    @RequestMapping(value = "/loginList3.do")
+    @ApiOperation(value = "参数为map,嵌套list")
+    @PostMapping(value = "/loginList3.do")
     public Object loginList3(@RequestBody(required = false)Map list) {
         System.out.println("list = " + list);
         return list;

@@ -112,6 +112,10 @@ spring:
 #            threadsInheritContextClassLoaderOfInitializingThread: true
 #    job-store-type: jdbc
 
+security:
+  basic:
+    enabled: false
+
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.ax.shop.entity

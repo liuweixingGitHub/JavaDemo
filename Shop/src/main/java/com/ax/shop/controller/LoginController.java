@@ -20,7 +20,7 @@ import java.util.*;
 /**
  * @author axing
  */
-@Api(description = "用户接口")
+@Api(tags = "用户接口")
 @RestController
 public class LoginController extends BaseController {
 
@@ -28,7 +28,7 @@ public class LoginController extends BaseController {
     private ILoginService loginService;
 
     @ApiOperation(value = "登录请求", notes = "返回json数据")
-    @RequestMapping(value = "/login.do")
+    @RequestMapping(value = "/1/login.do")
     @ResponseBody
     public Object login(@RequestParam(value = "username") String username,
                         @RequestParam(value = "password") String password) {
@@ -44,7 +44,7 @@ public class LoginController extends BaseController {
 
     }
 
-    @GetMapping(value = "/login.do")
+    @GetMapping(value = "/2/login.do")
     public Object login(@Validated({UsernameGroup.class, PasswordGroup.class}) LoginDto loginDto) {
 
 
@@ -102,18 +102,6 @@ public class LoginController extends BaseController {
         return object;
 
     }
-
-    /**
-     * jsp 页面可以直接取值,默认是请求转发 forward:
-     * ${result}
-     */
-    @ApiOperation(value = "登录页面", notes = "进入home页面")
-    @RequestMapping(value = "/home.page")
-    private ModelAndView homePage() {
-        return new ModelAndView("home");
-
-    }
-
 
     /**
      * 重定向

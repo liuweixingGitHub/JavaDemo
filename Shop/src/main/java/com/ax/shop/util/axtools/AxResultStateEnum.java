@@ -23,6 +23,9 @@ public enum AxResultStateEnum {
     BAD_REQUEST(HttpStatus.BAD_REQUEST.value(), "Bad Request"),
     INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Internal Server Error"),
     TOKEN_INVALID(HttpStatus.BAD_REQUEST.value(), "token失效"),
+    INVALID_LOGIN_PASSWORD_WRONG(HttpStatus.BAD_REQUEST.value(), "密码错误"),
+    INVALID_ANONYMOUS_NOT_SECURITY(HttpStatus.BAD_REQUEST.value(), "用来解决匿名用户访问无权限资源时的异常"),
+    INVALID_USER_NOT_SECURITY(HttpStatus.BAD_REQUEST.value(), "用来解决认证过的用户访问无权限资源时的异常"),
     ;
 
     /**
