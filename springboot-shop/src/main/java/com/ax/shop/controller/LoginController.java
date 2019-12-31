@@ -4,14 +4,13 @@ import com.ax.shop.dto.LoginDto;
 import com.ax.shop.entity.valid.PasswordGroup;
 import com.ax.shop.entity.valid.UsernameGroup;
 import com.ax.shop.service.ILoginService;
-import com.ax.shop.util.axtools.AxResultStateEnum;
-import com.ax.shop.util.axtools.AxResultEntity;
+import com.ax.shop.util.axUtil.AxResultStateEnum;
+import com.ax.shop.util.axUtil.AxResultEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletResponse;
@@ -133,7 +132,7 @@ public class LoginController extends BaseController {
                              HttpServletResponse response) throws Exception {
         System.out.println("name = " + name);
         //页面传参
-        redirectAttributes.addFlashAttribute("userName", name);
+        redirectAttributes.addFlashAttribute("username", name);
         //url传参
         redirectAttributes.addAttribute("name", name);
         return "redirect:/loginPage1";

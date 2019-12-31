@@ -7,9 +7,9 @@ import com.ax.shop.entity.Userinfo;
 import com.ax.shop.mapper.IpLogMapper;
 import com.ax.shop.mapper.UserinfoMapper;
 import com.ax.shop.service.ILoginService;
-import com.ax.shop.util.axtools.AxConst;
-import com.ax.shop.util.axtools.AxResultStateEnum;
-import com.ax.shop.util.axtools.AxResultEntity;
+import com.ax.shop.util.axUtil.AxConst;
+import com.ax.shop.util.axUtil.AxResultStateEnum;
+import com.ax.shop.util.axUtil.AxResultEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,22 +29,22 @@ public class LoginServiceImpl implements ILoginService {
     private IpLogMapper ipLogMapper;
 
     @Override
-    public Userinfo login(String userName, String passWord, HttpServletRequest request) {
+    public Userinfo login(String username, String password, HttpServletRequest request) {
 
         IpLog ipLog = new IpLog();
         ipLog.setIp(request.getRemoteAddr());
         ipLog.setLoginTime(new Date());
-        ipLog.setUserName(userName);
+        ipLog.setUsername(username);
 
 
-        Userinfo userinfo = this.userinfoMapper.getModelByuserNameAndpassWord(userName, passWord);
+        Userinfo userinfo = this.userinfoMapper.getModelByusernameAndpassword(username, password);
         if (userinfo != null) {
             /*
             登陆成功,保存当前登陆的userinfo
              */
 //            UserinfoContext.putUserinfo(userinfo);
 
-            ipLog.setUserType(userinfo.getUserType());
+//            ipLog.setUserType(userinfo.getUserType());
             ipLog.setUserinfoId(userinfo.getId());
             ipLog.setLoginState(IpLog.LOGINSTATE_SUCCESS);
 
@@ -60,22 +60,25 @@ public class LoginServiceImpl implements ILoginService {
     }
 
     @Override
-    public Userinfo getByUserName(String userName) {
+    public Userinfo getByUserName(String username) {
 
-
-        Userinfo userinfo = this.userinfoMapper.getByuserName(userName);
+        Userinfo userinfo = this.userinfoMapper.getByusername(username);
 
         return userinfo;
 
     }
 
+    @Override
+    public Userinfo getById(Long id) {
+        return userinfoMapper.selectByPrimaryKey(id);
+    }
 
 
     @Override
-    public Object loginState(String userName, String passWord, HttpServletRequest request) {
+    public Object loginState(String username, String password, HttpServletRequest request) {
 
 
-        Userinfo userinfo = this.userinfoMapper.getByuserName(userName.toLowerCase());
+        Userinfo userinfo = this.userinfoMapper.getByusername(username.toLowerCase());
 
         System.out.println("userinfo = " + userinfo);
 
@@ -91,11 +94,11 @@ public class LoginServiceImpl implements ILoginService {
             IpLog ipLog = new IpLog();
             ipLog.setIp(request.getRemoteAddr());
             ipLog.setLoginTime(new Date());
-            ipLog.setUserName(userName.toLowerCase());
-            ipLog.setUserType(userinfo.getUserType());
+            ipLog.setUsername(username.toLowerCase());
+//            ipLog.setUserType(userinfo.getUserType());
             ipLog.setUserinfoId(userinfo.getId());
 
-            if (userinfo.getPassWord().toLowerCase().equals(passWord.toLowerCase())) {
+            if (userinfo.getPassword().toLowerCase().equals(password.toLowerCase())) {
 
                 /**登陆成功,保存当前登陆的userinfo*/
                 UserinfoContext.putUserinfo(userinfo);
@@ -122,7 +125,7 @@ public class LoginServiceImpl implements ILoginService {
     @Override
     public boolean hasAdmin() {
 
-        return this.userinfoMapper.getCountByuserName(AxConst.ADMIN_NAME) > 0;
+        return this.userinfoMapper.getCountByusername(AxConst.ADMIN_NAME) > 0;
 
     }
 
@@ -132,9 +135,9 @@ public class LoginServiceImpl implements ILoginService {
         if (!hasAdmin()) {
 
             Userinfo userinfo = new Userinfo();
-            userinfo.setUserName(AxConst.ADMIN_NAME);
-            userinfo.setPassWord(AxConst.ADMIN_PASSWORD);
-            userinfo.setUserType(Userinfo.USERTYPE_SYSTEM);
+            userinfo.setUsername(AxConst.ADMIN_NAME);
+            userinfo.setPassword(AxConst.ADMIN_PASSWORD);
+//            userinfo.setUserType(Userinfo.USERTYPE_SYSTEM);
             this.userinfoMapper.insert(userinfo);
 
         }

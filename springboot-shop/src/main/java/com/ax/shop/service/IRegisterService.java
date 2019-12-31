@@ -5,8 +5,8 @@ package com.ax.shop.service;
  */
 public interface IRegisterService {
 
-    boolean register(String userName, String passWord, int userType);
+    boolean register(String username, String password, int userType);
 
-    boolean checkUsername(String userName);
+    boolean checkUsername(String username);
 
 }

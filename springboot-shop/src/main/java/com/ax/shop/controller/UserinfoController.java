@@ -2,8 +2,8 @@ package com.ax.shop.controller;
 
 import com.ax.shop.entity.Userinfo;
 import com.ax.shop.service.IUserinfoService;
-import com.ax.shop.util.axtools.AxResultStateEnum;
-import com.ax.shop.util.axtools.AxResultEntity;
+import com.ax.shop.util.axUtil.AxResultStateEnum;
+import com.ax.shop.util.axUtil.AxResultEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

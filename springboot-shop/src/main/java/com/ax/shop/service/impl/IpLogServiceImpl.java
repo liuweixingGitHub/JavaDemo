@@ -1,13 +1,12 @@
 package com.ax.shop.service.impl;
 
 import com.ax.shop.entity.IpLog;
-import com.ax.shop.entity.Userinfo;
 import com.ax.shop.mapper.IpLogMapper;
 import com.ax.shop.query.IpLogQueryObject;
 import com.ax.shop.service.IIpLogService;
-import com.ax.shop.util.axtools.AxPageResultEntity;
-import com.ax.shop.util.axtools.AxResultStateEnum;
-import com.ax.shop.util.axtools.AxResultEntity;
+import com.ax.shop.util.axUtil.AxPageResultEntity;
+import com.ax.shop.util.axUtil.AxResultStateEnum;
+import com.ax.shop.util.axUtil.AxResultEntity;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -32,10 +31,10 @@ public class IpLogServiceImpl implements IIpLogService {
 //    IpLog ipLog = new IpLog();
 //        ipLog.setIp(request.getRemoteAddr());
 //        ipLog.setLoginTime(new Date());
-//        ipLog.setUserName(userName);
+//        ipLog.setUsername(username);
 //
 //
-//    Userinfo userinfo = this.userinfoMapper.getModelByuserNameAndpassWord(userName, passWord);
+//    Userinfo userinfo = this.userinfoMapper.getModelByusernameAndpassword(username, password);
 //        if (userinfo != null) {
 //            /*
 //            登陆成功,保存当前登陆的userinfo

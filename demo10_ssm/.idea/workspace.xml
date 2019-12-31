@@ -2,10 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ea7d67-6a48-43bd-871a-4b252567d317" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/entity/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/handler/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/handler/MyLogoutSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/util/AxJwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/entity/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/handler/JwtAuthenticationTokenFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/handler/MyLogoutSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/handler/UserDetailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axUtil/AxJwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/smartfox_info.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/main/java/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/src/main/java/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/configuration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/configuration/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/controller/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/controller/SecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/entity/Userinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/entity/Userinfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/handler/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/handler/JWTAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/handler/JWTLoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/handler/JWTLoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/handler/MyAuthenctiationFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/handler/MyLoginFailureHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/handler/MyAuthenctiationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/handler/MyLoginSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/handler/MyAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/handler/MyAuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/handler/MyAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/handler/MyAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/service/ILoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/service/ILoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/service/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/src/main/java/com/example/security/service/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-security/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-security/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/AXCollectFile.md" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/AXCollectFile.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/advice/ExceptionAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/advice/ExceptionAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/context/UserinfoContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/context/UserinfoContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/controller/IpLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/controller/IpLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/controller/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/controller/UserinfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/controller/UserinfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/entity/IpLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/entity/IpLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/entity/Userinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/entity/Userinfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/inteceptor/TokenInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/inteceptor/TokenInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/mapper/UserinfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/mapper/UserinfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/query/IpLogQueryObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/query/IpLogQueryObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/configuration/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/configuration/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/controller/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/controller/SecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/service/JWTAuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/service/JWTLoginFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/service/JwtAuthenticationTokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/service/MyAccessDeniedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/handler/MyAccessDeniedHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/service/MyAuthenctiationFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/handler/MyLoginFailureHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/service/MyAuthenctiationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/handler/MyLoginSuccessHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/service/MyAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/handler/MyAuthenticationEntryPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/service/MyAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/handler/MyAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/security/service/UserDetailServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/IIpLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/IIpLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/ILoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/ILoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/IRegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/IRegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/IUserinfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/IUserinfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/impl/IpLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/impl/IpLogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/impl/RegisterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/impl/RegisterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/impl/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/impl/TokenServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/impl/UserinfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/service/impl/UserinfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axtools/AxConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axUtil/AxConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axtools/AxJsonView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axUtil/AxJsonView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axtools/AxPageResultEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axUtil/AxPageResultEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axtools/AxQueryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axUtil/AxQueryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axtools/AxResultEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axUtil/AxResultEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axtools/AxResultStateEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axUtil/AxResultStateEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axtools/BaseEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axUtil/BaseEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axtools/FastJsonEnumDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/java/com/ax/shop/util/axUtil/FastJsonEnumDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/resources/mapper/IpLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/resources/mapper/IpLogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/resources/mapper/UserinfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/resources/mapper/UserinfoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/main/resources/static/js/service/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/main/resources/static/js/service/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-shop/src/test/java/com/ax/shop/AppSpringBootApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot-shop/src/test/java/com/ax/shop/AppSpringBootApplicationTests.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,39 +93,6 @@
         <option value="XSLT Stylesheet" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>User</find>
-      <find>ip</find>
-      <find>com.ax.spring.entity</find>
-      <find>t_userinfo</find>
-      <find>.on</find>
-      <find>ogin-form</find>
-      <find>serAgent =</find>
-      <find>getModelByUsernameAndPassword</find>
-      <find>getModelByUsername</find>
-      <find>/user/menu.do</find>
-      <find>&gt;&gt;/login2.do</find>
-      <find>register.html&gt;&gt;&gt;</find>
-      <find>egister.html&gt;&gt;&gt;</find>
-      <find>org.springframework.web.servlet.ModelAndView</find>
-      <find>org.springframework.web.servlet.DispatcherServlet</find>
-      <find>org.springframework.web.servlet.view.InternalResourceViewResolver</find>
-      <find>org.springframework.web.servlet.view.JstlView</find>
-      <find>annotation-driven</find>
-      <find>col-md-offset-2</find>
-      <find>404</find>
-      <find>register.js</find>
-      <find>/checkUsername.do</find>
-      <find>login-form</find>
-      <find>checkUsername</find>
-      <find>remote</find>
-      <find>classpath:application.xml</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -70,6 +112,11 @@
   </component>
   <component name="ProjectId" id="1VNvDzEFvAepJw71OSfYKGZ3hot" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -80,24 +127,13 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Maven.demo10 [tomcat7:run]">
     <configuration name="BaseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -202,6 +238,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -213,6 +261,8 @@
       <option name="presentableId" value="Default" />
       <updated>1545661200011</updated>
       <workItem from="1577106259318" duration="733000" />
+      <workItem from="1577800115673" duration="30000" />
+      <workItem from="1577801835148" duration="749000" />
     </task>
     <servers />
   </component>
@@ -224,11 +274,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="323" y="186" width="837" height="550" key="find.popup" timestamp="1577801841216">
+      <screen x="42" y="23" width="1398" height="877" />
+    </state>
+    <state x="323" y="186" width="837" height="550" key="find.popup/42.23.1398.877@42.23.1398.877" timestamp="1577801841216" />
   </component>
   <component name="masterDetails">
     <states>

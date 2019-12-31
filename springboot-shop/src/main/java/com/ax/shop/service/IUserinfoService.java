@@ -11,6 +11,8 @@ public interface IUserinfoService {
 
     Userinfo get(Long id);
 
+    Userinfo selectUserWithRelo(Long id);
+
     List<Userinfo> getAllUserinfo();
 
 }

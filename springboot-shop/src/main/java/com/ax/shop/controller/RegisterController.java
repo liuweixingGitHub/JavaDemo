@@ -2,8 +2,8 @@ package com.ax.shop.controller;
 
 import com.ax.shop.entity.Userinfo;
 import com.ax.shop.service.IRegisterService;
-import com.ax.shop.util.axtools.AxResultStateEnum;
-import com.ax.shop.util.axtools.AxResultEntity;
+import com.ax.shop.util.axUtil.AxResultStateEnum;
+import com.ax.shop.util.axUtil.AxResultEntity;
 import io.swagger.annotations.Api;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +39,7 @@ public class RegisterController {
     @ResponseBody
     public Object registerUser(@RequestParam(value = "username") String username, @RequestParam(value = "password") String password) {
 
-        boolean register = this.registerService.register(username, password, Userinfo.USERTYPE_NORMAL);
+        boolean register = this.registerService.register(username, password,1);
 
 
         AxResultEntity responseEntity = new AxResultEntity();

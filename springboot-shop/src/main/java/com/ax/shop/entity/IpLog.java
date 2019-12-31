@@ -27,7 +27,7 @@ public class IpLog implements Serializable {
 
     private Long id;
 
-    private String userName;
+    private String username;
 
     @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss.SSSS")//页面写入数据库时格式
     private Date loginTime;
@@ -96,11 +96,11 @@ public class IpLog implements Serializable {
     }
 
     public String getUserName() {
-        return userName;
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
     public Date getLoginTime() {
@@ -111,7 +111,7 @@ public class IpLog implements Serializable {
     public String toString() {
         return "IpLog{" +
                 "id=" + id +
-                ", userName='" + userName + '\'' +
+                ", username='" + username + '\'' +
                 ", loginTime=" + loginTime +
                 ", ip='" + ip + '\'' +
                 ", loginState=" + loginState +

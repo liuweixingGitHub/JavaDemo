@@ -1,6 +1,6 @@
 package com.ax.shop.query;
 
-import com.ax.shop.util.axtools.AxQueryEntity;
+import com.ax.shop.util.axUtil.AxQueryEntity;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
@@ -12,16 +12,16 @@ public class IpLogQueryObject extends AxQueryEntity {
 
     private Date beginDate;
     private Date endDate;
-    private String userName;
+    private String username;
     private int userType = -1;
     private boolean like;
 
     public String getUserName() {
-        return userName;
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public int getUserType() {

@@ -1,11 +1,9 @@
 package com.ax.shop.advice;
 
 import com.ax.shop.error.TokenException;
-import com.ax.shop.util.axtools.AxResultEntity;
-import com.ax.shop.util.axtools.AxResultStateEnum;
+import com.ax.shop.util.axUtil.AxResultEntity;
+import com.ax.shop.util.axUtil.AxResultStateEnum;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.access.AccessDeniedException;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;

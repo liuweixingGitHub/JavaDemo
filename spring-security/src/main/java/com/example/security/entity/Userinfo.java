@@ -3,9 +3,11 @@ package com.example.security.entity;
 import com.alibaba.fastjson.annotation.JSONField;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.example.security.util.AxJwtUtil;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -19,8 +21,8 @@ public class Userinfo implements UserDetails {
     private String token;
     private String password;
     private String username;
-
-    List<GrantedAuthority> grantedAuthorities;
+    /**用户权限**/
+    List<UserRole> authorities = new ArrayList<>();
 
 
     public Long getId() {
@@ -29,19 +31,16 @@ public class Userinfo implements UserDetails {
 
     public void setId(Long id) {
         this.id = id;
+
+        if (id>0 && username!=null && password !=null){
+            token = JWT.create().withAudience(this.id.toString()).withAudience(username)
+                    .sign(Algorithm.HMAC256(this.password));
+        }
     }
 
     public String getToken() {
 
-        token = JWT.create().withAudience(this.id.toString()).withAudience(username)
-                .sign(Algorithm.HMAC256(this.password));
-
         return token;
-    }
-
-
-    public void setGrantedAuthorities(List<GrantedAuthority> grantedAuthorities) {
-        this.grantedAuthorities = grantedAuthorities;
     }
 
     public void setToken(String token) {
@@ -50,19 +49,32 @@ public class Userinfo implements UserDetails {
 
     public void setPassword(String password) {
         this.password = password;
+        if (id>0 && username!=null && password !=null){
+            token = JWT.create().withAudience(this.id.toString()).withAudience(username)
+                    .sign(Algorithm.HMAC256(this.password));
+        }
     }
 
     public void setUsername(String username) {
         this.username = username;
+        if (id>0 && username!=null && password !=null){
+            token = JWT.create().withAudience(this.id.toString()).withAudience(username)
+                    .sign(Algorithm.HMAC256(this.password));
+        }
     }
 
-    public List<GrantedAuthority> getGrantedAuthorities() {
-        return grantedAuthorities;
+    public void setAuthorities(List<UserRole> authorities) {
+        this.authorities = authorities;
     }
 
+    /**
+     * 添加用户拥有的权限和角色
+     *
+     * @return
+     */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return grantedAuthorities;
+        return authorities;
     }
 
     @Override
@@ -76,28 +88,64 @@ public class Userinfo implements UserDetails {
         return username;
     }
 
+    /**
+     * 账户是否过期
+     *
+     * @return
+     */
     @Override
     @JSONField(serialize = false)
     public boolean isAccountNonExpired() {
         return true;
     }
 
+    /**
+     * 是否禁用
+     *
+     * @return
+     */
     @Override
     @JSONField(serialize = false)
     public boolean isAccountNonLocked() {
         return true;
     }
 
+    /**
+     * 密码是否过期
+     *
+     * @return
+     */
     @Override
     @JSONField(serialize = false)
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
-
+    /**
+     * 是否启用
+     *
+     * @return
+     */
     @Override
     @JSONField(serialize = false)
     public boolean isEnabled() {
         return true;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("{");
+        sb.append("\"id\":")
+                .append(id);
+        sb.append(",\"token\":\"")
+                .append(token).append('\"');
+        sb.append(",\"password\":\"")
+                .append(password).append('\"');
+        sb.append(",\"username\":\"")
+                .append(username).append('\"');
+        sb.append(",\"authorities\":")
+                .append(authorities);
+        sb.append('}');
+        return sb.toString();
     }
 }

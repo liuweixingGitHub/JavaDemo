@@ -3,7 +3,7 @@ package com.ax.shop.controller;
 import com.ax.shop.dto.UpdateListObject;
 import com.ax.shop.entity.IpLog;
 import com.ax.shop.service.IIpLogService;
-import com.ax.shop.util.axtools.AxResultEntity;
+import com.ax.shop.util.axUtil.AxResultEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

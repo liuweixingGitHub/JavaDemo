@@ -12,7 +12,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-/***用来解决匿名用户访问无权限资源时的异常 访问此资源需要完全的身份验证 **/
+/***用来解决匿名用户访问无权限资源时的异常 访问此资源需要完全的身份验证
+ * 拦截了login 重定向
+ * **/
 @Component
 public class MyAuthenticationEntryPoint implements AuthenticationEntryPoint {
 

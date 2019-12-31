@@ -9,16 +9,17 @@ import javax.servlet.http.HttpServletRequest;
  */
 public interface ILoginService {
 
-    Userinfo login(String userName, String passWord, HttpServletRequest request);
+    Userinfo login(String username, String password, HttpServletRequest request);
 
-//    Userinfo login(String userName, String passWord);
+//    Userinfo login(String username, String password);
 
-    Object loginState(String userName, String passWord, HttpServletRequest request);
+    Object loginState(String username, String password, HttpServletRequest request);
 
     boolean hasAdmin();
 
     void createAdmin();
 
-    Userinfo getByUserName(String userName);
+    Userinfo getByUserName(String username);
 
+    Userinfo getById(Long id);
 }

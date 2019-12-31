@@ -3,7 +3,7 @@
 <mapper namespace="com.ax.shop.mapper.IpLogMapper" >
   <resultMap id="BaseResultMap" type="com.ax.shop.entity.IpLog" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="userName" property="userName" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
     <result column="loginTime" property="loginTime" jdbcType="TIMESTAMP" />
     <result column="ip" property="ip" jdbcType="VARCHAR" />
     <result column="loginState" property="loginState" jdbcType="INTEGER" />
@@ -11,7 +11,7 @@
     <result column="userinfoId" property="userinfoId" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, userName, loginTime, ip, loginState, userType, userinfoId
+    id, username, loginTime, ip, loginState, userType, userinfoId
   </sql>
 
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
@@ -27,10 +27,10 @@
   </delete>
 
   <insert id="insert" parameterType="com.ax.shop.entity.IpLog" useGeneratedKeys="true" keyProperty="id" >
-    insert into t_ipLog (userName, loginTime, ip, 
+    insert into t_ipLog (username, loginTime, ip,
       loginState, userType, userinfoId
       )
-    values (#{userName,jdbcType=VARCHAR}, #{loginTime,jdbcType=TIMESTAMP}, #{ip,jdbcType=VARCHAR}, 
+    values (#{username,jdbcType=VARCHAR}, #{loginTime,jdbcType=TIMESTAMP}, #{ip,jdbcType=VARCHAR},
       #{loginState,jdbcType=INTEGER}, #{userType,jdbcType=INTEGER}, #{userinfoId,jdbcType=BIGINT}
       )
   </insert>
@@ -38,8 +38,8 @@
   <insert id="insertSelective" parameterType="com.ax.shop.entity.IpLog" useGeneratedKeys="true" keyProperty="id" >
     insert into t_ipLog
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="userName != null" >
-        userName,
+      <if test="username != null" >
+        username,
       </if>
       <if test="loginTime != null" >
         loginTime,
@@ -58,8 +58,8 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="userName != null" >
-        #{userName,jdbcType=VARCHAR},
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
       </if>
       <if test="loginTime != null" >
         #{loginTime,jdbcType=TIMESTAMP},
@@ -82,8 +82,8 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.ax.shop.entity.IpLog" >
     update t_ipLog
     <set >
-      <if test="userName != null" >
-        userName = #{userName,jdbcType=VARCHAR},
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
       </if>
       <if test="loginTime != null" >
         loginTime = #{loginTime,jdbcType=TIMESTAMP},
@@ -105,7 +105,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.ax.shop.entity.IpLog" >
     update t_ipLog
-    set userName = #{userName,jdbcType=VARCHAR},
+    set username = #{username,jdbcType=VARCHAR},
       loginTime = #{loginTime,jdbcType=TIMESTAMP},
       ip = #{ip,jdbcType=VARCHAR},
       loginState = #{loginState,jdbcType=INTEGER},
@@ -125,12 +125,12 @@
         AND loginTime &lt;=#{endDate}
       </if>
 
-      <if test="userName!=null and like">
-        AND userName LIKE '%${userName}%'
+      <if test="username!=null and like">
+        AND username LIKE '%${username}%'
       </if>
 
-      <if test="userName!=null and !like">
-        AND userName = #{userName}
+      <if test="username!=null and !like">
+        AND username = #{username}
       </if>
 
       <if test="userType>-1">
@@ -204,7 +204,7 @@
 
     insert into t_ipLog
     (
-    userName,
+    username,
     loginTime,
     ip,
     loginState,
@@ -216,7 +216,7 @@
 
     <foreach collection="list" item="item" index="index" separator=",">
       (
-      #{item.userName},
+      #{item.username},
       #{item.loginTime},
       #{item.ip},
       #{item.loginState},
@@ -234,7 +234,7 @@
       update t_ipLog
       <set>
 
-        userName=#{item.userName,jdbcType=VARCHAR},
+        username=#{item.username,jdbcType=VARCHAR},
         loginTime=#{item.loginTime,jdbcType=TIMESTAMP},
         ip=#{item.ip,jdbcType=VARCHAR},
         loginState=#{item.loginState,jdbcType=INTEGER},
@@ -256,10 +256,10 @@
     <trim prefix="set" suffixOverrides=",">
 
       <!-- 拼接case when 这是另一种写法，这种写着更专业的感觉 -->
-      <trim prefix="userName =case" suffix="end,">
+      <trim prefix="username =case" suffix="end,">
         <foreach collection="list" item="item">
-          <if test="item.userName!=null">
-            when id=#{item.id} then #{item.userName}
+          <if test="item.username!=null">
+            when id=#{item.id} then #{item.username}
           </if>
         </foreach>
       </trim>

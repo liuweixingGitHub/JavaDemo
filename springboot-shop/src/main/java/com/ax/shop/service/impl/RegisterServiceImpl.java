@@ -20,16 +20,16 @@ public class RegisterServiceImpl implements IRegisterService {
     @Override
     public boolean register(String username, String password, int userType) {
 
-        int count = this.userinfoMapper.getCountByuserName(username);
+        int count = this.userinfoMapper.getCountByusername(username);
         MD5Encoder.encode(password.getBytes());
 
         if (count <= 0) {
             Userinfo userinfo = new Userinfo();
-            userinfo.setUserName(username);
+            userinfo.setUsername(username);
             /**password 加密密码*/
             /* String psw_md5 = DigestUtils.md5DigestAsHex(password.getBytes());*/
-            userinfo.setPassWord(password);
-            userinfo.setUserType(userType);
+            userinfo.setPassword(password);
+//            userinfo.setUserType(userType);
             int insert = this.userinfoMapper.insert(userinfo);
 
             return insert > 0;
@@ -41,7 +41,7 @@ public class RegisterServiceImpl implements IRegisterService {
     @Override
     public boolean checkUsername(String username) {
 
-        int count = this.userinfoMapper.getCountByuserName(username);
+        int count = this.userinfoMapper.getCountByusername(username);
 
         System.out.println("count = " + count);
 

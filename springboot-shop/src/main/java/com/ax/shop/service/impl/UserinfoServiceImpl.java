@@ -26,6 +26,12 @@ public class UserinfoServiceImpl implements IUserinfoService {
     public List<Userinfo> getAllUserinfo() {
         return userinfoMapper.getAll();
     }
+
+    @Override
+    public Userinfo selectUserWithRelo(Long id) {
+        return userinfoMapper.selectUserWithRelo(id);
+    }
+
 }
 
 

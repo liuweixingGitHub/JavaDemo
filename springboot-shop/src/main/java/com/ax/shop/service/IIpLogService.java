@@ -2,7 +2,7 @@ package com.ax.shop.service;
 
 import com.ax.shop.entity.IpLog;
 import com.ax.shop.query.IpLogQueryObject;
-import com.ax.shop.util.axtools.AxPageResultEntity;
+import com.ax.shop.util.axUtil.AxPageResultEntity;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
 

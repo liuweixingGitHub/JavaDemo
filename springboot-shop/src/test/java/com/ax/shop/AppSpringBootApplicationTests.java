@@ -3,8 +3,8 @@ package com.ax.shop;
 import com.ax.shop.service.impl.RedisService;
 import com.ax.shop.entity.IpLog;
 import com.ax.shop.mapper.IpLogMapper;
-import com.ax.shop.util.axtools.AxResultStateEnum;
-import com.ax.shop.util.axtools.AxResultEntity;
+import com.ax.shop.util.axUtil.AxResultStateEnum;
+import com.ax.shop.util.axUtil.AxResultEntity;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -87,7 +87,7 @@ public class AppSpringBootApplicationTests {
 	public void set() {
 //		IpLog ipLog = new IpLog();
 //		ipLog.setId((long) 88);
-//		ipLog.setUserName("jim");
+//		ipLog.setUsername("jim");
 //
 //		redisUtils.set("ipLog:redis_key1", ipLog);
 		AxResultEntity responseEntity =new AxResultEntity();
@@ -129,13 +129,13 @@ public class AppSpringBootApplicationTests {
 
 		IpLog ipLog1 = new IpLog();
 
-		ipLog1.setUserName("jim1");
+		ipLog1.setUsername("jim1");
 
 
 		list.add(ipLog1);
 
 		IpLog ipLog2 = new IpLog();
-		ipLog2.setUserName("jim2");
+		ipLog2.setUsername("jim2");
 
 		list.add(ipLog2);
 
@@ -153,12 +153,12 @@ public class AppSpringBootApplicationTests {
 
 		IpLog ipLog1 = ipLogMapper.selectByPrimaryKey(88L);
 
-		ipLog1.setUserName("jim11");
+		ipLog1.setUsername("jim11");
 
 		list.add(ipLog1);
 
 		IpLog ipLog2 = ipLogMapper.selectByPrimaryKey(89L);;
-		ipLog2.setUserName("jim22");
+		ipLog2.setUsername("jim22");
 
 		list.add(ipLog2);
 

@@ -183,7 +183,7 @@
 
 CREATE TABLE t_ipLog (
 id int primary key auto_increment,
-userName VARCHAR(120),
+username VARCHAR(120),
 loginTime VARCHAR(200),
 ip VARCHAR(200),
 loginState VARCHAR(200),
@@ -195,8 +195,8 @@ userinfoId VARCHAR(200)
 
 CREATE TABLE t_userinfo (
 id int primary key auto_increment,
-userName VARCHAR(120),
-passWord VARCHAR(200),
+username VARCHAR(120),
+password VARCHAR(200),
 userType int(10)
 );
 

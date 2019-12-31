@@ -85,7 +85,7 @@ $(function () {
 
                         window.localStorage.setItem('user', JSON.stringify(data.body));
 
-                        // var User = { "id":0 ,"userType":0 ,"userName": "","passWord":"","token":""};
+                        // var User = { "id":0 ,"userType":0 ,"username": "","password":"","token":""};
 
 
                         // var user = JSON.parse(localStorage.getItem('user'));

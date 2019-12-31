@@ -36,6 +36,7 @@ public class MyAuthenticationProvider implements AuthenticationProvider {
 
         // 这里调用我们的自己写的获取用户的方法；
         Userinfo userInfo = loginService.getByUserName(username);
+
         if (userInfo == null) {
             throw new BadCredentialsException("用户名不存在");
         }

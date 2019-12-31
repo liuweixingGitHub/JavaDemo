@@ -1,6 +1,9 @@
 package com.ax.shop.security.controller;
 
 
+import com.ax.shop.entity.Userinfo;
+import com.ax.shop.service.IUserinfoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Role;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -44,13 +47,15 @@ public class SecurityController {
         return "Hello,Worl-33!";
     }
 
+    @Autowired
+    private IUserinfoService userinfoService;
 
 
     //@PreAuthorize可以用来控制一个方法是否能够被调用。
     @RequestMapping("/security2")
-    public String admin3() {
+    public Object admin3() {
 
-        return "security2";
+        return userinfoService.selectUserWithRelo(1L);
     }
 
 

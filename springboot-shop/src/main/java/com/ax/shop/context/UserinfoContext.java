@@ -1,7 +1,7 @@
 package com.ax.shop.context;
 
 import com.ax.shop.entity.Userinfo;
-import com.ax.shop.util.axtools.AxConst;
+import com.ax.shop.util.axUtil.AxConst;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
