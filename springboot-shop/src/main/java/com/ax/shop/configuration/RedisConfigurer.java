@@ -28,6 +28,7 @@ import java.util.Map;
  * @author liuyazhuang
  */
 @Configuration
+/**Redis 是否可用*/
 //@EnableCaching
 public class RedisConfigurer extends CachingConfigurerSupport {
 

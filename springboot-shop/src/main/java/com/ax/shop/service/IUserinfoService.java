@@ -15,4 +15,6 @@ public interface IUserinfoService {
 
     List<Userinfo> getAllUserinfo();
 
+
+     List<Userinfo> getAllUserinfoWithRedis();
 }

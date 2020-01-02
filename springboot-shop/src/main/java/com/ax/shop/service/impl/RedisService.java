@@ -1,5 +1,6 @@
 package com.ax.shop.service.impl;
 
+import com.ax.shop.entity.Userinfo;
 import com.ax.shop.service.IRedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.*;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -75,6 +77,43 @@ public class RedisService implements IRedisService {
         }
         return result;
     }
+
+    @Override
+    public List<Userinfo> gettWithThread(final String key, Callable callable) {
+
+        boolean result = false;
+
+        List<Userinfo> list = ( List<Userinfo> )redisTemplate.opsForValue().get(key);
+        try {
+
+            // 双重检测锁
+            if (null==list){
+                synchronized (this){
+                    // 在redis中获取
+                    list= ( List<Userinfo> )redisTemplate.opsForValue().get(key);
+                    if (null==list){
+                        System.out.println("查询数据库------------");
+
+                        list = (List<Userinfo>) callable.call();
+
+                        redisTemplate.opsForValue().set(key,list);
+                        result = true;
+                    }else {
+                        System.out.println("查询redis缓存------------");
+                    }
+                }
+            }else{
+                System.out.println("查询redis缓存------------");
+            }
+
+        }catch (Exception e){
+
+            return list;
+        }
+        return list;
+    }
+
+
 
     /**
      * 批量删除对应的value

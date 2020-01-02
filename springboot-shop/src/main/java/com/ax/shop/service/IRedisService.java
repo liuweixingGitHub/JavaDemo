@@ -1,7 +1,10 @@
 package com.ax.shop.service;
 
+import com.ax.shop.entity.Userinfo;
+
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 public interface IRedisService {
@@ -27,6 +30,10 @@ public interface IRedisService {
      * @return
      */
     public boolean set(final String key, Object value, long outTime, TimeUnit timeUnit);
+
+
+     List<Userinfo> gettWithThread(final String key, Callable callable);
+
 
     /**
      * 批量删除对应的value
