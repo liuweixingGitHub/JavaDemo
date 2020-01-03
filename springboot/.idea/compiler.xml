@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="springboot-dubbo-consumer" />
+        <module name="springboot-dubbo-provider" />
+        <module name="dubbo-provider" />
+        <module name="springboot-dubbo-interface" />
+        <module name="springboot-shop" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="dubbo-consumer" target="1.8" />
+      <module name="dubbo-provider" target="1.8" />
+      <module name="springboot-dubbo-consumer" target="1.8" />
+      <module name="springboot-dubbo-interface" target="1.8" />
+      <module name="springboot-dubbo-provider" target="1.8" />
+      <module name="springboot-shop" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="dubbo-consumer" options="-parameters" />
+      <module name="dubbo-provider" options="-parameters" />
+      <module name="springboot-dubbo-consumer" options="-parameters" />
+      <module name="springboot-dubbo-provider" options="-parameters" />
+      <module name="springboot-shop" options="-parameters" />
+    </option>
+  </component>
+</project>
