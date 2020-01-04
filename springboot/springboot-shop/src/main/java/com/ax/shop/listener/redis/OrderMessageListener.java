@@ -11,7 +11,7 @@ public class OrderMessageListener implements MessageListener {
 
     @Override
     public void onMessage(Message message, byte[] bytes) {
-        System.out.println("getChannel = " + new String(message.getChannel()));
+        System.out.println("缓存失效getChannel = " + new String(message.getChannel()));
         System.out.println("getBody = " + new String(message.getBody()));
 
     }

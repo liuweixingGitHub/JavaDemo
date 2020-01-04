@@ -30,7 +30,7 @@ public class RedisService implements IRedisService {
 
     public final static String REDIS_VALUE_IPLOG = "iplog_p0";
 
-    public final static String REDIS_VALUE_USERINFO = "REDIS_VALUE_USERINFO_P0";
+    public final static String REDIS_VALUE_USERINFO = "userinfo";
 
 
     /**

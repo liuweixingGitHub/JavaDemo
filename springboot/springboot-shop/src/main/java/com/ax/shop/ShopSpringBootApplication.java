@@ -19,10 +19,12 @@ import java.time.format.DateTimeFormatter;
  * @author axing
  */
 
+/**
+ * 打包 war 必须改继承 SpringBootServletInitializer
+ * 同时用springboot 打包插件
+ * */
 
 @SpringBootApplication
-/**开启缓存功能*/
-//@EnableCaching
 @MapperScan("com.ax.shop.mapper")
 @EnableTransactionManagement
 @EnableSwagger2             //启动swagger注解

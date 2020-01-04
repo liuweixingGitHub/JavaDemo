@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/01springboot-shop" />
+    <file type="web" url="file://$PROJECT_DIR$/03springboot-war" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot-shop" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -7,6 +12,9 @@
         <option value="$PROJECT_DIR$/springboot-shop/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-dubbo-provider/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-dubbo-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/02springboot-noweb/pom.xml" />
+        <option value="$PROJECT_DIR$/03springboot-war/pom.xml" />
+        <option value="$PROJECT_DIR$/04springboot-jar/pom.xml" />
       </list>
     </option>
   </component>

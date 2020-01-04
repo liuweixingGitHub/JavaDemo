@@ -10,10 +10,11 @@
 	</parent>
 	<groupId>com.ax</groupId>
 	<artifactId>springboot-shop</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>springboot-shop</name>
-	<packaging>jar</packaging>
-	<description>实习项目</description>
+	<packaging>war</packaging>
+	<description>练手</description>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -200,6 +201,7 @@
 	<build>
 
 		<plugins>
+			<!--打包插件-->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

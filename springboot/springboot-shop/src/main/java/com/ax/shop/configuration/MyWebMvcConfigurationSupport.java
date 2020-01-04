@@ -3,8 +3,9 @@ package com.ax.shop.configuration;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
-import com.ax.shop.inteceptor.TokenInterceptor;
 import com.ax.shop.inteceptor.BaseInteceptor;
+import com.ax.shop.inteceptor.LogInterceptor;
+import com.ax.shop.inteceptor.TokenInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -38,6 +39,10 @@ public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
         return new TokenInterceptor();
     }
 
+    @Bean
+    public LogInterceptor logInterceptor(){
+        return new LogInterceptor();
+    }
     /**
      * 字符返回乱码
      *
@@ -109,7 +114,11 @@ public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
 //        registry.addInterceptor(baseInteceptor()).addPathPatterns("/**");
 
         registry.addInterceptor(this.tokenInterceptor()).addPathPatterns("/**");
+        registry.addInterceptor(logInterceptor()).addPathPatterns("/**");
+//        不需要拦截的
+//        String[] excludePathPatterns = {};
 
+//        registry.addInterceptor(this.tokenInterceptor()).addPathPatterns("/**").excludePathPatterns();
         super.addInterceptors(registry);
 
     }
@@ -170,6 +179,7 @@ public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
     protected RequestMappingHandlerMapping createRequestMappingHandlerMapping() {
         return new MyRequestMappingHandlerMapping();
     }
+
 
 
 }

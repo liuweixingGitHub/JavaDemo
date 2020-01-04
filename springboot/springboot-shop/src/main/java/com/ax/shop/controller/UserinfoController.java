@@ -19,9 +19,11 @@ public class UserinfoController {
 
 
     @RequestMapping(value = "/getUserInfo.do")
-    public Object getUserInfo(Long id) {
+    public Object getUserInfo(long id) {
 
-        return iUserinfoService.get(id);
+        System.out.println("id = " + id);
+
+        return iUserinfoService.getUserinfoWithKey(id);
 
     }
 

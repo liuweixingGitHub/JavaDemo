@@ -61,7 +61,7 @@ public class TokenInterceptor implements HandlerInterceptor {
                 } catch (JWTDecodeException j) {
                     throw new TokenException("token解析失败");
                 }
-                Userinfo user = userService.get(Long.valueOf(userId));
+                Userinfo user = userService.getUserinfoWithKey(Long.valueOf(userId));
                 if (user == null) {
                     throw new TokenException("用户不存在，请重新登录");
                 }

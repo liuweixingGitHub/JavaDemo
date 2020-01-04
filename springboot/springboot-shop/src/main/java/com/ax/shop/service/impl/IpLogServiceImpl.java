@@ -124,10 +124,10 @@ public class IpLogServiceImpl implements IIpLogService {
     RedisService redisService;
 
     //    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG,key = "#id" )
-    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG, key = "#p0")
+//    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG, key = "#p0")
 //    @Scheduled(fixedDelay = 6)
     @Override
-    public Object getByKey(Long id) {
+    public AxResultEntity getByKeyResultEntity(Long id) {
         IpLog ipLog = ipLogMapper.selectByPrimaryKey(id);
 
         AxResultEntity<IpLog> responseEntity = new AxResultEntity();
@@ -142,6 +142,15 @@ public class IpLogServiceImpl implements IIpLogService {
 
         return responseEntity;
     }
+
+    @Override
+    public IpLog getByKey(Long id){
+        IpLog ipLog = ipLogMapper.selectByPrimaryKey(id);
+        return ipLog;
+    }
+
+
+
 
     //    @CacheEvict(value = RedisService.REDIS_VALUE_IPLOG,key = "#ipLog.id")
     @CacheEvict(value = RedisService.REDIS_VALUE_IPLOG, key = "#p0.id")

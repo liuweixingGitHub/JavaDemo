@@ -2,9 +2,12 @@ package com.ax.shop.service;
 
 import com.ax.shop.entity.IpLog;
 import com.ax.shop.query.IpLogQueryObject;
+import com.ax.shop.service.impl.RedisService;
 import com.ax.shop.util.axUtil.AxPageResultEntity;
+import com.ax.shop.util.axUtil.AxResultEntity;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
+import org.springframework.cache.annotation.Cacheable;
 
 import java.util.List;
 
@@ -22,7 +25,11 @@ public interface IIpLogService {
      */
     AxPageResultEntity query(IpLogQueryObject queryObject);
 
-    Object getByKey(Long id);
+    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
+    AxResultEntity getByKeyResultEntity(Long id);
+
+    @Cacheable(value = RedisService.REDIS_VALUE_IPLOG)
+    IpLog getByKey(Long id);
 
     /**
      * 插入

@@ -21,7 +21,7 @@ public class UserinfoServiceImpl implements IUserinfoService {
     private UserinfoMapper userinfoMapper;
 
     @Override
-    public Userinfo get(Long id) {
+    public Userinfo getUserinfoWithKey(long id) {
         return userinfoMapper.selectByPrimaryKey(id);
 
     }
@@ -34,7 +34,7 @@ public class UserinfoServiceImpl implements IUserinfoService {
     }
 
     @Override
-    public Userinfo selectUserWithRelo(Long id) {
+    public Userinfo selectUserWithRelo(long id) {
         return userinfoMapper.selectUserWithRelo(id);
     }
 

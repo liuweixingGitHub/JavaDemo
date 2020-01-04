@@ -52,8 +52,11 @@ public class IpLogController {
 
     @RequestMapping(value = "/getIpLog.do")
     public Object getByKey(Long id) {
-        return ipLogService.getByKey(id);
-
+        System.out.println("id = " + id);
+        IpLog ipLog =  ipLogService.getByKey(id);
+        System.out.println("ipLog = " + ipLog);
+        return ipLog;
+//        return ipLogService.getByKeyResultEntity(id);
     }
 
     @RequestMapping(value = "/updateIplog.do")

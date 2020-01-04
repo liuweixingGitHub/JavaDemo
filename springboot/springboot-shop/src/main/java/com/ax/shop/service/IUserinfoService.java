@@ -11,11 +11,12 @@ import java.util.List;
  */
 public interface IUserinfoService {
 
-    Userinfo get(Long id);
+    @Cacheable(value = RedisService.REDIS_VALUE_USERINFO)
+    Userinfo getUserinfoWithKey(long id);
 
-    Userinfo selectUserWithRelo(Long id);
+    Userinfo selectUserWithRelo(long id);
 
-    //    @Cacheable(value = RedisService.REDIS_VALUE_USERINFO,sync=true)
+//        @Cacheable(value = RedisService.REDIS_VALUE_USERINFO,sync=true)
     @Cacheable(value = RedisService.REDIS_VALUE_USERINFO, sync = true)
     List<Userinfo> getAllUserinfo();
 
