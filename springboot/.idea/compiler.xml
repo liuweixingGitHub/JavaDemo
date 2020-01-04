@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -10,23 +11,19 @@
         <module name="springboot-dubbo-provider" />
         <module name="04springboot-jar" />
         <module name="02springboot-noweb" />
+        <module name="dubbo-provider" />
         <module name="03springboot-war" />
         <module name="springboot-dubbo-interface" />
         <module name="springboot-shop" />
-        <module name="dubbo-provider" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="02springboot-noweb" target="1.8" />
       <module name="03springboot-war" target="1.8" />
       <module name="04springboot-jar" target="1.8" />
-      <module name="dubbo-consumer" target="1.8" />
-      <module name="dubbo-provider" target="1.8" />
-      <module name="s01pringboot-shop" target="1.8" />
       <module name="springboot-dubbo-consumer" target="1.8" />
       <module name="springboot-dubbo-interface" target="1.8" />
       <module name="springboot-dubbo-provider" target="1.8" />
-      <module name="springboot-shop" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -34,12 +31,8 @@
       <module name="02springboot-noweb" options="-parameters" />
       <module name="03springboot-war" options="-parameters" />
       <module name="04springboot-jar" options="-parameters" />
-      <module name="dubbo-consumer" options="-parameters" />
-      <module name="dubbo-provider" options="-parameters" />
-      <module name="s01pringboot-shop" options="-parameters" />
       <module name="springboot-dubbo-consumer" options="-parameters" />
       <module name="springboot-dubbo-provider" options="-parameters" />
-      <module name="springboot-shop" options="-parameters" />
     </option>
   </component>
 </project>

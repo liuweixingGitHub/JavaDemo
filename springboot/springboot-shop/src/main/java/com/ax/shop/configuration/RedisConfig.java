@@ -23,34 +23,31 @@ import java.util.Map;
 /**
  * Redis缓存配置类
  *
- * @author liuyazhuang
+ * @author 2020-01-04
  */
 @Configuration
 /**Redis 是否可用*/
 @EnableCaching
 public class RedisConfig extends CachingConfigurerSupport {
 
-    /**2020-01-04*/
 
-
-
-
-//        @Bean
-//    public KeyGenerator keyGenerator() {
-//        return new KeyGenerator() {
-//            @Override
-//            public Object generate(Object o, Method method, Object... objects) {
-//                return method.getName()+ Arrays.asList(objects).toString();
-//            }
-//        };
-//    }
+/*    @Bean
+    public KeyGenerator keyGenerator() {
+        return new KeyGenerator() {
+            @Override
+            public Object generate(Object o, Method method, Object... objects) {
+                System.out.println("o = " + o);
+                return method.getName() + Arrays.asList(objects).toString();
+            }
+        };
+    }*/
 
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory connectionFactory) {
 
         RedisCacheWriter redisCacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(connectionFactory);
 
-        RedisCacheManager manager =  RedisCacheManager
+        RedisCacheManager manager = RedisCacheManager
                 .builder(redisCacheWriter)
                 .cacheDefaults(redisCacheConfiguration(-1))
 //                .initialCacheNames(cacheNames.build())
@@ -60,13 +57,13 @@ public class RedisConfig extends CachingConfigurerSupport {
         return manager;
     }
 
-    private RedisSerializer<Object> redisSerializer(){
+    private RedisSerializer<Object> redisSerializer() {
 //        FastJsonRedisSerializer<Object> redisSerializer = new FastJsonRedisSerializer<>(Object.class);
 //        return redisSerializer;
         return new GenericFastJsonRedisSerializer();
     }
 
-    private  RedisCacheConfiguration redisCacheConfiguration(long seconds){
+    private RedisCacheConfiguration redisCacheConfiguration(long seconds) {
 
         RedisSerializationContext.SerializationPair serializationPair =
                 RedisSerializationContext.SerializationPair.fromSerializer(redisSerializer());
@@ -87,7 +84,7 @@ public class RedisConfig extends CachingConfigurerSupport {
         return redisCacheConfigurationMap;
     }
 
-  /**
+    /**
      * 初始化监听器
      */
     @Bean
@@ -105,7 +102,6 @@ public class RedisConfig extends CachingConfigurerSupport {
     OrderMessageListener orderMessageListenerAdapter() {
         return new OrderMessageListener();
     }
-
 
 
 }
