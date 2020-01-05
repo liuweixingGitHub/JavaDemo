@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/springboot-shop/01springboot-shop.iml" filepath="$PROJECT_DIR$/springboot-shop/01springboot-shop.iml" />
       <module fileurl="file://$PROJECT_DIR$/02springboot-noweb/02springboot-noweb.iml" filepath="$PROJECT_DIR$/02springboot-noweb/02springboot-noweb.iml" />
       <module fileurl="file://$PROJECT_DIR$/03springboot-war/03springboot-war.iml" filepath="$PROJECT_DIR$/03springboot-war/03springboot-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/04springboot-jar/04springboot-jar.iml" filepath="$PROJECT_DIR$/04springboot-jar/04springboot-jar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05springboot-kafka-api/05springboot-kafka-api.iml" filepath="$PROJECT_DIR$/05springboot-kafka-api/05springboot-kafka-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05springboot-kafka-consumer/05springboot-kafka-consumer.iml" filepath="$PROJECT_DIR$/05springboot-kafka-consumer/05springboot-kafka-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05springboot-kafka-consumer2/05springboot-kafka-consumer2.iml" filepath="$PROJECT_DIR$/05springboot-kafka-consumer2/05springboot-kafka-consumer2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05springboot-kafka-producer/05springboot-kafka-producer.iml" filepath="$PROJECT_DIR$/05springboot-kafka-producer/05springboot-kafka-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06springboot-websocket/06springboot-websocket.iml" filepath="$PROJECT_DIR$/06springboot-websocket/06springboot-websocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-consumer/springboot-dubbo-consumer.iml" filepath="$PROJECT_DIR$/springboot-dubbo-consumer/springboot-dubbo-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-interface/springboot-dubbo-interface.iml" filepath="$PROJECT_DIR$/springboot-dubbo-interface/springboot-dubbo-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-provider/springboot-dubbo-provider.iml" filepath="$PROJECT_DIR$/springboot-dubbo-provider/springboot-dubbo-provider.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot-shop/01springboot-shop.iml" filepath="$PROJECT_DIR$/springboot-shop/01springboot-shop.iml" />
     </modules>
   </component>
 </project>

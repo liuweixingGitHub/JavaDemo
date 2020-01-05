@@ -4,6 +4,13 @@
     <file url="file://$PROJECT_DIR$/02springboot-noweb/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/03springboot-war/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/04springboot-jar/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05springboot-kafka-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05springboot-kafka-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05springboot-kafka-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05springboot-kafka-consumer2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05springboot-kafka-consumer2/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/05springboot-kafka-producer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/06springboot-websocket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-dubbo-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-dubbo-interface/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-dubbo-interface/src/main/resources" charset="UTF-8" />

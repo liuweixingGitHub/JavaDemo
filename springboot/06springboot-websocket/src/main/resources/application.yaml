@@ -1,0 +1,11 @@
+server:
+  servlet:
+    context-path: /
+  port: 8080
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+
+

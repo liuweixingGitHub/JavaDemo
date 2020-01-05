@@ -15,10 +15,22 @@
         <option value="$PROJECT_DIR$/02springboot-noweb/pom.xml" />
         <option value="$PROJECT_DIR$/03springboot-war/pom.xml" />
         <option value="$PROJECT_DIR$/04springboot-jar/pom.xml" />
+        <option value="$PROJECT_DIR$/05springboot-kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/05springboot-kafka-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/05springboot-kafka-producer/pom.xml" />
+        <option value="$PROJECT_DIR$/../springboot05/springboot-kafka-api/pom.xml" />
+        <option value="$PROJECT_DIR$/05springboot-kafka-api/pom.xml" />
+        <option value="$PROJECT_DIR$/05springboot-kafka-consumer2/pom.xml" />
+        <option value="$PROJECT_DIR$/06springboot-websocket/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../springboot05/05springboot-kafka-api/pom.xml" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

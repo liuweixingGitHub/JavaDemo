@@ -7,20 +7,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot-dubbo-consumer" />
-        <module name="springboot-dubbo-provider" />
-        <module name="04springboot-jar" />
-        <module name="02springboot-noweb" />
-        <module name="dubbo-provider" />
+        <module name="05springboot-kafka-consumer2" />
         <module name="03springboot-war" />
-        <module name="springboot-dubbo-interface" />
+        <module name="springboot-dubbo-consumer" />
+        <module name="dubbo-provider" />
+        <module name="02springboot-noweb" />
+        <module name="01springboot-shop" />
         <module name="springboot-shop" />
+        <module name="06springboot-websocket" />
+        <module name="05springboot-kafka-producer" />
+        <module name="05springboot-kafka-consumer" />
+        <module name="04springboot-jar" />
+        <module name="springboot-dubbo-provider" />
+        <module name="springboot-dubbo-interface" />
+        <module name="05springboot-kafka-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="01springboot-shop" target="1.8" />
       <module name="02springboot-noweb" target="1.8" />
       <module name="03springboot-war" target="1.8" />
       <module name="04springboot-jar" target="1.8" />
+      <module name="05springboot-kafka-api" target="1.8" />
+      <module name="05springboot-kafka-consumer" target="1.8" />
+      <module name="05springboot-kafka-consumer2" target="1.8" />
+      <module name="05springboot-kafka-producer" target="1.8" />
+      <module name="06springboot-websocket" target="1.8" />
       <module name="springboot-dubbo-consumer" target="1.8" />
       <module name="springboot-dubbo-interface" target="1.8" />
       <module name="springboot-dubbo-provider" target="1.8" />
@@ -28,9 +40,15 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="01springboot-shop" options="-parameters" />
       <module name="02springboot-noweb" options="-parameters" />
       <module name="03springboot-war" options="-parameters" />
       <module name="04springboot-jar" options="-parameters" />
+      <module name="05springboot-kafka-api" options="" />
+      <module name="05springboot-kafka-consumer" options="-parameters" />
+      <module name="05springboot-kafka-consumer2" options="-parameters" />
+      <module name="05springboot-kafka-producer" options="-parameters" />
+      <module name="06springboot-websocket" options="-parameters" />
       <module name="springboot-dubbo-consumer" options="-parameters" />
       <module name="springboot-dubbo-provider" options="-parameters" />
     </option>
