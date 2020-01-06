@@ -22,6 +22,7 @@
         <option value="$PROJECT_DIR$/05springboot-kafka-api/pom.xml" />
         <option value="$PROJECT_DIR$/05springboot-kafka-consumer2/pom.xml" />
         <option value="$PROJECT_DIR$/06springboot-websocket/pom.xml" />
+        <option value="$PROJECT_DIR$/07springboot-more-db/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

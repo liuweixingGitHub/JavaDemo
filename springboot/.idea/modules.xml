@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/05springboot-kafka-consumer2/05springboot-kafka-consumer2.iml" filepath="$PROJECT_DIR$/05springboot-kafka-consumer2/05springboot-kafka-consumer2.iml" />
       <module fileurl="file://$PROJECT_DIR$/05springboot-kafka-producer/05springboot-kafka-producer.iml" filepath="$PROJECT_DIR$/05springboot-kafka-producer/05springboot-kafka-producer.iml" />
       <module fileurl="file://$PROJECT_DIR$/06springboot-websocket/06springboot-websocket.iml" filepath="$PROJECT_DIR$/06springboot-websocket/06springboot-websocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07springboot-more-db/07springboot-more-db.iml" filepath="$PROJECT_DIR$/07springboot-more-db/07springboot-more-db.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-consumer/springboot-dubbo-consumer.iml" filepath="$PROJECT_DIR$/springboot-dubbo-consumer/springboot-dubbo-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-interface/springboot-dubbo-interface.iml" filepath="$PROJECT_DIR$/springboot-dubbo-interface/springboot-dubbo-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-provider/springboot-dubbo-provider.iml" filepath="$PROJECT_DIR$/springboot-dubbo-provider/springboot-dubbo-provider.iml" />
