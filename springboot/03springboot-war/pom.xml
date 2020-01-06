@@ -11,7 +11,7 @@
 
     <groupId>com.ax</groupId>
     <artifactId>03springboot-war</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>03springboot-war</name>
     <packaging>war</packaging>
     <!--war 用外部Tomcat,jar 用内部的Tomcat-->
@@ -38,6 +38,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope><!-- 打成war的时候打开注释，本地开发用内嵌tomcat时加上注释 -->
+        </dependency>
+
+
     </dependencies>
 
     <build>
