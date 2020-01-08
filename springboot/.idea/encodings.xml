@@ -12,6 +12,7 @@
     <file url="file://$PROJECT_DIR$/05springboot-kafka-producer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/06springboot-websocket/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/07springboot-more-db/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/09springsecurity-oauth/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-dubbo-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-dubbo-interface/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-dubbo-interface/src/main/resources" charset="UTF-8" />

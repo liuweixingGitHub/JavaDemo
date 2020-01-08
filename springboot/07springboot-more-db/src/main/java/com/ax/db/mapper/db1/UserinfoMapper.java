@@ -1,7 +1,7 @@
 package com.ax.db.mapper.db1;
 
 
-import com.ax.db.entity.Userinfo;
+import com.ax.db.entity.db1.Userinfo;
 
 import java.util.List;
 
