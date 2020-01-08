@@ -12,6 +12,8 @@ public interface IUserinfoService {
 
     Userinfo getUserinfoWithKey(long id);
 
+    Userinfo getByUsername(String username);
+
     Userinfo selectUserWithRelo(long id);
 
     List<Userinfo> getAllUserinfo();

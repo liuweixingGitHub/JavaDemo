@@ -1,7 +1,7 @@
 package com.ax.springsecurity.entity;
 
 import com.alibaba.fastjson.annotation.JSONField;
-import com.ax.springsecurity.util.axUtil.AxJwtUtil;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
@@ -10,19 +10,35 @@ import java.util.List;
 /**
  * @author axing
  */
-public class Userinfo implements UserDetails {
 
+public class Userinfo implements UserDetails {
 
     private Long id;
     private String token;
     private String password;
     private String username;
-    /**
-     * 用户权限
-     **/
-    List<UserRole> authorities;
-
+    private List<UserRole> authorities;
     private int userType;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+
+    public void setAuthorities(List<UserRole> authorities) {
+        this.authorities = authorities;
+    }
 
     public int getUserType() {
         return userType;
@@ -32,45 +48,7 @@ public class Userinfo implements UserDetails {
         this.userType = userType;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-
-//        if (id > 0 && username != null && password != null) {
-//            token = AxJwtUtil.createJWT(id.toString(),username,password,0);
-//        }
-    }
-
-    public String getToken() {
-        token = AxJwtUtil.createJWT(id.toString(),username,password,0);
-        return token;
-    }
-
-//    public void setToken(String token) {
-//        this.token = token;
-//    }
-
-    public void setPassword(String password) {
-        this.password = password;
-//        if (id > 0 && username != null && password != null) {
-//            token = AxJwtUtil.createJWT(id.toString(),username,password,0);
-//        }
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-//        if (id > 0 && username != null && password != null) {
-//            token = AxJwtUtil.createJWT(id.toString(),username,password,0);
-//        }
-    }
-
-    public void setAuthorities(List<UserRole> authorities) {
-        this.authorities = authorities;
-    }
-
+    //
     /**
      * 添加用户拥有的权限和角色
      *
@@ -83,7 +61,6 @@ public class Userinfo implements UserDetails {
 
     @Override
     public String getPassword() {
-//        return new BCryptPasswordEncoder().encode(password); //返回加密的密码
         return password; //直接返回密码
     }
 
@@ -99,6 +76,7 @@ public class Userinfo implements UserDetails {
      */
     @Override
     @JSONField(serialize = false)
+    @JsonIgnore
     public boolean isAccountNonExpired() {
         return true;
     }
@@ -109,7 +87,8 @@ public class Userinfo implements UserDetails {
      * @return
      */
     @Override
-    @JSONField(serialize = false)
+    @JSONField(serialize = false) //JSONObject对有JSONField(serialize = false)的不会返回，null的也不返回
+    @JsonIgnore //ObjectMapper对有注解jsonIgnore的不会返回，其它全部返回
     public boolean isAccountNonLocked() {
         return true;
     }
@@ -121,6 +100,7 @@ public class Userinfo implements UserDetails {
      */
     @Override
     @JSONField(serialize = false)
+    @JsonIgnore
     public boolean isCredentialsNonExpired() {
         return true;
     }
@@ -132,6 +112,7 @@ public class Userinfo implements UserDetails {
      */
     @Override
     @JSONField(serialize = false)
+    @JsonIgnore
     public boolean isEnabled() {
         return true;
     }

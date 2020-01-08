@@ -117,6 +117,7 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.ax.shop.entity
+
 #
 #pagehelper
 pagehelper:

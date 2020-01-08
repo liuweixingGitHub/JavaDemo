@@ -1,0 +1,14 @@
+server:
+  servlet:
+    context-path: /content
+  port: 8081
+
+security:
+  oauth2:
+    client:
+      client-id: client
+      client-secret: secret
+      access-token-uri: http://localhost:8080/oauth/token #请求令牌地址
+      user-authorization-uri: http://localhost:8080/oauth/authorize #授权地址
+    resource:
+      token-info-uri: http://localhost:8080/oauth/check_token #资源地址

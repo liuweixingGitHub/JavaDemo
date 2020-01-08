@@ -20,12 +20,18 @@ import javax.sql.DataSource;
 /*授权码 服务*/
 @Configuration
 @EnableAuthorizationServer
-public class AuthConfig extends AuthorizationServerConfigurerAdapter {
+public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
-//    http://localhost:8080/oauth/authorize?client_id=client&&response_type=code
+    /**
+//请求授权码地址
+    http://localhost:8080/oauth/authorize?client_id=client&response_type=code
 
 
-
+    获得授权码
+    http://client:secret@localhost:8080/oauth/token
+ grant_type  authorization_code
+ code
+*/
 
     //数据源,存储在数据库中
     @Bean
@@ -69,6 +75,20 @@ public class AuthConfig extends AuthorizationServerConfigurerAdapter {
 
         clients.withClientDetails(jdbc_clientDetailsService())
                ;
+//        // 配置客户端
+//        clients
+//                // 使用内存设置
+//                .inMemory()
+//                // client_id
+//                .withClient("client")
+//                // client_secret
+//                .secret(new BCryptPasswordEncoder().encode("secret"))
+//                // 授权类型
+//                .authorizedGrantTypes("authorization_code")
+//                // 授权范围
+//                .scopes("app")
+//                // 注册回调地址
+//                .redirectUris("http://www.funtl.com");
     }
 
     @Override

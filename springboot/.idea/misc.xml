@@ -25,6 +25,7 @@
         <option value="$PROJECT_DIR$/07springboot-more-db/pom.xml" />
         <option value="$PROJECT_DIR$/spring-security/pom.xml" />
         <option value="$PROJECT_DIR$/09springsecurity-oauth/pom.xml" />
+        <option value="$PROJECT_DIR$/09springsecurity-content/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
