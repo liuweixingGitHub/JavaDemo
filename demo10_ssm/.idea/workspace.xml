@@ -2,59 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3ea7d67-6a48-43bd-871a-4b252567d317" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../springboot/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-content/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-content/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-content/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-content/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-content/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-content/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-content/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-content/src/main/java/com/ax/content/config/ContentServerCofig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-content/src/main/java/com/ax/content/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-content/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-content/src/test/java/com/ax/content/ContentApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/OauthServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/mapper/UserinfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/resources/mapper/UserinfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/src/main/java/com/ax/springsecurity/09springsecurity-oauth/controller/TUserinfoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/src/main/java/com/ax/springsecurity/09springsecurity-oauth/entity/TUserinfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/src/main/java/com/ax/springsecurity/09springsecurity-oauth/mapper/TUserinfoMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/src/main/java/com/ax/springsecurity/09springsecurity-oauth/service/ITUserinfoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/src/main/java/com/ax/springsecurity/09springsecurity-oauth/service/impl/TUserinfoServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../springboot/src/main/resources/mapper/09springsecurity-oauth/TUserinfoMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/09springsecurity-content/src/main/java/com/ax/content/ContentApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/config/AuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/config/AuthorizationServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/config/WebSecurityConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/controller/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/controller/SecurityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/entity/Userinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/entity/Userinfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/handler/JwtAuthenticationTokenFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/handler/MyAccessDeniedHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/handler/MyAuthenticationEntryPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/handler/MyAuthenticationProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/handler/MyLoginFailureHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/handler/MyLoginSuccessHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/handler/MyLogoutSuccessHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/handler/UserDetailServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/service/IUserinfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/service/IUserinfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/service/UserinfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/java/com/ax/springsecurity/service/UserinfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/test/java/com/ax/ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/09springsecurity-oauth/src/test/java/com/ax/ApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot/springboot-shop/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../springboot/springboot-shop/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,6 +188,7 @@
       <workItem from="1577800115673" duration="30000" />
       <workItem from="1577801835148" duration="749000" />
       <workItem from="1578511323846" duration="692000" />
+      <workItem from="1578548073007" duration="598000" />
     </task>
     <servers />
   </component>

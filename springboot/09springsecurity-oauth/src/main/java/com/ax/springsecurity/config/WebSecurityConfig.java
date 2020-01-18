@@ -1,15 +1,20 @@
 package com.ax.springsecurity.config;//package com.ax.springsecurity.config;
 
+import com.ax.springsecurity.handler.MyLoginFailureHandler;
+import com.ax.springsecurity.handler.MyLoginSuccessHandler;
 import com.ax.springsecurity.service.UserDetailsServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
+import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 
 /**
  * 3、@EnableGlobalMethodSecurity详解
@@ -76,22 +81,41 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                ;
     }
 
+    @Bean
+    SimpleUrlAuthenticationFailureHandler failureHandler(){
+        return new MyLoginFailureHandler();
+    }
 
-//    @Override
-//    public void configure(HttpSecurity http) throws Exception {
-////
-////        http
-////                .authorizeRequests()
-////                .antMatchers("/test","/oauth/*").permitAll()     // 这两个页面任何人都可以访问
-////                .anyRequest().authenticated()                           // 其他任何请求都需要验证
-////        ;
+    @Bean
+    SimpleUrlAuthenticationSuccessHandler successHandler(){
+        return new MyLoginSuccessHandler();
+    }
+    @Override
+    public void configure(HttpSecurity http) throws Exception {
 //
+//        http
+//                .authorizeRequests()
+//                .antMatchers("/test","/oauth/*").permitAll()     // 这两个页面任何人都可以访问
+//                .anyRequest().authenticated()                           // 其他任何请求都需要验证
+//        ;
+
 //        /**开启授权认证 */
 //        http.authorizeRequests()
 //                //允许访问授权接口
 //                .antMatchers("/oauth/**").permitAll()
 //                //其他接口无需授权
 //                .anyRequest().authenticated();
-//
-//    }
+
+        /**
+         * 登陆成功后跳转页面
+         */
+        http.formLogin()
+                // 自定义登录成功页面,也可以在 SimpleUrlAuthenticationSuccessHandler 重定向
+//                .defaultSuccessUrl("home")
+                // 自定义登录成功处理
+                .successHandler(successHandler())
+                // 自定义登录失败处理
+                .failureHandler(failureHandler())
+                ;
+    }
 }

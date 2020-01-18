@@ -12,4 +12,7 @@ https://graph.qq.com/oauth2.0/show?which=Login&display=pc&client_id=100312028&re
     ABAC 基于属性
     PBAC 基于策略
     访问控制模型
+    
+    
+    http://client:secret@localhost:8080/oauth/token
  
