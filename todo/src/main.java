@@ -1,9 +1,5 @@
-import com.sun.org.apache.bcel.internal.generic.RETURN;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.lang.ref.SoftReference;
+import java.util.*;
 
 public class main {
 
@@ -18,19 +14,88 @@ public class main {
 ////        testLambdaService.test("xiaoming");
 //        testLambdaService.test1();;
 
-
-//        new Runnable() {
+//    String name="jim";
+//
+//
+//        String finalName = name;
+//        Runnable runnable =  new Runnable() {
+//
 //            @Override
 //            public void run() {
+//                try {
+//                    Thread.sleep(1000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
 //
+//
+//                System.out.println("name = " + finalName);
 //            }
-//        });
+//        };
+//
+//
+//        Thread thread = new Thread(runnable);
+//
+//        name = "tom";
+//        thread.start();;
+//        System.out.println("name = " + name);
+
+
+//        List list = Arrays.asList(0,1,2,3);
+////        list.add(4);
+//
+//        System.out.println("list = " + list);
+//        list.add(4);
+
+
+//        List obj = new ArrayList<Integer>() {{
+//            add(1);
+//            add(3);
+//
+//        }};
+//
+//
+//
+//
+//        List<Integer> items = Collections.unmodifiableList(Arrays.asList(0,1,2,3));
+//        items.add(2);
+
+
+//        Map aMap = new HashMap();
+//        aMap.put(1, "one");
+//        aMap.put(2, "two");
+//        Map map = Collections.unmodifiableMap(aMap);
+//
+//        System.out.println("aMap = " + aMap);
+//        System.out.println("map = " + map);
+//
+//        aMap.put(3,"there");
+//
+//        System.out.println("aMap = " + aMap);
+//        System.out.println("map = " + map);
+//        map.put(3,"there2");
 
 
 
+//        List<String> list = List.of("a", "b", "a", "c", "d");
+//        System.out.println(list);//[a, b, a, c, d]
+//
+//
+//        list.add("f");
 
-        LambdaObject.LambdaModel lambdaService = s ->{ System.out.println("s = " + s); return "xiaoming"+s ;};
-        LambdaObject lambdaObject = new LambdaObject(lambdaService);
+
+//        List list1 = Arrays.asList(0,1,2,3);
+//        System.out.println("list1 = " + list1);
+//        list1.add(4);
+
+
+        List list1 = Arrays.asList(0,1,2,3);
+        System.out.println("list1 = " + list1);
+        list1.add(4);
+
+
+        //        LambdaObject.LambdaModel lambdaModel = s ->{ System.out.println("s = " + s); return "xiaoming"+s ;};
+//        LambdaObject lambdaObject = new LambdaObject(lambdaModel);
 
 
 

@@ -7,9 +7,9 @@ public class LambdaObject {
     }
 
 
-    LambdaObject(LambdaModel service){
+    LambdaObject(LambdaModel model){
 
-     String string =  service.test("123");
+     String string =  model.test("123");
 
         System.out.println("string = " + string);
 
