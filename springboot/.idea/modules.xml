@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/07springboot-more-db/07springboot-more-db.iml" filepath="$PROJECT_DIR$/07springboot-more-db/07springboot-more-db.iml" />
       <module fileurl="file://$PROJECT_DIR$/09springsecurity-content/09springsecurity-content.iml" filepath="$PROJECT_DIR$/09springsecurity-content/09springsecurity-content.iml" />
       <module fileurl="file://$PROJECT_DIR$/09springsecurity-oauth/09springsecurity-oauth.iml" filepath="$PROJECT_DIR$/09springsecurity-oauth/09springsecurity-oauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10Springboot-nginx/10Springboot-nginx.iml" filepath="$PROJECT_DIR$/10Springboot-nginx/10Springboot-nginx.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-security/spring-security.iml" filepath="$PROJECT_DIR$/spring-security/spring-security.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-consumer/springboot-dubbo-consumer.iml" filepath="$PROJECT_DIR$/springboot-dubbo-consumer/springboot-dubbo-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-interface/springboot-dubbo-interface.iml" filepath="$PROJECT_DIR$/springboot-dubbo-interface/springboot-dubbo-interface.iml" />

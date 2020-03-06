@@ -8,23 +8,24 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="07springboot-more-db" />
-        <module name="09springsecurity-content" />
         <module name="03springboot-war" />
         <module name="05springboot-kafka-consumer2" />
         <module name="springboot-dubbo-consumer" />
         <module name="05springboot-kafka-producer" />
+        <module name="06springboot-websocket" />
         <module name="spring-security" />
         <module name="02springboot-noweb" />
         <module name="01springboot-shop" />
         <module name="springboot-shop" />
-        <module name="06springboot-websocket" />
+        <module name="09springsecurity-content" />
         <module name="dubbo-provider" />
+        <module name="05springboot-kafka-consumer" />
         <module name="09springsecurity-oauth" />
         <module name="04springboot-jar" />
         <module name="springboot-dubbo-provider" />
-        <module name="05springboot-kafka-api" />
+        <module name="10Springboot-nginx" />
         <module name="springboot-dubbo-interface" />
-        <module name="05springboot-kafka-consumer" />
+        <module name="05springboot-kafka-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -41,6 +42,7 @@
       <module name="08springsecurity-oauth" target="1.8" />
       <module name="09springsecurity-content" target="1.8" />
       <module name="09springsecurity-oauth" target="1.8" />
+      <module name="10Springboot-nginx" target="1.8" />
       <module name="spring-security" target="1.8" />
       <module name="springboot-dubbo-consumer" target="1.8" />
       <module name="springboot-dubbo-interface" target="1.8" />
@@ -63,6 +65,7 @@
       <module name="08springsecurity-oauth" options="-parameters" />
       <module name="09springsecurity-content" options="-parameters" />
       <module name="09springsecurity-oauth" options="-parameters" />
+      <module name="10Springboot-nginx" options="-parameters" />
       <module name="spring-security" options="-parameters" />
       <module name="springboot-dubbo-consumer" options="-parameters" />
       <module name="springboot-dubbo-provider" options="-parameters" />

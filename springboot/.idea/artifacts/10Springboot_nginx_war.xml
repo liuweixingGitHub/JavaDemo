@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="10Springboot-nginx:war">
+    <output-path>$PROJECT_DIR$/10Springboot-nginx/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>10Springboot-nginx</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="demo-1.0.0.war">
+      <element id="artifact" artifact-name="10Springboot-nginx:war exploded" />
+    </root>
+  </artifact>
+</component>
