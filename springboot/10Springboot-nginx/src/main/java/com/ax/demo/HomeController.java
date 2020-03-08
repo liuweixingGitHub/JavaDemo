@@ -1,11 +1,13 @@
 package com.ax.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,12 +41,27 @@ public class HomeController {
     @RequestMapping(value = {"/","/hi","/index.html"})
     public ModelAndView index(HttpServletRequest request){
         ModelAndView modelAndView = new ModelAndView("index");
+
         System.out.println(" request.getRemotePort() = " + request.getServerPort());
-
-        modelAndView.addObject("port",request.getServerPort());
-
+        System.out.println("port = " + port);
+        /// request.getServerPort()取值Nginx端口 ,要是负载均衡取 yaml端口
+//        modelAndView.addObject("port",request.getServerPort());
+        modelAndView.addObject("port",port);
         return modelAndView;
 
     }
+
+    @Autowired
+    ExcelService excelService;
+
+    @RequestMapping(value = "/excel")
+    public void excel(HttpServletResponse response) throws Exception {
+
+        excelService.exportExcel(response);
+
+    }
+
+
+
 
 }
