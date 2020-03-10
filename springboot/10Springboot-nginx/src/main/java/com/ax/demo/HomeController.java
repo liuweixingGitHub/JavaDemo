@@ -21,7 +21,7 @@ public class HomeController {
     public Object ipLogPageInfo() {
 
         Map<String, Object> map = new HashMap<>();
-        map.put("home","首页");
+        map.put("home", "首页");
         return map;
 
     }
@@ -38,15 +38,15 @@ public class HomeController {
     @Value("${server.port}")
     private String port;
 
-    @RequestMapping(value = {"/","/hi","/index.html"})
-    public ModelAndView index(HttpServletRequest request){
+    @RequestMapping(value = {"/", "/hi", "/index.html"})
+    public ModelAndView index(HttpServletRequest request) {
         ModelAndView modelAndView = new ModelAndView("index");
 
         System.out.println(" request.getRemotePort() = " + request.getServerPort());
         System.out.println("port = " + port);
         /// request.getServerPort()取值Nginx端口 ,要是负载均衡取 yaml端口
 //        modelAndView.addObject("port",request.getServerPort());
-        modelAndView.addObject("port",port);
+        modelAndView.addObject("port", port);
         return modelAndView;
 
     }
@@ -62,6 +62,34 @@ public class HomeController {
     }
 
 
+    @RequestMapping(value = "/test")
+    public Object do2(long time) throws InterruptedException {
 
+        Thread.sleep(time * 1000);
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("home", "首页");
+        return map;
+
+    }
+
+
+    @RequestMapping(value = "/video")
+    public Object video(){
+
+        ModelAndView modelAndView = new ModelAndView("videoPlay");
+        modelAndView.addObject("title", "小猪佩奇");
+
+        String name = "jm.mkv";
+//        String name = "v0200f930000bpajn9hevctlh37upcj0.MP4";
+
+        String videoPath = "http://127.0.0.1:8091/images/"+name;
+
+        modelAndView.addObject("path", videoPath);
+
+
+        return modelAndView;
+
+    }
 
 }

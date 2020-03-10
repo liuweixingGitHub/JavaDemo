@@ -9,7 +9,6 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/springboot-dubbo-interface/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-shop/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-dubbo-provider/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-dubbo-consumer/pom.xml" />
@@ -28,6 +27,7 @@
         <option value="$PROJECT_DIR$/09springsecurity-oauth/pom.xml" />
         <option value="$PROJECT_DIR$/09springsecurity-content/pom.xml" />
         <option value="$PROJECT_DIR$/10Springboot-nginx/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-dubbo-interface/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

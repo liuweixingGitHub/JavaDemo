@@ -18,7 +18,9 @@ spring:
   resources:
     static-locations: classpath:/static/
 
-
+  devtools:
+    restart:
+      enabled: true
 
 
 logging:

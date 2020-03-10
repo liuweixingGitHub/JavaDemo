@@ -133,8 +133,10 @@ public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
 
         super.addResourceHandlers(registry);
 
-        /**将static下面的js，css文件加载出来*/
+        /**将static下面的js，css文件加载出来 ,html引入文件就需要 ../static/ 这样前缀了*/
         registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+        /// 使用这个,html引入文件就不需要 ../static/ 这样前缀了
+        registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
 
 
 //        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
