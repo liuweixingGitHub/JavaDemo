@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/01Springboot-mvc" />
     <file type="web" url="file://$PROJECT_DIR$/01springboot-shop" />
     <file type="web" url="file://$PROJECT_DIR$/03springboot-war" />
     <file type="web" url="file://$PROJECT_DIR$/10Springboot-nginx" />
@@ -28,6 +29,8 @@
         <option value="$PROJECT_DIR$/09springsecurity-content/pom.xml" />
         <option value="$PROJECT_DIR$/10Springboot-nginx/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-dubbo-interface/pom.xml" />
+        <option value="$PROJECT_DIR$/01Springboot-mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/01Springboot-data/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -1,0 +1,29 @@
+server:
+  servlet:
+    context-path: /
+  port: 8091
+
+spring:
+  thymeleaf:
+    mode: HTML5 # 模板的模式
+    cache: false # 这个开发配置为false，避免改了模板还要重启服务器
+    check-template-location: true # 检查模板是否存在，然后再呈现
+    enabled: true #启用MVC Thymeleaf视图分辨率
+    template-resolver-order: 0
+    suffix: .html
+#    prefix: classpath:/templates/ # 这个是配置模板路径的，默认就是templates，可不用配置
+    encoding: UTF-8
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: classpath:/static/
+
+  devtools:
+    restart:
+      enabled: true
+
+
+logging:
+  level:
+    com.ax.shop.mapper : debug
+
