@@ -8,28 +8,30 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="07springboot-more-db" />
-        <module name="09springsecurity-content" />
         <module name="11Springboot-video" />
         <module name="03springboot-war" />
         <module name="05springboot-kafka-consumer2" />
         <module name="springboot-dubbo-consumer" />
-        <module name="05springboot-kafka-api" />
+        <module name="06springboot-websocket" />
         <module name="05springboot-kafka-producer" />
         <module name="02springboot-noweb" />
+        <module name="01springboot-shop" />
         <module name="springboot-shop" />
-        <module name="06springboot-websocket" />
+        <module name="09springsecurity-content" />
         <module name="dubbo-provider" />
+        <module name="05springboot-kafka-consumer" />
         <module name="09springsecurity-oauth" />
         <module name="04springboot-jar" />
         <module name="01Springboot-mvc" />
         <module name="springboot-dubbo-provider" />
         <module name="10Springboot-nginx" />
         <module name="springboot-dubbo-interface" />
-        <module name="05springboot-kafka-consumer" />
+        <module name="05springboot-kafka-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01Springboot-mvc" target="1.8" />
+      <module name="01springboot-shop" target="1.8" />
       <module name="02springboot-noweb" target="1.8" />
       <module name="03springboot-war" target="1.8" />
       <module name="04springboot-jar" target="1.8" />
@@ -56,6 +58,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="01Springboot-mvc" options="-parameters" />
+      <module name="01springboot-shop" options="-parameters" />
       <module name="02springboot-noweb" options="-parameters" />
       <module name="03springboot-war" options="-parameters" />
       <module name="04springboot-jar" options="-parameters" />

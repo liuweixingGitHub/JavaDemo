@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/01Springboot-mvc/01Springboot-mvc.iml" filepath="$PROJECT_DIR$/01Springboot-mvc/01Springboot-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-shop/01springboot-shop.iml" filepath="$PROJECT_DIR$/springboot-shop/01springboot-shop.iml" />
       <module fileurl="file://$PROJECT_DIR$/02springboot-noweb/02springboot-noweb.iml" filepath="$PROJECT_DIR$/02springboot-noweb/02springboot-noweb.iml" />
       <module fileurl="file://$PROJECT_DIR$/03springboot-war/03springboot-war.iml" filepath="$PROJECT_DIR$/03springboot-war/03springboot-war.iml" />
       <module fileurl="file://$PROJECT_DIR$/04springboot-jar/04springboot-jar.iml" filepath="$PROJECT_DIR$/04springboot-jar/04springboot-jar.iml" />
@@ -18,7 +19,6 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-consumer/springboot-dubbo-consumer.iml" filepath="$PROJECT_DIR$/springboot-dubbo-consumer/springboot-dubbo-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-interface/springboot-dubbo-interface.iml" filepath="$PROJECT_DIR$/springboot-dubbo-interface/springboot-dubbo-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-provider/springboot-dubbo-provider.iml" filepath="$PROJECT_DIR$/springboot-dubbo-provider/springboot-dubbo-provider.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springboot-shop/01springboot-shop.iml" filepath="$PROJECT_DIR$/springboot-shop/01springboot-shop.iml" />
     </modules>
   </component>
 </project>

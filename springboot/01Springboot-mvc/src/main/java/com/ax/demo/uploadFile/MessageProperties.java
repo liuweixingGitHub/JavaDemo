@@ -1,4 +1,4 @@
-package com.ax.shop.uploadFile;
+package com.ax.demo.uploadFile;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix="message")
 @PropertySource("classpath:file-message.properties")
-
 public class MessageProperties {
 
     private long fileSize;  //压缩大小
