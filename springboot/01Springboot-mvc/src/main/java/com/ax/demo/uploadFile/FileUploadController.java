@@ -19,7 +19,6 @@ public class FileUploadController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FileUploadController.class);
 
-
     @Autowired
     private FileUploadService fileUpAndDownService;
 
@@ -39,10 +38,11 @@ public class FileUploadController {
 
     @RequestMapping(value = "/uploadsimplefile")
     @ResponseBody
-    public Object setFileUpload(@RequestParam(value = "attachment", required = false) MultipartFile file) {
+    public Object setFileUpload(@RequestParam(value = "attachment", required = false) MultipartFile file,
+                                HttpServletRequest request) {
         System.out.println("file = " + file);
 
-        return fileUpAndDownService.uploadFlie(file);
+        return fileUpAndDownService.uploadFlie(file, request);
 
     }
 
@@ -56,10 +56,10 @@ public class FileUploadController {
         for (int i = 0; i < multipartFiles.size(); i++) {
 
             MultipartFile file = multipartFiles.get(i);
-            if (file.isEmpty()){
+            if (file.isEmpty()) {
                 break;
             }
-            Map<String, Object> resultMap = fileUpAndDownService.uploadFlie(file);
+            Map<String, Object> resultMap = fileUpAndDownService.uploadFlie(file, request);
             list.add(resultMap);
         }
 

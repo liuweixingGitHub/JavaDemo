@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,31 +20,32 @@ public class FileUploadServiceImpl implements FileUploadService {
     private MessageProperties config; //用来获取file-message.properties配置文件中的信息
 
 
-    public Map<String, Object> uploadFlie(MultipartFile multipartFile) {
+    @Override
+    public Map<String, Object> uploadFlie(MultipartFile multipartFile, HttpServletRequest request) {
 
         Map<String, Object> returnMap = new HashMap<>();
 
         if (multipartFile.isEmpty()) {
 
             returnMap.put("code", 404);
-            returnMap.put("msg","文件为空");
+            returnMap.put("msg", "文件为空");
 
         } else {
 
-            FileUploadMessage fileUploadMessage = uploadFlieDto(multipartFile);
+            FileUploadMessage fileUploadMessage = uploadFlieDto(multipartFile,request);
 
             if (fileUploadMessage.getResult() == true) {
                 returnMap.put("code", 200);
                 returnMap.put("data", fileUploadMessage);
             } else {
                 returnMap.put("code", 500);
-                returnMap.put("msg","上传失败");
+                returnMap.put("msg", "上传失败");
             }
         }
         return returnMap;
     }
 
-    public FileUploadMessage uploadFlieDto(MultipartFile file) {
+    public FileUploadMessage uploadFlieDto(MultipartFile file, HttpServletRequest request) {
 
         FileUploadMessage fileUploadMessage = new FileUploadMessage();
 
@@ -76,11 +78,12 @@ public class FileUploadServiceImpl implements FileUploadService {
 
                 /*文件大小*/
                 long size = file.getSize();
-
-                // 获取 tomcat 路径
-//                String fileSavePath = request.getSession().getServletContext().getRealPath("/upload/");
-                /// 上传指定路径,
+                /*上传指定路径,*/
                 String upPath = config.getUpPath();
+                if (null == upPath) {
+                    /*获取 tomcat 路径*/
+                    upPath = request.getSession().getServletContext().getRealPath("/upload/");
+                }
 
                 // 进行压缩(大于4M)
 //                if (file.getSize() > config.getFileSize()) {
@@ -155,5 +158,6 @@ public class FileUploadServiceImpl implements FileUploadService {
         }
         return fileUploadMessage;
     }
+
 
 }
