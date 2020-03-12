@@ -8,25 +8,27 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="07springboot-more-db" />
+        <module name="09springsecurity-content" />
         <module name="11Springboot-video" />
+        <module name="06Springboot-Spring-WebSockt" />
         <module name="03springboot-war" />
         <module name="05springboot-kafka-consumer2" />
         <module name="springboot-dubbo-consumer" />
-        <module name="06springboot-websocket" />
+        <module name="11Springboot-Netty-WebSocket" />
+        <module name="05springboot-kafka-api" />
         <module name="05springboot-kafka-producer" />
         <module name="02springboot-noweb" />
         <module name="01springboot-shop" />
         <module name="springboot-shop" />
-        <module name="09springsecurity-content" />
+        <module name="06springboot-websocket" />
         <module name="dubbo-provider" />
-        <module name="05springboot-kafka-consumer" />
         <module name="09springsecurity-oauth" />
         <module name="04springboot-jar" />
         <module name="01Springboot-mvc" />
         <module name="springboot-dubbo-provider" />
         <module name="10Springboot-nginx" />
         <module name="springboot-dubbo-interface" />
-        <module name="05springboot-kafka-api" />
+        <module name="05springboot-kafka-consumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -39,12 +41,14 @@
       <module name="05springboot-kafka-consumer" target="1.8" />
       <module name="05springboot-kafka-consumer2" target="1.8" />
       <module name="05springboot-kafka-producer" target="1.8" />
+      <module name="06Springboot-Spring-WebSockt" target="1.8" />
       <module name="06springboot-websocket" target="1.8" />
       <module name="07springboot-more-db" target="1.8" />
       <module name="08springsecurity-oauth" target="1.8" />
       <module name="09springsecurity-content" target="1.8" />
       <module name="09springsecurity-oauth" target="1.8" />
       <module name="10Springboot-nginx" target="1.8" />
+      <module name="11Springboot-Netty-WebSocket" target="1.8" />
       <module name="11Springboot-video" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="spring-security" target="1.8" />
@@ -66,12 +70,14 @@
       <module name="05springboot-kafka-consumer" options="-parameters" />
       <module name="05springboot-kafka-consumer2" options="-parameters" />
       <module name="05springboot-kafka-producer" options="-parameters" />
+      <module name="06Springboot-Spring-WebSockt" options="-parameters" />
       <module name="06springboot-websocket" options="-parameters" />
       <module name="07springboot-more-db" options="-parameters" />
       <module name="08springsecurity-oauth" options="-parameters" />
       <module name="09springsecurity-content" options="-parameters" />
       <module name="09springsecurity-oauth" options="-parameters" />
       <module name="10Springboot-nginx" options="-parameters" />
+      <module name="11Springboot-Netty-WebSocket" options="-parameters" />
       <module name="11Springboot-video" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="spring-security" options="-parameters" />

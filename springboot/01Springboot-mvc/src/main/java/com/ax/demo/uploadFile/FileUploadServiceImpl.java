@@ -25,7 +25,8 @@ public class FileUploadServiceImpl implements FileUploadService {
 
         Map<String, Object> returnMap = new HashMap<>();
 
-        if (multipartFile.isEmpty()) {
+
+        if (null == multipartFile || multipartFile.isEmpty()) {
 
             returnMap.put("code", 404);
             returnMap.put("msg", "文件为空");
@@ -42,6 +43,7 @@ public class FileUploadServiceImpl implements FileUploadService {
                 returnMap.put("msg", "上传失败");
             }
         }
+        System.out.println("returnMap = " + returnMap);
         return returnMap;
     }
 

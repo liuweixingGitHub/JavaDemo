@@ -31,6 +31,8 @@
         <option value="$PROJECT_DIR$/springboot-dubbo-interface/pom.xml" />
         <option value="$PROJECT_DIR$/01Springboot-mvc/pom.xml" />
         <option value="$PROJECT_DIR$/01Springboot-data/pom.xml" />
+        <option value="$PROJECT_DIR$/11Springboot-Netty-WebSocket/pom.xml" />
+        <option value="$PROJECT_DIR$/06Springboot-Spring-WebSockt/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
