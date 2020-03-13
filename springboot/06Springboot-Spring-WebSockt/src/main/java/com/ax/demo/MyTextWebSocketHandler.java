@@ -10,7 +10,7 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TextMsgHandler extends TextWebSocketHandler {
+public class MyTextWebSocketHandler extends TextWebSocketHandler {
 
 
     private Map<String, WebSocketSession> allClient = new HashMap<>();
@@ -23,6 +23,7 @@ public class TextMsgHandler extends TextWebSocketHandler {
         /**获取拦截中的id,这个是连接人的id*/
 //        Long id = (long) session.getAttributes().get("userid");
 //        allClient.put(id.toString(), session);
+
 
         System.out.println("建立连接 allClient = " + allClient);
 
@@ -41,19 +42,19 @@ public class TextMsgHandler extends TextWebSocketHandler {
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
 
         String payload = message.getPayload();
-        System.out.println("payload = " + payload);
+        System.out.println("获取到消息payload = " + payload);
 
-        String msg = new String(message.asBytes());
-        JSONObject jsonObject = JSON.parseObject(msg);
-
-        System.out.println("msg = " + msg);
+//        String msg = new String(message.asBytes());
+        JSONObject jsonObject = JSON.parseObject(payload);
+//
+//        System.out.println("msg = " + msg);
 
         /**这里是接收方的id*/
         Long toId = jsonObject.getLong("toId");
+        System.out.println("toId = " + toId);
+//        TextMessage textMessage = new TextMessage(msg);
 
-        TextMessage textMessage = new TextMessage(msg);
-
-        sendMsg(toId,textMessage);
+        sendMsg(toId,message);
     }
 
     public void sendMsg(Long userid, TextMessage textMessage){

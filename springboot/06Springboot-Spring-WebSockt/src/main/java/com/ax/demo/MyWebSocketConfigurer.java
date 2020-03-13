@@ -6,21 +6,24 @@ import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
 
-@Configuration
-@EnableWebSocket
-
 /**
  * 使用的是 org.springframework.web.socket 效内容
  */
-public class WebSocketConfig implements WebSocketConfigurer {
+@Configuration
+@EnableWebSocket
+public class MyWebSocketConfigurer implements WebSocketConfigurer {
 
-    public TextMsgHandler textMsgHandler(){
-        return new TextMsgHandler();
+    public MyTextWebSocketHandler textMsgHandler(){
+        return new MyTextWebSocketHandler();
+    }
+
+    public MyHttpSessionHandshakeInterceptor handshakeInterceptor(){
+        return new MyHttpSessionHandshakeInterceptor();
     }
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry webSocketHandlerRegistry) {
-        webSocketHandlerRegistry.addHandler(textMsgHandler(),"/ws/**").addInterceptors(new ChatInterceptor());
+        webSocketHandlerRegistry.addHandler(textMsgHandler(),"/ws/**").addInterceptors(handshakeInterceptor());
 
     }
 }

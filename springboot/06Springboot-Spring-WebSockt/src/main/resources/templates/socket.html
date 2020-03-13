@@ -4,13 +4,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Netty-Websocket</title>
     <script type="text/javascript">
+        //<![CDATA[
+
         // by zhengkai.blog.csdn.net
         var socket;
         if(!window.WebSocket){
             window.WebSocket = window.MozWebSocket;
         }
         if(window.WebSocket){
-            socket = new WebSocket("ws://127.0.0.1:8080/ws");
+            var uid = [[${uid}]];
+            socket = new WebSocket("ws://127.0.0.1:8080/ws/1001"+"?id=2"+'&'+"name=jim");
             socket.onmessage = function(event){
                 var ta = document.getElementById('responseText');
                 ta.value += event.data+"\r\n";
@@ -51,7 +54,7 @@
                 alert("WebSocket 连接没有建立成功！");
             }
         }
-
+        //]]>
     </script>
 </head>
 <body>

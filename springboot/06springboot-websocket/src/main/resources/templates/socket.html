@@ -14,12 +14,13 @@
 
             var uid = [[${uid}]];
 
-            socket = new WebSocket("ws://127.0.0.1:8080/ws/"+uid);
+            // socket = new WebSocket("ws://127.0.0.1:8081/ws/"+uid+"?name=jim&age=12&age=13");
+            socket = new WebSocket("ws://127.0.0.1:8081/ws"+"?id="+uid+"&name=jim&age=12&age=13");
             socket.onmessage = function(event){
                 var ta = document.getElementById('responseText');
                 ta.value += event.data+"\r\n";
             };
-            socket.onopen = function(event){``
+            socket.onopen = function(event){
                 var ta = document.getElementById('responseText');
                 ta.value = "Netty-WebSocket服务器。。。。。。连接  \r\n";
                 var uid = document.getElementById("uid").value;
