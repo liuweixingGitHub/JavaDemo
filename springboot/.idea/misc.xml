@@ -33,6 +33,9 @@
         <option value="$PROJECT_DIR$/01Springboot-data/pom.xml" />
         <option value="$PROJECT_DIR$/11Springboot-Netty-WebSocket/pom.xml" />
         <option value="$PROJECT_DIR$/06Springboot-Spring-WebSockt/pom.xml" />
+        <option value="$PROJECT_DIR$/12SpringBoot-SpringCloud/pom.xml" />
+        <option value="$PROJECT_DIR$/20SpringBoot-Elasticsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/../13SpringBoot-Dubbo/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -15,7 +15,7 @@ public class HomeController {
     /**
      * PageInfo 含有页面信息
      */
-    @RequestMapping(value = "/home.do")
+    @RequestMapping(value = "/toId")
     @RequireToken
     public Object ipLogPageInfo() {
 

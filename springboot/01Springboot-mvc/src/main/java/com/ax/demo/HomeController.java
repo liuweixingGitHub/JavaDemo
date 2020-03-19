@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,6 +23,12 @@ public class HomeController {
 
         Map<String, Object> map = new HashMap<>();
         map.put("home", "首页");
+        map.put("date", new Date());
+
+        String nullStr=new String();
+
+        map.put("null_key", nullStr);
+
         return map;
 
     }

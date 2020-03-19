@@ -9,6 +9,6 @@ spring:
 
 dubbo:
   application:
-    name: consumer #应用名
+    name: springboot-dubbo-consumer #应用名
   registry:
     address: zookeeper://localhost:2181 #zookeeper地址

@@ -1,0 +1,9 @@
+.form-horizontal{
+    border: 1px solid rgb(197, 197, 197);
+    width: 1000px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-image: none;
+    padding: 30px;
+    border-radius: 5px;
+}

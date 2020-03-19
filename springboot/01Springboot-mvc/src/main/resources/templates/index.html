@@ -14,6 +14,7 @@
 
 <h2 class="text-center" th:text="'端口号 = ' + ${port}"></h2>
 <h2 class="text-center" th:text="|端口号 ${port}|"></h2>
+<h2 id="h2-3" class="text-center" ></h2>
 
 <!--thymeleaf 赋值-->
 <!--<p th:text="${name}">default message</p>-->
@@ -66,6 +67,11 @@
 <link href="../css/plugins/bootstrap-4.2.1.min.css" rel="stylesheet">
 <link href="../css/service/base.css" rel="stylesheet" type="text./css"/>
 
+<script type="text/javascript">
+    var port = window.location.port;
 
+    document.getElementById('h2-3').innerText = "js端口号:"+port;
+
+</script>
 
 </html>

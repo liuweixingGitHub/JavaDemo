@@ -15,5 +15,5 @@ dubbo:
   registry:
     address: zookeeper://localhost:2181 #zookeeper地址
   protocol:
-    name: dubbo
+    name: springboot-dubbo-provider
     port: 20880
