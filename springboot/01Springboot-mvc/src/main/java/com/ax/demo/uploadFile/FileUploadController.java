@@ -33,37 +33,37 @@ public class FileUploadController {
     private FileUploadService fileUpAndDownService;
 
 
-    @RequestMapping("/uploadfile")
+    @RequestMapping("/uploadFileOne")
     public String uploadOneFile() {
 
-        return "uploadfile"; // 最终由ThymeleafView处理，转发 classpath:templates
+        return "uploadFileOne"; // 最终由ThymeleafView处理，转发 classpath:templates
     }
 
-    @RequestMapping("/uploadfiles")
+    @RequestMapping("/uploadFileMore")
     public String uploadMultiFile() {
 
-        return "uploadfiles"; // 最终由ThymeleafView处理，转发 classpath:templates
+        return "uploadFileMore"; // 最终由ThymeleafView处理，转发 classpath:templates
     }
 
 
     /**
      * value = "attachment"  ios 中  [formData appendPartWithFileData:imageData name:@"attachment"
      */
-    @RequestMapping(value = "/uploadsimplefile")
+    @RequestMapping(value = "/uploadFileOne")
     @ResponseBody
     public Object setFileUpload(@RequestParam(value = "attachment", required = false) MultipartFile file,
                                 HttpServletRequest request) {
-        System.out.println("file = " + file);
+        System.out.println("单个文件上传 file = " + file);
 
         return fileUpAndDownService.uploadFlie(file, request);
 
     }
 
-    @RequestMapping(value = "/uploadmultifile", method = RequestMethod.POST)
+    @RequestMapping(value = "/uploadFileMore", method = RequestMethod.POST)
     @ResponseBody
     public Object uploadMultiFile(@RequestParam("attachment") List<MultipartFile> multipartFiles,
                                   HttpServletRequest request) {
-        System.out.println("multipartFiles = " + multipartFiles);
+        System.out.println("多个文件上传 multipartFiles = " + multipartFiles);
 
         List<Map<String, Object>> list = new ArrayList<>();
 

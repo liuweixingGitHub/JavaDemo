@@ -3,6 +3,7 @@ package com.ax.demo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -69,10 +70,12 @@ public class HomeController {
     }
 
 
-    @RequestMapping(value = "/test")
-    public Object do2(long time) throws InterruptedException {
+    @RequestMapping(value = "/sleep")
+    public Object do2(@RequestParam(value = "time") long time) throws InterruptedException {
 
         Thread.sleep(time * 1000);
+
+        System.out.println("time = " + time);
 
         Map<String, Object> map = new HashMap<>();
         map.put("home", "首页");

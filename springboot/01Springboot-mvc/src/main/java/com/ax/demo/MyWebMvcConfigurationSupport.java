@@ -71,10 +71,8 @@ public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
 
         // 4.中文乱码解决方案
         List<MediaType> mediaTypes = new ArrayList<>();
-        mediaTypes.add(MediaType.APPLICATION_PROBLEM_JSON);
-
+        mediaTypes.add(MediaType.APPLICATION_PROBLEM_JSON_UTF8);
         fastConverter.setSupportedMediaTypes(mediaTypes);
-
         // 5.返回HttpMessageConverters对象
         return fastConverter;
     }
