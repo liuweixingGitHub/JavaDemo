@@ -19,6 +19,7 @@
     <modules>
         <module>payment</module>
         <module>order</module>
+        <module>gateway_9527</module>
     </modules>
 
 
@@ -81,6 +82,15 @@
                 <scope>import</scope>
             </dependency>
 
+            <!--监控信息-->
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-actuator</artifactId>
+                <version>2.2.5.RELEASE</version>
+            </dependency>
+
+
             <!--注册服务-->
             <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
             <dependency>
@@ -95,7 +105,6 @@
                 <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
                 <version>2.2.2.RELEASE</version>
             </dependency>
-
 
 
             <!--官网 https://cloud.spring.io/spring-cloud-zookeeper/reference/html/-->
@@ -144,6 +153,31 @@
                 <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
                 <version>2.2.2.RELEASE</version>
             </dependency>
+
+            <!--服务降级,熔断,限流-->
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-hystrix -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+                <version>2.2.2.RELEASE</version>
+            </dependency>
+
+            <!--降级服务仪表板 路径 hystrix-->
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-hystrix-dashboard -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+                <version>2.2.2.RELEASE</version>
+            </dependency>
+
+            <!--网关,动态路由器,断言,过滤器-->
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-gateway -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>2.2.2.RELEASE</version>
+            </dependency>
+
 
 
         </dependencies>

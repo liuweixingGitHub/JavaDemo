@@ -13,13 +13,6 @@
 
     <dependencies>
 
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-thymeleaf -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-            <version>2.2.5.RELEASE</version>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -32,7 +25,7 @@
         </dependency>
 
 
-        <!--热部署-->
+        <!--热部署,同时运行不同端口时候,注释了,才可以-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -69,21 +62,29 @@
               <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
           </dependency>-->
 
+        <!--注册服务-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
 
+        <!--注册服务-->
+        <!--       <dependency>
+                   <groupId>org.springframework.cloud</groupId>
+                   <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+               </dependency>-->
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
-      <!--  <dependency>
+
+        <!--服务降级-->
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>-->
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
 
     </dependencies>
 

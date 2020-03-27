@@ -64,10 +64,10 @@
             <artifactId>fastjson</artifactId>
         </dependency>
 
-<!--        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
-        </dependency>-->
+        <!--        <dependency>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
+                </dependency>-->
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -79,10 +79,34 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
-   <!--     <dependency>
+        <!--        <dependency>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                </dependency>-->
+
+        <!--客户端 注册负载均衡-->
+        <!--     <dependency>
+                 <groupId>org.springframework.cloud</groupId>
+                 <artifactId>spring-cloud-starter-ribbon</artifactId>
+             </dependency>-->
+
+
+        <!--服务降级-->
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>-->
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+        </dependency>
+
+        <!--监控信息-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
     </dependencies>
 

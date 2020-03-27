@@ -3,7 +3,6 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/01Springboot-mvc" />
     <file type="web" url="file://$PROJECT_DIR$/01springboot-shop" />
-    <file type="web" url="file://$PROJECT_DIR$/01springboot-shop" />
     <file type="web" url="file://$PROJECT_DIR$/03springboot-war" />
     <file type="web" url="file://$PROJECT_DIR$/10Springboot-nginx" />
   </component>
@@ -36,6 +35,7 @@
         <option value="$PROJECT_DIR$/12SpringBoot-SpringCloud/pom.xml" />
         <option value="$PROJECT_DIR$/20SpringBoot-Elasticsearch/pom.xml" />
         <option value="$PROJECT_DIR$/../13SpringBoot-Dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/12SpringBoot-SpringCloud/gateway_9527/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

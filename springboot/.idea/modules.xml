@@ -20,6 +20,8 @@
       <module fileurl="file://$PROJECT_DIR$/11Springboot-Netty-WebSocket/11Springboot-Netty-WebSocket.iml" filepath="$PROJECT_DIR$/11Springboot-Netty-WebSocket/11Springboot-Netty-WebSocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/12SpringBoot-SpringCloud.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/12SpringBoot-SpringCloud.iml" />
       <module fileurl="file://$PROJECT_DIR$/20SpringBoot-Elasticsearch/20SpringBoot-Elasticsearch.iml" filepath="$PROJECT_DIR$/20SpringBoot-Elasticsearch/20SpringBoot-Elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/gateway.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/gateway_9527/gateway_9527.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/gateway_9527/gateway_9527.iml" />
       <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/order/order.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/order/order.iml" />
       <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/payment/payment.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/payment/payment.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-consumer/springboot-dubbo-consumer.iml" filepath="$PROJECT_DIR$/springboot-dubbo-consumer/springboot-dubbo-consumer.iml" />

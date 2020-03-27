@@ -33,13 +33,13 @@ public class FileUploadController {
     private FileUploadService fileUpAndDownService;
 
 
-    @RequestMapping("/uploadFileOne")
+    @RequestMapping("/uploadFileOne.html")
     public String uploadOneFile() {
 
         return "uploadFileOne"; // 最终由ThymeleafView处理，转发 classpath:templates
     }
 
-    @RequestMapping("/uploadFileMore")
+    @RequestMapping("/uploadFileMore.html")
     public String uploadMultiFile() {
 
         return "uploadFileMore"; // 最终由ThymeleafView处理，转发 classpath:templates
@@ -49,9 +49,9 @@ public class FileUploadController {
     /**
      * value = "attachment"  ios 中  [formData appendPartWithFileData:imageData name:@"attachment"
      */
-    @RequestMapping(value = "/uploadFileOne")
+    @RequestMapping(value = "/uploadFileOne.do")
     @ResponseBody
-    public Object setFileUpload(@RequestParam(value = "attachment", required = false) MultipartFile file,
+    public Object setFileUpload(@RequestParam(value = "file", required = false) MultipartFile file,
                                 HttpServletRequest request) {
         System.out.println("单个文件上传 file = " + file);
 
@@ -59,17 +59,17 @@ public class FileUploadController {
 
     }
 
-    @RequestMapping(value = "/uploadFileMore", method = RequestMethod.POST)
+    @RequestMapping(value = "/uploadFileMore.do", method = RequestMethod.POST)
     @ResponseBody
-    public Object uploadMultiFile(@RequestParam("attachment") List<MultipartFile> multipartFiles,
+    public Object uploadMultiFile(@RequestParam("files") List<MultipartFile> files,
                                   HttpServletRequest request) {
-        System.out.println("多个文件上传 multipartFiles = " + multipartFiles);
+        System.out.println("多个文件上传 files = " + files);
 
         List<Map<String, Object>> list = new ArrayList<>();
 
-        for (int i = 0; i < multipartFiles.size(); i++) {
+        for (int i = 0; i < files.size(); i++) {
 
-            MultipartFile file = multipartFiles.get(i);
+            MultipartFile file = files.get(i);
             if (file == null || file.isEmpty()) {
                 break;
             }
@@ -81,7 +81,7 @@ public class FileUploadController {
     }
 
 
-    @RequestMapping("/downFile")
+    @RequestMapping("/downFile.do")
     public ResponseEntity<byte[]> download(@RequestParam(value = "id", required = false) String id, HttpServletRequest request) throws IOException {
 
         System.out.println("id = " + id);

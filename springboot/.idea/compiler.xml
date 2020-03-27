@@ -7,33 +7,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="05springboot-kafka-consumer2" />
+        <module name="07springboot-more-db" />
         <module name="11Springboot-video" />
+        <module name="06Springboot-Spring-WebSockt" />
         <module name="03springboot-war" />
-        <module name="order" />
-        <module name="springboot-dubbo-consumer" />
-        <module name="05springboot-kafka-producer" />
-        <module name="springboot-dubbo-interface" />
-        <module name="11Springboot-Netty-WebSocket" />
         <module name="payment" />
+        <module name="05springboot-kafka-consumer2" />
+        <module name="springboot-dubbo-consumer" />
+        <module name="11Springboot-Netty-WebSocket" />
+        <module name="gateway_9527" />
+        <module name="order" />
+        <module name="dubbo-provider" />
         <module name="12springboot-cloud" />
         <module name="02springboot-noweb" />
         <module name="01springboot-shop" />
         <module name="springboot-shop" />
         <module name="09springsecurity-content" />
-        <module name="06Springboot-Spring-WebSockt" />
+        <module name="05springboot-kafka-producer" />
         <module name="Dubbo-Consumer" />
-        <module name="07springboot-more-db" />
         <module name="09springsecurity-oauth" />
         <module name="04springboot-jar" />
         <module name="01Springboot-mvc" />
         <module name="06springboot-websocket" />
+        <module name="05springboot-kafka-api" />
         <module name="springboot-dubbo-provider" />
         <module name="20SpringBoot-Elasticsearch" />
         <module name="10Springboot-nginx" />
+        <module name="springboot-dubbo-interface" />
         <module name="05springboot-kafka-consumer" />
-        <module name="dubbo-provider" />
-        <module name="05springboot-kafka-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -60,6 +61,9 @@
       <module name="13SpringBoot-Dubbo" target="1.5" />
       <module name="20SpringBoot-Elasticsearch" target="1.8" />
       <module name="Dubbo-Consumer" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="gateway9527" target="1.8" />
+      <module name="gateway_9527" target="1.8" />
       <module name="order" target="1.8" />
       <module name="payment" target="1.8" />
       <module name="spring-security" target="1.8" />
@@ -94,6 +98,8 @@
       <module name="12springboot-cloud" options="-parameters" />
       <module name="20SpringBoot-Elasticsearch" options="-parameters" />
       <module name="Dubbo-Consumer" options="-parameters" />
+      <module name="gateway9527" options="-parameters" />
+      <module name="gateway_9527" options="-parameters" />
       <module name="order" options="-parameters" />
       <module name="payment" options="-parameters" />
       <module name="spring-security" options="-parameters" />

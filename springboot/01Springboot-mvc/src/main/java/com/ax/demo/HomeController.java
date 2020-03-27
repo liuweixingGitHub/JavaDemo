@@ -22,6 +22,8 @@ public class HomeController {
     @RequestMapping(value = "/home.do")
     public Object ipLogPageInfo() {
 
+        System.out.println("home.do");
+
         Map<String, Object> map = new HashMap<>();
         map.put("home", "首页");
         map.put("date", new Date());
@@ -29,6 +31,14 @@ public class HomeController {
         String nullStr=new String();
 
         map.put("null_key", nullStr);
+
+        String className = Thread.currentThread().getStackTrace()[1].getClassName();//调用的类名
+        String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();//调用的方法名
+        int lineNumber = Thread.currentThread().getStackTrace()[1].getLineNumber();//调用的行数
+
+        map.put("className", className);
+        map.put("methodName", methodName);
+        map.put("lineNumber", lineNumber);
 
         return map;
 
@@ -74,6 +84,8 @@ public class HomeController {
     public Object do2(@RequestParam(value = "time") long time) throws InterruptedException {
 
         Thread.sleep(time * 1000);
+
+//        TimeUnit.SECONDS.sleep(time);
 
         System.out.println("time = " + time);
 
