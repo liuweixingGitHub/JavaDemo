@@ -86,6 +86,10 @@
           <element id="library" level="project" name="Maven: com.github.virtuald:curvesapi:1.06" />
           <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.56" />
           <element id="library" level="project" name="Maven: net.coobird:thumbnailator:0.4.8" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-mail:2.2.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:5.2.4.RELEASE" />
+          <element id="library" level="project" name="Maven: com.sun.mail:jakarta.mail:1.6.4" />
+          <element id="library" level="project" name="Maven: com.sun.activation:jakarta.activation:1.2.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">

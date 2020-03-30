@@ -20,6 +20,7 @@
         <module>payment</module>
         <module>order</module>
         <module>gateway_9527</module>
+        <module>getaway_payment</module>
     </modules>
 
 

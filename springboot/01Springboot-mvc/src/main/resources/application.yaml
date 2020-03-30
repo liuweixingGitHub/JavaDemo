@@ -26,6 +26,16 @@ spring:
   devtools:
     restart:
       enabled: true
+  mail:
+    username: 9408050702@qq.com
+    password: flxgzxepdnkjcaci #对于qq邮箱而言 密码指的就是发送方的授权码
+    host: smtp.qq.com
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+
 
 
 logging:

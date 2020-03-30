@@ -14,11 +14,13 @@ spring:
       port: 8500
       discovery:
         service-name: ${spring.application.name}
+        register: true
     #网关
     gateway: #routes:#路由配置:参数为一个List
       routes:
         - id: payment_rout_1 #唯一标识
-          uri: http://localhost:8090/ #转发的地址,写服务名称
+#          uri: http://localhost:8090/ #转发的地址,写服务名称
+          uri: lb://cloud-service-payment #转发的地址,写服务名称
           predicates:
             - Path=/payment/get/** #判断匹配条件,即地址带有/ribbon/**的请求,会转发至lb:RIBBON-CONSUMER
 
