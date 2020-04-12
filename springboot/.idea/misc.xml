@@ -37,6 +37,7 @@
         <option value="$PROJECT_DIR$/../13SpringBoot-Dubbo/pom.xml" />
         <option value="$PROJECT_DIR$/12SpringBoot-SpringCloud/gateway_9527/pom.xml" />
         <option value="$PROJECT_DIR$/12SpringBoot-SpringCloud/getaway_payment/pom.xml" />
+        <option value="$PROJECT_DIR$/13springboot-netty/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
