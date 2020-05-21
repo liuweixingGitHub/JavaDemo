@@ -1,25 +1,36 @@
 package com.ax.demo;
 
+import com.ax.demo.entity.Student;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
+/**
+ * Api 用在类上，说明该类的作用。可以标记一个Controller类做为swagger 文档资源，使用方式：
+ *
+ * @Api(value = "/user", description = "Operations about user")
+ */
+@Api(value = "首页", tags = {"首页所有接口"})
 @RestController
 public class HomeController {
-
+/**
+ * ApiOperation：用在方法上，说明方法的作用，每一个url资源的定义,使用方式：
+ */
     /**
      * PageInfo 含有页面信息
      */
-    @RequestMapping(value = "/home.do")
+    @ApiOperation(
+            value = "首页.do",
+            notes = "首页.donotes")
+    @GetMapping(value = "/home.do")
     public Object ipLogPageInfo() {
 
         System.out.println("home.do");
@@ -28,7 +39,7 @@ public class HomeController {
         map.put("home", "首页");
         map.put("date", new Date());
 
-        String nullStr=new String();
+        String nullStr = new String();
 
         map.put("null_key", nullStr);
 
@@ -43,6 +54,31 @@ public class HomeController {
         return map;
 
     }
+
+    @ApiOperation(value = "编辑公告", notes = "编辑公告notes")
+    @PostMapping(value = "/edit")
+    public Student edit(
+            @ApiParam(name = "bis_key", value = "公告key", required = true) String bisKey,
+            @ApiParam(name = "title", value = "公告标题", required = true) @RequestParam String title,
+            @ApiParam(name = "content", value = "公告内容", required = true) String content) {
+
+        return new Student();
+    }
+
+    @ApiOperation(value = "编辑公告", notes = "编辑公告notes")
+    @PostMapping(value = "/edit2")
+    public List<Student> edit2(
+            @ApiParam(name = "bis_key", value = "公告key", required = true) String bisKey,
+            @ApiParam(name = "title", value = "公告标题", required = true) @RequestParam String title,
+            @ApiParam(name = "content", value = "公告内容", required = true) String content) {
+
+      List<Student> list = new ArrayList<>();
+      list.add(new Student());
+
+
+        return list;
+    }
+
 
     @RequestMapping(value = "/home.page")
     public Object ipLogPageInfo1() {
@@ -97,7 +133,7 @@ public class HomeController {
 
 
     @RequestMapping(value = "/video")
-    public Object video(){
+    public Object video() {
 
         ModelAndView modelAndView = new ModelAndView("videoPlay");
         modelAndView.addObject("title", "小猪佩奇");
@@ -105,7 +141,7 @@ public class HomeController {
         String name = "jm.mkv";
 //        String name = "v0200f930000bpajn9hevctlh37upcj0.MP4";
 
-        String videoPath = "http://127.0.0.1:8091/images/"+name;
+        String videoPath = "http://127.0.0.1:8091/images/" + name;
 
         modelAndView.addObject("path", videoPath);
 
