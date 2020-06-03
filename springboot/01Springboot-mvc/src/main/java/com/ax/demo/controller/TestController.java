@@ -1,4 +1,4 @@
-package com.ax.demo;
+package com.ax.demo.controller;
 
 import com.ax.demo.entity.Student;
 

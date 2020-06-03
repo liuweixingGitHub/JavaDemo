@@ -55,7 +55,7 @@ public class FileUploadController {
                                 HttpServletRequest request) {
         System.out.println("单个文件上传 file = " + file);
 
-        return fileUpAndDownService.uploadFlie(file, request);
+        return fileUpAndDownService.uploadFile(file, request);
 
     }
 
@@ -73,7 +73,7 @@ public class FileUploadController {
             if (file == null || file.isEmpty()) {
                 break;
             }
-            Map<String, Object> resultMap = fileUpAndDownService.uploadFlie(file, request);
+            Map<String, Object> resultMap = fileUpAndDownService.uploadFile(file, request);
             list.add(resultMap);
         }
 

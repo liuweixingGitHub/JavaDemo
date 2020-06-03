@@ -21,7 +21,7 @@ public class FileUploadServiceImpl implements FileUploadService {
 
 
     @Override
-    public Map<String, Object> uploadFlie(MultipartFile multipartFile, HttpServletRequest request) {
+    public Map<String, Object> uploadFile(MultipartFile multipartFile, HttpServletRequest request) {
 
         Map<String, Object> returnMap = new HashMap<>();
 

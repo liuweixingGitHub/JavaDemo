@@ -7,6 +7,6 @@ import java.util.Map;
 
 public interface FileUploadService {
 
-    Map<String, Object> uploadFlie(MultipartFile file, HttpServletRequest request);
+    Map<String, Object> uploadFile(MultipartFile file, HttpServletRequest request);
 
 }

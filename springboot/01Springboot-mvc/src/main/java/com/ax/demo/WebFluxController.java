@@ -12,7 +12,6 @@ import java.util.concurrent.TimeUnit;
 public class WebFluxController {
 
 
-
     @GetMapping("/1")
     public String mvc() throws InterruptedException {
         log.info("mvc start");
@@ -22,8 +21,6 @@ public class WebFluxController {
     }
 
 
-
-
     @GetMapping("/2")
     public Mono<String> mono() throws InterruptedException {   // 【改】返回类型为Mono<String>
 
@@ -31,14 +28,13 @@ public class WebFluxController {
 
 
 //      Mono mono=  Mono.just(todostr("mono2"));
-        Mono mono=  Mono.fromSupplier(()->todostr("mono3"));
+        Mono mono = Mono.fromSupplier(() -> todostr("mono3"));
         log.info(mono.toString());
         log.info("mono end");
 
 
-        return  mono;   // 【改】使用Mono.just生成响应式数据
+        return mono;   // 【改】使用Mono.just生成响应式数据
     }
-
 
 
     public String todostr(String string) {
@@ -49,7 +45,7 @@ public class WebFluxController {
             e.printStackTrace();
         }
 
-        log.info("string"+string);
+        log.info("string" + string);
         return string;
     }
 
