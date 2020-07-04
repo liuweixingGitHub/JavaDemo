@@ -11,7 +11,7 @@
 	<groupId>com.ax</groupId>
 	<artifactId>no-web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>no-web</name>
+	<name>02springboot-noweb</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

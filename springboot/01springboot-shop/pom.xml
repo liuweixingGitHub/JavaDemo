@@ -11,7 +11,7 @@
 	<groupId>com.ax</groupId>
 	<artifactId>springboot-shop</artifactId>
 	<version>0.0.1</version>
-	<name>springboot-shop</name>
+	<name>01springboot-shop</name>
 	<packaging>war</packaging>
 	<description>练手</description>
 
