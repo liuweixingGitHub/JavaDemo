@@ -7,40 +7,56 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="11Springboot-video" />
+        <module name="12SpringBoot-SpringCloud-gateway-payment" />
         <module name="11Springboot-Netty-WebSocket" />
+        <module name="demo (4)" />
+        <module name="12springboot-cloud" />
+        <module name="demo (5)" />
         <module name="springboot-dubbo-consumer" />
         <module name="02springboot-noweb" />
+        <module name="getaway_payment" />
         <module name="07springboot-more-db" />
+        <module name="12SpringBoot-SpringCloud-gateway" />
         <module name="05springboot-kafka-consumer2" />
+        <module name="demo (6)" />
         <module name="payment" />
         <module name="10Springboot-nginx" />
         <module name="springboot-dubbo-provider" />
         <module name="09springsecurity-content" />
+        <module name="01springboot-mvc" />
         <module name="01Springboot-mvc" />
         <module name="dubbo-provider" />
-        <module name="06Springboot-Spring-WebSockt" />
-        <module name="order" />
+        <module name="springboot-kafka-producer" />
+        <module name="springboot-noweb" />
+        <module name="demo (3)" />
         <module name="20SpringBoot-Elasticsearch" />
-        <module name="springboot-shop" />
-        <module name="13springboot-netty" />
         <module name="05springboot-kafka-api" />
         <module name="06springboot-websocket" />
         <module name="05springboot-kafka-consumer" />
         <module name="04springboot-jar" />
-        <module name="12springboot-cloud" />
-        <module name="getaway_payment" />
-        <module name="09springsecurity-oauth" />
-        <module name="03springboot-war" />
-        <module name="gateway_9527" />
-        <module name="01springboot-shop" />
-        <module name="Dubbo-Consumer" />
-        <module name="springboot-dubbo-interface" />
+        <module name="12SpringBoot-SpringCloud-payment" />
         <module name="05springboot-kafka-producer" />
+        <module name="springboot-shop" />
+        <module name="11Springboot-video" />
+        <module name="12SpringBoot-SpringCloud-order" />
+        <module name="springboot-websocket" />
+        <module name="09springsecurity-oauth" />
+        <module name="Dubbo-Consumer" />
+        <module name="06Springboot-Spring-WebSockt" />
+        <module name="gateway_9527" />
+        <module name="demo (2)" />
+        <module name="03springboot-war" />
+        <module name="springboot-kafka-consumer (2)" />
+        <module name="springboot-kafka-consumer (1)" />
+        <module name="01springboot-shop" />
+        <module name="order" />
+        <module name="springboot-dubbo-interface" />
+        <module name="13springboot-netty" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="01Springboot-mvc" target="1.8" />
+      <module name="01springboot-mvc" target="1.8" />
       <module name="01springboot-shop" target="1.8" />
       <module name="02springboot-noweb" target="1.8" />
       <module name="03springboot-war" target="1.8" />
@@ -60,9 +76,18 @@
       <module name="11Springboot-video" target="1.8" />
       <module name="12springboot-cloud" target="1.8" />
       <module name="12SpringBoot-SpringCloud" target="1.8" />
+      <module name="12SpringBoot-SpringCloud-gateway" target="1.8" />
+      <module name="12SpringBoot-SpringCloud-gateway-payment" target="1.8" />
+      <module name="12SpringBoot-SpringCloud-order" target="1.8" />
+      <module name="12SpringBoot-SpringCloud-payment" target="1.8" />
       <module name="13SpringBoot-Dubbo" target="1.5" />
       <module name="13springboot-netty" target="1.8" />
       <module name="20SpringBoot-Elasticsearch" target="1.8" />
+      <module name="demo (2)" target="1.8" />
+      <module name="demo (3)" target="1.8" />
+      <module name="demo (4)" target="1.8" />
+      <module name="demo (5)" target="1.8" />
+      <module name="demo (6)" target="1.8" />
       <module name="Dubbo-Consumer" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="gateway9527" target="1.8" />
@@ -74,13 +99,20 @@
       <module name="springboot-dubbo-consumer" target="1.8" />
       <module name="springboot-dubbo-interface" target="1.8" />
       <module name="springboot-dubbo-provider" target="1.8" />
+      <module name="springboot-kafka-consumer (1)" target="1.8" />
+      <module name="springboot-kafka-consumer (2)" target="1.8" />
+      <module name="springboot-kafka-producer" target="1.8" />
+      <module name="springboot-noweb" target="1.8" />
       <module name="springboot-shop" target="1.8" />
+      <module name="SpringBoot-SpringCloud" target="1.8" />
+      <module name="springboot-websocket" target="1.8" />
       <module name="springsecurity" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="01Springboot-mvc" options="-parameters" />
+      <module name="01springboot-mvc" options="-parameters" />
       <module name="01springboot-shop" options="-parameters" />
       <module name="02springboot-noweb" options="-parameters" />
       <module name="03springboot-war" options="-parameters" />
@@ -99,10 +131,19 @@
       <module name="11Springboot-Netty-WebSocket" options="-parameters" />
       <module name="11Springboot-video" options="-parameters" />
       <module name="12SpringBoot-SpringCloud" options="-parameters" />
+      <module name="12SpringBoot-SpringCloud-gateway" options="-parameters" />
+      <module name="12SpringBoot-SpringCloud-gateway-payment" options="-parameters" />
+      <module name="12SpringBoot-SpringCloud-order" options="-parameters" />
+      <module name="12SpringBoot-SpringCloud-payment" options="-parameters" />
       <module name="12springboot-cloud" options="-parameters" />
       <module name="13springboot-netty" options="-parameters" />
       <module name="20SpringBoot-Elasticsearch" options="-parameters" />
       <module name="Dubbo-Consumer" options="-parameters" />
+      <module name="demo (2)" options="-parameters" />
+      <module name="demo (3)" options="-parameters" />
+      <module name="demo (4)" options="-parameters" />
+      <module name="demo (5)" options="-parameters" />
+      <module name="demo (6)" options="-parameters" />
       <module name="gateway9527" options="-parameters" />
       <module name="gateway_9527" options="-parameters" />
       <module name="getaway_payment" options="-parameters" />
@@ -111,7 +152,12 @@
       <module name="spring-security" options="-parameters" />
       <module name="springboot-dubbo-consumer" options="-parameters" />
       <module name="springboot-dubbo-provider" options="-parameters" />
+      <module name="springboot-kafka-consumer (1)" options="-parameters" />
+      <module name="springboot-kafka-consumer (2)" options="-parameters" />
+      <module name="springboot-kafka-producer" options="-parameters" />
+      <module name="springboot-noweb" options="-parameters" />
       <module name="springboot-shop" options="-parameters" />
+      <module name="springboot-websocket" options="-parameters" />
       <module name="springsecurity" options="-parameters" />
     </option>
   </component>

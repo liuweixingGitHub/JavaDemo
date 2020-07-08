@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/01Springboot-mvc" />
+    <file type="web" url="" />
     <file type="web" url="file://$PROJECT_DIR$/01springboot-shop" />
     <file type="web" url="file://$PROJECT_DIR$/03springboot-war" />
     <file type="web" url="file://$PROJECT_DIR$/10Springboot-nginx" />

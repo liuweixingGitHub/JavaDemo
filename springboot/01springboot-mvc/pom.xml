@@ -9,11 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ax</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>springboot-mvc</artifactId>
     <version>1.0.0</version>
     <!--因为要放入外部的tomcat中，因此更改默认打包方式(jar)为war包-->
     <packaging>war</packaging>
-    <name>01Springboot-mvc</name>
+    <name>01springboot-mvc</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="springboot-shop:war exploded">
-    <output-path>$PROJECT_DIR$/springboot-shop/target/springboot-shop-0.0.1</output-path>
+    <output-path>$PROJECT_DIR$/01springboot-shop/target/springboot-shop-0.0.1</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -11,7 +11,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="s01pringboot-shop" />
+          <element id="module-output" name="springboot-shop" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.2.2.RELEASE" />
@@ -116,13 +116,16 @@
           <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.3" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.2" />
           <element id="library" level="project" name="Maven: net.coobird:thumbnailator:0.4.8" />
-          <element id="library" level="project" name="Maven: org.jetbrains:annotations:18.0.0" />
+          <element id="library" level="project" name="Maven: org.jetbrains:annotations:19.0.0" />
+          <element id="library" level="project" name="Maven: com.github.penggle:kaptcha:2.3.2" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
+          <element id="library" level="project" name="Maven: com.jhlabs:filters:2.0.235-1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/01springboot-shop/target/springboot-shop-0.0.1/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="s01pringboot-shop/web/Web" />
+      <element id="javaee-facet-resources" facet="springboot-shop/web/Web" />
     </root>
   </artifact>
 </component>

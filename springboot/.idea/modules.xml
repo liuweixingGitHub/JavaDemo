@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/01Springboot-mvc/01Springboot-mvc.iml" filepath="$PROJECT_DIR$/01Springboot-mvc/01Springboot-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01springboot-mvc/01Springboot-mvc.iml" filepath="$PROJECT_DIR$/01springboot-mvc/01Springboot-mvc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01springboot-mvc/01springboot-mvc.iml" filepath="$PROJECT_DIR$/01springboot-mvc/01springboot-mvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/01springboot-shop/01springboot-shop.iml" filepath="$PROJECT_DIR$/01springboot-shop/01springboot-shop.iml" />
       <module fileurl="file://$PROJECT_DIR$/02springboot-noweb/02springboot-noweb.iml" filepath="$PROJECT_DIR$/02springboot-noweb/02springboot-noweb.iml" />
       <module fileurl="file://$PROJECT_DIR$/03springboot-war/03springboot-war.iml" filepath="$PROJECT_DIR$/03springboot-war/03springboot-war.iml" />
@@ -19,8 +20,18 @@
       <module fileurl="file://$PROJECT_DIR$/10Springboot-nginx/10Springboot-nginx.iml" filepath="$PROJECT_DIR$/10Springboot-nginx/10Springboot-nginx.iml" />
       <module fileurl="file://$PROJECT_DIR$/11Springboot-Netty-WebSocket/11Springboot-Netty-WebSocket.iml" filepath="$PROJECT_DIR$/11Springboot-Netty-WebSocket/11Springboot-Netty-WebSocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/12SpringBoot-SpringCloud.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/12SpringBoot-SpringCloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/gateway_9527/12SpringBoot-SpringCloud-gateway.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/gateway_9527/12SpringBoot-SpringCloud-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/getaway_payment/12SpringBoot-SpringCloud-gateway-payment.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/getaway_payment/12SpringBoot-SpringCloud-gateway-payment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/order/12SpringBoot-SpringCloud-order.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/order/12SpringBoot-SpringCloud-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/payment/12SpringBoot-SpringCloud-payment.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/payment/12SpringBoot-SpringCloud-payment.iml" />
       <module fileurl="file://$PROJECT_DIR$/13springboot-netty/13springboot-netty.iml" filepath="$PROJECT_DIR$/13springboot-netty/13springboot-netty.iml" />
-      <module fileurl="file://$PROJECT_DIR$/20SpringBoot-Elasticsearch/20SpringBoot-Elasticsearch.iml" filepath="$PROJECT_DIR$/20SpringBoot-Elasticsearch/20SpringBoot-Elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/20springboot-elasticsearch/20SpringBoot-Elasticsearch.iml" filepath="$PROJECT_DIR$/20springboot-elasticsearch/20SpringBoot-Elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/SpringBoot-SpringCloud.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/SpringBoot-SpringCloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06Springboot-Spring-WebSockt/demo (2).iml" filepath="$PROJECT_DIR$/06Springboot-Spring-WebSockt/demo (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/10Springboot-nginx/demo (3).iml" filepath="$PROJECT_DIR$/10Springboot-nginx/demo (3).iml" />
+      <module fileurl="file://$PROJECT_DIR$/11Springboot-Netty-WebSocket/demo (4).iml" filepath="$PROJECT_DIR$/11Springboot-Netty-WebSocket/demo (4).iml" />
+      <module fileurl="file://$PROJECT_DIR$/13springboot-netty/demo (5).iml" filepath="$PROJECT_DIR$/13springboot-netty/demo (5).iml" />
+      <module fileurl="file://$PROJECT_DIR$/20springboot-elasticsearch/demo (6).iml" filepath="$PROJECT_DIR$/20springboot-elasticsearch/demo (6).iml" />
       <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/gateway.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/gateway_9527/gateway_9527.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/gateway_9527/gateway_9527.iml" />
       <module fileurl="file://$PROJECT_DIR$/12SpringBoot-SpringCloud/getaway_payment/getaway_payment.iml" filepath="$PROJECT_DIR$/12SpringBoot-SpringCloud/getaway_payment/getaway_payment.iml" />
@@ -29,6 +40,12 @@
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-consumer/springboot-dubbo-consumer.iml" filepath="$PROJECT_DIR$/springboot-dubbo-consumer/springboot-dubbo-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-interface/springboot-dubbo-interface.iml" filepath="$PROJECT_DIR$/springboot-dubbo-interface/springboot-dubbo-interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot-dubbo-provider/springboot-dubbo-provider.iml" filepath="$PROJECT_DIR$/springboot-dubbo-provider/springboot-dubbo-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05springboot-kafka-consumer/springboot-kafka-consumer (1).iml" filepath="$PROJECT_DIR$/05springboot-kafka-consumer/springboot-kafka-consumer (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/05springboot-kafka-consumer2/springboot-kafka-consumer (2).iml" filepath="$PROJECT_DIR$/05springboot-kafka-consumer2/springboot-kafka-consumer (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/05springboot-kafka-producer/springboot-kafka-producer.iml" filepath="$PROJECT_DIR$/05springboot-kafka-producer/springboot-kafka-producer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02springboot-noweb/springboot-noweb.iml" filepath="$PROJECT_DIR$/02springboot-noweb/springboot-noweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01springboot-shop/springboot-shop.iml" filepath="$PROJECT_DIR$/01springboot-shop/springboot-shop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06springboot-websocket/springboot-websocket.iml" filepath="$PROJECT_DIR$/06springboot-websocket/springboot-websocket.iml" />
     </modules>
   </component>
 </project>

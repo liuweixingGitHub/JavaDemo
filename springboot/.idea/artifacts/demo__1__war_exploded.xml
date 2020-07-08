@@ -1,17 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="01Springboot-mvc:war exploded">
+  <artifact type="exploded-war" name="demo (1):war exploded">
     <output-path>$PROJECT_DIR$/01Springboot-mvc/target/demo-1.0.0</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>01Springboot-mvc</module>
+        <module>demo (1)</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="01Springboot-mvc" />
+          <element id="module-output" name="01springboot-mvc" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-thymeleaf:2.2.5.RELEASE" />
@@ -109,7 +109,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/01springboot-mvc/target/demo-1.0.0/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="01Springboot-mvc/web/Web" />
+      <element id="javaee-facet-resources" facet="01springboot-mvc/web/Web" />
     </root>
   </artifact>
 </component>
