@@ -3,8 +3,8 @@ package com.ax.demo.api;
 import com.ax.demo.entity.Student;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 public interface HomeAPI {
 
     @ApiOperation(value = "首页接口")
-    @GetMapping(value = "/home.do")
+    @RequestMapping(value = "/home.do")
     Object ipLogPageInfo();
 
     @ApiOperation(value = "编辑公告", notes = "编辑公告notes")
