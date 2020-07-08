@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
+import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
@@ -71,10 +73,24 @@ public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
 
         // 4.中文乱码解决方案
         List<MediaType> mediaTypes = new ArrayList<>();
-        mediaTypes.add(MediaType.APPLICATION_PROBLEM_JSON_UTF8);
+        mediaTypes.add(MediaType.APPLICATION_JSON_UTF8);
         fastConverter.setSupportedMediaTypes(mediaTypes);
+
         // 5.返回HttpMessageConverters对象
         return fastConverter;
+    }
+
+
+    /**
+     * 添加拦截器
+     *
+     * @param registry
+     */
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+
+        super.addInterceptors(registry);
+
     }
 
     /**
@@ -88,17 +104,28 @@ public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
         super.addResourceHandlers(registry);
 
         /**将static下面的js，css文件加载出来 ,html引入文件就需要 ../static/ 这样前缀了*/
-//        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
+        registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/");
         /// 使用这个,html引入文件就不需要 ../static/ 这样前缀了
         registry.addResourceHandler("/**").addResourceLocations("classpath:/static/");
 
 
-        registry.addResourceHandler("/images/**").addResourceLocations("classpath:/images/");
+//        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+//
+//        registry.addResourceHandler("/web_frontend/**").addResourceLocations("classpath:/web_frontend/");
+        //解决办法就是设置自定义static路径的时候，不要使用/**，而是自己给加一个前缀
+
+//        registry.addResourceHandler("/upload/**").addResourceLocations("file:/Users/axing/Desktop/UploadData/images");
+
+//        registry.addResourceHandler("/upload/**").addResourceLocations("classpath:/upload/");
+
 
         registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
         registry.addResourceHandler("/swagger/**").addResourceLocations("classpath:/statics/swagger/");
 
+
+//        registry.addResourceHandler("/**.html")
+//                .addResourceLocations("classpath:/META-INF/resources/","/static","/templates");
 
     }
 
@@ -109,6 +136,12 @@ public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
 
         converters.add(stringHttpMessageConverterUtf8());
         converters.add(fastJsonHttpMessageConverters());
+    }
+
+    @Override
+    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+        super.configureContentNegotiation(configurer);
+        configurer.favorPathExtension(false);
     }
 
 
