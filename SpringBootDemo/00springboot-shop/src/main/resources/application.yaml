@@ -1,0 +1,175 @@
+server:
+  servlet:
+    context-path: /
+  port: 8080
+
+spring:
+#  resources:
+#  不要为我们工程中的资源文件建立映射,会拦截所有页面 home.html
+#    add-mappings: false
+  mvc:
+    #出现错误时, 直接抛出异常
+#    throw-exception-if-no-handler-found: true
+    # 小logo
+    favicon:
+      enabled: true
+    static-path-pattern: /**
+
+  #上传文件
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 100MB
+      resolve-lazily: false
+#      location: /img/tmp/
+
+  http:
+    encoding:
+      force: true
+      charset: utf-8
+      enabled: true
+
+  datasource:
+    name: mysql_test
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 12345678
+    url: jdbc:mysql://localhost:3306/ax_java_demo?characterEncoding=utf-8&useSSL=false
+#    schema 定时器 自动执行sql语句
+    schema:
+      - classpath:sql/test.sql
+#    schema 一定要加
+    initialization-mode: ALWAYS
+    filters: stat,wall,log4j
+
+  #    #druid相关配置
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+#      url: jdbc:mysql://localhost:3306/demo10_p1?characterEncoding=utf-8&allowMultiQueries=true
+      url: jdbc:mysql://localhost:3306/ax_java_demo?characterEncoding=utf-8
+      username: root
+      password: 12345678
+      #配置初始化大小/最小/最大
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      #获取连接等待超时时间
+      max-wait: 60000
+      #间隔多久进行一次检测，检测需要关闭的空闲连接
+      time-between-eviction-runs-millis: 60000
+      #一个连接在池中最小生存的时间
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
+      pool-prepared-statements: false
+      max-pool-prepared-statement-per-connection-size: 20
+
+      #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙    /druid 后台管理
+      filters: stat,wall
+      use-global-data-source-stat: true
+      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      # 配置监控服务器
+      stat-view-servlet:
+        login-username: admin
+        login-password: 123456
+        reset-enable: false
+        url-pattern: /druid/*
+        # 添加IP白名单
+        #allow:
+        # 添加IP黑名单，当白名单和黑名单重复时，黑名单优先级更高
+        #deny:
+      web-stat-filter:
+        # 添加过滤规则
+        url-pattern: /*
+        # 忽略过滤格式
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+
+
+
+  thymeleaf:
+    mode: HTML5 # 模板的模式
+    cache: false # 这个开发配置为false，避免改了模板还要重启服务器
+    check-template-location: true # 检查模板是否存在，然后再呈现
+    enabled: true #启用MVC Thymeleaf视图分辨率
+    template-resolver-order: 0
+    suffix: .html
+    prefix: classpath:/templates/ # 这个是配置模板路径的，默认就是templates，可不用配置
+    encoding: UTF-8
+
+
+  redis:
+    password: # Redis服务器连接密码（默认为空）
+    database: 0 # Redis数据库索引（默认为0）
+    port: 6379 # Redis服务器连接端口
+#    pool:
+#      max-idle: 8 # 连接池中的最大空闲连接
+#      min-idle: 0 # 连接池中的最小空闲连接
+#      max-active: 8 # 连接池最大连接数（使用负值表示没有限制）
+#      max-wait: -1 # 连接池最大阻塞等待时间（使用负值表示没有限制）
+    host: localhost # Redis服务器地址
+    timeout: 5000 # 连接超时时间（毫秒）
+
+
+
+
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+#  quartz:
+#    properties:
+#      org:
+#        quartz:
+#          scheduler:
+#            instanceName: clusteredScheduler
+#            instanceId: AUTO
+#          jobStore:
+#            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+#            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+#            tablePrefix: QRTZ_
+#            isClustered: false
+#            clusterCheckinInterval: 10000
+#            useProperties: false
+#          threadPool:
+#            class: org.quartz.simpl.SimpleThreadPool
+#            threadCount: 10
+#            threadPriority: 5
+#            threadsInheritContextClassLoaderOfInitializingThread: true
+#    job-store-type: jdbc
+
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.ax.shop.entity
+
+#
+#pagehelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+  returnPageInfo: check
+
+logging:
+  level:
+    com.ax.shop.mapper : debug
+
+
+
+#message:
+#  fileSize: 4194304
+#  #文件压缩大小(大于4兆压缩)
+#  upPath: /Users/axing/Desktop/UploadData/images
+#  #压缩比例
+#  scaleRatio: 0.20f
+#  #图片类型
+#  imageType: png,jpg,jpeg

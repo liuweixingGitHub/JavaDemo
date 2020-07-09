@@ -1,0 +1,43 @@
+server:
+  servlet:
+    context-path: /
+  port: 8080
+
+spring:
+  thymeleaf:
+    mode: HTML # 模板的模式 模板模式“HTML5”已弃用。改为使用模板模式“HTML”。
+    cache: false # 这个开发配置为false，避免改了模板还要重启服务器
+    check-template-location: true # 检查模板是否存在，然后再呈现
+    enabled: true #启用MVC Thymeleaf视图分辨率
+    template-resolver-order: 0
+    suffix: .html
+#    prefix: classpath:/templates/ # 这个是配置模板路径的，默认就是templates，可不用配置
+    encoding: UTF-8
+  mvc:
+    static-path-pattern: /**
+  resources:
+    static-locations: classpath:/static/
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  devtools:
+    restart:
+      enabled: true
+  mail:
+    username: 9408050702@qq.com
+    password: flxgzxepdnkjcaci #对于qq邮箱而言 密码指的就是发送方的授权码
+    host: smtp.qq.com
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+
+
+
+logging:
+  level:
+    com.ax.shop.mapper : debug
+

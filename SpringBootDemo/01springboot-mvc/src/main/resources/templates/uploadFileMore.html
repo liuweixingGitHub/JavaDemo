@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <title>文件上传</title>
+
+    <meta charset="utf-8"/>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+
+    <!--引入CSS样式-->
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        <div class="panel-heading">
+
+            <h3 class="panel-title">单个文件上传</h3>
+
+        </div>
+
+        <div class="panel-body">
+
+            <form class="form-horizontal" method="post" enctype="multipart/form-data"
+
+                  th:action="@{/uploadFileMore.do}" role="form">
+
+                <div class="form-group">
+
+                    <label for="attachment1" class="col-sm-2 control-label">文件上传：
+
+                    </label>
+
+                    <div class="col-sm-5">
+
+                        <input type="file" class="form-control" name="files"
+
+                               id="attachment1" placeholder="请选择邮件附件"/>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="attachment2" class="col-sm-2 control-label">文件上传：
+
+                    </label>
+
+                    <div class="col-sm-5">
+
+                        <input type="file" class="form-control" name="files"
+
+                               id="attachment2" placeholder="请选择邮件附件"/>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="attachment3" class="col-sm-2 control-label">文件上传：
+
+                    </label>
+
+                    <div class="col-sm-5">
+
+                        <input type="file" class="form-control" name="files"
+
+                               id="attachment3" placeholder="请选择邮件附件"/>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <div class="col-sm-offset-2 col-sm-10">
+
+                        <button type="submit" class="btn btn-default">上 传</button>
+
+                    </div>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="../js/plugins/jquery-2.1.3.min.js"></script>
+<script src="../js/plugins/jquery.form-4.2.2.min.js"></script>
+<script src="../js/plugins/jquery.validate-1.8.1.min.js"></script>
+<script src="../js/plugins/bootstrap-4.2.1.min.js"></script>
+<script src="../js/plugins/jquery.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../js/service/login.js"></script>
+<script type="text/javascript" src="../js/service/contextPath.js"></script>
+
+
+<!--css-->
+<link href="../css/plugins/bootstrap-4.2.1.min.css" rel="stylesheet">
+<link href="../css/service/base.css" rel="stylesheet" type="text./css"/>
+
+</html>
