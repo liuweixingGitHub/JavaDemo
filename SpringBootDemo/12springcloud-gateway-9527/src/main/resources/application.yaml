@@ -1,0 +1,33 @@
+server:
+  servlet:
+    context-path: /
+  port: 9527
+
+spring:
+  application:
+    name: cloud-service-gateway
+  cloud:
+    #注册服务
+    consul:
+      enabled: true
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        register: true
+    #网关
+    gateway: #routes:#路由配置:参数为一个List
+      routes:
+        - id: payment_rout_1 #唯一标识
+#          uri: http://localhost:8090/ #转发的地址,写服务名称
+          uri: lb://cloud-service-payment #转发的地址,写服务名称
+          predicates:
+            - Path=/payment/get/** #判断匹配条件,即地址带有/ribbon/**的请求,会转发至lb:RIBBON-CONSUMER
+
+        - id: payment_rout_2
+          uri: http://localhost:8090/
+          predicates:
+            - Path=/payment/lb/**
+      discovery:
+        locator:
+          enabled: true # 开启从注册中心动态创建路由的功能

@@ -1,0 +1,28 @@
+server:
+  servlet:
+    context-path: /
+  port: 8090
+
+spring:
+  application:
+    name: cloud-service-payment
+#  devtools:
+#    restart:
+#      enabled: true
+
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+    loadbalancer:
+      ribbon:
+        enabled: true
+
+#eureka:
+#  client:
+#    register-with-eureka: true # 服务注册，false表示不将自已注册到Eureka服务中
+#    #service-url: # Eureka客户端与Eureka服务端的交互地址，集群版配置对方的地址，单机版配置自己（如果不配置则默认本机8761端口）
+
+
