@@ -23,20 +23,20 @@
         <module>02springboot-noweb</module>
         <module>03springboot-war</module>
         <module>04springboot-jar</module>
-        <module>05springboot-kafka-api</module>
-        <module>05springboot-kafka-consumer</module>
-        <module>05springboot-kafka-consumer2</module>
-        <module>05springboot-kafka-producer</module>
-        <module>06springboot-spring-websockt</module>
-        <module>06springboot-websocket</module>
-        <module>07springboot-more-db</module>
+        <module>05kafka-api</module>
+        <module>05kafka-consumer</module>
+        <module>05kafka-consumer2</module>
+        <module>05kafka-producer</module>
+        <module>06spring-websockt</module>
+        <module>06websocket</module>
+        <module>07more-db</module>
         <module>08dubbo-consumer</module>
         <module>08dubbo-interface</module>
         <module>08dubbo-provider</module>
         <module>09springsecurity-content</module>
         <module>09springsecurity-oauth</module>
         <module>10Springboot-nginx</module>
-        <module>11springboot-netty-websocket</module>
+        <module>11netty-websocket</module>
         <module>12springcloud-gateway-9527</module>
         <module>12springcloud-getaway-payment</module>
         <module>12springcloud-order</module>
