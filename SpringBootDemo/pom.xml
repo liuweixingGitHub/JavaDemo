@@ -116,11 +116,11 @@
 
             <!--注册服务-->
             <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka-server -->
-            <!-- <dependency>
-                 <groupId>org.springframework.cloud</groupId>
-                 <artifactId>spring-cloud-starter-eureka-server</artifactId>
-                 <version>1.4.7.RELEASE</version>
-             </dependency>-->
+<!--             <dependency>-->
+<!--                 <groupId>org.springframework.cloud</groupId>-->
+<!--                 <artifactId>spring-cloud-starter-eureka-server</artifactId>-->
+<!--                 <version>1.4.7.RELEASE</version>-->
+<!--             </dependency>-->
 
             <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
             <!-- <dependency>
