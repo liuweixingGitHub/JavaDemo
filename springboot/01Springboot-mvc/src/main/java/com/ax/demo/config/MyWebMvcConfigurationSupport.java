@@ -1,4 +1,4 @@
-package com.ax.demo;
+package com.ax.demo.config;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
@@ -13,30 +13,29 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 @Configuration
 public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
 
-
     /**
      * 字符返回乱码
      *
-     * @return
+     * @return StringHttpMessageConverter
      */
     @Bean
     public HttpMessageConverter<String> stringHttpMessageConverterUtf8() {
-        StringHttpMessageConverter converter = new StringHttpMessageConverter(Charset.forName("UTF-8"));
-        return converter;
+        return new StringHttpMessageConverter(StandardCharsets.UTF_8);
     }
 
     /**
      * json返回工具类及乱码
      *
-     * @return
+     * @return HttpMessageConverter
      */
+
     @Bean
     public HttpMessageConverter fastJsonHttpMessageConverters() {
 
@@ -46,23 +45,22 @@ public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
         config.setDateFormat("yyyy-MM-dd HH:MM:ss");
 
         config.setSerializerFeatures(
+                SerializerFeature.DisableCircularReferenceDetect, //结果是否格式化,默认为false
 
-                //结果是否格式化,默认为false
-                SerializerFeature.PrettyFormat,
-                //枚举值使用名称或tosting
-                SerializerFeature.WriteEnumUsingName,
-                // 保留map空的字段
-                SerializerFeature.WriteMapNullValue,
-                // 将String类型的null转成""
-                SerializerFeature.WriteNullStringAsEmpty,
-                // 将Number类型的null转成0
-                SerializerFeature.WriteNullNumberAsZero,
-                // 将List类型的null转成[], List<String> list = new ArrayList<>(); 泛型不支持
-                SerializerFeature.WriteNullListAsEmpty,
-                // 将Boolean类型的null转成false
-                SerializerFeature.WriteNullBooleanAsFalse,
-                // 避免循环引用
-                SerializerFeature.DisableCircularReferenceDetect);
+                SerializerFeature.PrettyFormat, //枚举值使用名称或tosting
+
+                SerializerFeature.WriteEnumUsingName, // 保留map空的字段
+
+                SerializerFeature.WriteMapNullValue, // 将String类型的null转成""
+
+                SerializerFeature.WriteNullBooleanAsFalse, // 避免循环引用
+
+                SerializerFeature.WriteNullListAsEmpty, // 将Boolean类型的null转成false
+
+                SerializerFeature.WriteNullNumberAsZero, // 将List类型的null转成[], List<String> list = new ArrayList<>(); 泛型不支持
+
+                SerializerFeature.WriteNullStringAsEmpty // 将Number类型的null转成0
+        );
 
 
         // 1.定义一个converters转换消息的对象
@@ -70,10 +68,11 @@ public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
         // 3.在converter中添加配置信息
         fastConverter.setFastJsonConfig(config);
 
-
         // 4.中文乱码解决方案
         List<MediaType> mediaTypes = new ArrayList<>();
-        mediaTypes.add(MediaType.APPLICATION_JSON_UTF8);
+//        mediaTypes.add(MediaType.APPLICATION_JSON_UTF8);
+        mediaTypes.add(MediaType.APPLICATION_JSON);
+
         fastConverter.setSupportedMediaTypes(mediaTypes);
 
         // 5.返回HttpMessageConverters对象
@@ -83,15 +82,28 @@ public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
 
     /**
      * 添加拦截器
-     *
-     * @param registry
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-
         super.addInterceptors(registry);
-
     }
+
+
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        super.configureMessageConverters(converters);
+
+        converters.add(stringHttpMessageConverterUtf8());
+
+        converters.add(0, fastJsonHttpMessageConverters());//fastJsonHttpMessageConverters 需要在第一个位置
+    }
+
+    @Override
+    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+        super.configureContentNegotiation(configurer);
+        configurer.favorPathExtension(false);
+    }
+
 
     /**
      * 将.html 添加 到 resources目录下
@@ -128,21 +140,4 @@ public class MyWebMvcConfigurationSupport extends WebMvcConfigurationSupport {
 //                .addResourceLocations("classpath:/META-INF/resources/","/static","/templates");
 
     }
-
-
-    @Override
-    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        super.configureMessageConverters(converters);
-
-        converters.add(stringHttpMessageConverterUtf8());
-        converters.add(fastJsonHttpMessageConverters());
-    }
-
-    @Override
-    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
-        super.configureContentNegotiation(configurer);
-        configurer.favorPathExtension(false);
-    }
-
-
 }

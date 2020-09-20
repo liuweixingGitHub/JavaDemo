@@ -1,4 +1,4 @@
-package com.ax.demo;
+package com.ax.demo.config;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.context.annotation.Bean;
