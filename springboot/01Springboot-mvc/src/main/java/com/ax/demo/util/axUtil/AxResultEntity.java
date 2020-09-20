@@ -18,7 +18,6 @@ public class AxResultEntity<T> implements Serializable {
   //    @JSONField(serialize=false)
   // transient关键字只能修饰变量，而不能修饰方法和类。
   private transient AxResultStateEnum stateEnum;
-
   //        @JSONField(serialize=false)
   //    private  AxResultStateEnum stateEnum;
 
